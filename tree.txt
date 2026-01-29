@@ -1,0 +1,5221 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 0839-4178
+E:.
+ÃÄÄÄ.github
+³   ÀÄÄÄworkflows
+ÃÄÄÄapp
+³   ÃÄÄÄHttp
+³   ³   ÃÄÄÄControllers
+³   ³   ³   ÀÄÄÄAuth
+³   ³   ÀÄÄÄRequests
+³   ³       ÀÄÄÄAuth
+³   ÃÄÄÄModels
+³   ÃÄÄÄProviders
+³   ÀÄÄÄView
+³       ÀÄÄÄComponents
+ÃÄÄÄbootstrap
+³   ÀÄÄÄcache
+ÃÄÄÄconfig
+ÃÄÄÄdatabase
+³   ÃÄÄÄfactories
+³   ÃÄÄÄmigrations
+³   ÀÄÄÄseeders
+ÃÄÄÄdocs
+ÃÄÄÄnode_modules
+³   ÃÄÄÄ.bin
+³   ÃÄÄÄ.vite
+³   ³   ÀÄÄÄdeps
+³   ÃÄÄÄ.vite-temp
+³   ÃÄÄÄ@alloc
+³   ³   ÀÄÄÄquick-lru
+³   ÃÄÄÄ@esbuild
+³   ³   ÀÄÄÄwin32-x64
+³   ÃÄÄÄ@jridgewell
+³   ³   ÃÄÄÄgen-mapping
+³   ³   ³   ÃÄÄÄdist
+³   ³   ³   ³   ÀÄÄÄtypes
+³   ³   ³   ÃÄÄÄsrc
+³   ³   ³   ÀÄÄÄtypes
+³   ³   ÃÄÄÄremapping
+³   ³   ³   ÃÄÄÄdist
+³   ³   ³   ÃÄÄÄsrc
+³   ³   ³   ÀÄÄÄtypes
+³   ³   ÃÄÄÄresolve-uri
+³   ³   ³   ÀÄÄÄdist
+³   ³   ³       ÀÄÄÄtypes
+³   ³   ÃÄÄÄsourcemap-codec
+³   ³   ³   ÃÄÄÄdist
+³   ³   ³   ÃÄÄÄsrc
+³   ³   ³   ÀÄÄÄtypes
+³   ³   ÀÄÄÄtrace-mapping
+³   ³       ÃÄÄÄdist
+³   ³       ÃÄÄÄsrc
+³   ³       ÀÄÄÄtypes
+³   ÃÄÄÄ@nodelib
+³   ³   ÃÄÄÄfs.scandir
+³   ³   ³   ÀÄÄÄout
+³   ³   ³       ÃÄÄÄadapters
+³   ³   ³       ÃÄÄÄproviders
+³   ³   ³       ÃÄÄÄtypes
+³   ³   ³       ÀÄÄÄutils
+³   ³   ÃÄÄÄfs.stat
+³   ³   ³   ÀÄÄÄout
+³   ³   ³       ÃÄÄÄadapters
+³   ³   ³       ÃÄÄÄproviders
+³   ³   ³       ÀÄÄÄtypes
+³   ³   ÀÄÄÄfs.walk
+³   ³       ÀÄÄÄout
+³   ³           ÃÄÄÄproviders
+³   ³           ÃÄÄÄreaders
+³   ³           ÀÄÄÄtypes
+³   ÃÄÄÄ@rollup
+³   ³   ÃÄÄÄrollup-win32-x64-gnu
+³   ³   ÀÄÄÄrollup-win32-x64-msvc
+³   ÃÄÄÄ@tailwindcss
+³   ³   ÃÄÄÄforms
+³   ³   ³   ÃÄÄÄ.github
+³   ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+³   ³   ³   ³   ÀÄÄÄworkflows
+³   ³   ³   ÃÄÄÄscripts
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ÃÄÄÄnode
+³   ³   ³   ÃÄÄÄdist
+³   ³   ³   ÀÄÄÄnode_modules
+³   ³   ³       ÀÄÄÄtailwindcss
+³   ³   ³           ÀÄÄÄdist
+³   ³   ÃÄÄÄoxide
+³   ³   ÃÄÄÄoxide-win32-x64-msvc
+³   ³   ÀÄÄÄvite
+³   ³       ÃÄÄÄdist
+³   ³       ÀÄÄÄnode_modules
+³   ³           ÀÄÄÄtailwindcss
+³   ³               ÀÄÄÄdist
+³   ÃÄÄÄ@types
+³   ³   ÀÄÄÄestree
+³   ÃÄÄÄ@vue
+³   ³   ÃÄÄÄreactivity
+³   ³   ³   ÀÄÄÄdist
+³   ³   ÀÄÄÄshared
+³   ³       ÀÄÄÄdist
+³   ÃÄÄÄalpinejs
+³   ³   ÃÄÄÄbuilds
+³   ³   ÃÄÄÄdist
+³   ³   ÀÄÄÄsrc
+³   ³       ÃÄÄÄdirectives
+³   ³       ÃÄÄÄmagics
+³   ³       ÀÄÄÄutils
+³   ÃÄÄÄansi-regex
+³   ÃÄÄÄansi-styles
+³   ÃÄÄÄany-promise
+³   ³   ÀÄÄÄregister
+³   ÃÄÄÄanymatch
+³   ÃÄÄÄarg
+³   ÃÄÄÄasynckit
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄautoprefixer
+³   ³   ÃÄÄÄbin
+³   ³   ÃÄÄÄdata
+³   ³   ÀÄÄÄlib
+³   ³       ÀÄÄÄhacks
+³   ÃÄÄÄaxios
+³   ³   ÃÄÄÄdist
+³   ³   ³   ÃÄÄÄbrowser
+³   ³   ³   ÃÄÄÄesm
+³   ³   ³   ÀÄÄÄnode
+³   ³   ÀÄÄÄlib
+³   ³       ÃÄÄÄadapters
+³   ³       ÃÄÄÄcancel
+³   ³       ÃÄÄÄcore
+³   ³       ÃÄÄÄdefaults
+³   ³       ÃÄÄÄenv
+³   ³       ³   ÀÄÄÄclasses
+³   ³       ÃÄÄÄhelpers
+³   ³       ÀÄÄÄplatform
+³   ³           ÃÄÄÄbrowser
+³   ³           ³   ÀÄÄÄclasses
+³   ³           ÃÄÄÄcommon
+³   ³           ÀÄÄÄnode
+³   ³               ÀÄÄÄclasses
+³   ÃÄÄÄbaseline-browser-mapping
+³   ³   ÀÄÄÄdist
+³   ÃÄÄÄbinary-extensions
+³   ÃÄÄÄbraces
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄbrowserslist
+³   ÃÄÄÄcall-bind-apply-helpers
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄcamelcase-css
+³   ÃÄÄÄcaniuse-lite
+³   ³   ÃÄÄÄdata
+³   ³   ³   ÃÄÄÄfeatures
+³   ³   ³   ÀÄÄÄregions
+³   ³   ÀÄÄÄdist
+³   ³       ÃÄÄÄlib
+³   ³       ÀÄÄÄunpacker
+³   ÃÄÄÄchalk
+³   ³   ÃÄÄÄnode_modules
+³   ³   ³   ÀÄÄÄsupports-color
+³   ³   ÀÄÄÄsource
+³   ÃÄÄÄchokidar
+³   ³   ÃÄÄÄlib
+³   ³   ÃÄÄÄnode_modules
+³   ³   ³   ÀÄÄÄglob-parent
+³   ³   ÀÄÄÄtypes
+³   ÃÄÄÄcliui
+³   ³   ÀÄÄÄbuild
+³   ³       ÀÄÄÄlib
+³   ÃÄÄÄcolor-convert
+³   ÃÄÄÄcolor-name
+³   ÃÄÄÄcombined-stream
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄcommander
+³   ³   ÀÄÄÄtypings
+³   ÃÄÄÄconcurrently
+³   ³   ÃÄÄÄdist
+³   ³   ³   ÃÄÄÄbin
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ³       ÃÄÄÄcommand-parser
+³   ³   ³       ÀÄÄÄflow-control
+³   ³   ÀÄÄÄdocs
+³   ³       ÀÄÄÄcli
+³   ÃÄÄÄcssesc
+³   ³   ÃÄÄÄbin
+³   ³   ÀÄÄÄman
+³   ÃÄÄÄdelayed-stream
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄdetect-libc
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄdidyoumean
+³   ÃÄÄÄdlv
+³   ³   ÀÄÄÄdist
+³   ÃÄÄÄdunder-proto
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄelectron-to-chromium
+³   ÃÄÄÄemoji-regex
+³   ³   ÀÄÄÄes2015
+³   ÃÄÄÄenhanced-resolve
+³   ³   ÀÄÄÄlib
+³   ³       ÀÄÄÄutil
+³   ÃÄÄÄes-define-property
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄes-errors
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄes-object-atoms
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄes-set-tostringtag
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄesbuild
+³   ³   ÃÄÄÄbin
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄescalade
+³   ³   ÃÄÄÄdist
+³   ³   ÀÄÄÄsync
+³   ÃÄÄÄfast-glob
+³   ³   ÃÄÄÄnode_modules
+³   ³   ³   ÀÄÄÄglob-parent
+³   ³   ÀÄÄÄout
+³   ³       ÃÄÄÄmanagers
+³   ³       ÃÄÄÄproviders
+³   ³       ³   ÃÄÄÄfilters
+³   ³       ³   ÃÄÄÄmatchers
+³   ³       ³   ÀÄÄÄtransformers
+³   ³       ÃÄÄÄreaders
+³   ³       ÃÄÄÄtypes
+³   ³       ÀÄÄÄutils
+³   ÃÄÄÄfastq
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄfill-range
+³   ÃÄÄÄfollow-redirects
+³   ÃÄÄÄform-data
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄfraction.js
+³   ³   ÃÄÄÄdist
+³   ³   ÃÄÄÄexamples
+³   ³   ÃÄÄÄsrc
+³   ³   ÀÄÄÄtests
+³   ÃÄÄÄfunction-bind
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄget-caller-file
+³   ÃÄÄÄget-intrinsic
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄget-proto
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄglob-parent
+³   ÃÄÄÄgopd
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄgraceful-fs
+³   ÃÄÄÄhas-flag
+³   ÃÄÄÄhas-symbols
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ³       ÀÄÄÄshams
+³   ÃÄÄÄhas-tostringtag
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ³       ÀÄÄÄshams
+³   ÃÄÄÄhasown
+³   ³   ÀÄÄÄ.github
+³   ÃÄÄÄis-binary-path
+³   ÃÄÄÄis-core-module
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄis-extglob
+³   ÃÄÄÄis-fullwidth-code-point
+³   ÃÄÄÄis-glob
+³   ÃÄÄÄis-number
+³   ÃÄÄÄjiti
+³   ³   ÃÄÄÄdist
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄlaravel-vite-plugin
+³   ³   ÃÄÄÄbin
+³   ³   ÃÄÄÄdist
+³   ³   ÀÄÄÄinertia-helpers
+³   ÃÄÄÄlightningcss
+³   ³   ÀÄÄÄnode
+³   ÃÄÄÄlightningcss-win32-x64-msvc
+³   ÃÄÄÄlilconfig
+³   ³   ÀÄÄÄsrc
+³   ÃÄÄÄlines-and-columns
+³   ³   ÀÄÄÄbuild
+³   ÃÄÄÄmagic-string
+³   ³   ÀÄÄÄdist
+³   ÃÄÄÄmath-intrinsics
+³   ³   ÃÄÄÄ.github
+³   ³   ÃÄÄÄconstants
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄmerge2
+³   ÃÄÄÄmicromatch
+³   ÃÄÄÄmime-db
+³   ÃÄÄÄmime-types
+³   ÃÄÄÄmini-svg-data-uri
+³   ÃÄÄÄmz
+³   ÃÄÄÄnanoid
+³   ³   ÃÄÄÄasync
+³   ³   ÃÄÄÄbin
+³   ³   ÃÄÄÄnon-secure
+³   ³   ÀÄÄÄurl-alphabet
+³   ÃÄÄÄnode-releases
+³   ³   ÀÄÄÄdata
+³   ³       ÃÄÄÄprocessed
+³   ³       ÀÄÄÄrelease-schedule
+³   ÃÄÄÄnormalize-path
+³   ÃÄÄÄobject-assign
+³   ÃÄÄÄobject-hash
+³   ³   ÀÄÄÄdist
+³   ÃÄÄÄpath-parse
+³   ÃÄÄÄpicocolors
+³   ÃÄÄÄpicomatch
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄpify
+³   ÃÄÄÄpirates
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄpostcss
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄpostcss-import
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄpostcss-js
+³   ÃÄÄÄpostcss-load-config
+³   ³   ÀÄÄÄsrc
+³   ÃÄÄÄpostcss-nested
+³   ÃÄÄÄpostcss-selector-parser
+³   ³   ÀÄÄÄdist
+³   ³       ÃÄÄÄselectors
+³   ³       ÀÄÄÄutil
+³   ÃÄÄÄpostcss-value-parser
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄproxy-from-env
+³   ÃÄÄÄqueue-microtask
+³   ÃÄÄÄread-cache
+³   ÃÄÄÄreaddirp
+³   ÃÄÄÄrequire-directory
+³   ÃÄÄÄresolve
+³   ³   ÃÄÄÄ.github
+³   ³   ÃÄÄÄbin
+³   ³   ÃÄÄÄexample
+³   ³   ÃÄÄÄlib
+³   ³   ÀÄÄÄtest
+³   ³       ÃÄÄÄdotdot
+³   ³       ³   ÀÄÄÄabc
+³   ³       ÃÄÄÄmodule_dir
+³   ³       ³   ÃÄÄÄxmodules
+³   ³       ³   ³   ÀÄÄÄaaa
+³   ³       ³   ÃÄÄÄymodules
+³   ³       ³   ³   ÀÄÄÄaaa
+³   ³       ³   ÀÄÄÄzmodules
+³   ³       ³       ÀÄÄÄbbb
+³   ³       ÃÄÄÄnode_path
+³   ³       ³   ÃÄÄÄx
+³   ³       ³   ³   ÃÄÄÄaaa
+³   ³       ³   ³   ÀÄÄÄccc
+³   ³       ³   ÀÄÄÄy
+³   ³       ³       ÃÄÄÄbbb
+³   ³       ³       ÀÄÄÄccc
+³   ³       ÃÄÄÄpathfilter
+³   ³       ³   ÀÄÄÄdeep_ref
+³   ³       ÃÄÄÄprecedence
+³   ³       ³   ÃÄÄÄaaa
+³   ³       ³   ÀÄÄÄbbb
+³   ³       ÃÄÄÄresolver
+³   ³       ³   ÃÄÄÄbaz
+³   ³       ³   ÃÄÄÄbrowser_field
+³   ³       ³   ÃÄÄÄdot_main
+³   ³       ³   ÃÄÄÄdot_slash_main
+³   ³       ³   ÃÄÄÄfalse_main
+³   ³       ³   ÃÄÄÄincorrect_main
+³   ³       ³   ÃÄÄÄinvalid_main
+³   ³       ³   ÃÄÄÄmultirepo
+³   ³       ³   ³   ÀÄÄÄpackages
+³   ³       ³   ³       ÃÄÄÄpackage-a
+³   ³       ³   ³       ÀÄÄÄpackage-b
+³   ³       ³   ÃÄÄÄnested_symlinks
+³   ³       ³   ³   ÀÄÄÄmylib
+³   ³       ³   ÃÄÄÄother_path
+³   ³       ³   ³   ÀÄÄÄlib
+³   ³       ³   ÃÄÄÄquux
+³   ³       ³   ³   ÀÄÄÄfoo
+³   ³       ³   ÃÄÄÄsame_names
+³   ³       ³   ³   ÀÄÄÄfoo
+³   ³       ³   ÃÄÄÄsymlinked
+³   ³       ³   ³   ÃÄÄÄpackage
+³   ³       ³   ³   ÀÄÄÄ_
+³   ³       ³   ³       ÃÄÄÄnode_modules
+³   ³       ³   ³       ÀÄÄÄsymlink_target
+³   ³       ³   ÀÄÄÄwithout_basedir
+³   ³       ÀÄÄÄshadowed_core
+³   ³           ÀÄÄÄnode_modules
+³   ³               ÀÄÄÄutil
+³   ÃÄÄÄreusify
+³   ³   ÃÄÄÄ.github
+³   ³   ³   ÀÄÄÄworkflows
+³   ³   ÀÄÄÄbenchmarks
+³   ÃÄÄÄrollup
+³   ³   ÀÄÄÄdist
+³   ³       ÃÄÄÄbin
+³   ³       ÃÄÄÄes
+³   ³       ³   ÀÄÄÄshared
+³   ³       ÀÄÄÄshared
+³   ÃÄÄÄrun-parallel
+³   ÃÄÄÄrxjs
+³   ³   ÃÄÄÄajax
+³   ³   ÃÄÄÄdist
+³   ³   ³   ÃÄÄÄbundles
+³   ³   ³   ÃÄÄÄcjs
+³   ³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ³   ÃÄÄÄfetch
+³   ³   ³   ³   ÃÄÄÄinternal
+³   ³   ³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ³   ³   ÃÄÄÄobservable
+³   ³   ³   ³   ³   ³   ÀÄÄÄdom
+³   ³   ³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ³   ³   ÃÄÄÄscheduled
+³   ³   ³   ³   ³   ÃÄÄÄscheduler
+³   ³   ³   ³   ³   ÃÄÄÄsymbol
+³   ³   ³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ³   ÀÄÄÄwebSocket
+³   ³   ³   ÃÄÄÄesm
+³   ³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ³   ÃÄÄÄfetch
+³   ³   ³   ³   ÃÄÄÄinternal
+³   ³   ³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ³   ³   ÃÄÄÄobservable
+³   ³   ³   ³   ³   ³   ÀÄÄÄdom
+³   ³   ³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ³   ³   ÃÄÄÄscheduled
+³   ³   ³   ³   ³   ÃÄÄÄscheduler
+³   ³   ³   ³   ³   ÃÄÄÄsymbol
+³   ³   ³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ³   ÀÄÄÄwebSocket
+³   ³   ³   ÃÄÄÄesm5
+³   ³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ³   ÃÄÄÄfetch
+³   ³   ³   ³   ÃÄÄÄinternal
+³   ³   ³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ³   ³   ÃÄÄÄobservable
+³   ³   ³   ³   ³   ³   ÀÄÄÄdom
+³   ³   ³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ³   ³   ÃÄÄÄscheduled
+³   ³   ³   ³   ³   ÃÄÄÄscheduler
+³   ³   ³   ³   ³   ÃÄÄÄsymbol
+³   ³   ³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ³   ÀÄÄÄwebSocket
+³   ³   ³   ÀÄÄÄtypes
+³   ³   ³       ÃÄÄÄajax
+³   ³   ³       ÃÄÄÄfetch
+³   ³   ³       ÃÄÄÄinternal
+³   ³   ³       ³   ÃÄÄÄajax
+³   ³   ³       ³   ÃÄÄÄobservable
+³   ³   ³       ³   ³   ÀÄÄÄdom
+³   ³   ³       ³   ÃÄÄÄoperators
+³   ³   ³       ³   ÃÄÄÄscheduled
+³   ³   ³       ³   ÃÄÄÄscheduler
+³   ³   ³       ³   ÃÄÄÄsymbol
+³   ³   ³       ³   ÃÄÄÄtesting
+³   ³   ³       ³   ÀÄÄÄutil
+³   ³   ³       ÃÄÄÄoperators
+³   ³   ³       ÃÄÄÄtesting
+³   ³   ³       ÀÄÄÄwebSocket
+³   ³   ÃÄÄÄfetch
+³   ³   ÃÄÄÄoperators
+³   ³   ÃÄÄÄsrc
+³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ÃÄÄÄfetch
+³   ³   ³   ÃÄÄÄinternal
+³   ³   ³   ³   ÃÄÄÄajax
+³   ³   ³   ³   ÃÄÄÄobservable
+³   ³   ³   ³   ³   ÀÄÄÄdom
+³   ³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ³   ÃÄÄÄscheduled
+³   ³   ³   ³   ÃÄÄÄscheduler
+³   ³   ³   ³   ÃÄÄÄsymbol
+³   ³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ÃÄÄÄoperators
+³   ³   ³   ÃÄÄÄtesting
+³   ³   ³   ÀÄÄÄwebSocket
+³   ³   ÃÄÄÄtesting
+³   ³   ÀÄÄÄwebSocket
+³   ÃÄÄÄshell-quote
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄsource-map-js
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄstring-width
+³   ÃÄÄÄstrip-ansi
+³   ÃÄÄÄsucrase
+³   ³   ÃÄÄÄbin
+³   ³   ÃÄÄÄdist
+³   ³   ³   ÃÄÄÄesm
+³   ³   ³   ³   ÃÄÄÄparser
+³   ³   ³   ³   ³   ÃÄÄÄplugins
+³   ³   ³   ³   ³   ³   ÀÄÄÄjsx
+³   ³   ³   ³   ³   ÃÄÄÄtokenizer
+³   ³   ³   ³   ³   ÃÄÄÄtraverser
+³   ³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ³   ÃÄÄÄtransformers
+³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ÃÄÄÄparser
+³   ³   ³   ³   ÃÄÄÄplugins
+³   ³   ³   ³   ³   ÀÄÄÄjsx
+³   ³   ³   ³   ÃÄÄÄtokenizer
+³   ³   ³   ³   ÃÄÄÄtraverser
+³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ÃÄÄÄtransformers
+³   ³   ³   ÃÄÄÄtypes
+³   ³   ³   ³   ÃÄÄÄparser
+³   ³   ³   ³   ³   ÃÄÄÄplugins
+³   ³   ³   ³   ³   ³   ÀÄÄÄjsx
+³   ³   ³   ³   ³   ÃÄÄÄtokenizer
+³   ³   ³   ³   ³   ÃÄÄÄtraverser
+³   ³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ³   ÃÄÄÄtransformers
+³   ³   ³   ³   ÀÄÄÄutil
+³   ³   ³   ÀÄÄÄutil
+³   ³   ÃÄÄÄregister
+³   ³   ÀÄÄÄts-node-plugin
+³   ÃÄÄÄsupports-color
+³   ÃÄÄÄsupports-preserve-symlinks-flag
+³   ³   ÃÄÄÄ.github
+³   ³   ÀÄÄÄtest
+³   ÃÄÄÄtailwindcss
+³   ³   ÃÄÄÄlib
+³   ³   ³   ÃÄÄÄcli
+³   ³   ³   ³   ÃÄÄÄbuild
+³   ³   ³   ³   ÃÄÄÄhelp
+³   ³   ³   ³   ÀÄÄÄinit
+³   ³   ³   ÃÄÄÄcss
+³   ³   ³   ÃÄÄÄlib
+³   ³   ³   ÃÄÄÄpostcss-plugins
+³   ³   ³   ³   ÀÄÄÄnesting
+³   ³   ³   ÃÄÄÄpublic
+³   ³   ³   ÃÄÄÄutil
+³   ³   ³   ÀÄÄÄvalue-parser
+³   ³   ÃÄÄÄnesting
+³   ³   ÃÄÄÄnode_modules
+³   ³   ³   ÃÄÄÄ.bin
+³   ³   ³   ÀÄÄÄjiti
+³   ³   ³       ÃÄÄÄbin
+³   ³   ³       ÃÄÄÄdist
+³   ³   ³       ³   ÀÄÄÄplugins
+³   ³   ³       ÀÄÄÄlib
+³   ³   ÃÄÄÄpeers
+³   ³   ÃÄÄÄscripts
+³   ³   ÃÄÄÄsrc
+³   ³   ³   ÃÄÄÄcli
+³   ³   ³   ³   ÃÄÄÄbuild
+³   ³   ³   ³   ÃÄÄÄhelp
+³   ³   ³   ³   ÀÄÄÄinit
+³   ³   ³   ÃÄÄÄcss
+³   ³   ³   ÃÄÄÄlib
+³   ³   ³   ÃÄÄÄpostcss-plugins
+³   ³   ³   ³   ÀÄÄÄnesting
+³   ³   ³   ÃÄÄÄpublic
+³   ³   ³   ÃÄÄÄutil
+³   ³   ³   ÀÄÄÄvalue-parser
+³   ³   ÃÄÄÄstubs
+³   ³   ÀÄÄÄtypes
+³   ³       ÀÄÄÄgenerated
+³   ÃÄÄÄtapable
+³   ³   ÀÄÄÄlib
+³   ÃÄÄÄthenify
+³   ÃÄÄÄthenify-all
+³   ÃÄÄÄtinyglobby
+³   ³   ÃÄÄÄdist
+³   ³   ÀÄÄÄnode_modules
+³   ³       ÃÄÄÄfdir
+³   ³       ³   ÀÄÄÄdist
+³   ³       ÀÄÄÄpicomatch
+³   ³           ÀÄÄÄlib
+³   ÃÄÄÄto-regex-range
+³   ÃÄÄÄtree-kill
+³   ÃÄÄÄts-interface-checker
+³   ³   ÀÄÄÄdist
+³   ÃÄÄÄtslib
+³   ³   ÀÄÄÄmodules
+³   ÃÄÄÄupdate-browserslist-db
+³   ÃÄÄÄutil-deprecate
+³   ÃÄÄÄvite
+³   ³   ÃÄÄÄbin
+³   ³   ÃÄÄÄdist
+³   ³   ³   ÃÄÄÄclient
+³   ³   ³   ÀÄÄÄnode
+³   ³   ³       ÀÄÄÄchunks
+³   ³   ÃÄÄÄmisc
+³   ³   ÃÄÄÄnode_modules
+³   ³   ³   ÃÄÄÄfdir
+³   ³   ³   ³   ÀÄÄÄdist
+³   ³   ³   ÀÄÄÄpicomatch
+³   ³   ³       ÀÄÄÄlib
+³   ³   ÀÄÄÄtypes
+³   ³       ÀÄÄÄinternal
+³   ÃÄÄÄvite-plugin-full-reload
+³   ³   ÀÄÄÄdist
+³   ÃÄÄÄwrap-ansi
+³   ÃÄÄÄy18n
+³   ³   ÀÄÄÄbuild
+³   ³       ÀÄÄÄlib
+³   ³           ÀÄÄÄplatform-shims
+³   ÃÄÄÄyargs
+³   ³   ÃÄÄÄbuild
+³   ³   ³   ÀÄÄÄlib
+³   ³   ³       ÃÄÄÄtypings
+³   ³   ³       ÀÄÄÄutils
+³   ³   ÃÄÄÄhelpers
+³   ³   ÃÄÄÄlib
+³   ³   ³   ÀÄÄÄplatform-shims
+³   ³   ÀÄÄÄlocales
+³   ÀÄÄÄyargs-parser
+³       ÀÄÄÄbuild
+³           ÀÄÄÄlib
+ÃÄÄÄpublic
+³   ÀÄÄÄbuild
+³       ÀÄÄÄassets
+ÃÄÄÄresources
+³   ÃÄÄÄcss
+³   ÃÄÄÄjs
+³   ÀÄÄÄviews
+³       ÃÄÄÄauth
+³       ÃÄÄÄcomponents
+³       ÃÄÄÄlayouts
+³       ÀÄÄÄprofile
+³           ÀÄÄÄpartials
+ÃÄÄÄroutes
+ÃÄÄÄstorage
+³   ÃÄÄÄapp
+³   ³   ÃÄÄÄprivate
+³   ³   ÀÄÄÄpublic
+³   ÃÄÄÄframework
+³   ³   ÃÄÄÄcache
+³   ³   ³   ÀÄÄÄdata
+³   ³   ÃÄÄÄsessions
+³   ³   ÃÄÄÄtesting
+³   ³   ÀÄÄÄviews
+³   ÀÄÄÄlogs
+ÃÄÄÄtests
+³   ÃÄÄÄFeature
+³   ³   ÀÄÄÄAuth
+³   ÀÄÄÄUnit
+ÀÄÄÄvendor
+    ÃÄÄÄbin
+    ÃÄÄÄbrianium
+    ³   ÀÄÄÄparatest
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÃÄÄÄlint-xml-configuration
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄbin
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄCoverage
+    ³       ³   ÃÄÄÄJUnit
+    ³       ³   ÃÄÄÄTestDox
+    ³       ³   ÃÄÄÄUtil
+    ³       ³   ÀÄÄÄWrapperRunner
+    ³       ÀÄÄÄtest
+    ³           ÃÄÄÄfixtures
+    ³           ³   ÃÄÄÄcommon_results
+    ³           ³   ³   ÀÄÄÄjunit
+    ³           ³   ÃÄÄÄdeterministic_random
+    ³           ³   ÃÄÄÄexit_tests
+    ³           ³   ÃÄÄÄextensions
+    ³           ³   ÃÄÄÄextension_run_before_data_provider
+    ³           ³   ÃÄÄÄfatal_tests
+    ³           ³   ÃÄÄÄfunction_parallelization_tests
+    ³           ³   ÃÄÄÄgithub
+    ³           ³   ³   ÃÄÄÄGH420
+    ³           ³   ³   ÃÄÄÄGH420bis
+    ³           ³   ³   ÃÄÄÄGH431
+    ³           ³   ³   ÃÄÄÄGH505
+    ³           ³   ³   ÃÄÄÄGH505tokens
+    ³           ³   ³   ÃÄÄÄGH565
+    ³           ³   ³   ÃÄÄÄGH756
+    ³           ³   ³   ³   ÀÄÄÄtmp
+    ³           ³   ³   ÃÄÄÄGH782
+    ³           ³   ³   ³   ÀÄÄÄtmp
+    ³           ³   ³   ÃÄÄÄGH853
+    ³           ³   ³   ÃÄÄÄGH857
+    ³           ³   ³   ÃÄÄÄGH869
+    ³           ³   ³   ÃÄÄÄGH915
+    ³           ³   ³   ÃÄÄÄGH976
+    ³           ³   ³   ³   ÀÄÄÄcode_coverage_cache_dir
+    ³           ³   ³   ÀÄÄÄGH997
+    ³           ³   ÃÄÄÄmissing_results_tests
+    ³           ³   ÃÄÄÄno_tests
+    ³           ³   ÃÄÄÄorder_by
+    ³           ³   ÃÄÄÄparatest_only_tests
+    ³           ³   ÃÄÄÄpassthru_tests
+    ³           ³   ÃÄÄÄphpt
+    ³           ³   ÃÄÄÄprocess_isolation
+    ³           ³   ÃÄÄÄsame_beginning_of_name
+    ³           ³   ÃÄÄÄspecial_chars
+    ³           ³   ÃÄÄÄsymfony_output_collision
+    ³           ³   ÃÄÄÄtime_limit
+    ³           ³   ÃÄÄÄunexpected_output
+    ³           ³   ÀÄÄÄwrapper_batchsize_suite
+    ³           ³       ÀÄÄÄtmp
+    ³           ³           ÃÄÄÄpid
+    ³           ³           ÀÄÄÄtoken
+    ³           ÃÄÄÄtmp
+    ³           ÀÄÄÄUnit
+    ³               ÃÄÄÄUtil
+    ³               ÀÄÄÄWrapperRunner
+    ³                   ÀÄÄÄfixtures
+    ÃÄÄÄbrick
+    ³   ÀÄÄÄmath
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄException
+    ³       ³   ÀÄÄÄInternal
+    ³       ³       ÀÄÄÄCalculator
+    ³       ÃÄÄÄtests
+    ³       ³   ÀÄÄÄInternal
+    ³       ³       ÀÄÄÄCalculator
+    ³       ÀÄÄÄtools
+    ³           ÀÄÄÄecs
+    ÃÄÄÄcarbonphp
+    ³   ÀÄÄÄcarbon-doctrine-types
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄCarbon
+    ³       ³       ÀÄÄÄDoctrine
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄDoctrine
+    ÃÄÄÄcomposer
+    ÃÄÄÄdflydev
+    ³   ÀÄÄÄdot-access-data
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄException
+    ³       ÀÄÄÄtests
+    ÃÄÄÄdoctrine
+    ³   ÃÄÄÄdeprecations
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄPHPUnit
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ÀÄÄÄtest_fixtures
+    ³   ³       ÃÄÄÄsrc
+    ³   ³       ÀÄÄÄvendor
+    ³   ³           ÀÄÄÄdoctrine
+    ³   ³               ÀÄÄÄfoo
+    ³   ÃÄÄÄinflector
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ³   ÀÄÄÄen
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄRules
+    ³   ³   ³       ÃÄÄÄEnglish
+    ³   ³   ³       ÃÄÄÄEsperanto
+    ³   ³   ³       ÃÄÄÄFrench
+    ³   ³   ³       ÃÄÄÄItalian
+    ³   ³   ³       ÃÄÄÄNorwegianBokmal
+    ³   ³   ³       ÃÄÄÄPortuguese
+    ³   ³   ³       ÃÄÄÄSpanish
+    ³   ³   ³       ÀÄÄÄTurkish
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÀÄÄÄRules
+    ³   ³           ÃÄÄÄEnglish
+    ³   ³           ÃÄÄÄEsperanto
+    ³   ³           ÃÄÄÄFrench
+    ³   ³           ÃÄÄÄItalian
+    ³   ³           ÃÄÄÄNorwegianBokmal
+    ³   ³           ÃÄÄÄPortuguese
+    ³   ³           ÃÄÄÄSpanish
+    ³   ³           ÀÄÄÄTurkish
+    ³   ÀÄÄÄlexer
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄdocs
+    ³       ³   ÀÄÄÄen
+    ³       ÃÄÄÄsrc
+    ³       ÀÄÄÄtests
+    ÃÄÄÄdragonmantank
+    ³   ÀÄÄÄcron-expression
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄCron
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄCron
+    ÃÄÄÄegulias
+    ³   ÀÄÄÄemail-validator
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄdocumentation
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄParser
+    ³       ³   ³   ÀÄÄÄCommentStrategy
+    ³       ³   ÃÄÄÄResult
+    ³       ³   ³   ÀÄÄÄReason
+    ³       ³   ÃÄÄÄValidation
+    ³       ³   ³   ÃÄÄÄException
+    ³       ³   ³   ÀÄÄÄExtra
+    ³       ³   ÀÄÄÄWarning
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄEmailValidator
+    ³               ÃÄÄÄDummy
+    ³               ÃÄÄÄReason
+    ³               ÃÄÄÄResult
+    ³               ÀÄÄÄValidation
+    ³                   ÀÄÄÄExtra
+    ÃÄÄÄfakerphp
+    ³   ÀÄÄÄfaker
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄFaker
+    ³       ³       ÃÄÄÄCalculator
+    ³       ³       ÃÄÄÄContainer
+    ³       ³       ÃÄÄÄCore
+    ³       ³       ÃÄÄÄExtension
+    ³       ³       ÃÄÄÄGuesser
+    ³       ³       ÃÄÄÄORM
+    ³       ³       ³   ÃÄÄÄCakePHP
+    ³       ³       ³   ÃÄÄÄDoctrine
+    ³       ³       ³   ÃÄÄÄMandango
+    ³       ³       ³   ÃÄÄÄPropel
+    ³       ³       ³   ÃÄÄÄPropel2
+    ³       ³       ³   ÀÄÄÄSpot
+    ³       ³       ÀÄÄÄProvider
+    ³       ³           ÃÄÄÄar_EG
+    ³       ³           ÃÄÄÄar_JO
+    ³       ³           ÃÄÄÄar_SA
+    ³       ³           ÃÄÄÄat_AT
+    ³       ³           ÃÄÄÄbg_BG
+    ³       ³           ÃÄÄÄbn_BD
+    ³       ³           ÃÄÄÄcs_CZ
+    ³       ³           ÃÄÄÄda_DK
+    ³       ³           ÃÄÄÄde_AT
+    ³       ³           ÃÄÄÄde_CH
+    ³       ³           ÃÄÄÄde_DE
+    ³       ³           ÃÄÄÄel_CY
+    ³       ³           ÃÄÄÄel_GR
+    ³       ³           ÃÄÄÄen_AU
+    ³       ³           ÃÄÄÄen_CA
+    ³       ³           ÃÄÄÄen_GB
+    ³       ³           ÃÄÄÄen_HK
+    ³       ³           ÃÄÄÄen_IN
+    ³       ³           ÃÄÄÄen_NG
+    ³       ³           ÃÄÄÄen_NZ
+    ³       ³           ÃÄÄÄen_PH
+    ³       ³           ÃÄÄÄen_SG
+    ³       ³           ÃÄÄÄen_UG
+    ³       ³           ÃÄÄÄen_US
+    ³       ³           ÃÄÄÄen_ZA
+    ³       ³           ÃÄÄÄes_AR
+    ³       ³           ÃÄÄÄes_ES
+    ³       ³           ÃÄÄÄes_PE
+    ³       ³           ÃÄÄÄes_VE
+    ³       ³           ÃÄÄÄet_EE
+    ³       ³           ÃÄÄÄfa_IR
+    ³       ³           ÃÄÄÄfi_FI
+    ³       ³           ÃÄÄÄfr_BE
+    ³       ³           ÃÄÄÄfr_CA
+    ³       ³           ÃÄÄÄfr_CH
+    ³       ³           ÃÄÄÄfr_FR
+    ³       ³           ÃÄÄÄhe_IL
+    ³       ³           ÃÄÄÄhr_HR
+    ³       ³           ÃÄÄÄhu_HU
+    ³       ³           ÃÄÄÄhy_AM
+    ³       ³           ÃÄÄÄid_ID
+    ³       ³           ÃÄÄÄis_IS
+    ³       ³           ÃÄÄÄit_CH
+    ³       ³           ÃÄÄÄit_IT
+    ³       ³           ÃÄÄÄja_JP
+    ³       ³           ÃÄÄÄka_GE
+    ³       ³           ÃÄÄÄkk_KZ
+    ³       ³           ÃÄÄÄko_KR
+    ³       ³           ÃÄÄÄlt_LT
+    ³       ³           ÃÄÄÄlv_LV
+    ³       ³           ÃÄÄÄme_ME
+    ³       ³           ÃÄÄÄmn_MN
+    ³       ³           ÃÄÄÄms_MY
+    ³       ³           ÃÄÄÄnb_NO
+    ³       ³           ÃÄÄÄne_NP
+    ³       ³           ÃÄÄÄnl_BE
+    ³       ³           ÃÄÄÄnl_NL
+    ³       ³           ÃÄÄÄpl_PL
+    ³       ³           ÃÄÄÄpt_BR
+    ³       ³           ÃÄÄÄpt_PT
+    ³       ³           ÃÄÄÄro_MD
+    ³       ³           ÃÄÄÄro_RO
+    ³       ³           ÃÄÄÄru_RU
+    ³       ³           ÃÄÄÄsk_SK
+    ³       ³           ÃÄÄÄsl_SI
+    ³       ³           ÃÄÄÄsr_Cyrl_RS
+    ³       ³           ÃÄÄÄsr_Latn_RS
+    ³       ³           ÃÄÄÄsr_RS
+    ³       ³           ÃÄÄÄsv_SE
+    ³       ³           ÃÄÄÄth_TH
+    ³       ³           ÃÄÄÄtr_TR
+    ³       ³           ÃÄÄÄuk_UA
+    ³       ³           ÃÄÄÄvi_VN
+    ³       ³           ÃÄÄÄzh_CN
+    ³       ³           ÀÄÄÄzh_TW
+    ³       ÃÄÄÄtest
+    ³       ³   ÃÄÄÄFaker
+    ³       ³   ³   ÃÄÄÄCalculator
+    ³       ³   ³   ÃÄÄÄCore
+    ³       ³   ³   ÃÄÄÄExtension
+    ³       ³   ³   ÃÄÄÄORM
+    ³       ³   ³   ³   ÀÄÄÄDoctrine
+    ³       ³   ³   ÀÄÄÄProvider
+    ³       ³   ³       ÃÄÄÄar_EG
+    ³       ³   ³       ÃÄÄÄar_JO
+    ³       ³   ³       ÃÄÄÄar_SA
+    ³       ³   ³       ÃÄÄÄbg_BG
+    ³       ³   ³       ÃÄÄÄbn_BD
+    ³       ³   ³       ÃÄÄÄcs_CZ
+    ³       ³   ³       ÃÄÄÄda_DK
+    ³       ³   ³       ÃÄÄÄde_AT
+    ³       ³   ³       ÃÄÄÄde_CH
+    ³       ³   ³       ÃÄÄÄde_DE
+    ³       ³   ³       ÃÄÄÄel_GR
+    ³       ³   ³       ÃÄÄÄen_AU
+    ³       ³   ³       ÃÄÄÄen_CA
+    ³       ³   ³       ÃÄÄÄen_GB
+    ³       ³   ³       ÃÄÄÄen_IN
+    ³       ³   ³       ÃÄÄÄen_NG
+    ³       ³   ³       ÃÄÄÄen_NZ
+    ³       ³   ³       ÃÄÄÄen_PH
+    ³       ³   ³       ÃÄÄÄen_SG
+    ³       ³   ³       ÃÄÄÄen_UG
+    ³       ³   ³       ÃÄÄÄen_US
+    ³       ³   ³       ÃÄÄÄen_ZA
+    ³       ³   ³       ÃÄÄÄes_ES
+    ³       ³   ³       ÃÄÄÄes_PE
+    ³       ³   ³       ÃÄÄÄes_VE
+    ³       ³   ³       ÃÄÄÄfa_IR
+    ³       ³   ³       ÃÄÄÄfi_FI
+    ³       ³   ³       ÃÄÄÄfr_BE
+    ³       ³   ³       ÃÄÄÄfr_CH
+    ³       ³   ³       ÃÄÄÄfr_FR
+    ³       ³   ³       ÃÄÄÄhu_HU
+    ³       ³   ³       ÃÄÄÄid_ID
+    ³       ³   ³       ÃÄÄÄit_CH
+    ³       ³   ³       ÃÄÄÄit_IT
+    ³       ³   ³       ÃÄÄÄja_JP
+    ³       ³   ³       ÃÄÄÄka_GE
+    ³       ³   ³       ÃÄÄÄkk_KZ
+    ³       ³   ³       ÃÄÄÄko_KR
+    ³       ³   ³       ÃÄÄÄlt_LT
+    ³       ³   ³       ÃÄÄÄlv_LV
+    ³       ³   ³       ÃÄÄÄmn_MN
+    ³       ³   ³       ÃÄÄÄms_MY
+    ³       ³   ³       ÃÄÄÄnb_NO
+    ³       ³   ³       ÃÄÄÄne_NP
+    ³       ³   ³       ÃÄÄÄnl_BE
+    ³       ³   ³       ÃÄÄÄnl_NL
+    ³       ³   ³       ÃÄÄÄpl_PL
+    ³       ³   ³       ÃÄÄÄpt_BR
+    ³       ³   ³       ÃÄÄÄpt_PT
+    ³       ³   ³       ÃÄÄÄro_RO
+    ³       ³   ³       ÃÄÄÄru_RU
+    ³       ³   ³       ÃÄÄÄsv_SE
+    ³       ³   ³       ÃÄÄÄtr_TR
+    ³       ³   ³       ÃÄÄÄuk_UA
+    ³       ³   ³       ÀÄÄÄzh_TW
+    ³       ³   ÀÄÄÄFixture
+    ³       ³       ÃÄÄÄContainer
+    ³       ³       ÃÄÄÄEnum
+    ³       ³       ÀÄÄÄProvider
+    ³       ÀÄÄÄvendor-bin
+    ³           ÃÄÄÄphp-cs-fixer
+    ³           ÃÄÄÄphpstan
+    ³           ÃÄÄÄpsalm
+    ³           ÀÄÄÄrector
+    ÃÄÄÄfidry
+    ³   ÀÄÄÄcpu-core-counter
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄ.phive
+    ³       ÃÄÄÄbin
+    ³       ÃÄÄÄe2e
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄExecutor
+    ³       ³   ÀÄÄÄFinder
+    ³       ÃÄÄÄstubs
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄAutoReview
+    ³           ÃÄÄÄExecutor
+    ³           ÀÄÄÄFinder
+    ÃÄÄÄfilp
+    ³   ÀÄÄÄwhoops
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄdocs
+    ³       ÃÄÄÄexamples
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄWhoops
+    ³       ³       ÃÄÄÄException
+    ³       ³       ÃÄÄÄHandler
+    ³       ³       ÃÄÄÄInspector
+    ³       ³       ÃÄÄÄResources
+    ³       ³       ³   ÃÄÄÄcss
+    ³       ³       ³   ÃÄÄÄjs
+    ³       ³       ³   ÀÄÄÄviews
+    ³       ³       ÀÄÄÄUtil
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄfixtures
+    ³           ÀÄÄÄWhoops
+    ³               ÃÄÄÄException
+    ³               ÃÄÄÄHandler
+    ³               ÀÄÄÄUtil
+    ÃÄÄÄfruitcake
+    ³   ÀÄÄÄphp-cors
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄExceptions
+    ³       ÀÄÄÄtests
+    ÃÄÄÄgraham-campbell
+    ³   ÀÄÄÄresult-type
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ÀÄÄÄtests
+    ÃÄÄÄguzzlehttp
+    ³   ÃÄÄÄguzzle
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ³   ÀÄÄÄ_static
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄCookie
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÀÄÄÄHandler
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄCookie
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÀÄÄÄHandler
+    ³   ³   ³       ÀÄÄÄNetwork
+    ³   ³   ÀÄÄÄvendor-bin
+    ³   ³       ÃÄÄÄphp-cs-fixer
+    ³   ³       ÃÄÄÄphpstan
+    ³   ³       ÃÄÄÄpsalm
+    ³   ³       ÀÄÄÄupdate
+    ³   ÃÄÄÄpromises
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ÀÄÄÄvendor-bin
+    ³   ³       ÃÄÄÄphp-cs-fixer
+    ³   ³       ÃÄÄÄphpstan
+    ³   ³       ÀÄÄÄpsalm
+    ³   ÃÄÄÄpsr7
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄException
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÀÄÄÄIntegration
+    ³   ³   ÀÄÄÄvendor-bin
+    ³   ³       ÃÄÄÄphp-cs-fixer
+    ³   ³       ÃÄÄÄphpstan
+    ³   ³       ÀÄÄÄpsalm
+    ³   ÀÄÄÄuri-template
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ÃÄÄÄtests
+    ³       ÀÄÄÄvendor-bin
+    ³           ÃÄÄÄphp-cs-fixer
+    ³           ÃÄÄÄphpstan
+    ³           ÀÄÄÄpsalm
+    ÃÄÄÄhamcrest
+    ³   ÀÄÄÄhamcrest-php
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄgenerator
+    ³       ³   ÀÄÄÄparts
+    ³       ÃÄÄÄhamcrest
+    ³       ³   ÀÄÄÄHamcrest
+    ³       ³       ÃÄÄÄArrays
+    ³       ³       ÃÄÄÄCollection
+    ³       ³       ÃÄÄÄCore
+    ³       ³       ÃÄÄÄInternal
+    ³       ³       ÃÄÄÄNumber
+    ³       ³       ÃÄÄÄText
+    ³       ³       ÃÄÄÄType
+    ³       ³       ÀÄÄÄXml
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄHamcrest
+    ³               ÃÄÄÄArray
+    ³               ÃÄÄÄCollection
+    ³               ÃÄÄÄCore
+    ³               ÃÄÄÄNumber
+    ³               ÃÄÄÄText
+    ³               ÃÄÄÄType
+    ³               ÀÄÄÄXml
+    ÃÄÄÄjean85
+    ³   ÀÄÄÄpretty-package-versions
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄException
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄFunctional
+    ³           ÀÄÄÄUnit
+    ÃÄÄÄlaravel
+    ³   ÃÄÄÄbreeze
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄart
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄConsole
+    ³   ³   ÀÄÄÄstubs
+    ³   ³       ÃÄÄÄapi
+    ³   ³       ³   ÃÄÄÄapp
+    ³   ³       ³   ³   ÃÄÄÄHttp
+    ³   ³       ³   ³   ³   ÃÄÄÄControllers
+    ³   ³       ³   ³   ³   ³   ÀÄÄÄAuth
+    ³   ³       ³   ³   ³   ÃÄÄÄMiddleware
+    ³   ³       ³   ³   ³   ÀÄÄÄRequests
+    ³   ³       ³   ³   ³       ÀÄÄÄAuth
+    ³   ³       ³   ³   ÀÄÄÄProviders
+    ³   ³       ³   ÃÄÄÄconfig
+    ³   ³       ³   ÃÄÄÄpest-tests
+    ³   ³       ³   ³   ÃÄÄÄFeature
+    ³   ³       ³   ³   ³   ÀÄÄÄAuth
+    ³   ³       ³   ³   ÀÄÄÄUnit
+    ³   ³       ³   ÃÄÄÄroutes
+    ³   ³       ³   ÀÄÄÄtests
+    ³   ³       ³       ÀÄÄÄFeature
+    ³   ³       ³           ÀÄÄÄAuth
+    ³   ³       ÃÄÄÄdefault
+    ³   ³       ³   ÃÄÄÄapp
+    ³   ³       ³   ³   ÃÄÄÄHttp
+    ³   ³       ³   ³   ³   ÃÄÄÄControllers
+    ³   ³       ³   ³   ³   ³   ÀÄÄÄAuth
+    ³   ³       ³   ³   ³   ÀÄÄÄRequests
+    ³   ³       ³   ³   ³       ÀÄÄÄAuth
+    ³   ³       ³   ³   ÀÄÄÄView
+    ³   ³       ³   ³       ÀÄÄÄComponents
+    ³   ³       ³   ÃÄÄÄpest-tests
+    ³   ³       ³   ³   ÃÄÄÄFeature
+    ³   ³       ³   ³   ³   ÀÄÄÄAuth
+    ³   ³       ³   ³   ÀÄÄÄUnit
+    ³   ³       ³   ÃÄÄÄresources
+    ³   ³       ³   ³   ÃÄÄÄcss
+    ³   ³       ³   ³   ÃÄÄÄjs
+    ³   ³       ³   ³   ÀÄÄÄviews
+    ³   ³       ³   ³       ÃÄÄÄauth
+    ³   ³       ³   ³       ÃÄÄÄcomponents
+    ³   ³       ³   ³       ÃÄÄÄlayouts
+    ³   ³       ³   ³       ÀÄÄÄprofile
+    ³   ³       ³   ³           ÀÄÄÄpartials
+    ³   ³       ³   ÃÄÄÄroutes
+    ³   ³       ³   ÀÄÄÄtests
+    ³   ³       ³       ÀÄÄÄFeature
+    ³   ³       ³           ÀÄÄÄAuth
+    ³   ³       ÃÄÄÄinertia-common
+    ³   ³       ³   ÃÄÄÄapp
+    ³   ³       ³   ³   ÃÄÄÄHttp
+    ³   ³       ³   ³   ³   ÃÄÄÄControllers
+    ³   ³       ³   ³   ³   ³   ÀÄÄÄAuth
+    ³   ³       ³   ³   ³   ÀÄÄÄMiddleware
+    ³   ³       ³   ³   ÀÄÄÄProviders
+    ³   ³       ³   ÃÄÄÄpest-tests
+    ³   ³       ³   ³   ÀÄÄÄFeature
+    ³   ³       ³   ³       ÀÄÄÄAuth
+    ³   ³       ³   ÃÄÄÄroutes
+    ³   ³       ³   ÀÄÄÄtests
+    ³   ³       ³       ÀÄÄÄFeature
+    ³   ³       ³           ÀÄÄÄAuth
+    ³   ³       ÃÄÄÄinertia-react
+    ³   ³       ³   ÀÄÄÄresources
+    ³   ³       ³       ÃÄÄÄjs
+    ³   ³       ³       ³   ÃÄÄÄComponents
+    ³   ³       ³       ³   ÃÄÄÄLayouts
+    ³   ³       ³       ³   ÀÄÄÄPages
+    ³   ³       ³       ³       ÃÄÄÄAuth
+    ³   ³       ³       ³       ÀÄÄÄProfile
+    ³   ³       ³       ³           ÀÄÄÄPartials
+    ³   ³       ³       ÀÄÄÄviews
+    ³   ³       ÃÄÄÄinertia-react-ts
+    ³   ³       ³   ÀÄÄÄresources
+    ³   ³       ³       ÀÄÄÄjs
+    ³   ³       ³           ÃÄÄÄComponents
+    ³   ³       ³           ÃÄÄÄLayouts
+    ³   ³       ³           ÃÄÄÄPages
+    ³   ³       ³           ³   ÃÄÄÄAuth
+    ³   ³       ³           ³   ÀÄÄÄProfile
+    ³   ³       ³           ³       ÀÄÄÄPartials
+    ³   ³       ³           ÀÄÄÄtypes
+    ³   ³       ÃÄÄÄinertia-vue
+    ³   ³       ³   ÀÄÄÄresources
+    ³   ³       ³       ÃÄÄÄjs
+    ³   ³       ³       ³   ÃÄÄÄComponents
+    ³   ³       ³       ³   ÃÄÄÄLayouts
+    ³   ³       ³       ³   ÀÄÄÄPages
+    ³   ³       ³       ³       ÃÄÄÄAuth
+    ³   ³       ³       ³       ÀÄÄÄProfile
+    ³   ³       ³       ³           ÀÄÄÄPartials
+    ³   ³       ³       ÀÄÄÄviews
+    ³   ³       ÃÄÄÄinertia-vue-ts
+    ³   ³       ³   ÀÄÄÄresources
+    ³   ³       ³       ÀÄÄÄjs
+    ³   ³       ³           ÃÄÄÄComponents
+    ³   ³       ³           ÃÄÄÄLayouts
+    ³   ³       ³           ÃÄÄÄPages
+    ³   ³       ³           ³   ÃÄÄÄAuth
+    ³   ³       ³           ³   ÀÄÄÄProfile
+    ³   ³       ³           ³       ÀÄÄÄPartials
+    ³   ³       ³           ÀÄÄÄtypes
+    ³   ³       ÃÄÄÄlivewire
+    ³   ³       ³   ÀÄÄÄresources
+    ³   ³       ³       ÀÄÄÄviews
+    ³   ³       ³           ÀÄÄÄlivewire
+    ³   ³       ³               ÃÄÄÄlayout
+    ³   ³       ³               ÃÄÄÄpages
+    ³   ³       ³               ³   ÀÄÄÄauth
+    ³   ³       ³               ÃÄÄÄprofile
+    ³   ³       ³               ÀÄÄÄwelcome
+    ³   ³       ÃÄÄÄlivewire-common
+    ³   ³       ³   ÃÄÄÄapp
+    ³   ³       ³   ³   ÀÄÄÄLivewire
+    ³   ³       ³   ³       ÃÄÄÄActions
+    ³   ³       ³   ³       ÀÄÄÄForms
+    ³   ³       ³   ÃÄÄÄpest-tests
+    ³   ³       ³   ³   ÃÄÄÄFeature
+    ³   ³       ³   ³   ³   ÀÄÄÄAuth
+    ³   ³       ³   ³   ÀÄÄÄUnit
+    ³   ³       ³   ÃÄÄÄresources
+    ³   ³       ³   ³   ÀÄÄÄviews
+    ³   ³       ³   ³       ÃÄÄÄcomponents
+    ³   ³       ³   ³       ÀÄÄÄlayouts
+    ³   ³       ³   ÃÄÄÄroutes
+    ³   ³       ³   ÀÄÄÄtests
+    ³   ³       ³       ÀÄÄÄFeature
+    ³   ³       ³           ÀÄÄÄAuth
+    ³   ³       ÀÄÄÄlivewire-functional
+    ³   ³           ÀÄÄÄresources
+    ³   ³               ÀÄÄÄviews
+    ³   ³                   ÀÄÄÄlivewire
+    ³   ³                       ÃÄÄÄlayout
+    ³   ³                       ÃÄÄÄpages
+    ³   ³                       ³   ÀÄÄÄauth
+    ³   ³                       ÃÄÄÄprofile
+    ³   ³                       ÀÄÄÄwelcome
+    ³   ÃÄÄÄframework
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄbin
+    ³   ³   ÃÄÄÄconfig
+    ³   ³   ÃÄÄÄconfig-stubs
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄIlluminate
+    ³   ³   ³       ÃÄÄÄAuth
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄAccess
+    ³   ³   ³       ³   ³   ÀÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ³       ÀÄÄÄmake
+    ³   ³   ³       ³   ³           ÀÄÄÄviews
+    ³   ³   ³       ³   ³               ÀÄÄÄlayouts
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄListeners
+    ³   ³   ³       ³   ÃÄÄÄMiddleware
+    ³   ³   ³       ³   ÃÄÄÄNotifications
+    ³   ³   ³       ³   ÀÄÄÄPasswords
+    ³   ³   ³       ÃÄÄÄBroadcasting
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄBroadcasters
+    ³   ³   ³       ÃÄÄÄBus
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄEvents
+    ³   ³   ³       ÃÄÄÄCache
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÀÄÄÄRateLimiting
+    ³   ³   ³       ÃÄÄÄCollections
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄTraits
+    ³   ³   ³       ÃÄÄÄConcurrency
+    ³   ³   ³       ³   ÀÄÄÄConsole
+    ³   ³   ³       ÃÄÄÄConditionable
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄTraits
+    ³   ³   ³       ÃÄÄÄConfig
+    ³   ³   ³       ³   ÀÄÄÄ.github
+    ³   ³   ³       ³       ÀÄÄÄworkflows
+    ³   ³   ³       ÃÄÄÄConsole
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ÃÄÄÄContracts
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄresources
+    ³   ³   ³       ³   ³   ÀÄÄÄviews
+    ³   ³   ³       ³   ³       ÀÄÄÄcomponents
+    ³   ³   ³       ³   ÃÄÄÄScheduling
+    ³   ³   ³       ³   ÀÄÄÄView
+    ³   ³   ³       ³       ÀÄÄÄComponents
+    ³   ³   ³       ³           ÀÄÄÄMutators
+    ³   ³   ³       ÃÄÄÄContainer
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄAttributes
+    ³   ³   ³       ÃÄÄÄContracts
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄAuth
+    ³   ³   ³       ³   ³   ÃÄÄÄAccess
+    ³   ³   ³       ³   ³   ÀÄÄÄMiddleware
+    ³   ³   ³       ³   ÃÄÄÄBroadcasting
+    ³   ³   ³       ³   ÃÄÄÄBus
+    ³   ³   ³       ³   ÃÄÄÄCache
+    ³   ³   ³       ³   ÃÄÄÄConcurrency
+    ³   ³   ³       ³   ÃÄÄÄConfig
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ÃÄÄÄContainer
+    ³   ³   ³       ³   ÃÄÄÄCookie
+    ³   ³   ³       ³   ÃÄÄÄDatabase
+    ³   ³   ³       ³   ³   ÃÄÄÄEloquent
+    ³   ³   ³       ³   ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ³   ÀÄÄÄQuery
+    ³   ³   ³       ³   ÃÄÄÄDebug
+    ³   ³   ³       ³   ÃÄÄÄEncryption
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄFilesystem
+    ³   ³   ³       ³   ÃÄÄÄFoundation
+    ³   ³   ³       ³   ÃÄÄÄHashing
+    ³   ³   ³       ³   ÃÄÄÄHttp
+    ³   ³   ³       ³   ÃÄÄÄJsonSchema
+    ³   ³   ³       ³   ÃÄÄÄLog
+    ³   ³   ³       ³   ÃÄÄÄMail
+    ³   ³   ³       ³   ÃÄÄÄNotifications
+    ³   ³   ³       ³   ÃÄÄÄPagination
+    ³   ³   ³       ³   ÃÄÄÄPipeline
+    ³   ³   ³       ³   ÃÄÄÄProcess
+    ³   ³   ³       ³   ÃÄÄÄQueue
+    ³   ³   ³       ³   ÃÄÄÄRedis
+    ³   ³   ³       ³   ÃÄÄÄRouting
+    ³   ³   ³       ³   ÃÄÄÄSession
+    ³   ³   ³       ³   ³   ÀÄÄÄMiddleware
+    ³   ³   ³       ³   ÃÄÄÄSupport
+    ³   ³   ³       ³   ÃÄÄÄTranslation
+    ³   ³   ³       ³   ÃÄÄÄValidation
+    ³   ³   ³       ³   ÀÄÄÄView
+    ³   ³   ³       ÃÄÄÄCookie
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄMiddleware
+    ³   ³   ³       ÃÄÄÄDatabase
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄCapsule
+    ³   ³   ³       ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ÃÄÄÄConnectors
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÃÄÄÄFactories
+    ³   ³   ³       ³   ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ³   ÃÄÄÄMigrations
+    ³   ³   ³       ³   ³   ÀÄÄÄSeeds
+    ³   ³   ³       ³   ³       ÀÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄEloquent
+    ³   ³   ³       ³   ³   ÃÄÄÄAttributes
+    ³   ³   ³       ³   ³   ÃÄÄÄCasts
+    ³   ³   ³       ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ³   ÃÄÄÄFactories
+    ³   ³   ³       ³   ³   ÀÄÄÄRelations
+    ³   ³   ³       ³   ³       ÀÄÄÄConcerns
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄMigrations
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄQuery
+    ³   ³   ³       ³   ³   ÃÄÄÄGrammars
+    ³   ³   ³       ³   ³   ÀÄÄÄProcessors
+    ³   ³   ³       ³   ÀÄÄÄSchema
+    ³   ³   ³       ³       ÀÄÄÄGrammars
+    ³   ³   ³       ÃÄÄÄEncryption
+    ³   ³   ³       ³   ÀÄÄÄ.github
+    ³   ³   ³       ³       ÀÄÄÄworkflows
+    ³   ³   ³       ÃÄÄÄEvents
+    ³   ³   ³       ³   ÀÄÄÄ.github
+    ³   ³   ³       ³       ÀÄÄÄworkflows
+    ³   ³   ³       ÃÄÄÄFilesystem
+    ³   ³   ³       ³   ÀÄÄÄ.github
+    ³   ³   ³       ³       ÀÄÄÄworkflows
+    ³   ³   ³       ÃÄÄÄFoundation
+    ³   ³   ³       ³   ÃÄÄÄAuth
+    ³   ³   ³       ³   ³   ÀÄÄÄAccess
+    ³   ³   ³       ³   ÃÄÄÄBootstrap
+    ³   ³   ³       ³   ÃÄÄÄBus
+    ³   ³   ³       ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ÃÄÄÄConfiguration
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄExceptions
+    ³   ³   ³       ³   ³   ÃÄÄÄRenderer
+    ³   ³   ³       ³   ³   ³   ÀÄÄÄMappers
+    ³   ³   ³       ³   ³   ÃÄÄÄviews
+    ³   ³   ³       ³   ³   ÀÄÄÄWhoops
+    ³   ³   ³       ³   ÃÄÄÄHttp
+    ³   ³   ³       ³   ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ³   ÀÄÄÄMiddleware
+    ³   ³   ³       ³   ³       ÀÄÄÄConcerns
+    ³   ³   ³       ³   ÃÄÄÄProviders
+    ³   ³   ³       ³   ÃÄÄÄQueue
+    ³   ³   ³       ³   ÃÄÄÄresources
+    ³   ³   ³       ³   ³   ÀÄÄÄexceptions
+    ³   ³   ³       ³   ³       ÀÄÄÄrenderer
+    ³   ³   ³       ³   ³           ÃÄÄÄcomponents
+    ³   ³   ³       ³   ³           ³   ÀÄÄÄicons
+    ³   ³   ³       ³   ³           ÀÄÄÄdist
+    ³   ³   ³       ³   ÃÄÄÄRouting
+    ³   ³   ³       ³   ÃÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄSupport
+    ³   ³   ³       ³   ³   ÀÄÄÄProviders
+    ³   ³   ³       ³   ÃÄÄÄTesting
+    ³   ³   ³       ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ³   ÀÄÄÄTraits
+    ³   ³   ³       ³   ÀÄÄÄValidation
+    ³   ³   ³       ÃÄÄÄHashing
+    ³   ³   ³       ³   ÀÄÄÄ.github
+    ³   ³   ³       ³       ÀÄÄÄworkflows
+    ³   ³   ³       ÃÄÄÄHttp
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄClient
+    ³   ³   ³       ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ³   ÀÄÄÄPromises
+    ³   ³   ³       ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ÃÄÄÄExceptions
+    ³   ³   ³       ³   ÃÄÄÄMiddleware
+    ³   ³   ³       ³   ÃÄÄÄResources
+    ³   ³   ³       ³   ³   ÃÄÄÄJson
+    ³   ³   ³       ³   ³   ÀÄÄÄJsonApi
+    ³   ³   ³       ³   ³       ÃÄÄÄConcerns
+    ³   ³   ³       ³   ³       ÀÄÄÄExceptions
+    ³   ³   ³       ³   ÀÄÄÄTesting
+    ³   ³   ³       ÃÄÄÄJsonSchema
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄTypes
+    ³   ³   ³       ÃÄÄÄLog
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄContext
+    ³   ³   ³       ³   ³   ÀÄÄÄEvents
+    ³   ³   ³       ³   ÀÄÄÄEvents
+    ³   ³   ³       ÃÄÄÄMacroable
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄTraits
+    ³   ³   ³       ÃÄÄÄMail
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄMailables
+    ³   ³   ³       ³   ÃÄÄÄresources
+    ³   ³   ³       ³   ³   ÀÄÄÄviews
+    ³   ³   ³       ³   ³       ÃÄÄÄhtml
+    ³   ³   ³       ³   ³       ³   ÀÄÄÄthemes
+    ³   ³   ³       ³   ³       ÀÄÄÄtext
+    ³   ³   ³       ³   ÀÄÄÄTransport
+    ³   ³   ³       ÃÄÄÄNotifications
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄChannels
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄMessages
+    ³   ³   ³       ³   ÀÄÄÄresources
+    ³   ³   ³       ³       ÀÄÄÄviews
+    ³   ³   ³       ÃÄÄÄPagination
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄresources
+    ³   ³   ³       ³       ÀÄÄÄviews
+    ³   ³   ³       ÃÄÄÄPipeline
+    ³   ³   ³       ³   ÀÄÄÄ.github
+    ³   ³   ³       ³       ÀÄÄÄworkflows
+    ³   ³   ³       ÃÄÄÄProcess
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄExceptions
+    ³   ³   ³       ÃÄÄÄQueue
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄAttributes
+    ³   ³   ³       ³   ÃÄÄÄCapsule
+    ³   ³   ³       ³   ÃÄÄÄConnectors
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄFailed
+    ³   ³   ³       ³   ÃÄÄÄJobs
+    ³   ³   ³       ³   ÀÄÄÄMiddleware
+    ³   ³   ³       ÃÄÄÄRedis
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄConnections
+    ³   ³   ³       ³   ÃÄÄÄConnectors
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÀÄÄÄLimiters
+    ³   ³   ³       ÃÄÄÄReflection
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworflows
+    ³   ³   ³       ³   ÀÄÄÄTraits
+    ³   ³   ³       ÃÄÄÄRouting
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ÃÄÄÄContracts
+    ³   ³   ³       ³   ÃÄÄÄControllers
+    ³   ³   ³       ³   ÃÄÄÄEvents
+    ³   ³   ³       ³   ÃÄÄÄExceptions
+    ³   ³   ³       ³   ÃÄÄÄMatching
+    ³   ³   ³       ³   ÀÄÄÄMiddleware
+    ³   ³   ³       ÃÄÄÄSession
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄConsole
+    ³   ³   ³       ³   ³   ÀÄÄÄstubs
+    ³   ³   ³       ³   ÀÄÄÄMiddleware
+    ³   ³   ³       ÃÄÄÄSupport
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄDefer
+    ³   ³   ³       ³   ÃÄÄÄExceptions
+    ³   ³   ³       ³   ÃÄÄÄFacades
+    ³   ³   ³       ³   ÃÄÄÄTesting
+    ³   ³   ³       ³   ³   ÀÄÄÄFakes
+    ³   ³   ³       ³   ÀÄÄÄTraits
+    ³   ³   ³       ÃÄÄÄTesting
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ÃÄÄÄConstraints
+    ³   ³   ³       ³   ÃÄÄÄExceptions
+    ³   ³   ³       ³   ÀÄÄÄFluent
+    ³   ³   ³       ³       ÀÄÄÄConcerns
+    ³   ³   ³       ÃÄÄÄTranslation
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÀÄÄÄlang
+    ³   ³   ³       ³       ÀÄÄÄen
+    ³   ³   ³       ÃÄÄÄValidation
+    ³   ³   ³       ³   ÃÄÄÄ.github
+    ³   ³   ³       ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ³   ÃÄÄÄConcerns
+    ³   ³   ³       ³   ÀÄÄÄRules
+    ³   ³   ³       ÀÄÄÄView
+    ³   ³   ³           ÃÄÄÄ.github
+    ³   ³   ³           ³   ÀÄÄÄworkflows
+    ³   ³   ³           ÃÄÄÄCompilers
+    ³   ³   ³           ³   ÀÄÄÄConcerns
+    ³   ³   ³           ÃÄÄÄConcerns
+    ³   ³   ³           ÃÄÄÄEngines
+    ³   ³   ³           ÀÄÄÄMiddleware
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄAuth
+    ³   ³   ³   ÃÄÄÄBroadcasting
+    ³   ³   ³   ÃÄÄÄBus
+    ³   ³   ³   ÃÄÄÄCache
+    ³   ³   ³   ÃÄÄÄConditionable
+    ³   ³   ³   ÃÄÄÄConfig
+    ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ÃÄÄÄScheduling
+    ³   ³   ³   ³   ÀÄÄÄView
+    ³   ³   ³   ÃÄÄÄContainer
+    ³   ³   ³   ÃÄÄÄCookie
+    ³   ³   ³   ³   ÀÄÄÄMiddleware
+    ³   ³   ³   ÃÄÄÄDatabase
+    ³   ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ³   ÃÄÄÄEnums
+    ³   ³   ³   ³   ³   ÃÄÄÄFactories
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄMoney
+    ³   ³   ³   ³   ³   ÃÄÄÄModels
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄMoney
+    ³   ³   ³   ³   ³   ÀÄÄÄResources
+    ³   ³   ³   ³   ÃÄÄÄmigrations
+    ³   ³   ³   ³   ³   ÃÄÄÄconnection_configured
+    ³   ³   ³   ³   ³   ÃÄÄÄmulti_path
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄapp
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄvendor
+    ³   ³   ³   ³   ³   ÃÄÄÄone
+    ³   ³   ³   ³   ³   ÃÄÄÄshould_run
+    ³   ³   ³   ³   ³   ÀÄÄÄtwo
+    ³   ³   ³   ³   ÃÄÄÄPruning
+    ³   ³   ³   ³   ³   ÀÄÄÄModels
+    ³   ³   ³   ³   ÀÄÄÄstubs
+    ³   ³   ³   ÃÄÄÄEncryption
+    ³   ³   ³   ÃÄÄÄEvents
+    ³   ³   ³   ÃÄÄÄFilesystem
+    ³   ³   ³   ÃÄÄÄFoundation
+    ³   ³   ³   ³   ÃÄÄÄBootstrap
+    ³   ³   ³   ³   ÃÄÄÄConfiguration
+    ³   ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ³   ³   ÀÄÄÄRenderer
+    ³   ³   ³   ³   ÃÄÄÄfixtures
+    ³   ³   ³   ³   ³   ÃÄÄÄconfig
+    ³   ³   ³   ³   ³   ÃÄÄÄlaravel1
+    ³   ³   ³   ³   ³   ÃÄÄÄlaravel2
+    ³   ³   ³   ³   ³   ÀÄÄÄvendor
+    ³   ³   ³   ³   ³       ÀÄÄÄcomposer
+    ³   ³   ³   ³   ÃÄÄÄHttp
+    ³   ³   ³   ³   ³   ÀÄÄÄMiddleware
+    ³   ³   ³   ³   ÀÄÄÄTesting
+    ³   ³   ³   ³       ÃÄÄÄConcerns
+    ³   ³   ³   ³       ÀÄÄÄTraits
+    ³   ³   ³   ÃÄÄÄHashing
+    ³   ³   ³   ÃÄÄÄHttp
+    ³   ³   ³   ³   ÃÄÄÄfixtures
+    ³   ³   ³   ³   ÃÄÄÄMiddleware
+    ³   ³   ³   ³   ÀÄÄÄResources
+    ³   ³   ³   ³       ÀÄÄÄJsonApi
+    ³   ³   ³   ÃÄÄÄIntegration
+    ³   ³   ³   ³   ÃÄÄÄAuth
+    ³   ³   ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄModels
+    ³   ³   ³   ³   ³   ³   ³   ÃÄÄÄNested
+    ³   ³   ³   ³   ³   ³   ³   ÀÄÄÄPolicies
+    ³   ³   ³   ³   ³   ³   ³       ÀÄÄÄNested
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄPolicies
+    ³   ³   ³   ³   ³   ³       ÀÄÄÄNested
+    ³   ³   ³   ³   ³   ÀÄÄÄMiddleware
+    ³   ³   ³   ³   ÃÄÄÄBroadcasting
+    ³   ³   ³   ³   ÃÄÄÄCache
+    ³   ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³   ÃÄÄÄConcurrency
+    ³   ³   ³   ³   ³   ÀÄÄÄConsole
+    ³   ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ³   ÃÄÄÄEvents
+    ³   ³   ³   ³   ³   ÀÄÄÄScheduling
+    ³   ³   ³   ³   ÃÄÄÄContainer
+    ³   ³   ³   ³   ÃÄÄÄCookie
+    ³   ³   ³   ³   ÃÄÄÄDatabase
+    ³   ³   ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ³   ÃÄÄÄMariaDb
+    ³   ³   ³   ³   ³   ÃÄÄÄMySql
+    ³   ³   ³   ³   ³   ÃÄÄÄPostgres
+    ³   ³   ³   ³   ³   ÃÄÄÄQueue
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³   ³   ÃÄÄÄSqlite
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄConsole
+    ³   ³   ³   ³   ³   ³       ÀÄÄÄstubs
+    ³   ³   ³   ³   ³   ÃÄÄÄSqlServer
+    ³   ³   ³   ³   ³   ÀÄÄÄstubs
+    ³   ³   ³   ³   ÃÄÄÄEncryption
+    ³   ³   ³   ³   ÃÄÄÄEvents
+    ³   ³   ³   ³   ÃÄÄÄFilesystem
+    ³   ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³   ÃÄÄÄFoundation
+    ³   ³   ³   ³   ³   ÃÄÄÄConfiguration
+    ³   ³   ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄEventDiscovery
+    ³   ³   ³   ³   ³   ³   ³   ÃÄÄÄEvents
+    ³   ³   ³   ³   ³   ³   ³   ÃÄÄÄListeners
+    ³   ³   ³   ³   ³   ³   ³   ÀÄÄÄUnionListeners
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄLogs
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄMalformedErrorViews
+    ³   ³   ³   ³   ³   ³   ³   ÀÄÄÄerrors
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄProviders
+    ³   ³   ³   ³   ³   ÃÄÄÄSupport
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄProviders
+    ³   ³   ³   ³   ³   ³       ÀÄÄÄfixtures
+    ³   ³   ³   ³   ³   ÀÄÄÄTesting
+    ³   ³   ³   ³   ³       ÀÄÄÄConcerns
+    ³   ³   ³   ³   ÃÄÄÄGenerators
+    ³   ³   ³   ³   ÃÄÄÄHttp
+    ³   ³   ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ³   ÃÄÄÄMiddleware
+    ³   ³   ³   ³   ³   ÀÄÄÄResources
+    ³   ³   ³   ³   ³       ÃÄÄÄJson
+    ³   ³   ³   ³   ³       ÀÄÄÄJsonApi
+    ³   ³   ³   ³   ³           ÀÄÄÄFixtures
+    ³   ³   ³   ³   ÃÄÄÄLog
+    ³   ³   ³   ³   ÃÄÄÄMail
+    ³   ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³   ³       ÀÄÄÄmail
+    ³   ³   ³   ³   ÃÄÄÄMigration
+    ³   ³   ³   ³   ³   ÃÄÄÄfixtures
+    ³   ³   ³   ³   ³   ÀÄÄÄpretending
+    ³   ³   ³   ³   ÃÄÄÄNotifications
+    ³   ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³   ³       ÀÄÄÄmail
+    ³   ³   ³   ³   ÃÄÄÄQueue
+    ³   ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³   ³       ÀÄÄÄJobs
+    ³   ³   ³   ³   ÃÄÄÄRedis
+    ³   ³   ³   ³   ÃÄÄÄRouting
+    ³   ³   ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄbootstrap
+    ³   ³   ³   ³   ³   ³   ³   ÀÄÄÄcache
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄcache
+    ³   ³   ³   ³   ³   ÀÄÄÄstubs
+    ³   ³   ³   ³   ³       ÀÄÄÄserializable-closure-v1
+    ³   ³   ³   ³   ÃÄÄÄSession
+    ³   ³   ³   ³   ÃÄÄÄSupport
+    ³   ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³   ÃÄÄÄTesting
+    ³   ³   ³   ³   ÃÄÄÄTranslation
+    ³   ³   ³   ³   ³   ÀÄÄÄlang
+    ³   ³   ³   ³   ³       ÃÄÄÄen
+    ³   ³   ³   ³   ³       ÀÄÄÄfr
+    ³   ³   ³   ³   ÃÄÄÄValidation
+    ³   ³   ³   ³   ³   ÀÄÄÄRules
+    ³   ³   ³   ³   ÀÄÄÄView
+    ³   ³   ³   ³       ÃÄÄÄanonymous-components-1
+    ³   ³   ³   ³       ÃÄÄÄanonymous-components-2
+    ³   ³   ³   ³       ³   ÀÄÄÄbuttons
+    ³   ³   ³   ³       ÃÄÄÄanonymous-components-templates
+    ³   ³   ³   ³       ÀÄÄÄtemplates
+    ³   ³   ³   ³           ÃÄÄÄcomponents
+    ³   ³   ³   ³           ÀÄÄÄpartials
+    ³   ³   ³   ÃÄÄÄJsonSchema
+    ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³       ÀÄÄÄEnums
+    ³   ³   ³   ÃÄÄÄLog
+    ³   ³   ³   ÃÄÄÄMail
+    ³   ³   ³   ÃÄÄÄNotifications
+    ³   ³   ³   ÃÄÄÄPagination
+    ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³       ÀÄÄÄModels
+    ³   ³   ³   ÃÄÄÄPipeline
+    ³   ³   ³   ÃÄÄÄProcess
+    ³   ³   ³   ÃÄÄÄQueue
+    ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ÃÄÄÄRedis
+    ³   ³   ³   ³   ÀÄÄÄConnections
+    ³   ³   ³   ÃÄÄÄRouting
+    ³   ³   ³   ³   ÀÄÄÄfixtures
+    ³   ³   ³   ÃÄÄÄSession
+    ³   ³   ³   ³   ÀÄÄÄMiddleware
+    ³   ³   ³   ÃÄÄÄSupport
+    ³   ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ÃÄÄÄTesting
+    ³   ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ÃÄÄÄFluent
+    ³   ³   ³   ³   ÀÄÄÄStubs
+    ³   ³   ³   ÃÄÄÄTranslation
+    ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ³       ÀÄÄÄEnums
+    ³   ³   ³   ÃÄÄÄValidation
+    ³   ³   ³   ³   ÀÄÄÄfixtures
+    ³   ³   ³   ÀÄÄÄView
+    ³   ³   ³       ÃÄÄÄBlade
+    ³   ³   ³       ÃÄÄÄConcerns
+    ³   ³   ³       ÀÄÄÄfixtures
+    ³   ³   ³           ÃÄÄÄnamespaced
+    ³   ³   ³           ÀÄÄÄnested
+    ³   ³   ÀÄÄÄtypes
+    ³   ³       ÃÄÄÄCache
+    ³   ³       ÃÄÄÄCollections
+    ³   ³       ÃÄÄÄContainer
+    ³   ³       ÃÄÄÄContracts
+    ³   ³       ³   ÃÄÄÄCache
+    ³   ³       ³   ÃÄÄÄContainer
+    ³   ³       ³   ÃÄÄÄFoundation
+    ³   ³       ³   ÀÄÄÄValidation
+    ³   ³       ÃÄÄÄDatabase
+    ³   ³       ³   ÃÄÄÄEloquent
+    ³   ³       ³   ³   ÃÄÄÄCasts
+    ³   ³       ³   ³   ÀÄÄÄFactories
+    ³   ³       ³   ÀÄÄÄQuery
+    ³   ³       ÃÄÄÄFoundation
+    ³   ³       ³   ÀÄÄÄConfiguration
+    ³   ³       ÃÄÄÄHttp
+    ³   ³       ³   ÀÄÄÄClient
+    ³   ³       ÃÄÄÄLog
+    ³   ³       ÃÄÄÄManagers
+    ³   ³       ÃÄÄÄNotifications
+    ³   ³       ÃÄÄÄPagination
+    ³   ³       ÃÄÄÄQueue
+    ³   ³       ³   ÀÄÄÄEvents
+    ³   ³       ÃÄÄÄSupport
+    ³   ³       ³   ÀÄÄÄFacades
+    ³   ³       ÀÄÄÄTesting
+    ³   ÃÄÄÄpail
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄart
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ÀÄÄÄCommands
+    ³   ³   ³   ÃÄÄÄContracts
+    ³   ³   ³   ÃÄÄÄGuards
+    ³   ³   ³   ÃÄÄÄPrinters
+    ³   ³   ³   ÀÄÄÄValueObjects
+    ³   ³   ³       ÀÄÄÄOrigin
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄFeatures
+    ³   ³       ³   ÀÄÄÄFilters
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ÀÄÄÄUnit
+    ³   ³           ÀÄÄÄOrigins
+    ³   ÃÄÄÄpint
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄapp
+    ³   ³   ³   ÃÄÄÄActions
+    ³   ³   ³   ÃÄÄÄCommands
+    ³   ³   ³   ÃÄÄÄContracts
+    ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ÃÄÄÄFactories
+    ³   ³   ³   ÃÄÄÄOutput
+    ³   ³   ³   ³   ÀÄÄÄConcerns
+    ³   ³   ³   ÃÄÄÄProviders
+    ³   ³   ³   ÃÄÄÄRepositories
+    ³   ³   ³   ÀÄÄÄValueObjects
+    ³   ³   ÃÄÄÄart
+    ³   ³   ÃÄÄÄbootstrap
+    ³   ³   ÃÄÄÄbuilds
+    ³   ³   ÃÄÄÄconfig
+    ³   ³   ÃÄÄÄoverrides
+    ³   ³   ³   ÀÄÄÄRunner
+    ³   ³   ³       ÀÄÄÄParallel
+    ³   ³   ÃÄÄÄresources
+    ³   ³   ³   ÃÄÄÄpresets
+    ³   ³   ³   ÀÄÄÄviews
+    ³   ³   ³       ÀÄÄÄissue
+    ³   ³   ÃÄÄÄstorage
+    ³   ³   ³   ÃÄÄÄapp
+    ³   ³   ³   ÀÄÄÄframework
+    ³   ³   ³       ÃÄÄÄcache
+    ³   ³   ³       ÀÄÄÄviews
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄFeature
+    ³   ³       ³   ÀÄÄÄFixers
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄextend
+    ³   ³       ³   ÃÄÄÄextend_recursive
+    ³   ³       ³   ÃÄÄÄfinder
+    ³   ³       ³   ÃÄÄÄfixers
+    ³   ³       ³   ÃÄÄÄno-config
+    ³   ³       ³   ÃÄÄÄpreset
+    ³   ³       ³   ÃÄÄÄrules
+    ³   ³       ³   ÃÄÄÄwith-fixable-issues
+    ³   ³       ³   ÃÄÄÄwith-invalid-configuration
+    ³   ³       ³   ÃÄÄÄwith-non-fixable-issues
+    ³   ³       ³   ÃÄÄÄwithout-issues
+    ³   ³       ³   ÀÄÄÄwithout-issues-laravel
+    ³   ³       ÀÄÄÄUnit
+    ³   ³           ÃÄÄÄFactories
+    ³   ³           ÃÄÄÄOutput
+    ³   ³           ÃÄÄÄRepositories
+    ³   ³           ÀÄÄÄValueObjects
+    ³   ÃÄÄÄprompts
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄart
+    ³   ³   ÃÄÄÄplayground
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ÃÄÄÄOutput
+    ³   ³   ³   ÃÄÄÄSupport
+    ³   ³   ³   ÀÄÄÄThemes
+    ³   ³   ³       ÃÄÄÄContracts
+    ³   ³   ³       ÀÄÄÄDefault
+    ³   ³   ³           ÀÄÄÄConcerns
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÀÄÄÄFeature
+    ³   ÃÄÄÄsail
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄart
+    ³   ³   ÃÄÄÄbin
+    ³   ³   ÃÄÄÄdatabase
+    ³   ³   ³   ÃÄÄÄmariadb
+    ³   ³   ³   ÃÄÄÄmysql
+    ³   ³   ³   ÀÄÄÄpgsql
+    ³   ³   ÃÄÄÄruntimes
+    ³   ³   ³   ÃÄÄÄ8.0
+    ³   ³   ³   ÃÄÄÄ8.1
+    ³   ³   ³   ÃÄÄÄ8.2
+    ³   ³   ³   ÃÄÄÄ8.3
+    ³   ³   ³   ÃÄÄÄ8.4
+    ³   ³   ³   ÀÄÄÄ8.5
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄConsole
+    ³   ³   ³       ÀÄÄÄConcerns
+    ³   ³   ÀÄÄÄstubs
+    ³   ÃÄÄÄserializable-closure
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄContracts
+    ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ÃÄÄÄSerializers
+    ³   ³   ³   ÃÄÄÄSigners
+    ³   ³   ³   ÀÄÄÄSupport
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÀÄÄÄFixtures
+    ³   ÀÄÄÄtinker
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄart
+    ³       ÃÄÄÄconfig
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄConsole
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄfixtures
+    ³               ÃÄÄÄapp
+    ³               ³   ÃÄÄÄBaz
+    ³               ³   ÀÄÄÄFoo
+    ³               ÀÄÄÄvendor
+    ³                   ÃÄÄÄcomposer
+    ³                   ÀÄÄÄone
+    ³                       ÀÄÄÄtwo
+    ÃÄÄÄleague
+    ³   ÃÄÄÄcommonmark
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ÀÄÄÄbuild-jekyll-site-action
+    ³   ³   ÃÄÄÄdocker
+    ³   ³   ³   ÀÄÄÄconfig
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ³   ÃÄÄÄ1.x
+    ³   ³   ³   ³   ÃÄÄÄcustomization
+    ³   ³   ³   ³   ÀÄÄÄextensions
+    ³   ³   ³   ÃÄÄÄ2.x
+    ³   ³   ³   ³   ÃÄÄÄcustomization
+    ³   ³   ³   ³   ÃÄÄÄextensions
+    ³   ³   ³   ³   ÀÄÄÄupgrading
+    ³   ³   ³   ÃÄÄÄimages
+    ³   ³   ³   ³   ÀÄÄÄusers
+    ³   ³   ³   ÃÄÄÄ_data
+    ³   ³   ³   ÃÄÄÄ_layouts
+    ³   ³   ³   ÀÄÄÄ_plugins
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄDelimiter
+    ³   ³   ³   ³   ÀÄÄÄProcessor
+    ³   ³   ³   ÃÄÄÄEnvironment
+    ³   ³   ³   ÃÄÄÄEvent
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÃÄÄÄExtension
+    ³   ³   ³   ³   ÃÄÄÄAttributes
+    ³   ³   ³   ³   ³   ÃÄÄÄEvent
+    ³   ³   ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ³   ³   ÃÄÄÄParser
+    ³   ³   ³   ³   ³   ÀÄÄÄUtil
+    ³   ³   ³   ³   ÃÄÄÄAutolink
+    ³   ³   ³   ³   ÃÄÄÄCommonMark
+    ³   ³   ³   ³   ³   ÃÄÄÄDelimiter
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄProcessor
+    ³   ³   ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄBlock
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄInline
+    ³   ³   ³   ³   ³   ÃÄÄÄParser
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄBlock
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄInline
+    ³   ³   ³   ³   ³   ÀÄÄÄRenderer
+    ³   ³   ³   ³   ³       ÃÄÄÄBlock
+    ³   ³   ³   ³   ³       ÀÄÄÄInline
+    ³   ³   ³   ³   ÃÄÄÄDefaultAttributes
+    ³   ³   ³   ³   ÃÄÄÄDescriptionList
+    ³   ³   ³   ³   ³   ÃÄÄÄEvent
+    ³   ³   ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ³   ³   ÃÄÄÄParser
+    ³   ³   ³   ³   ³   ÀÄÄÄRenderer
+    ³   ³   ³   ³   ÃÄÄÄDisallowedRawHtml
+    ³   ³   ³   ³   ÃÄÄÄEmbed
+    ³   ³   ³   ³   ³   ÀÄÄÄBridge
+    ³   ³   ³   ³   ÃÄÄÄExternalLink
+    ³   ³   ³   ³   ÃÄÄÄFootnote
+    ³   ³   ³   ³   ³   ÃÄÄÄEvent
+    ³   ³   ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ³   ³   ÃÄÄÄParser
+    ³   ³   ³   ³   ³   ÀÄÄÄRenderer
+    ³   ³   ³   ³   ÃÄÄÄFrontMatter
+    ³   ³   ³   ³   ³   ÃÄÄÄData
+    ³   ³   ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ³   ³   ÃÄÄÄInput
+    ³   ³   ³   ³   ³   ÃÄÄÄListener
+    ³   ³   ³   ³   ³   ÀÄÄÄOutput
+    ³   ³   ³   ³   ÃÄÄÄHeadingPermalink
+    ³   ³   ³   ³   ÃÄÄÄHighlight
+    ³   ³   ³   ³   ÃÄÄÄInlinesOnly
+    ³   ³   ³   ³   ÃÄÄÄMention
+    ³   ³   ³   ³   ³   ÀÄÄÄGenerator
+    ³   ³   ³   ³   ÃÄÄÄSmartPunct
+    ³   ³   ³   ³   ÃÄÄÄStrikethrough
+    ³   ³   ³   ³   ÃÄÄÄTable
+    ³   ³   ³   ³   ÃÄÄÄTableOfContents
+    ³   ³   ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ³   ³   ÀÄÄÄNormalizer
+    ³   ³   ³   ³   ÀÄÄÄTaskList
+    ³   ³   ³   ÃÄÄÄInput
+    ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ³   ÃÄÄÄBlock
+    ³   ³   ³   ³   ÃÄÄÄInline
+    ³   ³   ³   ³   ÀÄÄÄQuery
+    ³   ³   ³   ÃÄÄÄNormalizer
+    ³   ³   ³   ÃÄÄÄOutput
+    ³   ³   ³   ÃÄÄÄParser
+    ³   ³   ³   ³   ÃÄÄÄBlock
+    ³   ³   ³   ³   ÀÄÄÄInline
+    ³   ³   ³   ÃÄÄÄReference
+    ³   ³   ³   ÃÄÄÄRenderer
+    ³   ³   ³   ³   ÃÄÄÄBlock
+    ³   ³   ³   ³   ÀÄÄÄInline
+    ³   ³   ³   ÃÄÄÄUtil
+    ³   ³   ³   ÀÄÄÄXml
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄbenchmark
+    ³   ³       ÃÄÄÄfunctional
+    ³   ³       ³   ÃÄÄÄdata
+    ³   ³       ³   ³   ÃÄÄÄemphasis
+    ³   ³       ³   ³   ÃÄÄÄhtml_input
+    ³   ³       ³   ³   ÃÄÄÄsafe
+    ³   ³       ³   ³   ÀÄÄÄsafe_links
+    ³   ³       ³   ÃÄÄÄDelimiter
+    ³   ³       ³   ÀÄÄÄExtension
+    ³   ³       ³       ÃÄÄÄAttributes
+    ³   ³       ³       ³   ÀÄÄÄdata
+    ³   ³       ³       ÃÄÄÄAutolink
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÃÄÄÄCommonMark
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÃÄÄÄDefaultAttributes
+    ³   ³       ³       ÃÄÄÄDescriptionList
+    ³   ³       ³       ÃÄÄÄDisallowedRawHtml
+    ³   ³       ³       ÃÄÄÄEmbed
+    ³   ³       ³       ³   ÃÄÄÄBridge
+    ³   ³       ³       ³   ³   ÃÄÄÄdata
+    ³   ³       ³       ³   ³   ÀÄÄÄrequests
+    ³   ³       ³       ³   ÀÄÄÄdata
+    ³   ³       ³       ÃÄÄÄExternalLink
+    ³   ³       ³       ÃÄÄÄFootnote
+    ³   ³       ³       ³   ÃÄÄÄmd
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÃÄÄÄFrontMatterExtension
+    ³   ³       ³       ÃÄÄÄHeadingPermalink
+    ³   ³       ³       ÃÄÄÄHighlight
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÃÄÄÄInlinesOnly
+    ³   ³       ³       ÃÄÄÄMention
+    ³   ³       ³       ÃÄÄÄSmartPunct
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÃÄÄÄStrikethrough
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÃÄÄÄTable
+    ³   ³       ³       ³   ÃÄÄÄmd
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÃÄÄÄTableOfContents
+    ³   ³       ³       ³   ÃÄÄÄmd
+    ³   ³       ³       ³   ÀÄÄÄxml
+    ³   ³       ³       ÀÄÄÄTaskList
+    ³   ³       ³           ÀÄÄÄxml
+    ³   ³       ÃÄÄÄpathological
+    ³   ³       ÃÄÄÄphpstan
+    ³   ³       ÀÄÄÄunit
+    ³   ³           ÃÄÄÄDelimiter
+    ³   ³           ÃÄÄÄEnvironment
+    ³   ³           ÃÄÄÄEvent
+    ³   ³           ÃÄÄÄExtension
+    ³   ³           ³   ÃÄÄÄAttributes
+    ³   ³           ³   ³   ÀÄÄÄUtil
+    ³   ³           ³   ÃÄÄÄCommonMark
+    ³   ³           ³   ³   ÃÄÄÄNode
+    ³   ³           ³   ³   ³   ÃÄÄÄBlock
+    ³   ³           ³   ³   ³   ÀÄÄÄInline
+    ³   ³           ³   ³   ÃÄÄÄParser
+    ³   ³           ³   ³   ³   ÃÄÄÄBlock
+    ³   ³           ³   ³   ³   ÀÄÄÄInline
+    ³   ³           ³   ³   ÀÄÄÄRenderer
+    ³   ³           ³   ³       ÃÄÄÄBlock
+    ³   ³           ³   ³       ÀÄÄÄInline
+    ³   ³           ³   ÃÄÄÄDescriptionList
+    ³   ³           ³   ³   ÃÄÄÄNode
+    ³   ³           ³   ³   ÀÄÄÄRenderer
+    ³   ³           ³   ÃÄÄÄDisallowedRawHtml
+    ³   ³           ³   ÃÄÄÄEmbed
+    ³   ³           ³   ÃÄÄÄExternalLink
+    ³   ³           ³   ÃÄÄÄFootnote
+    ³   ³           ³   ³   ÀÄÄÄRenderer
+    ³   ³           ³   ÃÄÄÄFrontMatter
+    ³   ³           ³   ³   ÃÄÄÄData
+    ³   ³           ³   ³   ÃÄÄÄException
+    ³   ³           ³   ³   ÃÄÄÄInput
+    ³   ³           ³   ³   ÀÄÄÄOutput
+    ³   ³           ³   ÃÄÄÄHeadingPermalink
+    ³   ³           ³   ÃÄÄÄHighlight
+    ³   ³           ³   ÃÄÄÄMention
+    ³   ³           ³   ³   ÀÄÄÄGenerator
+    ³   ³           ³   ÃÄÄÄSmartPunct
+    ³   ³           ³   ÃÄÄÄStrikethrough
+    ³   ³           ³   ÃÄÄÄTable
+    ³   ³           ³   ÀÄÄÄTaskList
+    ³   ³           ÃÄÄÄInput
+    ³   ³           ÃÄÄÄNode
+    ³   ³           ³   ÃÄÄÄBlock
+    ³   ³           ³   ÀÄÄÄInline
+    ³   ³           ÃÄÄÄNormalizer
+    ³   ³           ÃÄÄÄOutput
+    ³   ³           ÃÄÄÄParser
+    ³   ³           ³   ÀÄÄÄInline
+    ³   ³           ÃÄÄÄReference
+    ³   ³           ÃÄÄÄRenderer
+    ³   ³           ³   ÃÄÄÄBlock
+    ³   ³           ³   ÀÄÄÄInline
+    ³   ³           ÃÄÄÄUtil
+    ³   ³           ÀÄÄÄXml
+    ³   ÃÄÄÄconfig
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³       ÀÄÄÄbuild-jekyll-site-action
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ³   ÃÄÄÄ1.0
+    ³   ³   ³   ÃÄÄÄ1.1
+    ³   ³   ³   ÃÄÄÄ_data
+    ³   ³   ³   ÃÄÄÄ_layouts
+    ³   ³   ³   ÀÄÄÄ_plugins
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄException
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÀÄÄÄException
+    ³   ÃÄÄÄflysystem
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄbin
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄAdapterTestUtilities
+    ³   ³   ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³   ³   ÀÄÄÄtest_files
+    ³   ³   ³   ÃÄÄÄAsyncAwsS3
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄAwsS3V3
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄAzureBlobStorage
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄFtp
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄGoogleCloudStorage
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄGridFS
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄInMemory
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄLocal
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄPathPrefixing
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄPhpseclibV2
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄPhpseclibV3
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄReadOnly
+    ³   ³   ³   ³   ÀÄÄÄ.github
+    ³   ³   ³   ³       ÀÄÄÄworkflows
+    ³   ³   ³   ÃÄÄÄUnixVisibility
+    ³   ³   ³   ÃÄÄÄUrlGeneration
+    ³   ³   ³   ÃÄÄÄWebDAV
+    ³   ³   ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³   ³   ÀÄÄÄresources
+    ³   ³   ³   ÀÄÄÄZipArchive
+    ³   ³   ³       ÀÄÄÄ.github
+    ³   ³   ³           ÀÄÄÄworkflows
+    ³   ³   ÀÄÄÄtest_files
+    ³   ³       ÃÄÄÄsftp
+    ³   ³       ÀÄÄÄtoxiproxy
+    ³   ÃÄÄÄflysystem-local
+    ³   ³   ÀÄÄÄ.github
+    ³   ³       ÀÄÄÄworkflows
+    ³   ÃÄÄÄmime-type-detection
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄbin
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄGeneration
+    ³   ³   ÀÄÄÄtest_files
+    ³   ÃÄÄÄuri
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÀÄÄÄUriTemplate
+    ³   ÀÄÄÄuri-interfaces
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄContracts
+    ³       ÃÄÄÄExceptions
+    ³       ÃÄÄÄIdna
+    ³       ÃÄÄÄIPv4
+    ³       ÃÄÄÄIPv6
+    ³       ÀÄÄÄKeyValuePair
+    ÃÄÄÄmockery
+    ³   ÀÄÄÄmockery
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄdocs
+    ³       ³   ÃÄÄÄcookbook
+    ³       ³   ÃÄÄÄgetting_started
+    ³       ³   ÃÄÄÄmockery
+    ³       ³   ÃÄÄÄreference
+    ³       ³   ÀÄÄÄ_static
+    ³       ÃÄÄÄfixtures
+    ³       ÃÄÄÄlibrary
+    ³       ³   ÀÄÄÄMockery
+    ³       ³       ÃÄÄÄAdapter
+    ³       ³       ³   ÀÄÄÄPhpunit
+    ³       ³       ÃÄÄÄCountValidator
+    ³       ³       ÃÄÄÄException
+    ³       ³       ÃÄÄÄGenerator
+    ³       ³       ³   ÀÄÄÄStringManipulation
+    ³       ³       ³       ÀÄÄÄPass
+    ³       ³       ÃÄÄÄLoader
+    ³       ³       ÀÄÄÄMatcher
+    ³       ÃÄÄÄtests
+    ³       ³   ÃÄÄÄFixture
+    ³       ³   ³   ÃÄÄÄPHP74
+    ³       ³   ³   ³   ÀÄÄÄRegression
+    ³       ³   ³   ³       ÀÄÄÄIssue1402
+    ³       ³   ³   ÃÄÄÄPHP81
+    ³       ³   ³   ÃÄÄÄPHP82
+    ³       ³   ³   ÀÄÄÄPHP83
+    ³       ³   ÃÄÄÄMockery
+    ³       ³   ³   ÃÄÄÄAdapter
+    ³       ³   ³   ³   ÀÄÄÄPhpunit
+    ³       ³   ³   ÃÄÄÄDummyClasses
+    ³       ³   ³   ÃÄÄÄFixtures
+    ³       ³   ³   ÃÄÄÄGenerator
+    ³       ³   ³   ³   ÀÄÄÄStringManipulation
+    ³       ³   ³   ³       ÀÄÄÄPass
+    ³       ³   ³   ÃÄÄÄLoader
+    ³       ³   ³   ÃÄÄÄMatcher
+    ³       ³   ³   ÃÄÄÄStubs
+    ³       ³   ³   ÀÄÄÄ_files
+    ³       ³   ÃÄÄÄPHP80
+    ³       ³   ÃÄÄÄPHP81
+    ³       ³   ÃÄÄÄPHP82
+    ³       ³   ÀÄÄÄUnit
+    ³       ³       ÃÄÄÄPHP80
+    ³       ³       ÃÄÄÄPHP81
+    ³       ³       ÃÄÄÄPHP82
+    ³       ³       ÃÄÄÄPHP83
+    ³       ³       ÀÄÄÄRegression
+    ³       ÀÄÄÄtools
+    ÃÄÄÄmonolog
+    ³   ÀÄÄÄmonolog
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄdoc
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄMonolog
+    ³       ³       ÃÄÄÄAttribute
+    ³       ³       ÃÄÄÄFormatter
+    ³       ³       ÃÄÄÄHandler
+    ³       ³       ³   ÃÄÄÄCurl
+    ³       ³       ³   ÃÄÄÄFingersCrossed
+    ³       ³       ³   ÃÄÄÄSlack
+    ³       ³       ³   ÀÄÄÄSyslogUdp
+    ³       ³       ÃÄÄÄProcessor
+    ³       ³       ÀÄÄÄTest
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄMonolog
+    ³               ÃÄÄÄAttribute
+    ³               ÃÄÄÄFormatter
+    ³               ÃÄÄÄHandler
+    ³               ³   ÃÄÄÄFixtures
+    ³               ³   ÀÄÄÄSlack
+    ³               ÀÄÄÄProcessor
+    ÃÄÄÄmyclabs
+    ³   ÀÄÄÄdeep-copy
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄdoc
+    ³       ÃÄÄÄfixtures
+    ³       ³   ÃÄÄÄf001
+    ³       ³   ÃÄÄÄf002
+    ³       ³   ÃÄÄÄf003
+    ³       ³   ÃÄÄÄf004
+    ³       ³   ÃÄÄÄf005
+    ³       ³   ÃÄÄÄf006
+    ³       ³   ÃÄÄÄf007
+    ³       ³   ÃÄÄÄf008
+    ³       ³   ÃÄÄÄf009
+    ³       ³   ÃÄÄÄf011
+    ³       ³   ÃÄÄÄf012
+    ³       ³   ÃÄÄÄf013
+    ³       ³   ÀÄÄÄf014
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄDeepCopy
+    ³       ³       ÃÄÄÄException
+    ³       ³       ÃÄÄÄFilter
+    ³       ³       ³   ÀÄÄÄDoctrine
+    ³       ³       ÃÄÄÄMatcher
+    ³       ³       ³   ÀÄÄÄDoctrine
+    ³       ³       ÃÄÄÄReflection
+    ³       ³       ÃÄÄÄTypeFilter
+    ³       ³       ³   ÃÄÄÄDate
+    ³       ³       ³   ÀÄÄÄSpl
+    ³       ³       ÀÄÄÄTypeMatcher
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄDeepCopyTest
+    ³               ÃÄÄÄFilter
+    ³               ³   ÀÄÄÄDoctrine
+    ³               ÃÄÄÄMatcher
+    ³               ³   ÀÄÄÄDoctrine
+    ³               ÃÄÄÄReflection
+    ³               ÃÄÄÄTypeFilter
+    ³               ³   ÃÄÄÄDate
+    ³               ³   ÀÄÄÄSpl
+    ³               ÀÄÄÄTypeMatcher
+    ÃÄÄÄnesbot
+    ³   ÀÄÄÄcarbon
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄbin
+    ³       ÃÄÄÄlazy
+    ³       ³   ÀÄÄÄCarbon
+    ³       ³       ÀÄÄÄMessageFormatter
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄCarbon
+    ³       ³       ÃÄÄÄCli
+    ³       ³       ÃÄÄÄExceptions
+    ³       ³       ÃÄÄÄLang
+    ³       ³       ÃÄÄÄLaravel
+    ³       ³       ÃÄÄÄList
+    ³       ³       ÃÄÄÄMessageFormatter
+    ³       ³       ÃÄÄÄPHPStan
+    ³       ³       ÀÄÄÄTraits
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄCarbon
+    ³           ³   ÃÄÄÄExceptions
+    ³           ³   ÀÄÄÄFixtures
+    ³           ÃÄÄÄCarbonImmutable
+    ³           ³   ÀÄÄÄFixtures
+    ³           ÃÄÄÄCarbonInterval
+    ³           ³   ÀÄÄÄFixtures
+    ³           ÃÄÄÄCarbonPeriod
+    ³           ³   ÀÄÄÄFixtures
+    ³           ÃÄÄÄCarbonPeriodImmutable
+    ³           ÃÄÄÄCarbonTimeZone
+    ³           ³   ÀÄÄÄFixtures
+    ³           ÃÄÄÄCli
+    ³           ÃÄÄÄCommonTraits
+    ³           ÃÄÄÄDoctrine
+    ³           ÃÄÄÄFactory
+    ³           ÃÄÄÄFixtures
+    ³           ÃÄÄÄJenssegers
+    ³           ÃÄÄÄLanguage
+    ³           ÃÄÄÄLaravel
+    ³           ÃÄÄÄLocalization
+    ³           ÃÄÄÄPHPStan
+    ³           ÃÄÄÄPHPUnit
+    ³           ÀÄÄÄUnit
+    ÃÄÄÄnette
+    ³   ÃÄÄÄschema
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄSchema
+    ³   ³   ³       ÀÄÄÄElements
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÀÄÄÄSchema
+    ³   ³           ÀÄÄÄfixtures
+    ³   ÀÄÄÄutils
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄIterators
+    ³       ³   ÀÄÄÄUtils
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄIterators
+    ³           ÀÄÄÄUtils
+    ³               ÃÄÄÄexpected
+    ³               ÃÄÄÄfixtures.finder
+    ³               ³   ÃÄÄÄimages
+    ³               ³   ÀÄÄÄsubdir
+    ³               ³       ÀÄÄÄsubdir2
+    ³               ÃÄÄÄfixtures.finder2
+    ³               ³   ÃÄÄÄx
+    ³               ³   ÀÄÄÄ[x]
+    ³               ÃÄÄÄfixtures.finder3
+    ³               ³   ÃÄÄÄanother_subdir
+    ³               ³   ÀÄÄÄsubdir
+    ³               ÃÄÄÄfixtures.images
+    ³               ÀÄÄÄfixtures.reflection
+    ÃÄÄÄnikic
+    ³   ÀÄÄÄphp-parser
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄbin
+    ³       ÃÄÄÄdoc
+    ³       ³   ÀÄÄÄcomponent
+    ³       ÃÄÄÄgrammar
+    ³       ÃÄÄÄlib
+    ³       ³   ÀÄÄÄPhpParser
+    ³       ³       ÃÄÄÄBuilder
+    ³       ³       ÃÄÄÄComment
+    ³       ³       ÃÄÄÄErrorHandler
+    ³       ³       ÃÄÄÄInternal
+    ³       ³       ÃÄÄÄLexer
+    ³       ³       ³   ÀÄÄÄTokenEmulator
+    ³       ³       ÃÄÄÄNode
+    ³       ³       ³   ÃÄÄÄExpr
+    ³       ³       ³   ³   ÃÄÄÄAssignOp
+    ³       ³       ³   ³   ÃÄÄÄBinaryOp
+    ³       ³       ³   ³   ÀÄÄÄCast
+    ³       ³       ³   ÃÄÄÄName
+    ³       ³       ³   ÃÄÄÄScalar
+    ³       ³       ³   ³   ÀÄÄÄMagicConst
+    ³       ³       ³   ÀÄÄÄStmt
+    ³       ³       ³       ÀÄÄÄTraitUseAdaptation
+    ³       ³       ÃÄÄÄNodeVisitor
+    ³       ³       ÃÄÄÄParser
+    ³       ³       ÀÄÄÄPrettyPrinter
+    ³       ÃÄÄÄtest
+    ³       ³   ÃÄÄÄcode
+    ³       ³   ³   ÃÄÄÄformatPreservation
+    ³       ³   ³   ÃÄÄÄparser
+    ³       ³   ³   ³   ÃÄÄÄerrorHandling
+    ³       ³   ³   ³   ÃÄÄÄexpr
+    ³       ³   ³   ³   ³   ÃÄÄÄfetchAndCall
+    ³       ³   ³   ³   ³   ÀÄÄÄuvs
+    ³       ³   ³   ³   ÃÄÄÄscalar
+    ³       ³   ³   ³   ÀÄÄÄstmt
+    ³       ³   ³   ³       ÃÄÄÄclass
+    ³       ³   ³   ³       ÃÄÄÄfunction
+    ³       ³   ³   ³       ÃÄÄÄgenerator
+    ³       ³   ³   ³       ÃÄÄÄloop
+    ³       ³   ³   ³       ÀÄÄÄnamespace
+    ³       ³   ³   ÀÄÄÄprettyPrinter
+    ³       ³   ³       ÃÄÄÄexpr
+    ³       ³   ³       ÀÄÄÄstmt
+    ³       ³   ÃÄÄÄfixtures
+    ³       ³   ÀÄÄÄPhpParser
+    ³       ³       ÃÄÄÄBuilder
+    ³       ³       ÃÄÄÄErrorHandler
+    ³       ³       ÃÄÄÄInternal
+    ³       ³       ÃÄÄÄLexer
+    ³       ³       ÃÄÄÄNode
+    ³       ³       ³   ÃÄÄÄExpr
+    ³       ³       ³   ÃÄÄÄScalar
+    ³       ³       ³   ÀÄÄÄStmt
+    ³       ³       ÃÄÄÄNodeVisitor
+    ³       ³       ÀÄÄÄParser
+    ³       ÃÄÄÄtest_old
+    ³       ÀÄÄÄtools
+    ³           ÀÄÄÄfuzzing
+    ÃÄÄÄnunomaduro
+    ³   ÃÄÄÄcollision
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.temp
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄAdapters
+    ³   ³   ³   ³   ÃÄÄÄLaravel
+    ³   ³   ³   ³   ³   ÃÄÄÄCommands
+    ³   ³   ³   ³   ³   ÀÄÄÄExceptions
+    ³   ³   ³   ³   ÀÄÄÄPhpunit
+    ³   ³   ³   ³       ÃÄÄÄPrinters
+    ³   ³   ³   ³       ÃÄÄÄSubscribers
+    ³   ³   ³   ³       ÀÄÄÄSupport
+    ³   ³   ³   ÃÄÄÄContracts
+    ³   ³   ³   ³   ÀÄÄÄAdapters
+    ³   ³   ³   ³       ÀÄÄÄPhpunit
+    ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ÀÄÄÄSolutionsRepositories
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄFakeProgram
+    ³   ³       ÃÄÄÄLaravelApp
+    ³   ³       ³   ÃÄÄÄapp
+    ³   ³       ³   ³   ÃÄÄÄConsole
+    ³   ³       ³   ³   ³   ÀÄÄÄCommands
+    ³   ³       ³   ³   ÃÄÄÄHttp
+    ³   ³       ³   ³   ³   ÀÄÄÄControllers
+    ³   ³       ³   ³   ÃÄÄÄModels
+    ³   ³       ³   ³   ÀÄÄÄProviders
+    ³   ³       ³   ÃÄÄÄbootstrap
+    ³   ³       ³   ³   ÀÄÄÄcache
+    ³   ³       ³   ÃÄÄÄconfig
+    ³   ³       ³   ÃÄÄÄdatabase
+    ³   ³       ³   ³   ÃÄÄÄfactories
+    ³   ³       ³   ³   ÃÄÄÄmigrations
+    ³   ³       ³   ³   ÀÄÄÄseeders
+    ³   ³       ³   ÃÄÄÄpublic
+    ³   ³       ³   ÃÄÄÄresources
+    ³   ³       ³   ³   ÃÄÄÄcss
+    ³   ³       ³   ³   ÃÄÄÄjs
+    ³   ³       ³   ³   ÀÄÄÄviews
+    ³   ³       ³   ÃÄÄÄroutes
+    ³   ³       ³   ÃÄÄÄstorage
+    ³   ³       ³   ³   ÃÄÄÄapp
+    ³   ³       ³   ³   ³   ÀÄÄÄpublic
+    ³   ³       ³   ³   ÃÄÄÄframework
+    ³   ³       ³   ³   ³   ÃÄÄÄcache
+    ³   ³       ³   ³   ³   ³   ÀÄÄÄdata
+    ³   ³       ³   ³   ³   ÃÄÄÄsessions
+    ³   ³       ³   ³   ³   ÃÄÄÄtesting
+    ³   ³       ³   ³   ³   ÀÄÄÄviews
+    ³   ³       ³   ³   ÀÄÄÄlogs
+    ³   ³       ³   ÃÄÄÄtests
+    ³   ³       ³   ³   ÃÄÄÄFeature
+    ³   ³       ³   ³   ÀÄÄÄUnit
+    ³   ³       ³   ÀÄÄÄvendor
+    ³   ³       ÃÄÄÄPrinter
+    ³   ³       ÃÄÄÄTestCaseWithStdoutOutput
+    ³   ³       ÀÄÄÄUnit
+    ³   ³           ÀÄÄÄAdapters
+    ³   ÀÄÄÄtermwind
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄart
+    ³       ÃÄÄÄdocker
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄActions
+    ³       ³   ÃÄÄÄComponents
+    ³       ³   ÃÄÄÄEnums
+    ³       ³   ÃÄÄÄExceptions
+    ³       ³   ÃÄÄÄHelpers
+    ³       ³   ÃÄÄÄHtml
+    ³       ³   ÃÄÄÄLaravel
+    ³       ³   ÃÄÄÄRepositories
+    ³       ³   ÀÄÄÄValueObjects
+    ³       ÀÄÄÄtests
+    ÃÄÄÄpestphp
+    ³   ÃÄÄÄpest
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.temp
+    ³   ³   ÃÄÄÄbin
+    ³   ³   ÃÄÄÄdocker
+    ³   ³   ÃÄÄÄoverrides
+    ³   ³   ³   ÃÄÄÄEvent
+    ³   ³   ³   ³   ÀÄÄÄValue
+    ³   ³   ³   ÃÄÄÄLogging
+    ³   ³   ³   ³   ÀÄÄÄJUnit
+    ³   ³   ³   ÃÄÄÄRunner
+    ³   ³   ³   ³   ÃÄÄÄFilter
+    ³   ³   ³   ³   ÀÄÄÄResultCache
+    ³   ³   ³   ÀÄÄÄTextUI
+    ³   ³   ³       ÃÄÄÄCommand
+    ³   ³   ³       ³   ÀÄÄÄCommands
+    ³   ³   ³       ÀÄÄÄOutput
+    ³   ³   ³           ÀÄÄÄDefault
+    ³   ³   ³               ÀÄÄÄProgressPrinter
+    ³   ³   ³                   ÀÄÄÄSubscriber
+    ³   ³   ÃÄÄÄresources
+    ³   ³   ³   ÀÄÄÄviews
+    ³   ³   ³       ÃÄÄÄcomponents
+    ³   ³   ³       ÀÄÄÄinstallers
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄArchPresets
+    ³   ³   ³   ÃÄÄÄBootstrappers
+    ³   ³   ³   ÃÄÄÄCollision
+    ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ³   ÀÄÄÄLogging
+    ³   ³   ³   ÃÄÄÄConfiguration
+    ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ÃÄÄÄContracts
+    ³   ³   ³   ³   ÀÄÄÄPlugins
+    ³   ³   ³   ÃÄÄÄEvaluators
+    ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ÃÄÄÄExpectations
+    ³   ³   ³   ÃÄÄÄFactories
+    ³   ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ³   ÀÄÄÄCovers
+    ³   ³   ³   ÃÄÄÄInstallers
+    ³   ³   ³   ÃÄÄÄLogging
+    ³   ³   ³   ³   ÀÄÄÄTeamCity
+    ³   ³   ³   ³       ÀÄÄÄSubscriber
+    ³   ³   ³   ÃÄÄÄMatchers
+    ³   ³   ³   ÃÄÄÄMixins
+    ³   ³   ³   ÃÄÄÄPendingCalls
+    ³   ³   ³   ³   ÀÄÄÄConcerns
+    ³   ³   ³   ÃÄÄÄPlugins
+    ³   ³   ³   ³   ÃÄÄÄActions
+    ³   ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ³   ÀÄÄÄParallel
+    ³   ³   ³   ³       ÃÄÄÄContracts
+    ³   ³   ³   ³       ÃÄÄÄHandlers
+    ³   ³   ³   ³       ÃÄÄÄParatest
+    ³   ³   ³   ³       ÀÄÄÄSupport
+    ³   ³   ³   ÃÄÄÄRepositories
+    ³   ³   ³   ÃÄÄÄRunner
+    ³   ³   ³   ³   ÀÄÄÄFilter
+    ³   ³   ³   ÃÄÄÄSubscribers
+    ³   ³   ³   ÃÄÄÄSupport
+    ³   ³   ³   ÃÄÄÄTestCaseFilters
+    ³   ³   ³   ÃÄÄÄTestCaseMethodFilters
+    ³   ³   ³   ÀÄÄÄTestCases
+    ³   ³   ÃÄÄÄstubs
+    ³   ³   ³   ÃÄÄÄinit
+    ³   ³   ³   ³   ÃÄÄÄFeature
+    ³   ³   ³   ³   ÀÄÄÄUnit
+    ³   ³   ³   ÀÄÄÄinit-laravel
+    ³   ³   ³       ÃÄÄÄFeature
+    ³   ³   ³       ÀÄÄÄUnit
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄ.cache
+    ³   ³   ³   ÃÄÄÄ.pest
+    ³   ³   ³   ³   ÃÄÄÄsnapshots
+    ³   ³   ³   ³   ³   ÃÄÄÄFeatures
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄExpect
+    ³   ³   ³   ³   ³   ³       ÀÄÄÄtoMatchSnapshot
+    ³   ³   ³   ³   ³   ÀÄÄÄVisual
+    ³   ³   ³   ³   ³       ÃÄÄÄCollision
+    ³   ³   ³   ³   ³       ÃÄÄÄHelp
+    ³   ³   ³   ³   ³       ÃÄÄÄTodo
+    ³   ³   ³   ³   ³       ÀÄÄÄVersion
+    ³   ³   ³   ³   ÀÄÄÄsnapshots-external
+    ³   ³   ³   ³       ÀÄÄÄFeatures
+    ³   ³   ³   ³           ÀÄÄÄExpect
+    ³   ³   ³   ³               ÀÄÄÄtoMatchSnapshot
+    ³   ³   ³   ÃÄÄÄ.snapshots
+    ³   ³   ³   ÃÄÄÄ.tests
+    ³   ³   ³   ÃÄÄÄDatasets
+    ³   ³   ³   ÃÄÄÄEnvironments
+    ³   ³   ³   ÃÄÄÄFeatures
+    ³   ³   ³   ³   ÃÄÄÄCovers
+    ³   ³   ³   ³   ÃÄÄÄExpect
+    ³   ³   ³   ³   ³   ÀÄÄÄHigherOrder
+    ³   ³   ³   ³   ÀÄÄÄScopedDatasets
+    ³   ³   ³   ³       ÀÄÄÄDirectory
+    ³   ³   ³   ³           ÃÄÄÄDatasets
+    ³   ³   ³   ³           ÃÄÄÄNestedDirectory1
+    ³   ³   ³   ³           ÀÄÄÄNestedDirectory2
+    ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ÃÄÄÄArch
+    ³   ³   ³   ³   ³   ÃÄÄÄToBeIntBackedEnum
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHasIntBacking
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄHasStringBacking
+    ³   ³   ³   ³   ³   ÃÄÄÄToBeInvokable
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄIsInvokable
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄIsNotInvokable
+    ³   ³   ³   ³   ³   ÃÄÄÄToBeStringBackedEnum
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHasIntBacking
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄHasStringBacking
+    ³   ³   ³   ³   ³   ÃÄÄÄToHaveAttribute
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄAttributes
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHaveAttribute
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄNotHaveAttribute
+    ³   ³   ³   ³   ³   ÃÄÄÄToHaveConstructor
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHasConstructor
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄHasNoConstructor
+    ³   ³   ³   ³   ³   ÃÄÄÄToHaveDestructor
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHasDestructor
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄHasNoDestructor
+    ³   ³   ³   ³   ³   ÃÄÄÄToHaveMethod
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHasMethod
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄHasNoMethod
+    ³   ³   ³   ³   ³   ÃÄÄÄToHavePrefix
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHasNoPrefix
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄHasPrefix
+    ³   ³   ³   ³   ³   ÃÄÄÄToHavePublicMethodsBesides
+    ³   ³   ³   ³   ³   ÃÄÄÄToHaveSuffix
+    ³   ³   ³   ³   ³   ³   ÃÄÄÄHasNoSuffix
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄHasSuffix
+    ³   ³   ³   ³   ³   ÃÄÄÄToUseStrictEquality
+    ³   ³   ³   ³   ³   ÀÄÄÄToUseStrictTypes
+    ³   ³   ³   ³   ÃÄÄÄCovers
+    ³   ³   ³   ³   ÃÄÄÄDirectoryWithTests
+    ³   ³   ³   ³   ÀÄÄÄInheritance
+    ³   ³   ³   ³       ÀÄÄÄBase
+    ³   ³   ³   ÃÄÄÄHelpers
+    ³   ³   ³   ÃÄÄÄHooks
+    ³   ³   ³   ÃÄÄÄPHPUnit
+    ³   ³   ³   ³   ÃÄÄÄCustomAffixes
+    ³   ³   ³   ³   ³   ÀÄÄÄFolderWithAn@
+    ³   ³   ³   ³   ÃÄÄÄCustomTestCase
+    ³   ³   ³   ³   ÃÄÄÄCustomTestCaseInSubFolders
+    ³   ³   ³   ³   ³   ÃÄÄÄSubFolder
+    ³   ³   ³   ³   ³   ³   ÀÄÄÄSubFolder
+    ³   ³   ³   ³   ³   ÀÄÄÄSubFolder2
+    ³   ³   ³   ³   ÀÄÄÄGlobPatternTests
+    ³   ³   ³   ³       ÃÄÄÄSubFolder
+    ³   ³   ³   ³       ³   ÀÄÄÄInnerFolder
+    ³   ³   ³   ³       ÀÄÄÄSubFolder2
+    ³   ³   ³   ÃÄÄÄPlugins
+    ³   ³   ³   ÃÄÄÄUnit
+    ³   ³   ³   ³   ÃÄÄÄConfiguration
+    ³   ³   ³   ³   ÃÄÄÄConsole
+    ³   ³   ³   ³   ÃÄÄÄExpectations
+    ³   ³   ³   ³   ÃÄÄÄOverrides
+    ³   ³   ³   ³   ÃÄÄÄPlugins
+    ³   ³   ³   ³   ³   ÀÄÄÄConcerns
+    ³   ³   ³   ³   ÀÄÄÄSupport
+    ³   ³   ³   ÀÄÄÄVisual
+    ³   ³   ÀÄÄÄtests-external
+    ³   ³       ÀÄÄÄFeatures
+    ³   ³           ÀÄÄÄExpect
+    ³   ÃÄÄÄpest-plugin
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.temp
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄCommands
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄCommands
+    ³   ³       ÀÄÄÄStubs
+    ³   ³           ÀÄÄÄPestPlugins
+    ³   ÃÄÄÄpest-plugin-arch
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄCollections
+    ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ÃÄÄÄContracts
+    ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ÃÄÄÄExpectations
+    ³   ³   ³   ÃÄÄÄFactories
+    ³   ³   ³   ÃÄÄÄObjects
+    ³   ³   ³   ÃÄÄÄOptions
+    ³   ³   ³   ÃÄÄÄRepositories
+    ³   ³   ³   ÃÄÄÄSupport
+    ³   ³   ³   ÀÄÄÄValueObjects
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÀÄÄÄFixtures
+    ³   ³           ÃÄÄÄConcerns
+    ³   ³           ÃÄÄÄContracts
+    ³   ³           ³   ÃÄÄÄControllers
+    ³   ³           ³   ÀÄÄÄModels
+    ³   ³           ÃÄÄÄControllers
+    ³   ³           ÃÄÄÄDomains
+    ³   ³           ³   ÃÄÄÄA
+    ³   ³           ³   ³   ÃÄÄÄContracts
+    ³   ³           ³   ³   ³   ÀÄÄÄModels
+    ³   ³           ³   ³   ÀÄÄÄModels
+    ³   ³           ³   ÀÄÄÄB
+    ³   ³           ³       ÃÄÄÄContracts
+    ³   ³           ³       ³   ÀÄÄÄModels
+    ³   ³           ³       ÀÄÄÄModels
+    ³   ³           ÃÄÄÄEnums
+    ³   ³           ÃÄÄÄMisc
+    ³   ³           ³   ÃÄÄÄAbstracts
+    ³   ³           ³   ÀÄÄÄTestsNestedNamespace
+    ³   ³           ÃÄÄÄModels
+    ³   ³           ÀÄÄÄSupport
+    ³   ÃÄÄÄpest-plugin-laravel
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄresources
+    ³   ³   ³   ÃÄÄÄdatabase
+    ³   ³   ³   ³   ÀÄÄÄmigrations
+    ³   ³   ³   ÀÄÄÄviews
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄCommands
+    ³   ³   ÃÄÄÄstubs
+    ³   ³   ³   ÀÄÄÄLaravel
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄDatabase
+    ³   ³       ÃÄÄÄExpect
+    ³   ³       ÃÄÄÄModels
+    ³   ³       ÀÄÄÄOptions
+    ³   ÃÄÄÄpest-plugin-mutate
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.temp
+    ³   ³   ³   ÃÄÄÄcache
+    ³   ³   ³   ÀÄÄÄmutations
+    ³   ³   ÃÄÄÄart
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄBoostrappers
+    ³   ³   ³   ÃÄÄÄCache
+    ³   ³   ³   ÃÄÄÄContracts
+    ³   ³   ³   ÃÄÄÄEvent
+    ³   ³   ³   ³   ÀÄÄÄEvents
+    ³   ³   ³   ³       ÃÄÄÄTest
+    ³   ³   ³   ³       ³   ÃÄÄÄHookMethod
+    ³   ³   ³   ³       ³   ÀÄÄÄOutcome
+    ³   ³   ³   ³       ÀÄÄÄTestSuite
+    ³   ³   ³   ÃÄÄÄExceptions
+    ³   ³   ³   ÃÄÄÄFactories
+    ³   ³   ³   ÃÄÄÄMutators
+    ³   ³   ³   ³   ÃÄÄÄAbstract
+    ³   ³   ³   ³   ÃÄÄÄArithmetic
+    ³   ³   ³   ³   ÃÄÄÄArray
+    ³   ³   ³   ³   ÃÄÄÄAssignment
+    ³   ³   ³   ³   ÃÄÄÄCasting
+    ³   ³   ³   ³   ÃÄÄÄConcerns
+    ³   ³   ³   ³   ÃÄÄÄControlStructures
+    ³   ³   ³   ³   ÃÄÄÄEquality
+    ³   ³   ³   ³   ÃÄÄÄLaravel
+    ³   ³   ³   ³   ³   ÃÄÄÄRemove
+    ³   ³   ³   ³   ³   ÀÄÄÄUnwrap
+    ³   ³   ³   ³   ÃÄÄÄLogical
+    ³   ³   ³   ³   ÃÄÄÄMath
+    ³   ³   ³   ³   ÃÄÄÄNumber
+    ³   ³   ³   ³   ÃÄÄÄRemoval
+    ³   ³   ³   ³   ÃÄÄÄReturn
+    ³   ³   ³   ³   ÃÄÄÄSets
+    ³   ³   ³   ³   ÃÄÄÄString
+    ³   ³   ³   ³   ÀÄÄÄVisibility
+    ³   ³   ³   ÃÄÄÄOptions
+    ³   ³   ³   ÃÄÄÄPlugins
+    ³   ³   ³   ÃÄÄÄRepositories
+    ³   ³   ³   ÃÄÄÄSubscribers
+    ³   ³   ³   ÃÄÄÄSupport
+    ³   ³   ³   ³   ÃÄÄÄConfiguration
+    ³   ³   ³   ³   ÀÄÄÄPrinters
+    ³   ³   ³   ÀÄÄÄTester
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄ.pest
+    ³   ³       ³   ÀÄÄÄsnapshots
+    ³   ³       ³       ÃÄÄÄUnit
+    ³   ³       ³       ³   ÃÄÄÄMutationGeneratorTest
+    ³   ³       ³       ³   ÀÄÄÄSupport
+    ³   ³       ³       ³       ÀÄÄÄPrinters
+    ³   ³       ³       ³           ÀÄÄÄDefaultPrinterTest
+    ³   ³       ³       ÀÄÄÄVisual
+    ³   ³       ³           ÃÄÄÄTested
+    ³   ³       ³           ÃÄÄÄTestedWithDescribe
+    ³   ³       ³           ÀÄÄÄUntested
+    ³   ³       ÃÄÄÄ.tests
+    ³   ³       ³   ÃÄÄÄTested
+    ³   ³       ³   ÃÄÄÄTestedWithDescribe
+    ³   ³       ³   ÀÄÄÄUntested
+    ³   ³       ÃÄÄÄFeatures
+    ³   ³       ³   ÀÄÄÄProfiles
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄClasses
+    ³   ³       ³   ÀÄÄÄTraits
+    ³   ³       ÃÄÄÄMutators
+    ³   ³       ³   ÃÄÄÄAbstract
+    ³   ³       ³   ÃÄÄÄArithmetic
+    ³   ³       ³   ÃÄÄÄArray
+    ³   ³       ³   ÃÄÄÄAssignment
+    ³   ³       ³   ÃÄÄÄCasting
+    ³   ³       ³   ÃÄÄÄControlStructures
+    ³   ³       ³   ÃÄÄÄEquality
+    ³   ³       ³   ÃÄÄÄLaravel
+    ³   ³       ³   ³   ÃÄÄÄRemove
+    ³   ³       ³   ³   ÀÄÄÄUnwrap
+    ³   ³       ³   ÃÄÄÄLogical
+    ³   ³       ³   ÃÄÄÄMath
+    ³   ³       ³   ÃÄÄÄNumber
+    ³   ³       ³   ÃÄÄÄRemoval
+    ³   ³       ³   ÃÄÄÄReturn
+    ³   ³       ³   ÃÄÄÄString
+    ³   ³       ³   ÀÄÄÄVisibility
+    ³   ³       ÃÄÄÄUnit
+    ³   ³       ³   ÃÄÄÄCache
+    ³   ³       ³   ÃÄÄÄRepositories
+    ³   ³       ³   ÀÄÄÄSupport
+    ³   ³       ³       ÀÄÄÄPrinters
+    ³   ³       ÀÄÄÄVisual
+    ³   ÀÄÄÄpest-plugin-profanity
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄConfig
+    ³       ³   ³   ÀÄÄÄprofanities
+    ³       ³   ÃÄÄÄContracts
+    ³       ³   ÃÄÄÄLogging
+    ³       ³   ÀÄÄÄSupport
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄFixtures
+    ³           ÀÄÄÄSupport
+    ÃÄÄÄphar-io
+    ³   ÃÄÄÄmanifest
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ÃÄÄÄexamples
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄexceptions
+    ³   ³   ³   ÃÄÄÄvalues
+    ³   ³   ³   ÀÄÄÄxml
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄexceptions
+    ³   ³   ³   ÃÄÄÄvalues
+    ³   ³   ³   ÃÄÄÄxml
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄphp-cs-fixer.d
+    ³   ÀÄÄÄversion
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄconstraints
+    ³       ³   ÀÄÄÄexceptions
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄIntegration
+    ³           ÀÄÄÄUnit
+    ÃÄÄÄphpdocumentor
+    ³   ÃÄÄÄreflection-common
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄcommon
+    ³   ³       ÀÄÄÄunit
+    ³   ÃÄÄÄreflection-docblock
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄexamples
+    ³   ³   ³   ÀÄÄÄplaying-with-descriptions
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄDocBlock
+    ³   ³   ³   ³   ÀÄÄÄTags
+    ³   ³   ³   ³       ÃÄÄÄFactory
+    ³   ³   ³   ³       ÃÄÄÄFormatter
+    ³   ³   ³   ³       ÀÄÄÄReference
+    ³   ³   ³   ÀÄÄÄException
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄintegration
+    ³   ³       ÀÄÄÄunit
+    ³   ³           ÃÄÄÄAssets
+    ³   ³           ÃÄÄÄDocBlock
+    ³   ³           ³   ÀÄÄÄTags
+    ³   ³           ³       ÃÄÄÄFactory
+    ³   ³           ³       ÀÄÄÄFormatter
+    ³   ³           ÀÄÄÄException
+    ³   ÀÄÄÄtype-resolver
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄ.phpdoc
+    ³       ³   ÀÄÄÄtemplate
+    ³       ÃÄÄÄdocs
+    ³       ÃÄÄÄexamples
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄPseudoTypes
+    ³       ³   ÀÄÄÄTypes
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄbenchmark
+    ³           ³   ÀÄÄÄAssets
+    ³           ÀÄÄÄunit
+    ³               ÃÄÄÄPseudoTypes
+    ³               ÀÄÄÄTypes
+    ÃÄÄÄphpoption
+    ³   ÀÄÄÄphpoption
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄPhpOption
+    ³       ÃÄÄÄtests
+    ³       ³   ÀÄÄÄPhpOption
+    ³       ³       ÀÄÄÄTests
+    ³       ÀÄÄÄvendor-bin
+    ³           ÀÄÄÄphpstan
+    ÃÄÄÄphpstan
+    ³   ÀÄÄÄphpdoc-parser
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄapigen
+    ³       ³   ÀÄÄÄtheme
+    ³       ³       ÀÄÄÄblocks
+    ³       ÃÄÄÄdoc
+    ³       ³   ÀÄÄÄgrammars
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄAst
+    ³       ³   ³   ÃÄÄÄConstExpr
+    ³       ³   ³   ÃÄÄÄNodeVisitor
+    ³       ³   ³   ÃÄÄÄPhpDoc
+    ³       ³   ³   ³   ÀÄÄÄDoctrine
+    ³       ³   ³   ÀÄÄÄType
+    ³       ³   ÃÄÄÄLexer
+    ³       ³   ÃÄÄÄParser
+    ³       ³   ÀÄÄÄPrinter
+    ³       ÃÄÄÄtests
+    ³       ³   ÀÄÄÄPHPStan
+    ³       ³       ÃÄÄÄAst
+    ³       ³       ³   ÃÄÄÄAttributes
+    ³       ³       ³   ÃÄÄÄNodeVisitor
+    ³       ³       ³   ÀÄÄÄToString
+    ³       ³       ÃÄÄÄParser
+    ³       ³       ³   ÀÄÄÄDoctrine
+    ³       ³       ÀÄÄÄPrinter
+    ³       ³           ÀÄÄÄdata
+    ³       ÀÄÄÄtmp
+    ³           ÀÄÄÄcache
+    ÃÄÄÄphpunit
+    ³   ÃÄÄÄphp-code-coverage
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄData
+    ³   ³   ³   ÃÄÄÄDriver
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ÃÄÄÄReport
+    ³   ³   ³   ³   ÃÄÄÄHtml
+    ³   ³   ³   ³   ³   ÀÄÄÄRenderer
+    ³   ³   ³   ³   ³       ÀÄÄÄTemplate
+    ³   ³   ³   ³   ³           ÃÄÄÄcss
+    ³   ³   ³   ³   ³           ÃÄÄÄicons
+    ³   ³   ³   ³   ³           ÀÄÄÄjs
+    ³   ³   ³   ³   ÀÄÄÄXml
+    ³   ³   ³   ÃÄÄÄStaticAnalysis
+    ³   ³   ³   ³   ÃÄÄÄValue
+    ³   ³   ³   ³   ÀÄÄÄVisitor
+    ³   ³   ³   ÃÄÄÄTarget
+    ³   ³   ³   ÃÄÄÄTestSize
+    ³   ³   ³   ÃÄÄÄTestStatus
+    ³   ³   ³   ÀÄÄÄUtil
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ³   ÃÄÄÄData
+    ³   ³   ³   ³   ÃÄÄÄDriver
+    ³   ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ³   ÃÄÄÄReport
+    ³   ³   ³   ³   ³   ÀÄÄÄHtml
+    ³   ³   ³   ³   ÃÄÄÄStaticAnalysis
+    ³   ³   ³   ³   ³   ÃÄÄÄValue
+    ³   ³   ³   ³   ³   ÀÄÄÄVisitor
+    ³   ³   ³   ³   ÃÄÄÄTarget
+    ³   ³   ³   ³   ÀÄÄÄUtil
+    ³   ³   ³   ÀÄÄÄ_files
+    ³   ³   ³       ÃÄÄÄfilter
+    ³   ³   ³       ÃÄÄÄReport
+    ³   ³   ³       ³   ÃÄÄÄClover
+    ³   ³   ³       ³   ÃÄÄÄCobertura
+    ³   ³   ³       ³   ÃÄÄÄCrap4j
+    ³   ³   ³       ³   ÃÄÄÄHTML
+    ³   ³   ³       ³   ³   ÃÄÄÄCoverageForBankAccount
+    ³   ³   ³       ³   ³   ÃÄÄÄCoverageForClassWithAnonymousFunction
+    ³   ³   ³       ³   ³   ÃÄÄÄCoverageForFileWithIgnoredLines
+    ³   ³   ³       ³   ³   ÃÄÄÄPathCoverageForBankAccount
+    ³   ³   ³       ³   ³   ÀÄÄÄPathCoverageForSourceWithoutNamespace
+    ³   ³   ³       ³   ÃÄÄÄOpenClover
+    ³   ³   ³       ³   ÃÄÄÄText
+    ³   ³   ³       ³   ÀÄÄÄXML
+    ³   ³   ³       ³       ÃÄÄÄCoverageForBankAccount
+    ³   ³   ³       ³       ÃÄÄÄCoverageForBankAccountWithoutSource
+    ³   ³   ³       ³       ÃÄÄÄCoverageForClassWithAnonymousFunction
+    ³   ³   ³       ³       ÀÄÄÄCoverageForFileWithIgnoredLines
+    ³   ³   ³       ÀÄÄÄTarget
+    ³   ³   ³           ÀÄÄÄregression
+    ³   ³   ³               ÀÄÄÄ1066
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄCallLikes
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÃÄÄÄphp-file-iterator
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄfixture
+    ³   ³   ³   ³   ÃÄÄÄa
+    ³   ³   ³   ³   ³   ÀÄÄÄc
+    ³   ³   ³   ³   ³       ÃÄÄÄ.hidden
+    ³   ³   ³   ³   ³       ÀÄÄÄd
+    ³   ³   ³   ³   ³           ÀÄÄÄi
+    ³   ³   ³   ³   ÀÄÄÄb
+    ³   ³   ³   ³       ÃÄÄÄe
+    ³   ³   ³   ³       ³   ÃÄÄÄg
+    ³   ³   ³   ³       ³   ³   ÀÄÄÄi
+    ³   ³   ³   ³       ³   ÀÄÄÄi
+    ³   ³   ³   ³       ÀÄÄÄf
+    ³   ³   ³   ³           ÀÄÄÄh
+    ³   ³   ³   ³               ÀÄÄÄi
+    ³   ³   ³   ÀÄÄÄunit
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄphp-invoker
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄexceptions
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄphp-text-template
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄ.psalm
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄexceptions
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄphp-timer
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄexceptions
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ÀÄÄÄtools
+    ³   ÀÄÄÄphpunit
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄimg
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÃÄÄÄPULL_REQUEST_TEMPLATE
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄ.phive
+    ³       ÃÄÄÄbuild
+    ³       ³   ÃÄÄÄconfig
+    ³       ³   ÃÄÄÄscripts
+    ³       ³   ³   ÀÄÄÄphar-set-timestamps
+    ³       ³   ³       ÀÄÄÄvendor
+    ³       ³   ³           ÃÄÄÄcomposer
+    ³       ³   ³           ÀÄÄÄseld
+    ³       ³   ³               ÀÄÄÄphar-utils
+    ³       ³   ³                   ÀÄÄÄsrc
+    ³       ³   ÃÄÄÄtemplates
+    ³       ³   ÀÄÄÄtest-extension
+    ³       ³       ÀÄÄÄsrc
+    ³       ÃÄÄÄschema
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄEvent
+    ³       ³   ³   ÃÄÄÄDispatcher
+    ³       ³   ³   ÃÄÄÄEmitter
+    ³       ³   ³   ÃÄÄÄEvents
+    ³       ³   ³   ³   ÃÄÄÄApplication
+    ³       ³   ³   ³   ÃÄÄÄTest
+    ³       ³   ³   ³   ³   ÃÄÄÄHookMethod
+    ³       ³   ³   ³   ³   ÃÄÄÄIssue
+    ³       ³   ³   ³   ³   ÃÄÄÄLifecycle
+    ³       ³   ³   ³   ³   ÃÄÄÄOutcome
+    ³       ³   ³   ³   ³   ÀÄÄÄTestDouble
+    ³       ³   ³   ³   ÃÄÄÄTestRunner
+    ³       ³   ³   ³   ÀÄÄÄTestSuite
+    ³       ³   ³   ÃÄÄÄException
+    ³       ³   ³   ÀÄÄÄValue
+    ³       ³   ³       ÃÄÄÄRuntime
+    ³       ³   ³       ÃÄÄÄTelemetry
+    ³       ³   ³       ÃÄÄÄTest
+    ³       ³   ³       ³   ÃÄÄÄIssue
+    ³       ³   ³       ³   ÀÄÄÄTestData
+    ³       ³   ³       ÀÄÄÄTestSuite
+    ³       ³   ÃÄÄÄFramework
+    ³       ³   ³   ÃÄÄÄAssert
+    ³       ³   ³   ÃÄÄÄAttributes
+    ³       ³   ³   ÃÄÄÄConstraint
+    ³       ³   ³   ³   ÃÄÄÄBoolean
+    ³       ³   ³   ³   ÃÄÄÄCardinality
+    ³       ³   ³   ³   ÃÄÄÄEquality
+    ³       ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÃÄÄÄFilesystem
+    ³       ³   ³   ³   ÃÄÄÄMath
+    ³       ³   ³   ³   ÃÄÄÄObject
+    ³       ³   ³   ³   ÃÄÄÄOperator
+    ³       ³   ³   ³   ÃÄÄÄString
+    ³       ³   ³   ³   ÃÄÄÄTraversable
+    ³       ³   ³   ³   ÀÄÄÄType
+    ³       ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÃÄÄÄIncomplete
+    ³       ³   ³   ³   ÃÄÄÄObjectEquals
+    ³       ³   ³   ³   ÀÄÄÄSkipped
+    ³       ³   ³   ÃÄÄÄMockObject
+    ³       ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÃÄÄÄGenerator
+    ³       ³   ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ³   ÀÄÄÄtemplates
+    ³       ³   ³   ³   ÀÄÄÄRuntime
+    ³       ³   ³   ³       ÃÄÄÄApi
+    ³       ³   ³   ³       ÃÄÄÄInterface
+    ³       ³   ³   ³       ÃÄÄÄPropertyHook
+    ³       ³   ³   ³       ÃÄÄÄRule
+    ³       ³   ³   ³       ÀÄÄÄStub
+    ³       ³   ³   ÃÄÄÄTestRunner
+    ³       ³   ³   ³   ÀÄÄÄtemplates
+    ³       ³   ³   ÃÄÄÄTestSize
+    ³       ³   ³   ÀÄÄÄTestStatus
+    ³       ³   ÃÄÄÄLogging
+    ³       ³   ³   ÃÄÄÄJUnit
+    ³       ³   ³   ³   ÀÄÄÄSubscriber
+    ³       ³   ³   ÃÄÄÄOpenTestReporting
+    ³       ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÃÄÄÄschema
+    ³       ³   ³   ³   ÀÄÄÄSubscriber
+    ³       ³   ³   ÃÄÄÄTeamCity
+    ³       ³   ³   ³   ÀÄÄÄSubscriber
+    ³       ³   ³   ÀÄÄÄTestDox
+    ³       ³   ³       ÀÄÄÄTestResult
+    ³       ³   ³           ÀÄÄÄSubscriber
+    ³       ³   ÃÄÄÄMetadata
+    ³       ³   ³   ÃÄÄÄApi
+    ³       ³   ³   ÃÄÄÄException
+    ³       ³   ³   ÃÄÄÄParser
+    ³       ³   ³   ÀÄÄÄVersion
+    ³       ³   ÃÄÄÄRunner
+    ³       ³   ³   ÃÄÄÄBaseline
+    ³       ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÀÄÄÄSubscriber
+    ³       ³   ³   ÃÄÄÄDeprecationCollector
+    ³       ³   ³   ³   ÀÄÄÄSubscriber
+    ³       ³   ³   ÃÄÄÄException
+    ³       ³   ³   ÃÄÄÄExtension
+    ³       ³   ³   ÃÄÄÄFilter
+    ³       ³   ³   ÃÄÄÄGarbageCollection
+    ³       ³   ³   ³   ÀÄÄÄSubscriber
+    ³       ³   ³   ÃÄÄÄHookMethod
+    ³       ³   ³   ÃÄÄÄPhpt
+    ³       ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÀÄÄÄtemplates
+    ³       ³   ³   ÃÄÄÄResultCache
+    ³       ³   ³   ³   ÀÄÄÄSubscriber
+    ³       ³   ³   ÀÄÄÄTestResult
+    ³       ³   ³       ÀÄÄÄSubscriber
+    ³       ³   ÃÄÄÄTextUI
+    ³       ³   ³   ÃÄÄÄCommand
+    ³       ³   ³   ³   ÀÄÄÄCommands
+    ³       ³   ³   ÃÄÄÄConfiguration
+    ³       ³   ³   ³   ÃÄÄÄCli
+    ³       ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÃÄÄÄValue
+    ³       ³   ³   ³   ÀÄÄÄXml
+    ³       ³   ³   ³       ÃÄÄÄCodeCoverage
+    ³       ³   ³   ³       ³   ÀÄÄÄReport
+    ³       ³   ³   ³       ÃÄÄÄLogging
+    ³       ³   ³   ³       ³   ÀÄÄÄTestDox
+    ³       ³   ³   ³       ÃÄÄÄMigration
+    ³       ³   ³   ³       ³   ÀÄÄÄMigrations
+    ³       ³   ³   ³       ÃÄÄÄSchemaDetector
+    ³       ³   ³   ³       ÀÄÄÄValidator
+    ³       ³   ³   ÃÄÄÄException
+    ³       ³   ³   ÀÄÄÄOutput
+    ³       ³   ³       ÃÄÄÄDefault
+    ³       ³   ³       ³   ÀÄÄÄProgressPrinter
+    ³       ³   ³       ³       ÀÄÄÄSubscriber
+    ³       ³   ³       ÃÄÄÄPrinter
+    ³       ³   ³       ÀÄÄÄTestDox
+    ³       ³   ÀÄÄÄUtil
+    ³       ³       ÃÄÄÄException
+    ³       ³       ÃÄÄÄHttp
+    ³       ³       ÃÄÄÄPHP
+    ³       ³       ÀÄÄÄXml
+    ³       ÃÄÄÄtests
+    ³       ³   ÃÄÄÄend-to-end
+    ³       ³   ³   ÃÄÄÄbaseline
+    ³       ³   ³   ÃÄÄÄcheck-php-configuration
+    ³       ³   ³   ÃÄÄÄcli
+    ³       ³   ³   ³   ÃÄÄÄcolumns
+    ³       ³   ³   ³   ÃÄÄÄconfiguration-file-based-test-selection
+    ³       ³   ³   ³   ÃÄÄÄcoverage
+    ³       ³   ³   ³   ÃÄÄÄdo-not-fail-on
+    ³       ³   ³   ³   ÃÄÄÄexclude-filter
+    ³       ³   ³   ³   ÃÄÄÄfail-on
+    ³       ³   ³   ³   ÃÄÄÄfilter
+    ³       ³   ³   ³   ÃÄÄÄfilter-error-handler
+    ³       ³   ³   ³   ÃÄÄÄgroup
+    ³       ³   ³   ³   ÃÄÄÄhelp
+    ³       ³   ³   ³   ÃÄÄÄlist-suites
+    ³       ³   ³   ³   ÃÄÄÄlist-test-files
+    ³       ³   ³   ³   ÃÄÄÄlisting-tests-and-groups
+    ³       ³   ³   ³   ÀÄÄÄstop-on
+    ³       ³   ³   ÃÄÄÄdata-provider
+    ³       ³   ³   ÃÄÄÄdeprecation-trigger
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÃÄÄÄdeprecation-trigger-baseline-ignore
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³   ³       ÃÄÄÄdeprecation-trigger-class
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³   ³       ÃÄÄÄdeprecation-trigger-function
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³   ³       ÃÄÄÄdeprecation-trigger-method
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³   ³       ÃÄÄÄdetails
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÀÄÄÄdetails-process-isolation
+    ³       ³   ³   ³           ÀÄÄÄtests
+    ³       ³   ³   ÃÄÄÄevent
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÃÄÄÄcustom-error-handler-registered-in-bootstrap-is-not-overwritten-by-phpunit
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄcustom-failure-interface
+    ³       ³   ³   ³       ÃÄÄÄerror-handler-can-be-disabled
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄinvalid-coverage-metadata
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄtest-risky-code-coverage
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÀÄÄÄtest-risky-depends-on-larger-test
+    ³       ³   ³   ÃÄÄÄexecution-order
+    ³       ³   ³   ³   ÀÄÄÄfixture
+    ³       ³   ³   ³       ÃÄÄÄempty-test-suite
+    ³       ³   ³   ³       ÃÄÄÄtest-classes
+    ³       ³   ³   ³       ÃÄÄÄtest-classes-with-defects
+    ³       ³   ³   ³       ÃÄÄÄtest-classes-with-different-sizes
+    ³       ³   ³   ³       ÃÄÄÄtest-classes-with-duration
+    ³       ³   ³   ³       ÃÄÄÄtest-methods-with-defects
+    ³       ³   ³   ³       ÃÄÄÄtest-methods-with-dependencies
+    ³       ³   ³   ³       ÀÄÄÄtest-methods-with-duration
+    ³       ³   ³   ÃÄÄÄextension-cli
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÃÄÄÄclass-does-not-exist
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄclass-does-not-implement-interface
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄexception-in-extension-bootstrap-method
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄexception-in-extension-constructor
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄexception-in-extension-subscriber
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÀÄÄÄextension-bootstrap
+    ³       ³   ³   ³           ÃÄÄÄsrc
+    ³       ³   ³   ³           ÀÄÄÄtests
+    ³       ³   ³   ÃÄÄÄextension-xml
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÃÄÄÄclass-does-not-exist
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄclass-does-not-implement-interface
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄexception-in-extension-bootstrap-method
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄexception-in-extension-constructor
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄexception-in-extension-subscriber
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÀÄÄÄextension-bootstrap
+    ³       ³   ³   ³           ÃÄÄÄsrc
+    ³       ³   ³   ³           ÀÄÄÄtests
+    ³       ³   ³   ÃÄÄÄgeneric
+    ³       ³   ³   ³   ÃÄÄÄabstract-test-class
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ÃÄÄÄgroups-from-configuration
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÀÄÄÄtests
+    ³       ³   ³   ³           ÃÄÄÄbar-baz
+    ³       ³   ³   ³           ÀÄÄÄfoo
+    ³       ³   ³   ÃÄÄÄlogging
+    ³       ³   ³   ³   ÃÄÄÄjunit
+    ³       ³   ³   ³   ÃÄÄÄopen-test-reporting
+    ³       ³   ³   ³   ÃÄÄÄteamcity
+    ³       ³   ³   ³   ÃÄÄÄtestdox
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÃÄÄÄstatus
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÀÄÄÄteamcity-warning
+    ³       ³   ³   ³           ÀÄÄÄtests
+    ³       ³   ³   ÃÄÄÄmetadata
+    ³       ³   ³   ÃÄÄÄmigration
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÃÄÄÄmigration-from-100
+    ³       ³   ³   ³       ÃÄÄÄmigration-from-110
+    ³       ³   ³   ³       ÃÄÄÄmigration-from-85
+    ³       ³   ³   ³       ÃÄÄÄmigration-from-92
+    ³       ³   ³   ³       ÃÄÄÄmigration-from-95
+    ³       ³   ³   ³       ÃÄÄÄpossibility-to-migrate-from-100-is-detected
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄpossibility-to-migrate-from-85-is-detected
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄpossibility-to-migrate-from-92-is-detected
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄpossibility-to-migrate-from-95-is-detected
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÀÄÄÄunsupported-schema
+    ³       ³   ³   ÃÄÄÄmock-objects
+    ³       ³   ³   ³   ÃÄÄÄgenerator
+    ³       ³   ³   ³   ÀÄÄÄmock-method
+    ³       ³   ³   ÃÄÄÄphar
+    ³       ³   ³   ³   ÃÄÄÄsrc
+    ³       ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄphpt
+    ³       ³   ³   ³       ÀÄÄÄstandard
+    ³       ³   ³   ÃÄÄÄphpt
+    ³       ³   ³   ÃÄÄÄregression
+    ³       ³   ³   ³   ÃÄÄÄ1149
+    ³       ³   ³   ³   ÃÄÄÄ1335
+    ³       ³   ³   ³   ÃÄÄÄ1337
+    ³       ³   ³   ³   ÃÄÄÄ1374
+    ³       ³   ³   ³   ÃÄÄÄ1437
+    ³       ³   ³   ³   ÃÄÄÄ1471
+    ³       ³   ³   ³   ÃÄÄÄ1570
+    ³       ³   ³   ³   ÃÄÄÄ2085
+    ³       ³   ³   ³   ÃÄÄÄ2137
+    ³       ³   ³   ³   ÃÄÄÄ2145
+    ³       ³   ³   ³   ÃÄÄÄ2155
+    ³       ³   ³   ³   ÃÄÄÄ2158
+    ³       ³   ³   ³   ÃÄÄÄ2380
+    ³       ³   ³   ³   ÃÄÄÄ2435
+    ³       ³   ³   ³   ÃÄÄÄ2448
+    ³       ³   ³   ³   ÃÄÄÄ2724
+    ³       ³   ³   ³   ÃÄÄÄ2725
+    ³       ³   ³   ³   ÃÄÄÄ2731
+    ³       ³   ³   ³   ÃÄÄÄ2811
+    ³       ³   ³   ³   ÃÄÄÄ2830
+    ³       ³   ³   ³   ÃÄÄÄ2972
+    ³       ³   ³   ³   ÃÄÄÄ3093
+    ³       ³   ³   ³   ÃÄÄÄ3156
+    ³       ³   ³   ³   ÃÄÄÄ3881
+    ³       ³   ³   ³   ÃÄÄÄ3904
+    ³       ³   ³   ³   ÃÄÄÄ3983
+    ³       ³   ³   ³   ÃÄÄÄ4232
+    ³       ³   ³   ³   ÃÄÄÄ433
+    ³       ³   ³   ³   ÃÄÄÄ4347
+    ³       ³   ³   ³   ÃÄÄÄ4376
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ4391
+    ³       ³   ³   ³   ÃÄÄÄ445
+    ³       ³   ³   ³   ÃÄÄÄ4498
+    ³       ³   ³   ³   ÃÄÄÄ4620
+    ³       ³   ³   ³   ÃÄÄÄ498
+    ³       ³   ³   ³   ÃÄÄÄ5020
+    ³       ³   ³   ³   ³   ÀÄÄÄUnder
+    ³       ³   ³   ³   ³       ÀÄÄÄScore
+    ³       ³   ³   ³   ÃÄÄÄ503
+    ³       ³   ³   ³   ÃÄÄÄ5138
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5157
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5165
+    ³       ³   ³   ³   ÃÄÄÄ5172
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5178
+    ³       ³   ³   ³   ÃÄÄÄ5192
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5210
+    ³       ³   ³   ³   ÃÄÄÄ5218
+    ³       ³   ³   ³   ³   ÃÄÄÄsrc
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5234
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5258
+    ³       ³   ³   ³   ÃÄÄÄ5278
+    ³       ³   ³   ³   ÃÄÄÄ5287
+    ³       ³   ³   ³   ³   ÃÄÄÄA
+    ³       ³   ³   ³   ³   ÃÄÄÄB
+    ³       ³   ³   ³   ³   ÀÄÄÄC
+    ³       ³   ³   ³   ÃÄÄÄ5288
+    ³       ³   ³   ³   ÃÄÄÄ5340
+    ³       ³   ³   ³   ÃÄÄÄ5342
+    ³       ³   ³   ³   ÃÄÄÄ5351
+    ³       ³   ³   ³   ³   ÃÄÄÄsrc
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5364
+    ³       ³   ³   ³   ÃÄÄÄ5451
+    ³       ³   ³   ³   ÃÄÄÄ5456
+    ³       ³   ³   ³   ÃÄÄÄ5493
+    ³       ³   ³   ³   ÃÄÄÄ5498
+    ³       ³   ³   ³   ÃÄÄÄ5561
+    ³       ³   ³   ³   ÃÄÄÄ5567
+    ³       ³   ³   ³   ÃÄÄÄ5574
+    ³       ³   ³   ³   ÃÄÄÄ5592
+    ³       ³   ³   ³   ÃÄÄÄ5614
+    ³       ³   ³   ³   ÃÄÄÄ5616
+    ³       ³   ³   ³   ÃÄÄÄ5760
+    ³       ³   ³   ³   ÃÄÄÄ5764
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5771
+    ³       ³   ³   ³   ÃÄÄÄ5807
+    ³       ³   ³   ³   ³   ÃÄÄÄsrc
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ581
+    ³       ³   ³   ³   ÃÄÄÄ5822
+    ³       ³   ³   ³   ³   ÃÄÄÄsrc
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5844
+    ³       ³   ³   ³   ÃÄÄÄ5875
+    ³       ³   ³   ³   ÃÄÄÄ5884
+    ³       ³   ³   ³   ³   ÃÄÄÄsrc
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ5891
+    ³       ³   ³   ³   ÃÄÄÄ5898
+    ³       ³   ³   ³   ÃÄÄÄ5908
+    ³       ³   ³   ³   ÃÄÄÄ5943
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ³       ÃÄÄÄa
+    ³       ³   ³   ³   ³       ÀÄÄÄb
+    ³       ³   ³   ³   ÃÄÄÄ5949
+    ³       ³   ³   ³   ÃÄÄÄ5965
+    ³       ³   ³   ³   ÃÄÄÄ5976
+    ³       ³   ³   ³   ÃÄÄÄ6094
+    ³       ³   ³   ³   ÃÄÄÄ6095
+    ³       ³   ³   ³   ÃÄÄÄ6098
+    ³       ³   ³   ³   ÃÄÄÄ6100
+    ³       ³   ³   ³   ÃÄÄÄ6103
+    ³       ³   ³   ³   ÃÄÄÄ6105
+    ³       ³   ³   ³   ÃÄÄÄ6109
+    ³       ³   ³   ³   ÃÄÄÄ6115
+    ³       ³   ³   ³   ÃÄÄÄ6138
+    ³       ³   ³   ³   ÃÄÄÄ6142
+    ³       ³   ³   ³   ÃÄÄÄ6173
+    ³       ³   ³   ³   ÃÄÄÄ6222
+    ³       ³   ³   ³   ÃÄÄÄ6234
+    ³       ³   ³   ³   ÃÄÄÄ6279
+    ³       ³   ³   ³   ÃÄÄÄ6281
+    ³       ³   ³   ³   ÃÄÄÄ6294
+    ³       ³   ³   ³   ÃÄÄÄ6329
+    ³       ³   ³   ³   ÃÄÄÄ6366
+    ³       ³   ³   ³   ÃÄÄÄ6368
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ6382
+    ³       ³   ³   ³   ÃÄÄÄ6391
+    ³       ³   ³   ³   ³   ÃÄÄÄsrc
+    ³       ³   ³   ³   ³   ÀÄÄÄtests
+    ³       ³   ³   ³   ÃÄÄÄ6406
+    ³       ³   ³   ³   ÃÄÄÄ6408
+    ³       ³   ³   ³   ÃÄÄÄ74
+    ³       ³   ³   ³   ÃÄÄÄ765
+    ³       ³   ³   ³   ÀÄÄÄ797
+    ³       ³   ³   ÃÄÄÄself-direct-indirect
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ³       ÃÄÄÄdeprecation-in-test-code
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄdeprecation-in-test-code-ignored
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄinvalid-deprecation-trigger
+    ³       ³   ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³   ³       ÃÄÄÄuser-deprecation
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³   ³       ÃÄÄÄuser-deprecation-report-self
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³   ³       ÃÄÄÄuser-deprecation-report-self-direct
+    ³       ³   ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³   ³       ÀÄÄÄuser-deprecation-report-self-direct-indirect
+    ³       ³   ³   ³           ÃÄÄÄsrc
+    ³       ³   ³   ³           ÃÄÄÄtests
+    ³       ³   ³   ³           ÀÄÄÄvendor
+    ³       ³   ³   ÃÄÄÄtestdox
+    ³       ³   ³   ³   ÀÄÄÄ_files
+    ³       ³   ³   ÀÄÄÄ_files
+    ³       ³   ³       ÃÄÄÄattribute-based-filtering
+    ³       ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄbaseline
+    ³       ³   ³       ³   ÃÄÄÄgenerate-baseline
+    ³       ³   ³       ³   ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ÃÄÄÄgenerate-baseline-suppressed
+    ³       ³   ³       ³   ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ÃÄÄÄgenerate-baseline-suppressed-with-ignored-suppression
+    ³       ³   ³       ³   ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ÃÄÄÄgenerate-baseline-with-relative-directory
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ÃÄÄÄinvalid-baseline
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ÃÄÄÄunsupported-baseline
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ÃÄÄÄuse-baseline
+    ³       ³   ³       ³   ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ÀÄÄÄuse-baseline-in-another-directory
+    ³       ³   ³       ³       ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄbasic
+    ³       ³   ³       ³   ÀÄÄÄunit
+    ³       ³   ³       ÃÄÄÄbootstrap-for-test-suite
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ³       ÃÄÄÄbootstrap
+    ³       ³   ³       ³       ÃÄÄÄone
+    ³       ³   ³       ³       ÀÄÄÄtwo
+    ³       ³   ³       ÃÄÄÄcode-coverage-targeting
+    ³       ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄconfiguration-file-based-test-selection
+    ³       ³   ³       ³   ÃÄÄÄdefaultTestSuite
+    ³       ³   ³       ³   ³   ÀÄÄÄtests
+    ³       ³   ³       ³   ³       ÃÄÄÄend-to-end
+    ³       ³   ³       ³   ³       ÀÄÄÄunit
+    ³       ³   ³       ³   ÀÄÄÄgroups
+    ³       ³   ³       ³       ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄcontrolled-garbage-collection
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄcoverage
+    ³       ³   ³       ÃÄÄÄcoverage-annotation-based-filter
+    ³       ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄdo-not-fail-on
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄfilter-error-handler
+    ³       ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³       ³   ÀÄÄÄvendor
+    ³       ³   ³       ÃÄÄÄforce-covers-annotation
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄgroups
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄlisting-tests-and-groups
+    ³       ³   ³       ÃÄÄÄlog-events-text
+    ³       ³   ³       ÃÄÄÄmultiple-testsuites
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ³       ÃÄÄÄend-to-end
+    ³       ³   ³       ³       ÀÄÄÄunit
+    ³       ³   ³       ÃÄÄÄno-log-cc-override
+    ³       ³   ³       ÃÄÄÄoverlapping-testsuite-configuration
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÃÄÄÄphar-extension
+    ³       ³   ³       ³   ÃÄÄÄtests
+    ³       ³   ³       ³   ÀÄÄÄtools
+    ³       ³   ³       ³       ÀÄÄÄphpunit.d
+    ³       ³   ³       ÃÄÄÄrequires_environment_variable
+    ³       ³   ³       ÃÄÄÄsize-combinations
+    ³       ³   ³       ÃÄÄÄsize-groups
+    ³       ³   ³       ÃÄÄÄstop-on-fail-on
+    ³       ³   ³       ÃÄÄÄtest-attribute-on-hook-methods
+    ³       ³   ³       ÃÄÄÄtest-directory-does-not-exist
+    ³       ³   ³       ÃÄÄÄtransform-exception-hook-method
+    ³       ³   ³       ³   ÃÄÄÄsrc
+    ³       ³   ³       ³   ÀÄÄÄtests
+    ³       ³   ³       ÀÄÄÄwith_environment_variable
+    ³       ³   ÃÄÄÄunit
+    ³       ³   ³   ÃÄÄÄEvent
+    ³       ³   ³   ³   ÃÄÄÄDispatcher
+    ³       ³   ³   ³   ÃÄÄÄEmitter
+    ³       ³   ³   ³   ÃÄÄÄEvents
+    ³       ³   ³   ³   ³   ÃÄÄÄApplication
+    ³       ³   ³   ³   ³   ÃÄÄÄTest
+    ³       ³   ³   ³   ³   ³   ÃÄÄÄHookMethod
+    ³       ³   ³   ³   ³   ³   ÃÄÄÄIssue
+    ³       ³   ³   ³   ³   ³   ÃÄÄÄLifecycle
+    ³       ³   ³   ³   ³   ³   ÀÄÄÄOutcome
+    ³       ³   ³   ³   ³   ÃÄÄÄTestDouble
+    ³       ³   ³   ³   ³   ÃÄÄÄTestRunner
+    ³       ³   ³   ³   ³   ÀÄÄÄTestSuite
+    ³       ³   ³   ³   ÀÄÄÄValue
+    ³       ³   ³   ³       ÃÄÄÄRuntime
+    ³       ³   ³   ³       ÃÄÄÄTelemetry
+    ³       ³   ³   ³       ÃÄÄÄTest
+    ³       ³   ³   ³       ³   ÀÄÄÄTestData
+    ³       ³   ³   ³       ÀÄÄÄTestSuite
+    ³       ³   ³   ÃÄÄÄFramework
+    ³       ³   ³   ³   ÃÄÄÄAssert
+    ³       ³   ³   ³   ÃÄÄÄConstraint
+    ³       ³   ³   ³   ³   ÃÄÄÄBoolean
+    ³       ³   ³   ³   ³   ÃÄÄÄCardinality
+    ³       ³   ³   ³   ³   ÃÄÄÄEquality
+    ³       ³   ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ³   ÃÄÄÄFilesystem
+    ³       ³   ³   ³   ³   ÃÄÄÄMath
+    ³       ³   ³   ³   ³   ÃÄÄÄObject
+    ³       ³   ³   ³   ³   ÃÄÄÄOperator
+    ³       ³   ³   ³   ³   ÃÄÄÄString
+    ³       ³   ³   ³   ³   ÃÄÄÄTraversable
+    ³       ³   ³   ³   ³   ÀÄÄÄType
+    ³       ³   ³   ³   ÃÄÄÄException
+    ³       ³   ³   ³   ÃÄÄÄMockObject
+    ³       ³   ³   ³   ³   ÃÄÄÄCreation
+    ³       ³   ³   ³   ³   ÃÄÄÄGenerator
+    ³       ³   ³   ³   ³   ÀÄÄÄRuntime
+    ³       ³   ³   ³   ÀÄÄÄTestRunner
+    ³       ³   ³   ÃÄÄÄLogging
+    ³       ³   ³   ³   ÀÄÄÄTestDox
+    ³       ³   ³   ÃÄÄÄMetadata
+    ³       ³   ³   ³   ÃÄÄÄApi
+    ³       ³   ³   ³   ÃÄÄÄParser
+    ³       ³   ³   ³   ÀÄÄÄVersion
+    ³       ³   ³   ÃÄÄÄRunner
+    ³       ³   ³   ³   ÃÄÄÄBaseline
+    ³       ³   ³   ³   ÃÄÄÄFilter
+    ³       ³   ³   ³   ÃÄÄÄHookMethod
+    ³       ³   ³   ³   ÃÄÄÄPhpt
+    ³       ³   ³   ³   ÀÄÄÄResultCache
+    ³       ³   ³   ÃÄÄÄTextUI
+    ³       ³   ³   ³   ÃÄÄÄCommand
+    ³       ³   ³   ³   ³   ÀÄÄÄCommands
+    ³       ³   ³   ³   ÃÄÄÄConfiguration
+    ³       ³   ³   ³   ³   ÃÄÄÄCli
+    ³       ³   ³   ³   ³   ÃÄÄÄValue
+    ³       ³   ³   ³   ³   ÀÄÄÄXml
+    ³       ³   ³   ³   ÀÄÄÄOutput
+    ³       ³   ³   ³       ÀÄÄÄDefault
+    ³       ³   ³   ³           ÀÄÄÄexpectations
+    ³       ³   ³   ³               ÃÄÄÄresult
+    ³       ³   ³   ³               ÃÄÄÄsummary
+    ³       ³   ³   ³               ÀÄÄÄsummary-coloured
+    ³       ³   ³   ÀÄÄÄUtil
+    ³       ³   ³       ÃÄÄÄPHP
+    ³       ³   ³       ÀÄÄÄXml
+    ³       ³   ÀÄÄÄ_files
+    ³       ³       ÃÄÄÄabstract
+    ³       ³       ³   ÃÄÄÄwith-test-suffix
+    ³       ³       ³   ÀÄÄÄwithout-test-suffix
+    ³       ³       ÃÄÄÄbaseline
+    ³       ³       ÃÄÄÄDataProviderIssue2833
+    ³       ³       ÃÄÄÄdependencies
+    ³       ³       ÃÄÄÄdeprecation-trigger
+    ³       ³       ÃÄÄÄEnumerationEquals
+    ³       ³       ÃÄÄÄInheritance
+    ³       ³       ÃÄÄÄJsonData
+    ³       ³       ÃÄÄÄMetadata
+    ³       ³       ³   ÀÄÄÄAttribute
+    ³       ³       ³       ÃÄÄÄsrc
+    ³       ³       ³       ÀÄÄÄtests
+    ³       ³       ÃÄÄÄmock-object
+    ³       ³       ÃÄÄÄnamespace
+    ³       ³       ³   ÃÄÄÄsomeNamespaceA
+    ³       ³       ³   ÀÄÄÄsomeNamespaceB
+    ³       ³       ÃÄÄÄObjectEquals
+    ³       ³       ÃÄÄÄOneClassPerFile
+    ³       ³       ³   ÀÄÄÄwrongClassName
+    ³       ³       ÃÄÄÄphpt
+    ³       ³       ³   ÃÄÄÄinvalid
+    ³       ³       ³   ÀÄÄÄunsupported
+    ³       ³       ÃÄÄÄSameClassNames
+    ³       ³       ³   ÃÄÄÄNamespaceOne
+    ³       ³       ³   ÀÄÄÄNamespaceTwo
+    ³       ³       ÃÄÄÄsource-filter
+    ³       ³       ³   ÃÄÄÄa
+    ³       ³       ³   ³   ÀÄÄÄc
+    ³       ³       ³   ³       ÃÄÄÄ.hidden
+    ³       ³       ³   ³       ÀÄÄÄd
+    ³       ³       ³   ÀÄÄÄb
+    ³       ³       ³       ÃÄÄÄe
+    ³       ³       ³       ³   ÀÄÄÄg
+    ³       ³       ³       ÀÄÄÄf
+    ³       ³       ³           ÀÄÄÄh
+    ³       ³       ÀÄÄÄXmlConfigurationMigration
+    ³       ÀÄÄÄtools
+    ³           ÀÄÄÄ.phpstan
+    ³               ÀÄÄÄvendor
+    ³                   ÃÄÄÄbin
+    ³                   ÃÄÄÄcomposer
+    ³                   ÃÄÄÄergebnis
+    ³                   ³   ÀÄÄÄphpstan-rules
+    ³                   ³       ÀÄÄÄsrc
+    ³                   ³           ÃÄÄÄCallLikes
+    ³                   ³           ÃÄÄÄClasses
+    ³                   ³           ³   ÀÄÄÄPHPUnit
+    ³                   ³           ³       ÀÄÄÄFramework
+    ³                   ³           ÃÄÄÄClosures
+    ³                   ³           ÃÄÄÄExpressions
+    ³                   ³           ÃÄÄÄFiles
+    ³                   ³           ÃÄÄÄFunctions
+    ³                   ³           ÃÄÄÄMethods
+    ³                   ³           ÀÄÄÄStatements
+    ³                   ÃÄÄÄnette
+    ³                   ³   ÀÄÄÄutils
+    ³                   ³       ÀÄÄÄsrc
+    ³                   ³           ÃÄÄÄIterators
+    ³                   ³           ÀÄÄÄUtils
+    ³                   ÃÄÄÄphpstan
+    ³                   ³   ÃÄÄÄextension-installer
+    ³                   ³   ³   ÀÄÄÄsrc
+    ³                   ³   ÃÄÄÄphpstan
+    ³                   ³   ³   ÀÄÄÄconf
+    ³                   ³   ÀÄÄÄphpstan-strict-rules
+    ³                   ³       ÀÄÄÄsrc
+    ³                   ³           ÀÄÄÄRules
+    ³                   ³               ÃÄÄÄBooleansInConditions
+    ³                   ³               ÃÄÄÄCast
+    ³                   ³               ÃÄÄÄClasses
+    ³                   ³               ÃÄÄÄDisallowedConstructs
+    ³                   ³               ÃÄÄÄForeachLoop
+    ³                   ³               ÃÄÄÄForLoop
+    ³                   ³               ÃÄÄÄFunctions
+    ³                   ³               ÃÄÄÄMethods
+    ³                   ³               ÃÄÄÄOperators
+    ³                   ³               ÃÄÄÄStrictCalls
+    ³                   ³               ÃÄÄÄSwitchConditions
+    ³                   ³               ÀÄÄÄVariableVariables
+    ³                   ÀÄÄÄtomasvotruba
+    ³                       ÀÄÄÄtype-coverage
+    ³                           ÃÄÄÄconfig
+    ³                           ÀÄÄÄsrc
+    ³                               ÃÄÄÄCollectors
+    ³                               ÃÄÄÄConfiguration
+    ³                               ÃÄÄÄFormatter
+    ³                               ÃÄÄÄRules
+    ³                               ÀÄÄÄValueObject
+    ÃÄÄÄpsr
+    ³   ÃÄÄÄclock
+    ³   ³   ÀÄÄÄsrc
+    ³   ÃÄÄÄcontainer
+    ³   ³   ÀÄÄÄsrc
+    ³   ÃÄÄÄevent-dispatcher
+    ³   ³   ÀÄÄÄsrc
+    ³   ÃÄÄÄhttp-client
+    ³   ³   ÀÄÄÄsrc
+    ³   ÃÄÄÄhttp-factory
+    ³   ³   ÀÄÄÄsrc
+    ³   ÃÄÄÄhttp-message
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ÀÄÄÄsrc
+    ³   ÃÄÄÄlog
+    ³   ³   ÀÄÄÄsrc
+    ³   ÀÄÄÄsimple-cache
+    ³       ÀÄÄÄsrc
+    ÃÄÄÄpsy
+    ³   ÀÄÄÄpsysh
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄ.phan
+    ³       ÃÄÄÄbin
+    ³       ÃÄÄÄbuild
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄCodeCleaner
+    ³       ³   ÃÄÄÄCommand
+    ³       ³   ³   ÃÄÄÄListCommand
+    ³       ³   ³   ÀÄÄÄTimeitCommand
+    ³       ³   ÃÄÄÄException
+    ³       ³   ÃÄÄÄExecutionLoop
+    ³       ³   ÃÄÄÄFormatter
+    ³       ³   ÃÄÄÄInput
+    ³       ³   ÃÄÄÄLogger
+    ³       ³   ÃÄÄÄManual
+    ³       ³   ÃÄÄÄManualUpdater
+    ³       ³   ÃÄÄÄOutput
+    ³       ³   ÃÄÄÄReadline
+    ³       ³   ³   ÀÄÄÄHoa
+    ³       ³   ³       ÀÄÄÄTerminfo
+    ³       ³   ³           ÃÄÄÄ77
+    ³       ³   ³           ÀÄÄÄ78
+    ³       ³   ÃÄÄÄReflection
+    ³       ³   ÃÄÄÄSudo
+    ³       ³   ÃÄÄÄTabCompletion
+    ³       ³   ³   ÃÄÄÄAutoloadWarmer
+    ³       ³   ³   ÀÄÄÄMatcher
+    ³       ³   ÃÄÄÄUtil
+    ³       ³   ÃÄÄÄVarDumper
+    ³       ³   ÀÄÄÄVersionUpdater
+    ³       ³       ÀÄÄÄDownloader
+    ³       ÃÄÄÄtest
+    ³       ³   ÃÄÄÄCodeCleaner
+    ³       ³   ³   ÀÄÄÄFixtures
+    ³       ³   ÃÄÄÄCommand
+    ³       ³   ³   ÃÄÄÄListCommand
+    ³       ³   ³   ³   ÀÄÄÄFixtures
+    ³       ³   ³   ÀÄÄÄTimeitCommand
+    ³       ³   ÃÄÄÄException
+    ³       ³   ÃÄÄÄExecutionLoop
+    ³       ³   ÃÄÄÄfixtures
+    ³       ³   ³   ÃÄÄÄautoload-warmer-vendor
+    ³       ³   ³   ³   ÀÄÄÄcomposer
+    ³       ³   ³   ÃÄÄÄdefault
+    ³       ³   ³   ³   ÃÄÄÄ.config
+    ³       ³   ³   ³   ³   ÀÄÄÄpsysh
+    ³       ³   ³   ³   ÀÄÄÄ.local
+    ³       ³   ³   ³       ÀÄÄÄshare
+    ³       ³   ³   ³           ÀÄÄÄpsysh
+    ³       ³   ³   ÃÄÄÄlegacy
+    ³       ³   ³   ³   ÀÄÄÄ.psysh
+    ³       ³   ³   ÃÄÄÄmixed
+    ³       ³   ³   ³   ÀÄÄÄ.psysh
+    ³       ³   ³   ÃÄÄÄproject
+    ³       ³   ³   ÃÄÄÄwhich
+    ³       ³   ³   ³   ÃÄÄÄbin
+    ³       ³   ³   ³   ÃÄÄÄhome
+    ³       ³   ³   ³   ³   ÀÄÄÄusername
+    ³       ³   ³   ³   ³       ÀÄÄÄbin
+    ³       ³   ³   ³   ÃÄÄÄnotexec
+    ³       ³   ³   ³   ÃÄÄÄsbin
+    ³       ³   ³   ³   ÀÄÄÄusr
+    ³       ³   ³   ³       ÃÄÄÄbin
+    ³       ³   ³   ³       ÀÄÄÄsbin
+    ³       ³   ³   ÀÄÄÄxdg
+    ³       ³   ³       ÃÄÄÄconfig
+    ³       ³   ³       ³   ÀÄÄÄpsysh
+    ³       ³   ³       ÃÄÄÄdata
+    ³       ³   ³       ³   ÀÄÄÄpsysh
+    ³       ³   ³       ÀÄÄÄruntime
+    ³       ³   ³           ÀÄÄÄpsysh
+    ³       ³   ÃÄÄÄFormatter
+    ³       ³   ³   ÀÄÄÄFixtures
+    ³       ³   ÃÄÄÄInput
+    ³       ³   ÃÄÄÄLogger
+    ³       ³   ÃÄÄÄManual
+    ³       ³   ÃÄÄÄManualUpdater
+    ³       ³   ÃÄÄÄOutput
+    ³       ³   ÃÄÄÄReadline
+    ³       ³   ÃÄÄÄReflection
+    ³       ³   ÃÄÄÄSudo
+    ³       ³   ÃÄÄÄTabCompletion
+    ³       ³   ³   ÃÄÄÄAutoloadWarmer
+    ³       ³   ³   ÀÄÄÄMatcher
+    ³       ³   ÃÄÄÄtools
+    ³       ³   ÃÄÄÄUtil
+    ³       ³   ÀÄÄÄVersionUpdater
+    ³       ÀÄÄÄvendor-bin
+    ³           ÃÄÄÄbox
+    ³           ÃÄÄÄphan
+    ³           ÃÄÄÄphpstan
+    ³           ÀÄÄÄphpunit
+    ÃÄÄÄralouphie
+    ³   ÀÄÄÄgetallheaders
+    ³       ÃÄÄÄsrc
+    ³       ÀÄÄÄtests
+    ÃÄÄÄramsey
+    ³   ÃÄÄÄcollection
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÃÄÄÄISSUE_TEMPLATE
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÃÄÄÄcache
+    ³   ³   ³   ÀÄÄÄlogs
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÃÄÄÄMap
+    ³   ³   ³   ÀÄÄÄTool
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄMap
+    ³   ³       ÃÄÄÄMock
+    ³   ³       ÃÄÄÄstubs
+    ³   ³       ÃÄÄÄTool
+    ³   ³       ³   ÀÄÄÄMock
+    ³   ³       ÀÄÄÄtypes
+    ³   ÀÄÄÄuuid
+    ³       ÃÄÄÄ.github
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄbuild
+    ³       ³   ÃÄÄÄcache
+    ³       ³   ÀÄÄÄlogs
+    ³       ÃÄÄÄdocs
+    ³       ³   ÃÄÄÄcustomize
+    ³       ³   ÃÄÄÄnonstandard
+    ³       ³   ÃÄÄÄreference
+    ³       ³   ÃÄÄÄrfc4122
+    ³       ³   ÃÄÄÄupgrading
+    ³       ³   ÀÄÄÄ_static
+    ³       ÃÄÄÄresources
+    ³       ³   ÀÄÄÄvagrant
+    ³       ³       ÃÄÄÄfreebsd
+    ³       ³       ÃÄÄÄlinux
+    ³       ³       ÀÄÄÄwindows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄBuilder
+    ³       ³   ÃÄÄÄCodec
+    ³       ³   ÃÄÄÄConverter
+    ³       ³   ³   ÃÄÄÄNumber
+    ³       ³   ³   ÀÄÄÄTime
+    ³       ³   ÃÄÄÄException
+    ³       ³   ÃÄÄÄFields
+    ³       ³   ÃÄÄÄGenerator
+    ³       ³   ÃÄÄÄGuid
+    ³       ³   ÃÄÄÄLazy
+    ³       ³   ÃÄÄÄMath
+    ³       ³   ÃÄÄÄNonstandard
+    ³       ³   ÃÄÄÄProvider
+    ³       ³   ³   ÃÄÄÄDce
+    ³       ³   ³   ÃÄÄÄNode
+    ³       ³   ³   ÀÄÄÄTime
+    ³       ³   ÃÄÄÄRfc4122
+    ³       ³   ÃÄÄÄType
+    ³       ³   ÀÄÄÄValidator
+    ³       ÀÄÄÄtests
+    ³           ÃÄÄÄbenchmark
+    ³           ÃÄÄÄBuilder
+    ³           ÃÄÄÄCodec
+    ³           ÃÄÄÄConverter
+    ³           ³   ÃÄÄÄNumber
+    ³           ³   ÀÄÄÄTime
+    ³           ÃÄÄÄEncoder
+    ³           ÃÄÄÄGenerator
+    ³           ÃÄÄÄGuid
+    ³           ÃÄÄÄMath
+    ³           ÃÄÄÄNonstandard
+    ³           ÃÄÄÄProvider
+    ³           ³   ÃÄÄÄDce
+    ³           ³   ÃÄÄÄNode
+    ³           ³   ÀÄÄÄTime
+    ³           ÃÄÄÄRfc4122
+    ³           ÃÄÄÄstatic-analysis
+    ³           ÃÄÄÄType
+    ³           ÀÄÄÄValidator
+    ÃÄÄÄsebastian
+    ³   ÃÄÄÄcli-parser
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄexceptions
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄCallLikes
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÃÄÄÄdocs
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÃÄÄÄcomparator
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄexceptions
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄCallLikes
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÃÄÄÄcomplexity
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄComplexity
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÀÄÄÄVisitor
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄintegration
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄdiff
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÀÄÄÄOutput
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÃÄÄÄfixtures
+    ³   ³   ³   ³   ÃÄÄÄout
+    ³   ³   ³   ³   ÀÄÄÄUnifiedDiffAssertTraitIntegrationTest
+    ³   ³   ³   ÃÄÄÄOutput
+    ³   ³   ³   ³   ÀÄÄÄIntegration
+    ³   ³   ³   ÀÄÄÄUtils
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄenvironment
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÃÄÄÄdocs
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÃÄÄÄexporter
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄCallLikes
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÃÄÄÄdocs
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÃÄÄÄglobal-state
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄexceptions
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄCallLikes
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÃÄÄÄdocs
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÃÄÄÄlines-of-code
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄException
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄintegration
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄobject-enumerator
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄobject-reflector
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ÃÄÄÄrecursion-context
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÃÄÄÄdocs
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÃÄÄÄtype
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄ.phive
+    ³   ³   ÃÄÄÄbuild
+    ³   ³   ³   ÀÄÄÄscripts
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÃÄÄÄexception
+    ³   ³   ³   ÀÄÄÄtype
+    ³   ³   ÃÄÄÄtests
+    ³   ³   ³   ÃÄÄÄunit
+    ³   ³   ³   ³   ÀÄÄÄtype
+    ³   ³   ³   ÀÄÄÄ_fixture
+    ³   ³   ÀÄÄÄtools
+    ³   ³       ÀÄÄÄ.phpstan
+    ³   ³           ÀÄÄÄvendor
+    ³   ³               ÃÄÄÄbin
+    ³   ³               ÃÄÄÄcomposer
+    ³   ³               ÃÄÄÄergebnis
+    ³   ³               ³   ÀÄÄÄphpstan-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄCallLikes
+    ³   ³               ³           ÃÄÄÄClasses
+    ³   ³               ³           ³   ÀÄÄÄPHPUnit
+    ³   ³               ³           ³       ÀÄÄÄFramework
+    ³   ³               ³           ÃÄÄÄClosures
+    ³   ³               ³           ÃÄÄÄExpressions
+    ³   ³               ³           ÃÄÄÄFiles
+    ³   ³               ³           ÃÄÄÄFunctions
+    ³   ³               ³           ÃÄÄÄMethods
+    ³   ³               ³           ÀÄÄÄStatements
+    ³   ³               ÃÄÄÄnette
+    ³   ³               ³   ÀÄÄÄutils
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÃÄÄÄIterators
+    ³   ³               ³           ÀÄÄÄUtils
+    ³   ³               ÃÄÄÄphpstan
+    ³   ³               ³   ÃÄÄÄextension-installer
+    ³   ³               ³   ³   ÀÄÄÄsrc
+    ³   ³               ³   ÃÄÄÄphpstan
+    ³   ³               ³   ³   ÀÄÄÄconf
+    ³   ³               ³   ÀÄÄÄphpstan-strict-rules
+    ³   ³               ³       ÀÄÄÄsrc
+    ³   ³               ³           ÀÄÄÄRules
+    ³   ³               ³               ÃÄÄÄBooleansInConditions
+    ³   ³               ³               ÃÄÄÄCast
+    ³   ³               ³               ÃÄÄÄClasses
+    ³   ³               ³               ÃÄÄÄDisallowedConstructs
+    ³   ³               ³               ÃÄÄÄForeachLoop
+    ³   ³               ³               ÃÄÄÄForLoop
+    ³   ³               ³               ÃÄÄÄFunctions
+    ³   ³               ³               ÃÄÄÄMethods
+    ³   ³               ³               ÃÄÄÄOperators
+    ³   ³               ³               ÃÄÄÄStrictCalls
+    ³   ³               ³               ÃÄÄÄSwitchConditions
+    ³   ³               ³               ÀÄÄÄVariableVariables
+    ³   ³               ÀÄÄÄtomasvotruba
+    ³   ³                   ÀÄÄÄtype-coverage
+    ³   ³                       ÃÄÄÄconfig
+    ³   ³                       ÃÄÄÄdocs
+    ³   ³                       ÀÄÄÄsrc
+    ³   ³                           ÃÄÄÄCollectors
+    ³   ³                           ÃÄÄÄConfiguration
+    ³   ³                           ÃÄÄÄFormatter
+    ³   ³                           ÃÄÄÄRules
+    ³   ³                           ÀÄÄÄValueObject
+    ³   ÀÄÄÄversion
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄ.phive
+    ³       ÃÄÄÄbuild
+    ³       ³   ÀÄÄÄscripts
+    ³       ÃÄÄÄsrc
+    ³       ÀÄÄÄtools
+    ÃÄÄÄstaabm
+    ³   ÀÄÄÄside-effects-detector
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄlib
+    ³       ÀÄÄÄtests
+    ÃÄÄÄsymfony
+    ³   ÃÄÄÄclock
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ÃÄÄÄTest
+    ³   ³   ÀÄÄÄTests
+    ³   ÃÄÄÄconsole
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄAttribute
+    ³   ³   ³   ÀÄÄÄReflection
+    ³   ³   ÃÄÄÄCI
+    ³   ³   ÃÄÄÄCommand
+    ³   ³   ÃÄÄÄCommandLoader
+    ³   ³   ÃÄÄÄCompletion
+    ³   ³   ³   ÀÄÄÄOutput
+    ³   ³   ÃÄÄÄDataCollector
+    ³   ³   ÃÄÄÄDebug
+    ³   ³   ÃÄÄÄDependencyInjection
+    ³   ³   ÃÄÄÄDescriptor
+    ³   ³   ÃÄÄÄEvent
+    ³   ³   ÃÄÄÄEventListener
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄFormatter
+    ³   ³   ÃÄÄÄHelper
+    ³   ³   ÃÄÄÄInput
+    ³   ³   ÃÄÄÄInteraction
+    ³   ³   ÃÄÄÄLogger
+    ³   ³   ÃÄÄÄMessenger
+    ³   ³   ÃÄÄÄOutput
+    ³   ³   ÃÄÄÄQuestion
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ³   ÀÄÄÄbin
+    ³   ³   ÃÄÄÄSignalRegistry
+    ³   ³   ÃÄÄÄStyle
+    ³   ³   ÃÄÄÄTester
+    ³   ³   ³   ÀÄÄÄConstraint
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄCI
+    ³   ³       ÃÄÄÄCommand
+    ³   ³       ÃÄÄÄCommandLoader
+    ³   ³       ÃÄÄÄCompletion
+    ³   ³       ³   ÀÄÄÄOutput
+    ³   ³       ÃÄÄÄDependencyInjection
+    ³   ³       ÃÄÄÄDescriptor
+    ³   ³       ÃÄÄÄEventListener
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÀÄÄÄStyle
+    ³   ³       ³       ÀÄÄÄSymfonyStyle
+    ³   ³       ³           ÃÄÄÄcommand
+    ³   ³       ³           ÃÄÄÄoutput
+    ³   ³       ³           ÀÄÄÄprogress
+    ³   ³       ÃÄÄÄFormatter
+    ³   ³       ÃÄÄÄHelper
+    ³   ³       ÃÄÄÄInput
+    ³   ³       ÃÄÄÄLogger
+    ³   ³       ÃÄÄÄMessenger
+    ³   ³       ÃÄÄÄOutput
+    ³   ³       ÃÄÄÄphpt
+    ³   ³       ³   ÃÄÄÄalarm
+    ³   ³       ³   ÃÄÄÄsignal
+    ³   ³       ³   ÀÄÄÄsingle_application
+    ³   ³       ÃÄÄÄQuestion
+    ³   ³       ÃÄÄÄSignalRegistry
+    ³   ³       ÃÄÄÄStyle
+    ³   ³       ÀÄÄÄTester
+    ³   ³           ÀÄÄÄConstraint
+    ³   ÃÄÄÄcss-selector
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄNode
+    ³   ³   ÃÄÄÄParser
+    ³   ³   ³   ÃÄÄÄHandler
+    ³   ³   ³   ÃÄÄÄShortcut
+    ³   ³   ³   ÀÄÄÄTokenizer
+    ³   ³   ÃÄÄÄTests
+    ³   ³   ³   ÃÄÄÄNode
+    ³   ³   ³   ÃÄÄÄParser
+    ³   ³   ³   ³   ÃÄÄÄHandler
+    ³   ³   ³   ³   ÀÄÄÄShortcut
+    ³   ³   ³   ÀÄÄÄXPath
+    ³   ³   ³       ÀÄÄÄFixtures
+    ³   ³   ÀÄÄÄXPath
+    ³   ³       ÀÄÄÄExtension
+    ³   ÃÄÄÄdeprecation-contracts
+    ³   ³   ÀÄÄÄ.github
+    ³   ³       ÀÄÄÄworkflows
+    ³   ÃÄÄÄerror-handler
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄCommand
+    ³   ³   ÃÄÄÄError
+    ³   ³   ÃÄÄÄErrorEnhancer
+    ³   ³   ÃÄÄÄErrorRenderer
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄInternal
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ³   ÃÄÄÄassets
+    ³   ³   ³   ³   ÃÄÄÄcss
+    ³   ³   ³   ³   ÃÄÄÄimages
+    ³   ³   ³   ³   ÀÄÄÄjs
+    ³   ³   ³   ÃÄÄÄbin
+    ³   ³   ³   ÀÄÄÄviews
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄCommand
+    ³   ³       ÃÄÄÄErrorEnhancer
+    ³   ³       ÃÄÄÄErrorRenderer
+    ³   ³       ÃÄÄÄException
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄFinalConstant
+    ³   ³       ³   ÃÄÄÄFinalProperty
+    ³   ³       ³   ÀÄÄÄpsr4
+    ³   ³       ÃÄÄÄFixtures2
+    ³   ³       ÀÄÄÄphpt
+    ³   ÃÄÄÄevent-dispatcher
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄAttribute
+    ³   ³   ÃÄÄÄDebug
+    ³   ³   ÃÄÄÄDependencyInjection
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄDebug
+    ³   ³       ÃÄÄÄDependencyInjection
+    ³   ³       ÀÄÄÄFixtures
+    ³   ÃÄÄÄevent-dispatcher-contracts
+    ³   ³   ÀÄÄÄ.github
+    ³   ³       ÀÄÄÄworkflows
+    ³   ÃÄÄÄfinder
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄComparator
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄIterator
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄComparator
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄ.dot
+    ³   ³       ³   ³   ÀÄÄÄb
+    ³   ³       ³   ÃÄÄÄA
+    ³   ³       ³   ³   ÀÄÄÄB
+    ³   ³       ³   ³       ÀÄÄÄC
+    ³   ³       ³   ÃÄÄÄcopy
+    ³   ³       ³   ³   ÀÄÄÄA
+    ³   ³       ³   ³       ÀÄÄÄB
+    ³   ³       ³   ³           ÀÄÄÄC
+    ³   ³       ³   ÃÄÄÄgitignore
+    ³   ³       ³   ³   ÃÄÄÄgit_root
+    ³   ³       ³   ³   ³   ÀÄÄÄsearch_root
+    ³   ³       ³   ³   ³       ÀÄÄÄdir
+    ³   ³       ³   ³   ÀÄÄÄsearch_root
+    ³   ³       ³   ³       ÀÄÄÄdir
+    ³   ³       ³   ÃÄÄÄone
+    ³   ³       ³   ³   ÀÄÄÄb
+    ³   ³       ³   ÃÄÄÄr+e.gex[c]a(r)s
+    ³   ³       ³   ³   ÀÄÄÄdir
+    ³   ³       ³   ÀÄÄÄwith space
+    ³   ³       ÀÄÄÄIterator
+    ³   ÃÄÄÄhttp-foundation
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄFile
+    ³   ³   ³   ÀÄÄÄException
+    ³   ³   ÃÄÄÄRateLimiter
+    ³   ³   ÃÄÄÄRequestMatcher
+    ³   ³   ÃÄÄÄSession
+    ³   ³   ³   ÃÄÄÄAttribute
+    ³   ³   ³   ÃÄÄÄFlash
+    ³   ³   ³   ÀÄÄÄStorage
+    ³   ³   ³       ÃÄÄÄHandler
+    ³   ³   ³       ÀÄÄÄProxy
+    ³   ³   ÃÄÄÄTest
+    ³   ³   ³   ÀÄÄÄConstraint
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄFile
+    ³   ³       ³   ÀÄÄÄFixtures
+    ³   ³       ³       ÃÄÄÄdirectory
+    ³   ³       ³       ÀÄÄÄwebkitdirectory
+    ³   ³       ³           ÀÄÄÄnested
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄrequest-functional
+    ³   ³       ³   ÃÄÄÄresponse-functional
+    ³   ³       ³   ÀÄÄÄxml
+    ³   ³       ÃÄÄÄRateLimiter
+    ³   ³       ÃÄÄÄRequestMatcher
+    ³   ³       ÃÄÄÄschema
+    ³   ³       ÃÄÄÄSession
+    ³   ³       ³   ÃÄÄÄAttribute
+    ³   ³       ³   ÃÄÄÄFlash
+    ³   ³       ³   ÀÄÄÄStorage
+    ³   ³       ³       ÃÄÄÄHandler
+    ³   ³       ³       ³   ÃÄÄÄFixtures
+    ³   ³       ³       ³   ÀÄÄÄstubs
+    ³   ³       ³       ÀÄÄÄProxy
+    ³   ³       ÀÄÄÄTest
+    ³   ³           ÀÄÄÄConstraint
+    ³   ÃÄÄÄhttp-kernel
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄAttribute
+    ³   ³   ÃÄÄÄBundle
+    ³   ³   ÃÄÄÄCacheClearer
+    ³   ³   ÃÄÄÄCacheWarmer
+    ³   ³   ÃÄÄÄConfig
+    ³   ³   ÃÄÄÄController
+    ³   ³   ³   ÀÄÄÄArgumentResolver
+    ³   ³   ÃÄÄÄControllerMetadata
+    ³   ³   ÃÄÄÄDataCollector
+    ³   ³   ÃÄÄÄDebug
+    ³   ³   ÃÄÄÄDependencyInjection
+    ³   ³   ÃÄÄÄEvent
+    ³   ³   ÃÄÄÄEventListener
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄFragment
+    ³   ³   ÃÄÄÄHttpCache
+    ³   ³   ÃÄÄÄLog
+    ³   ³   ÃÄÄÄProfiler
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄAttribute
+    ³   ³       ÃÄÄÄBundle
+    ³   ³       ÃÄÄÄCacheClearer
+    ³   ³       ÃÄÄÄCacheWarmer
+    ³   ³       ÃÄÄÄConfig
+    ³   ³       ÃÄÄÄController
+    ³   ³       ³   ÀÄÄÄArgumentResolver
+    ³   ³       ÃÄÄÄControllerMetadata
+    ³   ³       ÃÄÄÄDataCollector
+    ³   ³       ÃÄÄÄDebug
+    ³   ³       ÃÄÄÄDependencyInjection
+    ³   ³       ÃÄÄÄEvent
+    ³   ³       ÃÄÄÄEventListener
+    ³   ³       ÃÄÄÄException
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄAcmeFooBundle
+    ³   ³       ³   ³   ÀÄÄÄResources
+    ³   ³       ³   ³       ÀÄÄÄconfig
+    ³   ³       ³   ÃÄÄÄAttribute
+    ³   ³       ³   ÃÄÄÄBundle1Bundle
+    ³   ³       ³   ³   ÀÄÄÄResources
+    ³   ³       ³   ÃÄÄÄController
+    ³   ³       ³   ³   ÀÄÄÄArgumentResolver
+    ³   ³       ³   ³       ÀÄÄÄUploadedFile
+    ³   ³       ³   ÃÄÄÄDataCollector
+    ³   ³       ³   ÃÄÄÄExtensionNotValidBundle
+    ³   ³       ³   ³   ÀÄÄÄDependencyInjection
+    ³   ³       ³   ÀÄÄÄExtensionPresentBundle
+    ³   ³       ³       ÀÄÄÄDependencyInjection
+    ³   ³       ÃÄÄÄFragment
+    ³   ³       ÃÄÄÄHttpCache
+    ³   ³       ÃÄÄÄLog
+    ³   ³       ÀÄÄÄProfiler
+    ³   ÃÄÄÄmailer
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄCommand
+    ³   ³   ÃÄÄÄDataCollector
+    ³   ³   ÃÄÄÄEvent
+    ³   ³   ÃÄÄÄEventListener
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄHeader
+    ³   ³   ÃÄÄÄMessenger
+    ³   ³   ÃÄÄÄTest
+    ³   ³   ³   ÀÄÄÄConstraint
+    ³   ³   ÃÄÄÄTests
+    ³   ³   ³   ÃÄÄÄCommand
+    ³   ³   ³   ÃÄÄÄEventListener
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ÀÄÄÄTransport
+    ³   ³   ³       ÃÄÄÄFixtures
+    ³   ³   ³       ÀÄÄÄSmtp
+    ³   ³   ³           ÀÄÄÄStream
+    ³   ³   ÀÄÄÄTransport
+    ³   ³       ÀÄÄÄSmtp
+    ³   ³           ÃÄÄÄAuth
+    ³   ³           ÀÄÄÄStream
+    ³   ÃÄÄÄmime
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄCrypto
+    ³   ³   ÃÄÄÄDependencyInjection
+    ³   ³   ÃÄÄÄEncoder
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄHeader
+    ³   ³   ÃÄÄÄHtmlToTextConverter
+    ³   ³   ÃÄÄÄPart
+    ³   ³   ³   ÀÄÄÄMultipart
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ³   ÀÄÄÄbin
+    ³   ³   ÃÄÄÄTest
+    ³   ³   ³   ÀÄÄÄConstraint
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄCrypto
+    ³   ³       ÃÄÄÄDependencyInjection
+    ³   ³       ÃÄÄÄEncoder
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄmimetypes
+    ³   ³       ³   ³   ÀÄÄÄdirectory
+    ³   ³       ³   ÃÄÄÄsamples
+    ³   ³       ³   ³   ÀÄÄÄcharsets
+    ³   ³       ³   ³       ÃÄÄÄiso-2022-jp
+    ³   ³       ³   ³       ÃÄÄÄiso-8859-1
+    ³   ³       ³   ³       ÀÄÄÄutf-8
+    ³   ³       ³   ÀÄÄÄweb
+    ³   ³       ÃÄÄÄHeader
+    ³   ³       ÃÄÄÄHtmlToTextConverter
+    ³   ³       ÃÄÄÄPart
+    ³   ³       ³   ÀÄÄÄMultipart
+    ³   ³       ÃÄÄÄTest
+    ³   ³       ³   ÀÄÄÄConstraint
+    ³   ³       ÀÄÄÄ_data
+    ³   ÃÄÄÄpolyfill-ctype
+    ³   ÃÄÄÄpolyfill-intl-grapheme
+    ³   ÃÄÄÄpolyfill-intl-idn
+    ³   ³   ÀÄÄÄResources
+    ³   ³       ÀÄÄÄunidata
+    ³   ÃÄÄÄpolyfill-intl-normalizer
+    ³   ³   ÀÄÄÄResources
+    ³   ³       ÃÄÄÄstubs
+    ³   ³       ÀÄÄÄunidata
+    ³   ÃÄÄÄpolyfill-mbstring
+    ³   ³   ÀÄÄÄResources
+    ³   ³       ÀÄÄÄunidata
+    ³   ÃÄÄÄpolyfill-php80
+    ³   ³   ÀÄÄÄResources
+    ³   ³       ÀÄÄÄstubs
+    ³   ÃÄÄÄpolyfill-php83
+    ³   ³   ÀÄÄÄResources
+    ³   ³       ÀÄÄÄstubs
+    ³   ÃÄÄÄpolyfill-php84
+    ³   ³   ÀÄÄÄResources
+    ³   ³       ÀÄÄÄstubs
+    ³   ÃÄÄÄpolyfill-php85
+    ³   ³   ÀÄÄÄResources
+    ³   ³       ÀÄÄÄstubs
+    ³   ÃÄÄÄpolyfill-uuid
+    ³   ÃÄÄÄprocess
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄMessenger
+    ³   ³   ÃÄÄÄPipes
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ÀÄÄÄMessenger
+    ³   ÃÄÄÄrouting
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄAnnotation
+    ³   ³   ÃÄÄÄAttribute
+    ³   ³   ÃÄÄÄDependencyInjection
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄGenerator
+    ³   ³   ³   ÀÄÄÄDumper
+    ³   ³   ÃÄÄÄLoader
+    ³   ³   ³   ÃÄÄÄConfigurator
+    ³   ³   ³   ³   ÀÄÄÄTraits
+    ³   ³   ³   ÀÄÄÄschema
+    ³   ³   ³       ÀÄÄÄrouting
+    ³   ³   ÃÄÄÄMatcher
+    ³   ³   ³   ÀÄÄÄDumper
+    ³   ³   ÃÄÄÄRequirement
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄAttribute
+    ³   ³       ÃÄÄÄDependencyInjection
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ³   ÃÄÄÄalias
+    ³   ³       ³   ÃÄÄÄAttributedClasses
+    ³   ³       ³   ÃÄÄÄAttributeFixtures
+    ³   ³       ³   ÃÄÄÄAttributes
+    ³   ³       ³   ÃÄÄÄAttributesFixtures
+    ³   ³       ³   ÃÄÄÄcontroller
+    ³   ³       ³   ³   ÀÄÄÄempty_wildcard
+    ³   ³       ³   ÃÄÄÄdirectory
+    ³   ³       ³   ³   ÀÄÄÄrecurse
+    ³   ³       ³   ÃÄÄÄdirectory_import
+    ³   ³       ³   ÃÄÄÄdumper
+    ³   ³       ³   ÃÄÄÄEnum
+    ³   ³       ³   ÃÄÄÄglob
+    ³   ³       ³   ÃÄÄÄimport_with_name_prefix
+    ³   ³       ³   ÃÄÄÄimport_with_no_trailing_slash
+    ³   ³       ³   ÃÄÄÄlocale_and_host
+    ³   ³       ³   ÃÄÄÄlocalized
+    ³   ³       ³   ÃÄÄÄOtherAnnotatedClasses
+    ³   ³       ³   ÃÄÄÄpsr4-controllers-redirection
+    ³   ³       ³   ÀÄÄÄPsr4Controllers
+    ³   ³       ³       ÀÄÄÄSubNamespace
+    ³   ³       ³           ÀÄÄÄEvenDeeperNamespace
+    ³   ³       ÃÄÄÄGenerator
+    ³   ³       ³   ÀÄÄÄDumper
+    ³   ³       ÃÄÄÄLoader
+    ³   ³       ³   ÀÄÄÄConfigurator
+    ³   ³       ³       ÀÄÄÄTraits
+    ³   ³       ÃÄÄÄMatcher
+    ³   ³       ³   ÀÄÄÄDumper
+    ³   ³       ÀÄÄÄRequirement
+    ³   ÃÄÄÄservice-contracts
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄAttribute
+    ³   ³   ÀÄÄÄTest
+    ³   ÃÄÄÄstring
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄInflector
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ³   ÃÄÄÄbin
+    ³   ³   ³   ÀÄÄÄdata
+    ³   ³   ÃÄÄÄSlugger
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄInflector
+    ³   ³       ÀÄÄÄSlugger
+    ³   ÃÄÄÄtranslation
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄCatalogue
+    ³   ³   ÃÄÄÄCommand
+    ³   ³   ÃÄÄÄDataCollector
+    ³   ³   ÃÄÄÄDependencyInjection
+    ³   ³   ÃÄÄÄDumper
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄExtractor
+    ³   ³   ³   ÀÄÄÄVisitor
+    ³   ³   ÃÄÄÄFormatter
+    ³   ³   ÃÄÄÄLoader
+    ³   ³   ÃÄÄÄProvider
+    ³   ³   ÃÄÄÄReader
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ³   ÃÄÄÄbin
+    ³   ³   ³   ÃÄÄÄdata
+    ³   ³   ³   ÀÄÄÄschemas
+    ³   ³   ÃÄÄÄTest
+    ³   ³   ÃÄÄÄTests
+    ³   ³   ³   ÃÄÄÄCatalogue
+    ³   ³   ³   ÃÄÄÄCommand
+    ³   ³   ³   ÃÄÄÄDataCollector
+    ³   ³   ³   ÃÄÄÄDependencyInjection
+    ³   ³   ³   ³   ÀÄÄÄFixtures
+    ³   ³   ³   ÃÄÄÄDumper
+    ³   ³   ³   ÃÄÄÄException
+    ³   ³   ³   ÃÄÄÄExtractor
+    ³   ³   ³   ÃÄÄÄFixtures
+    ³   ³   ³   ³   ÃÄÄÄextractor
+    ³   ³   ³   ³   ÃÄÄÄextractor-7.3
+    ³   ³   ³   ³   ÃÄÄÄextractor-ast
+    ³   ³   ³   ³   ÀÄÄÄresourcebundle
+    ³   ³   ³   ³       ÃÄÄÄcorrupted
+    ³   ³   ³   ³       ÃÄÄÄdat
+    ³   ³   ³   ³       ÀÄÄÄres
+    ³   ³   ³   ÃÄÄÄFormatter
+    ³   ³   ³   ÃÄÄÄLoader
+    ³   ³   ³   ÃÄÄÄProvider
+    ³   ³   ³   ÃÄÄÄUtil
+    ³   ³   ³   ÀÄÄÄWriter
+    ³   ³   ÃÄÄÄUtil
+    ³   ³   ÀÄÄÄWriter
+    ³   ÃÄÄÄtranslation-contracts
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÀÄÄÄTest
+    ³   ÃÄÄÄuid
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄCommand
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄFactory
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄCommand
+    ³   ³       ÃÄÄÄFactory
+    ³   ³       ÀÄÄÄFixtures
+    ³   ÃÄÄÄvar-dumper
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ÃÄÄÄCaster
+    ³   ³   ÃÄÄÄCloner
+    ³   ³   ÃÄÄÄCommand
+    ³   ³   ³   ÀÄÄÄDescriptor
+    ³   ³   ÃÄÄÄDumper
+    ³   ³   ³   ÀÄÄÄContextProvider
+    ³   ³   ÃÄÄÄException
+    ³   ³   ÃÄÄÄResources
+    ³   ³   ³   ÃÄÄÄbin
+    ³   ³   ³   ÃÄÄÄcss
+    ³   ³   ³   ÃÄÄÄfunctions
+    ³   ³   ³   ÀÄÄÄjs
+    ³   ³   ÃÄÄÄServer
+    ³   ³   ÃÄÄÄTest
+    ³   ³   ÀÄÄÄTests
+    ³   ³       ÃÄÄÄCaster
+    ³   ³       ÃÄÄÄCloner
+    ³   ³       ÃÄÄÄCommand
+    ³   ³       ³   ÀÄÄÄDescriptor
+    ³   ³       ÃÄÄÄDumper
+    ³   ³       ³   ÃÄÄÄContextProvider
+    ³   ³       ³   ÀÄÄÄfunctions
+    ³   ³       ÃÄÄÄFixtures
+    ³   ³       ÃÄÄÄServer
+    ³   ³       ÀÄÄÄTest
+    ³   ÀÄÄÄyaml
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄCommand
+    ³       ÃÄÄÄException
+    ³       ÃÄÄÄResources
+    ³       ³   ÀÄÄÄbin
+    ³       ÃÄÄÄTag
+    ³       ÀÄÄÄTests
+    ³           ÃÄÄÄCommand
+    ³           ÀÄÄÄFixtures
+    ÃÄÄÄta-tikoma
+    ³   ÀÄÄÄphpunit-architecture-test
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄAsserts
+    ³       ³   ³   ÃÄÄÄDependencies
+    ³       ³   ³   ³   ÀÄÄÄElements
+    ³       ³   ³   ÃÄÄÄInheritance
+    ³       ³   ³   ÃÄÄÄIterator
+    ³       ³   ³   ÃÄÄÄMethods
+    ³       ³   ³   ³   ÀÄÄÄElements
+    ³       ³   ³   ÀÄÄÄProperties
+    ³       ³   ³       ÀÄÄÄElements
+    ³       ³   ÃÄÄÄBuilders
+    ³       ³   ÃÄÄÄElements
+    ³       ³   ³   ÀÄÄÄLayer
+    ³       ³   ÃÄÄÄEnums
+    ³       ³   ÃÄÄÄServices
+    ³       ³   ÀÄÄÄStorage
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄArchitecture
+    ÃÄÄÄtheseer
+    ³   ÀÄÄÄtokenizer
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ÃÄÄÄtests
+    ³       ³   ÀÄÄÄ_files
+    ³       ÀÄÄÄtools
+    ³           ÀÄÄÄphp-cs-fixer.d
+    ÃÄÄÄtijsverkoyen
+    ³   ÀÄÄÄcss-to-inline-styles
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄexample
+    ³       ³   ÀÄÄÄexamples
+    ³       ³       ÀÄÄÄsumo
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄCss
+    ³       ³       ÃÄÄÄProperty
+    ³       ³       ÀÄÄÄRule
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄCss
+    ³               ÃÄÄÄProperty
+    ³               ÀÄÄÄRule
+    ÃÄÄÄvlucas
+    ³   ÀÄÄÄphpdotenv
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄsrc
+    ³       ³   ÃÄÄÄException
+    ³       ³   ÃÄÄÄLoader
+    ³       ³   ÃÄÄÄParser
+    ³       ³   ÃÄÄÄRepository
+    ³       ³   ³   ÀÄÄÄAdapter
+    ³       ³   ÃÄÄÄStore
+    ³       ³   ³   ÀÄÄÄFile
+    ³       ³   ÀÄÄÄUtil
+    ³       ÃÄÄÄtests
+    ³       ³   ÃÄÄÄDotenv
+    ³       ³   ³   ÃÄÄÄLoader
+    ³       ³   ³   ÃÄÄÄParser
+    ³       ³   ³   ÃÄÄÄRepository
+    ³       ³   ³   ³   ÀÄÄÄAdapter
+    ³       ³   ³   ÀÄÄÄStore
+    ³       ³   ÀÄÄÄfixtures
+    ³       ³       ÀÄÄÄenv
+    ³       ÀÄÄÄvendor-bin
+    ³           ÀÄÄÄphpstan
+    ÃÄÄÄvoku
+    ³   ÀÄÄÄportable-ascii
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ÃÄÄÄbuild
+    ³       ³   ÀÄÄÄdocs
+    ³       ÃÄÄÄsrc
+    ³       ³   ÀÄÄÄvoku
+    ³       ³       ÀÄÄÄhelper
+    ³       ³           ÀÄÄÄdata
+    ³       ÀÄÄÄtests
+    ³           ÀÄÄÄfixtures
+    ÀÄÄÄwebmozart
+        ÀÄÄÄassert
+            ÃÄÄÄ.github
+            ³   ÀÄÄÄworkflows
+            ÃÄÄÄbin
+            ³   ÀÄÄÄsrc
+            ÃÄÄÄsrc
+            ÃÄÄÄtests
+            ³   ÀÄÄÄstatic-analysis
+            ÀÄÄÄtools
+                ÃÄÄÄphp-cs-fixer
+                ÃÄÄÄphpunit
+                ÃÄÄÄpsalm
+                ÀÄÄÄroave-bc-check
