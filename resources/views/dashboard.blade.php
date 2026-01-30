@@ -7,17 +7,20 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            
+
             <!-- Welcome Message -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-6">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h3 class="text-2xl font-bold mb-2">Welcome back, {{ $userName }}! 👋</h3>
                     <p class="text-gray-600 dark:text-gray-400">
-                        You have <span class="font-semibold text-green-600 dark:text-green-400">{{ $approvedPortfolios }}</span> approved portfolios 
-                        out of <span class="font-semibold">{{ $totalPortfolios }}</span> total submissions 
+                        You have <span
+                            class="font-semibold text-green-600 dark:text-green-400">{{ $approvedPortfolios }}</span>
+                        approved portfolios
+                        out of <span class="font-semibold">{{ $totalPortfolios }}</span> total submissions
                         (<span class="font-semibold">{{ $progressPercentage }}%</span> approval rate).
                     </p>
-                    <p class="text-gray-600 dark:text-gray-400">Keep building your portfolio and tracking your skills!</p>
+                    <p class="text-gray-600 dark:text-gray-400">Keep building your portfolio and tracking your skills!
+                    </p>
                 </div>
             </div>
 
@@ -27,12 +30,14 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-4">
-                            <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Portfolio Submissions</h4>
+                            <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Portfolio Submissions
+                            </h4>
                             <span class="text-sm text-gray-600 dark:text-gray-400">Last 4 Months</span>
                         </div>
                         <canvas id="portfolioChart" height="200"></canvas>
                         <div class="mt-4 text-center">
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Total: <span class="font-semibold">{{ $totalPortfolios }}</span> portfolios</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Total: <span
+                                    class="font-semibold">{{ $totalPortfolios }}</span> portfolios</p>
                         </div>
                     </div>
                 </div>
@@ -42,12 +47,15 @@
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-4">
                             <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Skills Progress</h4>
-                            <span class="text-sm text-gray-600 dark:text-gray-400">Current Skills: {{ $skillsData['current'] }}</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">Current Skills:
+                                {{ $skillsData['current'] }}</span>
                         </div>
                         <canvas id="skillsChart" height="200"></canvas>
                         <div class="mt-4 text-center">
                             <p class="text-sm text-gray-600 dark:text-gray-400">
-                                <span class="font-semibold text-blue-600 dark:text-blue-400">{{ $skillsData['current'] }}</span> skills acquired
+                                <span
+                                    class="font-semibold text-blue-600 dark:text-blue-400">{{ $skillsData['current'] }}</span>
+                                skills acquired
                             </p>
                         </div>
                     </div>
@@ -56,49 +64,61 @@
 
             <!-- Bottom Section: Portfolios and Calendar -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                
+
                 <!-- Recent Portfolios Section (2/3 width) -->
                 <div class="lg:col-span-2">
                     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6">
                             <div class="flex justify-between items-center mb-4">
-                                <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Recent Portfolios</h4>
-                                <a href="{{ route('dashboard') }}" class="text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">View All</a>
+                                <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Recent Portfolios
+                                </h4>
+                                <a href="{{ route('dashboard') }}"
+                                    class="text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">View
+                                    All</a>
                             </div>
-                            
+
                             <div class="space-y-4">
-                                @forelse($certificates as $cert)
-                                <div class="flex items-start justify-between py-3 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0">
-                                            <div class="w-10 h-10 rounded-full bg-{{ $cert['color'] }}-500 flex items-center justify-center text-white font-bold text-xs">
-                                                {{ $cert['initials'] }}
-                                            </div>
-                                        </div>
-                                        <div class="flex-1">
-                                            <div class="flex items-center gap-2">
-                                                <h5 class="font-semibold text-gray-900 dark:text-gray-100">{{ $cert['message'] }}</h5>
-                                                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium
-                                                    {{ $cert['status'] === 'approved' ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200' : '' }}
-                                                    {{ $cert['status'] === 'pending' ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200' : '' }}
-                                                    {{ $cert['status'] === 'rejected' ? 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200' : '' }}
-                                                ">
-                                                    {{ ucfirst($cert['status']) }}
-                                                </span>
-                                            </div>
-                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">{{ Str::limit($cert['description'] ?? 'No description', 100) }}</p>
-                                            <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">Category: {{ $cert['name'] }}</p>
-                                        </div>
-                                    </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-500 whitespace-nowrap ml-4">{{ $cert['time'] }}</span>
-                                </div>
-                                @empty
-                                <div class="text-center py-8">
-                                    <p class="text-gray-500 dark:text-gray-400 mb-2">No portfolios yet</p>
-                                    <p class="text-sm text-gray-400 dark:text-gray-500">Start uploading your work to track your progress!</p>
-                                </div>
-                                @endforelse
-                            </div>
+    @forelse($certificates as $cert)
+    <div onclick="openPortfolioModal(this)" 
+         class="flex items-start justify-between py-3 border-b border-gray-200 dark:border-gray-700 last:border-b-0 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition duration-150 ease-in-out px-2 rounded-lg"
+         
+         {{-- DATA PENTING BUAT JS --}}
+         data-id="{{ $cert['id'] }}" 
+         data-title="{{ $cert['message'] }}"
+         data-category="{{ $cert['name'] }}"
+         data-status="{{ $cert['status'] }}"
+         data-description="{{ $cert['description'] ?? 'Tidak ada deskripsi.' }}"
+         data-feedback="{{ $cert['admin_feedback'] ?? 'Belum ada feedback.' }}"
+    >
+        <div class="flex items-start space-x-3 pointer-events-none">
+            <div class="flex-shrink-0">
+                <div class="w-10 h-10 rounded-full bg-{{ $cert['color'] }}-500 flex items-center justify-center text-white font-bold text-xs">
+                    {{ $cert['initials'] }}
+                </div>
+            </div>
+            <div class="flex-1">
+                <div class="flex items-center gap-2">
+                    <h5 class="font-semibold text-gray-900 dark:text-gray-100">{{ $cert['message'] }}</h5>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium
+                        {{ $cert['status'] === 'approved' ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200' : '' }}
+                        {{ $cert['status'] === 'pending' ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200' : '' }}
+                        {{ $cert['status'] === 'rejected' ? 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200' : '' }}
+                    ">
+                        {{ ucfirst($cert['status']) }}
+                    </span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-1">{{ Str::limit($cert['description'] ?? 'No description', 100) }}</p>
+                <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">Category: {{ $cert['name'] }}</p>
+            </div>
+        </div>
+        <span class="text-xs text-gray-500 dark:text-gray-500 whitespace-nowrap ml-4">{{ $cert['time'] }}</span>
+    </div>
+    @empty
+    <div class="text-center py-8">
+        <p class="text-gray-500 dark:text-gray-400 mb-2">No portfolios yet</p>
+    </div>
+    @endforelse
+</div>
                         </div>
                     </div>
                 </div>
@@ -109,17 +129,18 @@
                     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6">
                             <div class="flex justify-between items-center mb-4">
-                                <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Activity Calendar</h4>
+                                <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Activity Calendar
+                                </h4>
                                 <span class="text-sm text-gray-600 dark:text-gray-400">{{ $currentMonth }}</span>
                             </div>
-                            
+
                             <!-- Calendar Grid -->
                             <div class="grid grid-cols-7 gap-1 text-center text-xs">
                                 <!-- Day Headers -->
                                 @foreach(['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'] as $day)
                                 <div class="font-semibold text-gray-600 dark:text-gray-400 py-2">{{ $day }}</div>
                                 @endforeach
-                                
+
                                 <!-- Calendar Days -->
                                 @foreach($calendarDays as $day)
                                 <div class="aspect-square flex items-center justify-center">
@@ -135,7 +156,7 @@
                                 </div>
                                 @endforeach
                             </div>
-                            
+
                             <div class="mt-4 flex items-center gap-3 text-xs">
                                 <div class="flex items-center gap-1">
                                     <div class="w-3 h-3 rounded-full bg-indigo-600"></div>
@@ -155,25 +176,32 @@
                             <div class="flex justify-between items-center mb-4">
                                 <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Pending Reviews</h4>
                                 @if($upcomingActivities->count() > 0)
-                                <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded-full font-semibold">
+                                <span
+                                    class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded-full font-semibold">
                                     {{ $upcomingActivities->count() }}
                                 </span>
                                 @endif
                             </div>
-                            
+
                             <div class="space-y-3">
                                 @forelse($upcomingActivities as $activity)
-                                <div class="flex items-start space-x-3 p-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg cursor-pointer">
+                                <div
+                                    class="flex items-start space-x-3 p-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg cursor-pointer">
                                     <div class="flex-shrink-0">
-                                        <div class="w-10 h-10 rounded-full bg-{{ $activity['color'] }}-500 flex items-center justify-center text-white font-bold text-xs">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-{{ $activity['color'] }}-500 flex items-center justify-center text-white font-bold text-xs">
                                             {{ $activity['day'] }}
                                         </div>
                                     </div>
                                     <div class="flex-1 min-w-0">
-                                        <h5 class="font-semibold text-sm text-gray-900 dark:text-gray-100 truncate">{{ $activity['title'] }}</h5>
-                                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">{{ $activity['date'] }}</p>
-                                        <p class="text-xs text-yellow-600 dark:text-yellow-400 font-medium mt-1">⏳ {{ $activity['time'] }}</p>
-                                        <p class="text-xs text-gray-500 dark:text-gray-500 mt-1 truncate">{{ $activity['location'] }}</p>
+                                        <h5 class="font-semibold text-sm text-gray-900 dark:text-gray-100 truncate">
+                                            {{ $activity['title'] }}</h5>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">{{ $activity['date'] }}
+                                        </p>
+                                        <p class="text-xs text-yellow-600 dark:text-yellow-400 font-medium mt-1">⏳
+                                            {{ $activity['time'] }}</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-500 mt-1 truncate">
+                                            {{ $activity['location'] }}</p>
                                     </div>
                                 </div>
                                 @empty
@@ -189,130 +217,235 @@
             </div>
         </div>
     </div>
+    <div id="portfolioModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title"
+        role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onclick="closePortfolioModal()"></div>
+
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white dark:bg-gray-800 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+
+                <div class="bg-white dark:bg-gray-800 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100"
+                                    id="modalTitle">Judul Portfolio</h3>
+                                <span id="modalStatus" class="px-2 py-1 text-xs font-bold rounded">Status</span>
+                            </div>
+
+                            <div class="mt-2 space-y-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-500 uppercase">Category</label>
+                                    <p id="modalCategory" class="text-sm text-gray-700 dark:text-gray-300">Category Name
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-500 uppercase">Description</label>
+                                    <p id="modalDescription" class="text-sm text-gray-600 dark:text-gray-400">Deskripsi
+                                        lengkap...</p>
+                                </div>
+
+                                <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-md">
+                                    <label
+                                        class="block text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Admin
+                                        Feedback</label>
+                                    <p id="modalFeedback" class="text-sm text-gray-800 dark:text-gray-200 italic">No
+                                        feedback.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-700 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                    <a id="modalPdfLink" href="#" target="_blank"
+                        class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto">
+                        View Certificate / PDF
+                    </a>
+                    <button type="button" onclick="closePortfolioModal()"
+                        class="mt-3 inline-flex w-full justify-center rounded-md bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Detect if dark mode is active
-        const isDarkMode = document.documentElement.classList.contains('dark');
-        
-        // Define colors based on theme
-        const colors = {
-            text: isDarkMode ? '#e5e7eb' : '#374151',
-            grid: isDarkMode ? '#374151' : '#e5e7eb',
-            blue: {
-                line: 'rgb(59, 130, 246)',
-                fill: isDarkMode ? 'rgba(59, 130, 246, 0.2)' : 'rgba(59, 130, 246, 0.1)',
-            },
-            green: {
-                line: 'rgb(34, 197, 94)',
-                fill: isDarkMode ? 'rgba(34, 197, 94, 0.2)' : 'rgba(34, 197, 94, 0.1)',
-            }
-        };
+    // Detect if dark mode is active
+    const isDarkMode = document.documentElement.classList.contains('dark');
 
-        // Portfolio Submissions Chart
-        const portfolioCtx = document.getElementById('portfolioChart').getContext('2d');
-        const portfolioData = @json($chartData);
-        
-        new Chart(portfolioCtx, {
-            type: 'line',
-            data: {
-                labels: portfolioData.map(d => d.label),
-                datasets: [{
-                    label: 'Submissions',
-                    data: portfolioData.map(d => d.count),
-                    borderColor: colors.blue.line,
-                    backgroundColor: colors.blue.fill,
-                    fill: true,
-                    tension: 0.4,
-                    pointBackgroundColor: colors.blue.line,
-                    pointBorderColor: '#fff',
-                    pointBorderWidth: 2,
-                    pointRadius: 5,
-                }]
+    // Define colors based on theme
+    const colors = {
+        text: isDarkMode ? '#e5e7eb' : '#374151',
+        grid: isDarkMode ? '#374151' : '#e5e7eb',
+        blue: {
+            line: 'rgb(59, 130, 246)',
+            fill: isDarkMode ? 'rgba(59, 130, 246, 0.2)' : 'rgba(59, 130, 246, 0.1)',
+        },
+        green: {
+            line: 'rgb(34, 197, 94)',
+            fill: isDarkMode ? 'rgba(34, 197, 94, 0.2)' : 'rgba(34, 197, 94, 0.1)',
+        }
+    };
+
+    // Portfolio Submissions Chart
+    const portfolioCtx = document.getElementById('portfolioChart').getContext('2d');
+    const portfolioData = @json($chartData);
+
+    new Chart(portfolioCtx, {
+        type: 'line',
+        data: {
+            labels: portfolioData.map(d => d.label),
+            datasets: [{
+                label: 'Submissions',
+                data: portfolioData.map(d => d.count),
+                borderColor: colors.blue.line,
+                backgroundColor: colors.blue.fill,
+                fill: true,
+                tension: 0.4,
+                pointBackgroundColor: colors.blue.line,
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+                pointRadius: 5,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: {
-                        display: false
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1,
+                        color: colors.text
+                    },
+                    grid: {
+                        color: colors.grid
                     }
                 },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1,
-                            color: colors.text
-                        },
-                        grid: {
-                            color: colors.grid
-                        }
+                x: {
+                    ticks: {
+                        color: colors.text
                     },
-                    x: {
-                        ticks: {
-                            color: colors.text
-                        },
-                        grid: {
-                            color: colors.grid
-                        }
+                    grid: {
+                        color: colors.grid
                     }
                 }
             }
-        });
+        }
+    });
 
-        // Skills Progress Chart
-        const skillsCtx = document.getElementById('skillsChart').getContext('2d');
-        const skillsData = @json($skillsData);
-        
-        new Chart(skillsCtx, {
-            type: 'line',
-            data: {
-                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-                datasets: [{
-                    label: 'Skills Acquired',
-                    data: skillsData.progression,
-                    borderColor: colors.green.line,
-                    backgroundColor: colors.green.fill,
-                    fill: true,
-                    tension: 0.4,
-                    pointBackgroundColor: colors.green.line,
-                    pointBorderColor: '#fff',
-                    pointBorderWidth: 2,
-                    pointRadius: 5,
-                }]
+    // Skills Progress Chart
+    const skillsCtx = document.getElementById('skillsChart').getContext('2d');
+    const skillsData = @json($skillsData);
+
+    new Chart(skillsCtx, {
+        type: 'line',
+        data: {
+            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+            datasets: [{
+                label: 'Skills Acquired',
+                data: skillsData.progression,
+                borderColor: colors.green.line,
+                backgroundColor: colors.green.fill,
+                fill: true,
+                tension: 0.4,
+                pointBackgroundColor: colors.green.line,
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+                pointRadius: 5,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: {
-                        display: false
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1,
+                        color: colors.text
+                    },
+                    grid: {
+                        color: colors.grid
                     }
                 },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1,
-                            color: colors.text
-                        },
-                        grid: {
-                            color: colors.grid
-                        }
+                x: {
+                    ticks: {
+                        color: colors.text
                     },
-                    x: {
-                        ticks: {
-                            color: colors.text
-                        },
-                        grid: {
-                            color: colors.grid
-                        }
+                    grid: {
+                        color: colors.grid
                     }
                 }
             }
-        });
+        }
+    });
+
+    // --- PORTFOLIO MODAL LOGIC ---
+    const modal = document.getElementById('portfolioModal');
+
+    function openPortfolioModal(element) {
+        // 1. Ambil data dari atribut HTML
+        const title = element.getAttribute('data-title');
+        const category = element.getAttribute('data-category');
+        const status = element.getAttribute('data-status');
+        const description = element.getAttribute('data-description');
+        const pdfUrl = element.getAttribute('data-pdf');
+        const feedback = element.getAttribute('data-feedback');
+
+        // 2. Isi data ke dalam Modal
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalCategory').innerText = category;
+        document.getElementById('modalDescription').innerText = description;
+        document.getElementById('modalFeedback').innerText = feedback;
+        const id = element.getAttribute('data-id');
+        document.getElementById('modalPdfLink').href = "/portfolio/" + id;
+        document.getElementById('modalPdfLink').innerText = "Lihat Detail Page";
+
+        // 3. Atur warna badge status
+        const statusEl = document.getElementById('modalStatus');
+        statusEl.innerText = status.toUpperCase();
+        statusEl.className = 'px-2 py-1 text-xs font-bold rounded '; // Reset class
+
+        if (status === 'approved') {
+            statusEl.classList.add('bg-green-100', 'text-green-800');
+        } else if (status === 'rejected') {
+            statusEl.classList.add('bg-red-100', 'text-red-800');
+        } else {
+            statusEl.classList.add('bg-yellow-100', 'text-yellow-800');
+        }
+
+        // 4. Tampilkan Modal
+        modal.classList.remove('hidden');
+    }
+
+    function closePortfolioModal() {
+        modal.classList.add('hidden');
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closePortfolioModal();
+        }
+    });
     </script>
     @endpush
 </x-app-layout>
