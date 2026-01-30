@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfolio.index');
     Route::get('/portfolios/create', [PortfolioController::class, 'create'])->name('portfolio.create');
+    Route::post('/portfolios', [PortfolioController::class, 'store'])->name('portfolio.store');
 });
 
 // ini baru, sek nyoba dlu
