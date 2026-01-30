@@ -60,6 +60,7 @@ class DashboardController extends Controller
                     ->join('');
                 
                 return [
+                    'id' => $portfolio->id,
                     'name' => $portfolio->category_name,
                     'initials' => $initials,
                     'color' => $portfolio->status_color,
