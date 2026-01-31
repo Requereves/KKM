@@ -8,7 +8,6 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             
-            <!-- Welcome Message -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-6">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h3 class="text-2xl font-bold mb-2">Welcome back, {{ $userName }}! 👋</h3>
@@ -21,9 +20,7 @@
                 </div>
             </div>
 
-            <!-- Performance Graphs -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <!-- Portfolio Submissions Chart -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-4">
@@ -37,7 +34,6 @@
                     </div>
                 </div>
 
-                <!-- Skills Progress Chart -->
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-4">
@@ -54,10 +50,108 @@
                 </div>
             </div>
 
-            <!-- Bottom Section: Portfolios and Calendar -->
+            <div class="mb-8">
+                <div class="flex justify-between items-end mb-4 px-1">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">Recommended for You 🎯</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Based on your skills: <span class="font-semibold text-indigo-600 dark:text-indigo-400">Software Engineering</span></p>
+                    </div>
+                    <a href="#" class="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 flex items-center gap-1 transition-colors">
+                        View All
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group flex flex-col h-full">
+                        <div class="relative overflow-hidden rounded-t-xl h-40">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" 
+                                 alt="Course" 
+                                 class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-indigo-600 shadow-sm border border-indigo-100">
+                                Web Development
+                            </div>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h4 class="text-md font-bold text-gray-900 dark:text-white mb-1 line-clamp-2 leading-tight group-hover:text-indigo-600 transition-colors">
+                                Full Stack Laravel 11 & Vue.js: The Complete Guide
+                            </h4>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">by Ghufroon Academy</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400 mb-4 mt-auto">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <span class="font-semibold text-gray-700 dark:text-gray-300">4.8</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span>12 Hours</span>
+                                </div>
+                            </div>
+                            <a href="#" class="block w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 hover:bg-indigo-600 dark:hover:bg-indigo-500 text-gray-700 dark:text-gray-200 hover:text-white text-center rounded-lg font-semibold text-xs transition-all duration-300 border border-gray-200 dark:border-gray-600 hover:border-transparent">
+                                Start Learning →
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group flex flex-col h-full">
+                        <div class="relative overflow-hidden rounded-t-xl h-40">
+                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-green-600 shadow-sm border border-green-100">
+                                UI/UX Design
+                            </div>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h4 class="text-md font-bold text-gray-900 dark:text-white mb-1 line-clamp-2 leading-tight group-hover:text-green-600 transition-colors">
+                                Mastering Figma: From Zero to Hero
+                            </h4>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">by Design Masters</p>
+                            
+                            <div class="mt-auto mb-4">
+                                <div class="flex justify-between text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1">
+                                    <span>Progress</span>
+                                    <span>45%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-green-500 h-1.5 rounded-full" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            <a href="#" class="block w-full py-2 px-4 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-center rounded-lg font-semibold text-xs hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors">
+                                Continue Course
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group flex flex-col h-full">
+                        <div class="relative overflow-hidden rounded-t-xl h-40">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-purple-600 shadow-sm border border-purple-100">
+                                Database
+                            </div>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h4 class="text-md font-bold text-gray-900 dark:text-white mb-1 line-clamp-2 leading-tight group-hover:text-purple-600 transition-colors">
+                                Advanced MySQL Optimization
+                            </h4>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">by Database Pros</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400 mb-4 mt-auto">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <span class="font-semibold text-gray-700 dark:text-gray-300">5.0</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span>8 Hours</span>
+                                </div>
+                            </div>
+                            <a href="#" class="block w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 hover:bg-purple-600 dark:hover:bg-purple-500 text-gray-700 dark:text-gray-200 hover:text-white text-center rounded-lg font-semibold text-xs transition-all duration-300 border border-gray-200 dark:border-gray-600 hover:border-transparent">
+                                Start Learning →
+                            </a>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 
-                <!-- Recent Portfolios Section (2/3 width) -->
                 <div class="lg:col-span-2">
                     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6">
@@ -103,9 +197,7 @@
                     </div>
                 </div>
 
-                <!-- Calendar and Pending Items Section (1/3 width) -->
                 <div class="space-y-6">
-                    <!-- Calendar -->
                     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6">
                             <div class="flex justify-between items-center mb-4">
@@ -113,14 +205,11 @@
                                 <span class="text-sm text-gray-600 dark:text-gray-400">{{ $currentMonth }}</span>
                             </div>
                             
-                            <!-- Calendar Grid -->
                             <div class="grid grid-cols-7 gap-1 text-center text-xs">
-                                <!-- Day Headers -->
                                 @foreach(['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'] as $day)
                                 <div class="font-semibold text-gray-600 dark:text-gray-400 py-2">{{ $day }}</div>
                                 @endforeach
                                 
-                                <!-- Calendar Days -->
                                 @foreach($calendarDays as $day)
                                 <div class="aspect-square flex items-center justify-center">
                                     @if($day['date'])
@@ -149,7 +238,6 @@
                         </div>
                     </div>
 
-                    <!-- Pending Reviews -->
                     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6">
                             <div class="flex justify-between items-center mb-4">
