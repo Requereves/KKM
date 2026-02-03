@@ -1,5 +1,5 @@
 
-import { CompetencyData, SkillGapData, StudentVerification, Student, Job, JobApplication } from './types';
+import { CompetencyData, SkillGapData, StudentVerification, Student, Job, JobApplication, Course } from './types';
 
 export const INITIAL_VERIFICATIONS: StudentVerification[] = [
   { 
@@ -204,6 +204,57 @@ export const INITIAL_APPLICATIONS: JobApplication[] = [
   { id: '4', jobId: '2', studentId: '2', appliedAt: '2026-01-26', status: 'interview' },
   { id: '5', jobId: '2', studentId: '10', appliedAt: '2026-01-27', status: 'pending' },
   { id: '6', jobId: '3', studentId: '4', appliedAt: '2025-12-15', status: 'rejected' },
+];
+
+export const INITIAL_COURSES: Course[] = [
+  {
+    id: '1',
+    title: 'Python for Data Science Bootcamp',
+    instructor: 'DataCamp ID',
+    startDate: '2026-03-01',
+    endDate: '2026-03-05',
+    location: 'Zoom Meeting',
+    type: 'Online',
+    category: 'Data Science',
+    description: 'Intensive 5-day bootcamp covering Python basics, Pandas, NumPy, and Matplotlib. Perfect for beginners wanting to enter the data field.',
+    status: 'upcoming',
+    participantsCount: 45,
+    maxParticipants: 100,
+    image: 'https://picsum.photos/seed/python/400/200',
+    syllabus: ['Python Basics', 'Data Analysis with Pandas', 'Visualization', 'Final Project']
+  },
+  {
+    id: '2',
+    title: 'Professional Soft Skills Workshop',
+    instructor: 'HR Professionals Assoc.',
+    startDate: '2026-02-15',
+    endDate: '2026-02-15',
+    location: 'Aula Utama Kampus',
+    type: 'Offline',
+    category: 'Soft Skills',
+    description: 'Learn communication, leadership, and teamwork skills essential for the modern workplace.',
+    status: 'active',
+    participantsCount: 180,
+    maxParticipants: 200,
+    image: 'https://picsum.photos/seed/softskills/400/200',
+    syllabus: ['Effective Communication', 'Leadership 101', 'Conflict Resolution']
+  },
+  {
+    id: '3',
+    title: 'Fullstack Web Development with Laravel',
+    instructor: 'Codepolitan',
+    startDate: '2025-12-01',
+    endDate: '2026-01-30',
+    location: 'Hybrid (Lab 3 & Zoom)',
+    type: 'Hybrid',
+    category: 'Web Development',
+    description: 'Comprehensive course building a real e-commerce application using Laravel and React.',
+    status: 'completed',
+    participantsCount: 30,
+    maxParticipants: 30,
+    image: 'https://picsum.photos/seed/laravel/400/200',
+    syllabus: ['PHP & OOP', 'Laravel MVC', 'React Frontend', 'Deployment']
+  }
 ];
 
 export const COMPETENCY_CHART_DATA: CompetencyData[] = [

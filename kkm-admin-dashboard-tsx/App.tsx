@@ -10,6 +10,7 @@ import ProfilePage from './components/ProfilePage';
 import StudentsPage from './components/StudentsPage';
 import JobsPage from './components/JobsPage';
 import StatsPage from './components/StatsPage';
+import TrainingPage from './components/TrainingPage';
 import { INITIAL_VERIFICATIONS, INITIAL_STUDENTS, INITIAL_JOBS } from './constants';
 import { StudentVerification, Student, Job } from './types';
 import { translations, Language } from './translations';
@@ -215,7 +216,10 @@ const App: React.FC = () => {
                         <span className="material-icons-outlined ml-auto opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
                       </button>
 
-                      <button className="w-full flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 hover:bg-amber-500/5 dark:hover:bg-amber-500/10 transition-all group">
+                      <button 
+                        onClick={() => setCurrentView('courses')}
+                        className="w-full flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 hover:bg-amber-500/5 dark:hover:bg-amber-500/10 transition-all group"
+                      >
                         <div className="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 p-2 rounded-lg group-hover:bg-amber-500/20">
                           <span className="material-icons-outlined text-xl">cast_for_education</span>
                         </div>
@@ -223,6 +227,7 @@ const App: React.FC = () => {
                           <p className="font-semibold text-sm text-slate-900 dark:text-white">{t.training_info}</p>
                           <p className="text-xs text-slate-500">{t.training_desc}</p>
                         </div>
+                        <span className="material-icons-outlined ml-auto opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
                       </button>
 
                       <button className="w-full flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-pink-500 hover:bg-pink-500/5 dark:hover:bg-pink-500/10 transition-all group">
@@ -281,7 +286,13 @@ const App: React.FC = () => {
               />
             )}
 
-            {currentView !== 'dashboard' && currentView !== 'verification' && currentView !== 'profile' && currentView !== 'students' && currentView !== 'jobs' && currentView !== 'stats' && (
+            {currentView === 'courses' && (
+              <TrainingPage 
+                lang={lang}
+              />
+            )}
+
+            {currentView !== 'dashboard' && currentView !== 'verification' && currentView !== 'profile' && currentView !== 'students' && currentView !== 'jobs' && currentView !== 'stats' && currentView !== 'courses' && (
               <div className="py-20 text-center space-y-4">
                 <span className="material-icons-outlined text-6xl text-slate-200 dark:text-slate-800">construction</span>
                 <h2 className="text-xl font-bold dark:text-white">Halaman "{currentView}" sedang dalam pengembangan</h2>

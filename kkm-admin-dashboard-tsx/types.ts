@@ -66,3 +66,20 @@ export interface JobApplication {
   status: 'pending' | 'reviewed' | 'interview' | 'rejected' | 'accepted';
   coverLetter?: string;
 }
+
+export interface Course {
+  id: string;
+  title: string;
+  instructor: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+  type: 'Online' | 'Offline' | 'Hybrid';
+  category: string;
+  description: string;
+  status: 'upcoming' | 'active' | 'completed';
+  participantsCount: number;
+  maxParticipants: number;
+  image: string;
+  syllabus: string[];
+}

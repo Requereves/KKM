@@ -110,7 +110,28 @@ export const translations = {
     stats_type_chart: "Distribusi Tipe Pekerjaan",
     stats_location_chart: "Sebaran Lokasi Pekerjaan",
     stats_people: "Orang",
-    stats_jobs: "Pekerjaan"
+    stats_jobs: "Pekerjaan",
+    // Courses Page
+    courses_title: "Pelatihan & Workshop",
+    courses_subtitle: "Kelola program peningkatan kompetensi mahasiswa.",
+    add_course: "Tambah Pelatihan",
+    search_courses: "Cari pelatihan, instruktur...",
+    provider: "Penyedia / Instruktur",
+    duration: "Durasi",
+    participants: "Peserta",
+    enrolled: "Terdaftar",
+    capacity: "Kapasitas",
+    course_type: "Tipe",
+    syllabus: "Silabus",
+    save_course: "Simpan Pelatihan",
+    delete_course: "Hapus Pelatihan",
+    filter_upcoming: "Akan Datang",
+    filter_completed: "Selesai",
+    start_date: "Tanggal Mulai",
+    end_date: "Tanggal Selesai",
+    edit_course: "Edit Pelatihan",
+    create_course: "Buat Pelatihan Baru",
+    delete_course_confirm: "Apakah Anda yakin ingin menghapus pelatihan ini?"
   },
   en: {
     dashboard: "Dashboard",
@@ -222,7 +243,28 @@ export const translations = {
     stats_type_chart: "Job Type Distribution",
     stats_location_chart: "Job Location Distribution",
     stats_people: "People",
-    stats_jobs: "Jobs"
+    stats_jobs: "Jobs",
+    // Courses Page
+    courses_title: "Training & Workshops",
+    courses_subtitle: "Manage student competency improvement programs.",
+    add_course: "Add Training",
+    search_courses: "Search training, instructor...",
+    provider: "Provider / Instructor",
+    duration: "Duration",
+    participants: "Participants",
+    enrolled: "Enrolled",
+    capacity: "Capacity",
+    course_type: "Type",
+    syllabus: "Syllabus",
+    save_course: "Save Training",
+    delete_course: "Delete Training",
+    filter_upcoming: "Upcoming",
+    filter_completed: "Completed",
+    start_date: "Start Date",
+    end_date: "End Date",
+    edit_course: "Edit Training",
+    create_course: "Create New Training",
+    delete_course_confirm: "Are you sure you want to delete this training?"
   }
 };
 
