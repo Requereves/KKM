@@ -131,7 +131,25 @@ export const translations = {
     end_date: "Tanggal Selesai",
     edit_course: "Edit Pelatihan",
     create_course: "Buat Pelatihan Baru",
-    delete_course_confirm: "Apakah Anda yakin ingin menghapus pelatihan ini?"
+    delete_course_confirm: "Apakah Anda yakin ingin menghapus pelatihan ini?",
+    // CMS (Announcement) Page
+    cms_title: "Pengumuman (Mading)",
+    cms_subtitle: "Kelola berita, pengumuman, dan informasi untuk mahasiswa.",
+    add_announcement: "Buat Pengumuman",
+    search_announcements: "Cari judul, kategori...",
+    target_audience: "Target Audiens",
+    publish_date: "Tanggal Terbit",
+    content: "Konten Pengumuman",
+    save_announcement: "Simpan Pengumuman",
+    delete_announcement: "Hapus Pengumuman",
+    delete_announcement_confirm: "Apakah Anda yakin ingin menghapus pengumuman ini?",
+    edit_announcement: "Edit Pengumuman",
+    create_announcement: "Buat Pengumuman Baru",
+    filter_published: "Terbit",
+    filter_archived: "Diarsipkan",
+    author: "Penulis",
+    preview: "Pratinjau",
+    preview_mode: "Mode Pratinjau Mahasiswa"
   },
   en: {
     dashboard: "Dashboard",
@@ -264,7 +282,25 @@ export const translations = {
     end_date: "End Date",
     edit_course: "Edit Training",
     create_course: "Create New Training",
-    delete_course_confirm: "Are you sure you want to delete this training?"
+    delete_course_confirm: "Are you sure you want to delete this training?",
+    // CMS (Announcement) Page
+    cms_title: "Announcements (CMS)",
+    cms_subtitle: "Manage news, announcements, and information for students.",
+    add_announcement: "Create Announcement",
+    search_announcements: "Search title, category...",
+    target_audience: "Target Audience",
+    publish_date: "Publish Date",
+    content: "Announcement Content",
+    save_announcement: "Save Announcement",
+    delete_announcement: "Delete Announcement",
+    delete_announcement_confirm: "Are you sure you want to delete this announcement?",
+    edit_announcement: "Edit Announcement",
+    create_announcement: "Create New Announcement",
+    filter_published: "Published",
+    filter_archived: "Archived",
+    author: "Author",
+    preview: "Preview",
+    preview_mode: "Student Preview Mode"
   }
 };
 

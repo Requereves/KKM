@@ -83,3 +83,16 @@ export interface Course {
   image: string;
   syllabus: string[];
 }
+
+export interface Announcement {
+  id: string;
+  title: string;
+  content: string;
+  category: 'News' | 'Event' | 'Academic' | 'Maintenance';
+  status: 'published' | 'draft' | 'archived';
+  targetAudience: 'All' | 'Students' | 'Lecturers';
+  author: string;
+  publishDate: string;
+  createdAt: string;
+  image?: string;
+}

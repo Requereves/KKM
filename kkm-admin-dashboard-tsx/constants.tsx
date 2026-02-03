@@ -1,5 +1,5 @@
 
-import { CompetencyData, SkillGapData, StudentVerification, Student, Job, JobApplication, Course } from './types';
+import { CompetencyData, SkillGapData, StudentVerification, Student, Job, JobApplication, Course, Announcement } from './types';
 
 export const INITIAL_VERIFICATIONS: StudentVerification[] = [
   { 
@@ -254,6 +254,44 @@ export const INITIAL_COURSES: Course[] = [
     maxParticipants: 30,
     image: 'https://picsum.photos/seed/laravel/400/200',
     syllabus: ['PHP & OOP', 'Laravel MVC', 'React Frontend', 'Deployment']
+  }
+];
+
+export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
+  {
+    id: '1',
+    title: 'System Maintenance Scheduled',
+    content: 'The portal will be undergoing scheduled maintenance this weekend on Saturday from 22:00 to 02:00. Please save your work.',
+    category: 'Maintenance',
+    status: 'published',
+    targetAudience: 'All',
+    author: 'IT Department',
+    publishDate: '2026-02-01',
+    createdAt: '2026-01-28',
+    image: 'https://picsum.photos/seed/maintenance/400/200'
+  },
+  {
+    id: '2',
+    title: 'Final Semester Exam Schedule',
+    content: 'The official schedule for the even semester final exams has been released. Check your dashboard for details.',
+    category: 'Academic',
+    status: 'published',
+    targetAudience: 'Students',
+    author: 'Academic Bureau',
+    publishDate: '2026-02-05',
+    createdAt: '2026-02-01',
+    image: 'https://picsum.photos/seed/exam/400/200'
+  },
+  {
+    id: '3',
+    title: 'Call for Research Papers 2026',
+    content: 'Lecturers are invited to submit their research papers for the upcoming Annual Tech Conference. Deadline is March 15th.',
+    category: 'Event',
+    status: 'draft',
+    targetAudience: 'Lecturers',
+    author: 'Research Center',
+    publishDate: '2026-02-10',
+    createdAt: '2026-02-03',
   }
 ];
 
