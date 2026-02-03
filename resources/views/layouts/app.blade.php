@@ -1,46 +1,66 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" 
+      x-data="{ 
+          darkMode: localStorage.getItem('theme') === 'dark',
+          sidebarOpen: false,
+          toggleTheme() {
+              this.darkMode = !this.darkMode;
+              localStorage.setItem('theme', this.darkMode ? 'dark' : 'light');
+              if (this.darkMode) {
+                  document.documentElement.classList.add('dark');
+              } else {
+                  document.documentElement.classList.remove('dark');
+              }
+          }
+      }"
+      x-init="$watch('darkMode', val => val ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')); if(darkMode) document.documentElement.classList.add('dark');"
+      :class="{ 'dark': darkMode }">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'KKM App') }}</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        indigo: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 900: '#312e81' },
+                        slate: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 800: '#1e293b', 900: '#0f172a', 950: '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+<body class="font-sans antialiased bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    
+    <div class="flex h-screen overflow-hidden">
+        @include('components.sidebar')
 
-<body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        
-        {{-- 1. INCLUDE SIDEBAR (Posisi Fixed di Kiri) --}}
-        @include('layouts.sidebar')
+        <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+            
+            @include('components.header')
 
-        {{-- 2. INCLUDE TOPBAR (Navigation) --}}
-        {{-- Note: File navigation.blade.php sudah kita kasih margin-left (md:ml-64) sendiri tadi --}}
-        @include('layouts.navigation')
-
-        @isset($header)
-        {{-- Tambahkan 'md:ml-64' agar header tidak tertutup sidebar di desktop --}}
-        <header class="bg-white dark:bg-gray-800 shadow md:ml-64 transition-all duration-300">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header>
-        @endisset
-
-        <main>
-            {{-- Tambahkan 'md:ml-64' agar konten utama tidak tertutup sidebar di desktop --}}
-            <div class="md:ml-64 transition-all duration-300">
+            <main class="w-full grow p-6">
                 {{ $slot }}
-            </div>
-        </main>
+            </main>
+        </div>
     </div>
-    @stack('scripts')
-</body>
 
+    @stack('scripts')
+    
+</body>
 </html>

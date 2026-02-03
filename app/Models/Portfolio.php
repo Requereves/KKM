@@ -9,8 +9,11 @@ class Portfolio extends Model
 {
     use HasFactory;
 
-    const UPDATED_AT = null; // Only use created_at
-
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'student_id',
         'title',
@@ -22,9 +25,15 @@ class Portfolio extends Model
         'verified_at',
     ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
     protected $casts = [
         'verified_at' => 'datetime',
         'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
     /**
@@ -37,6 +46,7 @@ class Portfolio extends Model
 
     /**
      * Get category display name.
+     * Accessor: $portfolio->category_name
      */
     public function getCategoryNameAttribute()
     {
@@ -44,19 +54,22 @@ class Portfolio extends Model
             'sertifikat' => 'Certificate',
             'proyek_kuliah' => 'College Project',
             'portofolio_bebas' => 'Free Portfolio',
-            default => $this->category,
+            // Fallback untuk membersihkan format enum (contoh: 'other_doc' jadi 'Other Doc')
+            default => ucwords(str_replace('_', ' ', $this->category)),
         };
     }
 
     /**
      * Get status badge color.
+     * Accessor: $portfolio->status_color
+     * Used mainly for Tailwind CSS classes (e.g. bg-green-500)
      */
     public function getStatusColorAttribute()
     {
         return match($this->status) {
-            'approved' => 'green',
-            'pending' => 'yellow',
-            'rejected' => 'red',
+            'approved' => 'green',  // Dashboard Mahasiswa pakai 'green'
+            'pending' => 'yellow',  // Dashboard Mahasiswa pakai 'yellow'
+            'rejected' => 'red',    // Dashboard Mahasiswa pakai 'red'
             default => 'gray',
         };
     }
