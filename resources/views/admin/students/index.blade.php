@@ -94,7 +94,7 @@
                                            <td class="px-6 py-4">
                                                 <div class="flex flex-wrap gap-1.5 items-center">
                                                     <!-- Loop untuk menampilkan 2 skill pertama -->
-                                                    <template x-for="skill in selectedSkills" :key="skill.id">
+                                                    <template x-for="(skill, index) in student.skills.slice(0, 2)" :key="index">
                                                         <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100/50 dark:border-indigo-800/50 uppercase tracking-tight">
                                                             <span x-text="skill"></span>
                                                         </span>
