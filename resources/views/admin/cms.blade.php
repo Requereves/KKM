@@ -137,7 +137,7 @@
                                 <label for="name" class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200">Nama Lengkap</label>
                                 <div class="mt-1">
                                     <input type="text" name="name" id="name" required 
-                                           class="block w-full rounded-md border-0 py-1.5 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-slate-800 dark:ring-slate-700 dark:text-white">
+                                           class="block w-full rounded-md border-0 py-1.5 px-3 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-slate-800 dark:ring-slate-700 dark:text-white">
                                 </div>
                             </div>
 
@@ -146,7 +146,7 @@
                                 <label for="email" class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200">Email Address</label>
                                 <div class="mt-1">
                                     <input type="email" name="email" id="email" required 
-                                           class="block w-full rounded-md border-0 py-1.5 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-slate-800 dark:ring-slate-700 dark:text-white">
+                                           class="block w-full rounded-md border-0 py-1.5 px-3 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-slate-800 dark:ring-slate-700 dark:text-white">
                                 </div>
                             </div>
 
@@ -155,7 +155,7 @@
                                 <label for="password" class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200">Password</label>
                                 <div class="mt-1">
                                     <input type="password" name="password" id="password" required minlength="8"
-                                           class="block w-full rounded-md border-0 py-1.5 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-slate-800 dark:ring-slate-700 dark:text-white">
+                                           class="block w-full rounded-md border-0 py-1.5 px-3 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-slate-800 dark:ring-slate-700 dark:text-white">
                                 </div>
                                 <p class="mt-1 text-xs text-slate-500">Minimal 8 karakter.</p>
                             </div>

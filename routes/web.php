@@ -44,10 +44,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Route default yang dicari Laravel secara standar setelah login
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    // --- PROFILE ---
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // --- PROFILE (URL diubah jadi /admin/profile) ---
+    Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/admin/profile', [ProfileController::class, 'update'])->name('profile.update');
+    
+    // 👇 ROUTE BARU: UPDATE AVATAR/FOTO PROFIL
+    Route::patch('/admin/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
+    
+    Route::delete('/admin/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // --- STUDENT PORTFOLIOS (Mahasiswa) ---
     Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfolio.index');

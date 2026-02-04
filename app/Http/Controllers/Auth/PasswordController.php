@@ -17,7 +17,15 @@ class PasswordController extends Controller
     {
         $validated = $request->validateWithBag('updatePassword', [
             'current_password' => ['required', 'current_password'],
-            'password' => ['required', Password::defaults(), 'confirmed'],
+            'password' => [
+                'required', 
+                Password::defaults(), 
+                'confirmed', 
+                'different:current_password' // Validasi: Password baru harus beda dari yang lama
+            ],
+        ], [
+            // Custom Error Message Bahasa Indonesia
+            'password.different' => 'Password baru tidak boleh sama dengan password saat ini.',
         ]);
 
         $request->user()->update([
