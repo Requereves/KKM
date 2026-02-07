@@ -3,27 +3,38 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Storage; // Pastikan ini ada untuk fitur Storage
-use Illuminate\View\View;
+use Illuminate\Support\Facades\Storage;
+use Inertia\Inertia;
+use Inertia\Response;
+use Illuminate\View\View; // 👈 PENTING: Import untuk Blade View Admin
 
 class ProfileController extends Controller
 {
     /**
-     * Display the user's profile form.
+     * =========================================================================
+     * BAGIAN 1: UNTUK MAHASISWA (REACT / INERTIA)
+     * URL: /profile
+     * =========================================================================
      */
-    public function edit(Request $request): View
+
+    /**
+     * Display the user's profile form (React).
+     */
+    public function edit(Request $request): Response
     {
-        return view('profile.edit', [
-            'user' => $request->user(),
+        return Inertia::render('Profile/Edit', [
+            'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
+            'status' => session('status'),
         ]);
     }
 
     /**
-     * Update the user's profile information (Name & Email).
+     * Update the user's profile information (React).
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
@@ -39,7 +50,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Update the user's avatar (Method Baru Khusus Foto).
+     * Update the user's avatar (React - Fitur Khusus Mahasiswa).
      */
     public function updateAvatar(Request $request): RedirectResponse
     {
@@ -53,27 +64,81 @@ class ProfileController extends Controller
         // 2. Cek apakah ada file yang diupload
         if ($request->hasFile('avatar')) {
             
-            // Hapus foto lama jika ada (agar storage tidak penuh)
+            // Hapus foto lama jika ada
             if ($user->avatar && Storage::disk('public')->exists($user->avatar)) {
                 Storage::disk('public')->delete($user->avatar);
             }
 
-            // Simpan foto baru ke folder 'avatars' di public disk
+            // Simpan foto baru
             $path = $request->file('avatar')->store('avatars', 'public');
-
-            // Simpan path/alamat foto ke database
             $user->avatar = $path;
             $user->save();
         }
 
-        // Redirect kembali ke halaman profile dengan pesan sukses khusus
         return Redirect::route('profile.edit')->with('status', 'avatar-updated');
     }
 
     /**
-     * Delete the user's account.
+     * Delete the user's account (React).
      */
     public function destroy(Request $request): RedirectResponse
+    {
+        $request->validateWithBag('userDeletion', [
+            'password' => ['required', 'current_password'],
+        ]);
+
+        $user = $request->user();
+
+        Auth::logout();
+
+        $user->delete();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return Redirect::to('/');
+    }
+
+
+    /**
+     * =========================================================================
+     * BAGIAN 2: UNTUK ADMIN (BLADE VIEW)
+     * URL: /admin/profile
+     * =========================================================================
+     */
+
+    /**
+     * Menampilkan Form Profile Admin (Blade View).
+     */
+    public function editAdmin(Request $request): View
+    {
+        // Mengarahkan ke file resources/views/admin/profile/edit.blade.php
+        return view('admin.profile.edit', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    /**
+     * Update Profile Admin.
+     */
+    public function updateAdmin(ProfileUpdateRequest $request): RedirectResponse
+    {
+        $request->user()->fill($request->validated());
+
+        if ($request->user()->isDirty('email')) {
+            $request->user()->email_verified_at = null;
+        }
+
+        $request->user()->save();
+
+        // Redirect kembali ke route admin, bukan profile.edit biasa
+        return Redirect::route('admin.profile.edit')->with('status', 'profile-updated');
+    }
+
+    /**
+     * Hapus Akun Admin.
+     */
+    public function destroyAdmin(Request $request): RedirectResponse
     {
         $request->validateWithBag('userDeletion', [
             'password' => ['required', 'current_password'],

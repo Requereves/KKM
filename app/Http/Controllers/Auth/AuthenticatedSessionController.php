@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Inertia\Inertia; // 👈 PENTING: Tambahkan Import Ini
 
 class AuthenticatedSessionController extends Controller
 {
@@ -35,7 +36,6 @@ class AuthenticatedSessionController extends Controller
             return redirect()->intended(route('admin.dashboard', absolute: false));
         }
 
-        // 👇 PERUBAHAN DI SINI:
         // Jika Mahasiswa (default), arahkan ke '/home' (route name: 'home')
         return redirect()->intended(route('home', absolute: false));
     }
@@ -43,7 +43,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Destroy an authenticated session.
      */
-    public function destroy(Request $request): RedirectResponse
+    public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
 
@@ -51,6 +51,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        // 👇 PERUBAHAN UTAMA DI SINI:
+        // Gunakan Inertia::location() agar browser melakukan Full Reload ke halaman awal.
+        // Ini mengatasi masalah tampilan "modal kecil" saat logout dari halaman React.
+        return Inertia::location('/');
     }
 }

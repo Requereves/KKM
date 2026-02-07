@@ -37,17 +37,20 @@ Route::get('/cek-php', function () {
 // Group Route untuk User yang sudah Login & Terverifikasi Email
 Route::middleware(['auth', 'verified'])->group(function () {
     
-    // 👇 PERUBAHAN DI SINI (Dulu 'dashboard', sekarang 'home')
-    // URL: /home, Name: home
+    // 1. DASHBOARD MAHASISWA
     Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
-    // --- PROFILE ---
-    Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/admin/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::patch('/admin/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
-    Route::delete('/admin/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // 2. PROFILE USER (MAHASISWA) - REACT/INERTIA
+    // URL: /profile
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    
+    // 👇 PERBAIKAN DI SINI: Menggunakan POST untuk upload file (Avatar)
+    Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
+    
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // --- STUDENT PORTFOLIOS (Mahasiswa) ---
+    // 3. STUDENT PORTFOLIOS
     Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfolio.index');
     Route::get('/portfolios/create', [PortfolioController::class, 'create'])->name('portfolio.create');
     Route::post('/portfolios', [PortfolioController::class, 'store'])->name('portfolio.store');
@@ -55,25 +58,32 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Detail Portfolio
     Route::get('/portfolio/{id}', [PortfolioController::class, 'show'])->name('portfolio.show');
 
-    // --- COURSES (Placeholder) ---
+    // 4. COURSES (Placeholder)
     Route::get('/courses', function () {
         return "Halaman Course Belum Tersedia (Coming Soon)";
     })->name('courses.index');
 
-    // --- ADMIN AREA ---
+    // --- AREA KHUSUS ADMIN ---
+    // Semua route di sini otomatis ada awalan '/admin'
     Route::prefix('admin')->group(function () {
         
-        // 2. DASHBOARD KHUSUS ADMIN (Tetap /admin/dashboard)
+        // Dashboard Admin
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+        // PROFILE ADMIN - BLADE VIEW
+        // URL: /admin/profile
+        Route::get('/profile', [ProfileController::class, 'editAdmin'])->name('admin.profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'updateAdmin'])->name('admin.profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroyAdmin'])->name('admin.profile.destroy');
 
         // Verification Resource
         Route::resource('verification', VerificationController::class)
             ->only(['index', 'show', 'update']);
 
-        // --- HALAMAN CMS ---
+        // Halaman CMS
         Route::get('/cms', [DashboardController::class, 'cms'])->name('cms.index');
 
-        // --- TAMBAH ADMIN BARU ---
+        // Tambah Admin Baru
         Route::post('/create-admin', [DashboardController::class, 'storeAdmin'])->name('admin.create');
     });
 

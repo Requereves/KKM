@@ -34,9 +34,9 @@ export default function StudentLayout({ children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         
-                        {/* Logo (Tombol Burger sudah dihapus di sini) */}
+                        {/* Logo */}
                         <div className="flex shrink-0 items-center">
-                            {/* 👇 UPDATE: Mengarah ke 'home', bukan 'dashboard' */}
+                            {/* Link ke Home Dashboard User */}
                             <Link href={route('home')} className="flex items-center gap-2">
                                 <img src="/favicon.png" alt="Logo" className="w-8 h-8" />
                                 <span className="font-bold text-xl text-gray-800 dark:text-white hidden sm:block">
@@ -90,6 +90,7 @@ export default function StudentLayout({ children }) {
                                         onClick={() => setShowingUserDropdown(false)} // Close on click
                                     >
                                         <div className="py-1">
+                                            {/* Link Profile User (React) */}
                                             <Link href={route('profile.edit')} className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600">
                                                 Profile
                                             </Link>
@@ -119,15 +120,13 @@ export default function StudentLayout({ children }) {
                 </div>
             </footer>
 
-            {/* Mobile Menu Container (Hidden logic retained but routes fixed) */}
+            {/* Mobile Menu (Hanya muncul di layar kecil) */}
             <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
                 <div className="pt-2 pb-3 space-y-1">
-                    {/* 👇 UPDATE: Mengarah ke 'home' */}
                     <Link href={route('home')} className="block w-full ps-3 pe-4 py-2 border-l-4 border-indigo-400 text-start text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">
                         Dashboard
                     </Link>
                 </div>
-                {/* Bagian profil user di mobile menu tetap ada untuk kelengkapan data */}
             </div>
         </div>
     );

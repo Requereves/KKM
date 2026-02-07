@@ -13,6 +13,7 @@ use App\Models\Skill;
 use App\Models\JobVacancy;
 use App\Models\Course;
 use Inertia\Inertia; // 👈 PENTING: Import Inertia
+use Inertia\Response;
 
 class DashboardController extends Controller
 {
@@ -175,6 +176,7 @@ class DashboardController extends Controller
                 $statusColor = match($portfolio->status) {
                     'approved' => 'green',
                     'rejected' => 'red',
+                    'pending' => 'yellow',
                     default => 'yellow',
                 };
                 
@@ -228,8 +230,9 @@ class DashboardController extends Controller
         $data['recommendedCourses'] = $recommendedCourses;
         $data['userInterest'] = $userInterest;
 
-        // 👈 PERUBAHAN UTAMA DI SINI: Render Inertia React
-        return Inertia::render('Student/Dashboard', $data);
+        // 👈 PERUBAHAN UTAMA DI SINI:
+        // Hapus 'Student/' karena file Dashboard.jsx ada di folder Pages langsung.
+        return Inertia::render('Dashboard', $data);
     }
 
     /**

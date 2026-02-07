@@ -12,7 +12,8 @@
             </div>
 
             <div class="flex shrink-0 items-center">
-                <a href="{{ route('dashboard') }}" class="flex items-center gap-2">
+                {{-- 👇 UPDATE: Mengarah ke Admin Dashboard --}}
+                <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2">
                     <img src="{{ asset('favicon.png') }}" alt="Logo" class="w-8 h-8">
                     <span class="font-bold text-xl text-gray-800 dark:text-white hidden sm:block">Arahin<span class="text-blue-600">.id</span></span>
                 </a>
@@ -54,7 +55,8 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        {{-- 👇 UPDATE: Mengarah ke 'admin.profile.edit' --}}
+                        <x-dropdown-link :href="route('admin.profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
@@ -73,7 +75,8 @@
     {{-- Mobile Menu --}}
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            {{-- 👇 UPDATE: Mengarah ke Admin Dashboard --}}
+            <x-responsive-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
@@ -94,7 +97,8 @@
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
+                {{-- 👇 UPDATE: Mengarah ke Admin Profile --}}
+                <x-responsive-nav-link :href="route('admin.profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
 
@@ -107,36 +111,43 @@
             </div>
         </div>
     </div>
+</nav>
 
-    @push('scripts')
-    <script>
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+{{-- SCRIPT DARK MODE (Dipindah ke luar nav agar lebih rapi, atau bisa ditaruh di layout utama) --}}
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-    // Init Theme
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    if (currentTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-        themeToggleLightIcon?.classList.remove('hidden');
-    } else {
-        document.documentElement.classList.remove('dark');
-        themeToggleDarkIcon?.classList.remove('hidden');
-    }
+        // Fungsi Update Icon
+        function updateThemeIcons() {
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+                document.documentElement.classList.add('dark');
+            } else {
+                themeToggleLightIcon.classList.add('hidden');
+                themeToggleDarkIcon.classList.remove('hidden');
+                document.documentElement.classList.remove('dark');
+            }
+        }
 
-    // Toggle Theme (Tanpa Reload Page agar lebih smooth)
-    themeToggleBtn?.addEventListener('click', function() {
-        themeToggleDarkIcon.classList.toggle('hidden');
-        themeToggleLightIcon.classList.toggle('hidden');
+        // Init saat load
+        updateThemeIcons();
 
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
+        // Event Listener Toggle
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', function() {
+                if (localStorage.getItem('theme') === 'dark') {
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    localStorage.setItem('theme', 'dark');
+                }
+                updateThemeIcons();
+            });
         }
     });
-    </script>
-    @endpush
-</nav>
+</script>
+@endpush

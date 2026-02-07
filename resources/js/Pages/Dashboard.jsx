@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StudentLayout from '../../Layouts/StudentLayout';
+import StudentLayout from '../Layouts/StudentLayout';
 import { Head, Link } from '@inertiajs/react';
 import {
     Chart as ChartJS,

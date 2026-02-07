@@ -20,8 +20,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role', // 👈 PENTING: Tambahkan ini agar role bisa diisi 'admin'
-        'avatar', // Opsional: Tambahkan juga jika nanti mau fitur upload foto profil
+        'role',     // Role user (admin/mahasiswa)
+        'avatar',   // Foto profil
+        'interest', // 👈 PENTING: Tambahkan ini agar Minat Belajar bisa disimpan
     ];
 
     /**
