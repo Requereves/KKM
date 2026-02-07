@@ -33,7 +33,7 @@
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Judul Pekerjaan</label>
                     <input type="text" name="title" value="{{ old('title', $job->title ?? '') }}" required
-                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black"
+                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white"
                            placeholder="e.g. Frontend Developer">
                 </div>
 
@@ -41,28 +41,28 @@
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Nama Perusahaan</label>
                     <input type="text" name="company" value="{{ old('company', $job->company ?? '') }}" required
-                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black">
+                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white">
                 </div>
 
                 <!-- Location -->
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Lokasi</label>
                     <input type="text" name="location" value="{{ old('location', $job->location ?? '') }}" required
-                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black">
+                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white">
                 </div>
 
                 <!-- Salary -->
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Gaji (Salary)</label>
                     <input type="text" name="salary" value="{{ old('salary', $job->salary ?? '') }}"
-                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black"
+                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white"
                            placeholder="e.g. IDR 5.000.000">
                 </div>
 
                 <!-- Job Type -->
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tipe Pekerjaan</label>
-                    <select name="type" class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black">
+                    <select name="type" class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white">
                         @foreach(['Full-time', 'Internship', 'Part-time', 'Contract'] as $type)
                             <option value="{{ $type }}" {{ old('type', $job->type ?? '') == $type ? 'selected' : '' }}>{{ $type }}</option>
                         @endforeach
@@ -72,7 +72,7 @@
                 <!-- Status -->
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Status</label>
-                    <select name="status" class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black">
+                    <select name="status" class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white">
                         @foreach(['draft', 'active', 'closed'] as $status)
                             <option value="{{ $status }}" {{ old('status', $job->status ?? 'draft') == $status ? 'selected' : '' }}>{{ ucfirst($status) }}</option>
                         @endforeach
@@ -85,14 +85,14 @@
                     {{-- Gunakan created_at jika edit, gunakan hari ini jika tambah --}}
                     <input type="date" name="posted_at" 
                            value="{{ old('posted_at', isset($job) ? $job->created_at->format('Y-m-d') : date('Y-m-d')) }}"
-                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black">
+                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white">
                 </div>
                 <div class="space-y-2">
                     <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tanggal Berakhir</label>
                     {{-- Proteksi agar tidak error format() jika expires_at null --}}
                     <input type="date" name="expires_at" 
                            value="{{ old('expires_at', (isset($job) && $job->expires_at) ? $job->expires_at->format('Y-m-d') : '') }}"
-                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black">
+                           class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white">
                 </div>
             </div>
 
@@ -100,7 +100,7 @@
             <div class="space-y-2">
                 <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Deskripsi</label>
                 <textarea name="description" rows="4" 
-                          class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black">{{ old('description', $job->description ?? '') }}</textarea>
+                          class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white">{{ old('description', $job->description ?? '') }}</textarea>
             </div>
 
             <!-- Requirements (Textarea to Array Logic) -->
@@ -108,7 +108,7 @@
                 <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Persyaratan (Satu per baris)</label>
                 {{-- Gabungkan array menjadi baris teks jika mode edit --}}
                 <textarea name="requirements" rows="4" placeholder="Contoh:&#10;Minimal S1&#10;Bisa Laravel"
-                          class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-black font-mono text-sm">@if(old('requirements')){{ old('requirements') }}@elseif(isset($job) && is_array($job->requirements)){{ implode("\n", $job->requirements) }}@endif</textarea>
+                          class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none dark:text-white font-mono text-sm">@if(old('requirements')){{ old('requirements') }}@elseif(isset($job) && is_array($job->requirements)){{ implode("\n", $job->requirements) }}@endif</textarea>
             </div>
 
             <!-- Actions -->

@@ -31,7 +31,12 @@ class StudentController extends Controller
                 'yearOfEntry' => $student->year_of_entry, // Mapping dari year_of_entry
                 'phone' => $student->phone,
                 // Mengambil nama-nama skill ke dalam array sederhana
-                'skills' => $student->skills->pluck('name')->toArray(),
+                'skills' => $student->skills->map(function($s) {
+                    return [
+                        'id' => $s->id,
+                        'name' => $s-> skill_name
+                    ];
+                })->toArray(),
                 // Avatar default menggunakan UI Avatars berdasarkan nama
                 'avatar' => 'https://ui-avatars.com/api/?name=' . urlencode($student->full_name) . '&background=6366f1&color=fff',
 
@@ -44,6 +49,7 @@ class StudentController extends Controller
             ];
         });
 
+       
         return view('admin.students.index', compact('students'));
     }
 

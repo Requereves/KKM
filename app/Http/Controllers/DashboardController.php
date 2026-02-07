@@ -10,7 +10,7 @@ use App\Models\User; // Tambahan untuk create user admin
 use App\Models\Student;
 use App\Models\Portfolio;
 use App\Models\Skill;
-use App\Models\JobVacancy;
+use App\Models\JobsVacancies;
 
 class DashboardController extends Controller
 {
@@ -69,7 +69,7 @@ class DashboardController extends Controller
             $data['pendingCount'] = Portfolio::where('status', 'pending')->count();
             $data['totalStudents'] = Student::count();
             // Cek apakah tabel/model JobVacancy sudah ada, jika belum gunakan 0 agar tidak error
-            $data['activeJobs'] = class_exists(JobVacancy::class) ? JobVacancy::count() : 0; 
+            $data['activeJobs'] = class_exists(JobsVacancies::class) ? JobsVacancies::count() : 0; 
             $data['partnersCount'] = 24; // Hardcode sesuai desain
 
             // 2. Tabel Recent Verification Requests (Admin Only)

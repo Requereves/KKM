@@ -96,7 +96,8 @@
                                                     <!-- Loop untuk menampilkan 2 skill pertama -->
                                                     <template x-for="(skill, index) in student.skills.slice(0, 2)" :key="index">
                                                         <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100/50 dark:border-indigo-800/50 uppercase tracking-tight">
-                                                            <span x-text="skill"></span>
+                                                            <span x-text="skill.name"></span>
+                                                            <!-- <code class="text-[10px]" x-text="JSON.stringify(student.skills)"></code> -->
                                                         </span>
                                                     </template>
 
