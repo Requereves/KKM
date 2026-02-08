@@ -3,8 +3,10 @@ import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+
     // 👇 WAJIB: Aktifkan mode class untuk Dark Mode
     darkMode: 'class',
+
 
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',

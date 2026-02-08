@@ -12,6 +12,7 @@ class Skill extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'skill_id',
         'skill_name',
     ];
 

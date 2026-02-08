@@ -15,7 +15,12 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         // 👇 2. TAMBAHKAN KODE INI DI SINI
         $middleware->web(append: [
+
             HandleInertiaRequests::class,
+            // Middleware Bahasa yang baru kita buat
+            \App\Http\Middleware\Localization::class,
+            \App\Http\Middleware\UpdateUserLastSeen::class,
+
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

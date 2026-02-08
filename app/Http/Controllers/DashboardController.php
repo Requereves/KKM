@@ -10,10 +10,12 @@ use App\Models\User;
 use App\Models\Student;
 use App\Models\Portfolio;
 use App\Models\Skill;
-use App\Models\JobVacancy;
+// use App\Models\JobVacancy;
 use App\Models\Course;
 use Inertia\Inertia; // 👈 PENTING: Import Inertia
 use Inertia\Response;
+use App\Models\JobsVacancies;
+
 
 class DashboardController extends Controller
 {
@@ -59,11 +61,20 @@ class DashboardController extends Controller
             'pendingVerifications' => $pendingVerifications,
             'pendingVerificationsCount' => $pendingVerificationsCount,
             
+
             // Kartu Statistik
             'pendingCount' => Portfolio::where('status', 'pending')->count(),
             'totalStudents' => Student::count(),
             'activeJobs' => class_exists(JobVacancy::class) ? JobVacancy::count() : 0,
             'partnersCount' => 24, // Hardcode
+
+            // 1. Kartu Statistik
+            $data['pendingCount'] = Portfolio::where('status', 'pending')->count();
+            $data['totalStudents'] = Student::count();
+            // Cek apakah tabel/model JobVacancy sudah ada, jika belum gunakan 0 agar tidak error
+            $data['activeJobs'] = class_exists(JobsVacancies::class) ? JobsVacancies::count() : 0; 
+            $data['partnersCount'] = 24; // Hardcode sesuai desain
+
 
             // Tabel Recent Requests
             'recentVerifications' => Portfolio::with('student')

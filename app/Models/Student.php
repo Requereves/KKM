@@ -23,6 +23,7 @@ class Student extends Model
 
     protected $casts = [
         'year_of_entry' => 'integer',
+        'last_seen_at' => 'datetime',
     ];
 
     /**
