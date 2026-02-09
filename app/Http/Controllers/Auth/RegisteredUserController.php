@@ -50,12 +50,15 @@ class RegisteredUserController extends Controller
             'user_id' => $user->id,
             'nim' => 'TEMP-' . rand(1000, 9999), 
             'full_name' => $user->name,
+            'email' => $user->email, // Saya tambahkan email agar data student lengkap (opsional, hapus jika error)
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        // 👇 PERBAIKAN DI SINI:
+        // Arahkan ke 'home', karena route 'dashboard' sudah dihapus/diganti di web.php
+        return redirect(route('home', absolute: false));
     }
 }

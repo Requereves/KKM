@@ -12,7 +12,7 @@
             </div>
 
             <div class="flex shrink-0 items-center">
-                {{-- 👇 UPDATE: Mengarah ke Admin Dashboard --}}
+                {{-- Mengarah ke Admin Dashboard --}}
                 <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2">
                     <img src="{{ asset('favicon.png') }}" alt="Logo" class="w-8 h-8">
                     <span class="font-bold text-xl text-gray-800 dark:text-white hidden sm:block">Arahin<span class="text-blue-600">.id</span></span>
@@ -55,7 +55,7 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        {{-- 👇 UPDATE: Mengarah ke 'admin.profile.edit' --}}
+                        {{-- Dropdown Profile Link --}}
                         <x-dropdown-link :href="route('admin.profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
@@ -72,12 +72,17 @@
         </div>
     </div>
 
-    {{-- Mobile Menu --}}
+    {{-- Mobile Menu (Tampil saat Hamburger di-klik) --}}
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            {{-- 👇 UPDATE: Mengarah ke Admin Dashboard --}}
+            {{-- Dashboard Link --}}
             <x-responsive-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+
+            {{-- 👇 UPDATE DI SINI: Menu Manajemen Course (Mobile) --}}
+            <x-responsive-nav-link :href="route('admin.courses.index')" :active="request()->routeIs('admin.courses.*')">
+                {{ __('Manajemen Course') }}
             </x-responsive-nav-link>
         </div>
 
@@ -97,7 +102,6 @@
             </div>
 
             <div class="mt-3 space-y-1">
-                {{-- 👇 UPDATE: Mengarah ke Admin Profile --}}
                 <x-responsive-nav-link :href="route('admin.profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
@@ -113,7 +117,7 @@
     </div>
 </nav>
 
-{{-- SCRIPT DARK MODE (Dipindah ke luar nav agar lebih rapi, atau bisa ditaruh di layout utama) --}}
+{{-- SCRIPT DARK MODE --}}
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {

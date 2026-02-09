@@ -26,6 +26,9 @@ class ProfileUpdateRequest extends FormRequest
                 Rule::unique(User::class)->ignore($this->user()->id),
             ],
             'avatar' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            
+            // 👇 TAMBAHAN: Validasi untuk kolom interest (Minat Belajar)
+            'interest' => ['nullable', 'string', 'max:255'],
         ];
     }
 }

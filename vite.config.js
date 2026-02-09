@@ -10,4 +10,10 @@ export default defineConfig({
         }),
         react(),
     ],
+    // 👇 TAMBAHAN PENTING: Konfigurasi Alias '@'
+    resolve: {
+        alias: {
+            '@': '/resources/js',
+        },
+    },
 });

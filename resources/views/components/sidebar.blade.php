@@ -64,11 +64,12 @@
                     'label' => __('messages.jobs'), // 👈 Mengambil teks dari kamus
                     'icon' => 'work_outline'
                 ],
+                // 👇 UPDATE DI SINI: Menu Training / Course
                 [
-                    'route' => 'courses.index', 
-                    'active' => 'courses.*',
+                    'route' => 'admin.courses.index', // Mengarah ke route resource course admin
+                    'active' => 'admin.courses.*',    // Aktif saat di index, create, atau store course
                     'label' => __('messages.training'), // 👈 Mengambil teks dari kamus
-                    'icon' => 'auto_stories'
+                    'icon' => 'school' // Ganti icon jadi school agar sesuai konteks
                 ],
                 [
                     'route' => 'cms.index', 

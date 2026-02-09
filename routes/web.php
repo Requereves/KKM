@@ -52,7 +52,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     
-    // 👇 PERBAIKAN DI SINI: Menggunakan POST untuk upload file (Avatar)
+    // Menggunakan POST untuk upload file (Avatar)
     Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
     
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -65,7 +65,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Detail Portfolio
     Route::get('/portfolio/{id}', [PortfolioController::class, 'show'])->name('portfolio.show');
 
-    // 4. COURSES (Placeholder)
+    // 4. COURSES (Halaman List Course untuk Mahasiswa)
+    // Saat ini masih placeholder, nanti bisa diganti controller untuk menampilkan list course dari DB
     Route::get('/courses', function () {
         return "Halaman Course Belum Tersedia (Coming Soon)";
     })->name('courses.index');
@@ -87,18 +88,31 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::resource('verification', VerificationController::class)
             ->only(['index', 'show', 'update']);
 
-        // Halaman CMS
-        // Route Student
+        // Route Student Management (CMS)
         Route::resource('students', StudentController::class);
 
-        // Route Jobs
+        // Route Job Vacancies (CMS)
         Route::resource('jobs', JobController::class);
-            // ->only(['index', 'update', 'store']);
 
-        // --- HALAMAN CMS (MANAJEMEN ADMIN) ---
-        // Route untuk menampilkan halaman list admin & modal tambah admin
+        // Route Management Course (Full CRUD)
+        Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class)->names([
+            'index'   => 'admin.courses.index',
+            'create'  => 'admin.courses.create',
+            'store'   => 'admin.courses.store',
+            'edit'    => 'admin.courses.edit',
+            'update'  => 'admin.courses.update',
+            'destroy' => 'admin.courses.destroy',
+        ]);
 
-        Route::get('/cms', [DashboardController::class, 'cms'])->name('cms.index');
+        // 👇 PERUBAHAN DI SINI: Route CMS sekarang pakai AnnouncementController (Full CRUD)
+        Route::resource('cms', \App\Http\Controllers\Admin\AnnouncementController::class)->names([
+            'index'   => 'cms.index',
+            'create'  => 'cms.create',
+            'store'   => 'cms.store',
+            'edit'    => 'cms.edit',
+            'update'  => 'cms.update',
+            'destroy' => 'cms.destroy',
+        ]);
 
         // Tambah Admin Baru
         Route::post('/create-admin', [DashboardController::class, 'storeAdmin'])->name('admin.create');

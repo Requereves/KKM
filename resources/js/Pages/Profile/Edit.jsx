@@ -5,12 +5,24 @@ import { Head, useForm, usePage } from '@inertiajs/react';
 export default function Edit({ mustVerifyEmail, status }) {
     const user = usePage().props.auth.user;
 
+    // --- DAFTAR KATEGORI COURSE ---
+    // Opsi minat belajar yang tersedia
+    const interestOptions = [
+        "Web Development",
+        "Mobile Development",
+        "Data Science",
+        "UI/UX Design",
+        "Digital Marketing",
+        "Cyber Security"
+    ];
+
     // --- FORM DATA HANDLER ---
     
-    // 1. Form Update Profil (Nama & Email)
+    // 1. Form Update Profil (Nama, Email, & INTEREST)
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: user.name,
         email: user.email,
+        interest: user.interest || '', // 👈 Ambil data interest dari user
     });
 
     // 2. Form Update Password
@@ -60,9 +72,7 @@ export default function Edit({ mustVerifyEmail, status }) {
         if (file) {
             avatarData.avatar = file;
             
-            // 👇 UPDATE DI SINI:
-            // Kita gunakan POST murni (karena route di web.php sudah diubah jadi Route::post)
-            // Hapus '_method: patch' agar tidak error.
+            // Upload Foto menggunakan POST murni
             postAvatar(route('profile.avatar'), {
                 preserveScroll: true,
                 forceFormData: true, 
@@ -70,12 +80,11 @@ export default function Edit({ mustVerifyEmail, status }) {
         }
     };
 
-    // --- LOGIC REKOMENDASI CERDAS (Fitur Baru) ---
-    // Rekomendasi berubah real-time saat user mengetik nama atau berdasarkan role
+    // --- LOGIC REKOMENDASI CERDAS ---
     const getRecommendation = () => {
         const role = user.role || 'mahasiswa';
-        const nameLength = data.name.length;
-
+        
+        // Logic Admin
         if (role === 'admin') {
             return {
                 title: "Administrator Power",
@@ -83,23 +92,24 @@ export default function Edit({ mustVerifyEmail, status }) {
                 icon: "admin_panel_settings",
                 color: "text-purple-600 bg-purple-100"
             };
+        } 
+        
+        // Logic Mahasiswa berdasarkan Interest
+        if (data.interest) {
+             return {
+                title: `Fokus: ${data.interest}`,
+                desc: `Kami telah menyesuaikan rekomendasi kursus di Dashboard sesuai minat ${data.interest} kamu!`,
+                icon: "school",
+                color: "text-blue-600 bg-blue-100"
+            };
         } else {
-            // Logika dummy untuk Mahasiswa
-            if (nameLength > 0 && nameLength < 5) {
-                return {
-                    title: "Mulai Petualangan!",
-                    desc: `Hai ${data.name}, nama yang singkat! Kami sarankan ambil kursus 'Dasar Pemrograman'.`,
-                    icon: "rocket_launch",
-                    color: "text-blue-600 bg-blue-100"
-                };
-            } else {
-                return {
-                    title: "Tingkatkan Portfolio",
-                    desc: `Halo ${data.name}, lengkapi profilmu agar kesempatan direkrut meningkat 80%!`,
-                    icon: "trending_up",
-                    color: "text-emerald-600 bg-emerald-100"
-                };
-            }
+            // Fallback jika belum pilih interest
+            return {
+                title: "Tentukan Minatmu",
+                desc: `Halo ${data.name}, yuk pilih 'Minat Belajar' di form profil agar rekomendasi kursus lebih akurat!`,
+                icon: "lightbulb",
+                color: "text-yellow-600 bg-yellow-100"
+            };
         }
     };
 
@@ -259,6 +269,29 @@ export default function Edit({ mustVerifyEmail, status }) {
                                             </div>
                                             {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
                                         </div>
+
+                                        {/* 👇 INPUT BARU: MINAT BELAJAR (INTEREST) */}
+                                        <div className="space-y-2">
+                                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Minat Belajar</label>
+                                            <div className="relative">
+                                                <span className="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">school</span>
+                                                <select
+                                                    value={data.interest}
+                                                    onChange={(e) => setData('interest', e.target.value)}
+                                                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all dark:text-white sm:text-sm appearance-none cursor-pointer"
+                                                >
+                                                    <option value="" disabled>Pilih Minat Utama...</option>
+                                                    {interestOptions.map((option, index) => (
+                                                        <option key={index} value={option}>{option}</option>
+                                                    ))}
+                                                </select>
+                                                {/* Icon Panah Dropdown */}
+                                                <span className="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+                                            </div>
+                                            <p className="text-[10px] text-slate-400">Rekomendasi course di dashboard akan disesuaikan dengan pilihan ini.</p>
+                                            {errors.interest && <span className="text-red-500 text-xs">{errors.interest}</span>}
+                                        </div>
+
                                     </div>
 
                                     <div className="flex justify-end">
