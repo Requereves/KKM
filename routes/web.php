@@ -47,6 +47,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // 1. DASHBOARD MAHASISWA
     Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
+    // Redirect dari /dashboard ke /home untuk kompatibilitas lama buat testing doang
+    Route::get('/dashboard', function() {return redirect()->route('home');})->name('dashboard');
+
     // 2. PROFILE USER (MAHASISWA) - REACT/INERTIA
     // URL: /profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
