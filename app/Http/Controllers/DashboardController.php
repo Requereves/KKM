@@ -61,11 +61,6 @@ class DashboardController extends Controller
             'pendingVerifications' => $pendingVerifications,
             'pendingVerificationsCount' => $pendingVerificationsCount,
             
-
-            // Kartu Statistik
-            'pendingVerifications' => $pendingVerifications,
-            'pendingVerificationsCount' => $pendingVerificationsCount,
-
             // Kartu Statistik
             'pendingCount' => Portfolio::where('status', 'pending')->count(),
             'totalStudents' => Student::count(),
@@ -222,20 +217,25 @@ class DashboardController extends Controller
         $data['chartData'] = $this->getPortfolioChartData($student);
         $data['skillsData'] = $this->getSkillsChartData($student);
 
-        // Rekomendasi Course
+        // 👇 PERUBAHAN DI SINI: Rekomendasi Course dengan Empty State Support
         $userInterest = $user->interest; 
-        $recommendedCourses = Course::where('category', $userInterest)
-                            ->inRandomOrder()
-                            ->limit(3)
-                            ->get();
+        $recommendedCourses = []; // Default kosong jika belum punya interest
 
-        if ($recommendedCourses->isEmpty()) {
-            $recommendedCourses = Course::latest()->limit(3)->get();
-            $userInterest = 'Terbaru';
+        // Jika User sudah punya interest, baru kita cari course-nya
+        if (!empty($userInterest)) {
+            $recommendedCourses = Course::where('category', $userInterest)
+                                ->inRandomOrder()
+                                ->limit(3)
+                                ->get();
+            
+            // Opsional: Jika user punya interest tapi coursenya kosong (misal data belum ada),
+            // kita biarkan kosong saja agar card "Belum ada rekomendasi" tidak muncul 
+            // (atau bisa fallback ke latest jika mau). 
+            // Untuk skenario "Empty State saat belum isi profil", logic ini sudah benar.
         }
 
         $data['recommendedCourses'] = $recommendedCourses;
-        $data['userInterest'] = $userInterest;
+        $data['userInterest'] = $userInterest; // Dikirim agar Frontend tahu user sudah isi profil atau belum
 
         // 👈 PERUBAHAN UTAMA DI SINI:
         // Hapus 'Student/' karena file Dashboard.jsx ada di folder Pages langsung.

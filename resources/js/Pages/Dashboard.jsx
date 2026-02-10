@@ -173,24 +173,35 @@ export default function Dashboard({
                     </div>
                 </div>
 
-                {/* Section Rekomendasi Course */}
+                {/* ========================================================= */}
+                {/* SECTION REKOMENDASI COURSE (UPDATED) */}
+                {/* ========================================================= */}
                 <div>
                     <div className="flex justify-between items-end mb-4 px-1">
                         <div>
                             <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">Rekomendasi Untukmu 🎯</h3>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                                Berdasarkan minat: <span className="font-semibold text-indigo-600 dark:text-indigo-400">{userInterest || 'Umum'}</span>
-                            </p>
+                            
+                            {/* Hanya tampilkan subtitle jika user sudah punya interest */}
+                            {userInterest && (
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                                    Berdasarkan minat: <span className="font-semibold text-indigo-600 dark:text-indigo-400">{userInterest}</span>
+                                </p>
+                            )}
                         </div>
-                        <Link href={route('courses.index')} className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 flex items-center gap-1 transition-colors">
-                            Lihat Semua
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                        </Link>
+                        
+                        {/* Tombol Lihat Semua hanya muncul jika ada data */}
+                        {recommendedCourses.length > 0 && (
+                            <Link href={route('courses.index')} className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 flex items-center gap-1 transition-colors">
+                                Lihat Semua
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                            </Link>
+                        )}
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {recommendedCourses.length > 0 ? (
-                            recommendedCourses.map((course, index) => (
+                    {recommendedCourses.length > 0 ? (
+                        // 🟢 JIKA ADA COURSE (TAMPILKAN CARD)
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {recommendedCourses.map((course, index) => (
                                 <div key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group flex flex-col h-full overflow-hidden">
                                     <div className="relative h-40 overflow-hidden">
                                         <img 
@@ -214,14 +225,29 @@ export default function Dashboard({
                                         </div>
                                     </div>
                                 </div>
-                            ))
-                        ) : (
-                            <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center py-12">
-                                <span className="material-icons-outlined text-4xl text-gray-300 mb-2">school</span>
-                                <p className="text-gray-500 dark:text-gray-400">Belum ada rekomendasi course saat ini.</p>
+                            ))}
+                        </div>
+                    ) : (
+                        // 🔴 JIKA KOSONG (TAMPILKAN EMPTY STATE / CTA)
+                        <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800 rounded-xl p-8 text-center animate-in fade-in zoom-in duration-300">
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white dark:bg-gray-800 mb-4 shadow-sm">
+                                <span className="material-icons-outlined text-3xl text-indigo-500">school</span>
                             </div>
-                        )}
-                    </div>
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                                Belum ada rekomendasi, nih!
+                            </h3>
+                            <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-6 text-sm">
+                                Kami butuh tahu apa yang ingin kamu pelajari agar bisa memberikan rekomendasi course terbaik untukmu.
+                            </p>
+                            <Link 
+                                href={route('profile.edit')} 
+                                className="inline-flex items-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/30 transition-all gap-2 text-sm"
+                            >
+                                <span className="material-icons-outlined text-base">edit_note</span>
+                                Atur Minat Belajar
+                            </Link>
+                        </div>
+                    )}
                 </div>
 
                 {/* Bottom Section: Portfolio List & Calendar */}
