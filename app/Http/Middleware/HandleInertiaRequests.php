@@ -38,12 +38,23 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             
-            // 👇 DATA USER LOGIN (Wajib agar React tidak error baca 'auth.user')
+            // 👇 DATA USER LOGIN
             'auth' => [
-                'user' => $request->user(),
+                'user' => $request->user() ? [
+                    'id' => $request->user()->id,
+                    'name' => $request->user()->name,
+                    'username' => $request->user()->username, // Tambahkan ini
+                    'email' => $request->user()->email,
+                    'role' => $request->user()->role,
+                    
+                    // ✅ KUNCI PERUBAHAN DI SINI:
+                    // Kita mapping property 'avatar' di frontend agar mengambil value dari 'avatar_url' (Accessor di Model)
+                    // Ini yang membawa timestamp (?t=...) agar gambar refresh otomatis
+                    'avatar' => $request->user()->avatar_url, 
+                ] : null,
             ],
 
-            // 👇 FLASH MESSAGES (Untuk notifikasi sukses/gagal dari controller)
+            // 👇 FLASH MESSAGES
             'flash' => [
                 'success' => fn () => $request->session()->get('success'),
                 'error' => fn () => $request->session()->get('error'),
