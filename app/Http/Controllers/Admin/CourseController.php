@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use Illuminate\Http\Request;
-use Inertia\Inertia; // Import Inertia
+use Inertia\Inertia; 
 use Illuminate\Support\Facades\Storage;
 
 class CourseController extends Controller
@@ -22,10 +22,10 @@ class CourseController extends Controller
                 'id' => $course->id,
                 'title' => $course->title,
                 'category' => $course->category,
-                // Placeholder description jika di DB belum ada kolom description
+    
                 'description' => $course->description ?? 'Comprehensive course description placeholder...', 
                 'instructor' => $course->instructor,
-                // Pastikan URL gambar valid, atau gunakan placeholder jika kosong
+                
                 'image' => $course->thumbnail ? asset('storage/' . $course->thumbnail) : 'https://placehold.co/600x400/png',
                 'startDate' => $course->created_at->format('Y-m-d'), // Mapping created_at ke startDate
                 'endDate' => $course->created_at->addMonths(1)->format('Y-m-d'), // Dummy endDate (+1 bulan)
