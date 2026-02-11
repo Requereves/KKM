@@ -6,32 +6,46 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('jobs_vacancies', function (Blueprint $table) {
-        $table->id();
-        $table->string('title');
-        $table->string('company');
-        $table->string('logo_url')->nullable();
-        $table->string('location');
-        $table->string('salary');
-        $table->string('type'); // Full-time, Remote, Internship, dll
-        $table->enum('status', ['active', 'closed', 'draft'])->default('draft');
-        $table->text('description');
-        $table->json('requirements'); // Kita simpan sebagai JSON agar bisa menyimpan banyak poin
-        $table->timestamp('expires_at')->nullable();
-        $table->timestamps();
+        // 🔥 HAPUS TABEL LAMA DULU (Agar struktur reset bersih)
+        // Disable foreign keys sementara untuk mencegah error saat drop
+        Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('job_vacancies');
+        Schema::dropIfExists('jobs_vacancies'); 
+        Schema::enableForeignKeyConstraints();
+
+        // 🔥 STRUKTUR BARU (LENGKAP DENGAN REQUIREMENTS)
+        Schema::create('job_vacancies', function (Blueprint $table) {
+            $table->id();
+            
+            // Data Utama
+            $table->string('title');
+            $table->string('company');
+            $table->string('location');
+            
+            // Pilihan Statis (Enum) - Sesuai Dropdown di Frontend
+            $table->enum('type', ['Full-time', 'Part-time', 'Contract', 'Internship']);
+            $table->enum('status', ['active', 'closed', 'draft'])->default('draft');
+            
+            // Keuangan
+            $table->decimal('salary', 15, 0)->nullable(); 
+            
+            // Detail Tambahan
+            $table->text('description')->nullable();
+            
+            // 🔥 PENTING: Kolom untuk menyimpan list persyaratan (JSON Array)
+            $table->json('requirements')->nullable(); 
+            
+            // Tanggal Deadline
+            $table->date('deadline')->nullable(); 
+            
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('jobs_vacancies');
+        Schema::dropIfExists('job_vacancies');
     }
 };

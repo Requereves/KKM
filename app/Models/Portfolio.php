@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Portfolio extends Model
 {
@@ -37,11 +38,17 @@ class Portfolio extends Model
     ];
 
     /**
+     * The accessors to append to the model's array form.
+     * Penting: Agar 'category_name' dan 'status_color' otomatis ada di JSON (Inertia Props)
+     */
+    protected $appends = ['category_name', 'status_color'];
+
+    /**
      * Get the student that owns the portfolio.
      */
-    public function student()
+    public function student(): BelongsTo
     {
-        return $this->belongsTo(Student::class);
+        return $this->belongsTo(Student::class, 'student_id');
     }
 
     /**
@@ -54,6 +61,8 @@ class Portfolio extends Model
             'sertifikat' => 'Certificate',
             'proyek_kuliah' => 'College Project',
             'portofolio_bebas' => 'Free Portfolio',
+            'lomba' => 'Competition',
+            'magang' => 'Internship',
             // Fallback untuk membersihkan format enum (contoh: 'other_doc' jadi 'Other Doc')
             default => ucwords(str_replace('_', ' ', $this->category)),
         };

@@ -5,9 +5,14 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\VerificationController;
-use Inertia\Inertia;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\JobController;
+// Import Controller Admin Secara Eksplisit
+use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\AnnouncementController;
+use App\Http\Controllers\Admin\StatsController;
+use App\Http\Controllers\Admin\AdminUserController;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,16 +28,17 @@ Route::get('lang/{locale}', function ($locale) {
     return redirect()->back();
 })->name('lang.switch');
 
-
+// Route Test Inertia (Opsional)
 Route::get('/inertia-test', function () {
     return Inertia::render('Test');
 });
 
+// Landing Page
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Route Debugging
+// Route Debugging (Opsional - Hapus saat Production)
 Route::get('/cek-php', function () {
     return [
         'File Config yang Dipakai' => php_ini_loaded_file(),
@@ -41,84 +47,94 @@ Route::get('/cek-php', function () {
     ];
 });
 
-// Group Route untuk User yang sudah Login & Terverifikasi Email
+// =========================================================================
+// GROUP ROUTE: LOGIN & VERIFIED EMAIL
+// =========================================================================
 Route::middleware(['auth', 'verified'])->group(function () {
     
-    // 1. DASHBOARD MAHASISWA
+    // ---------------------------------------------------------------------
+    // 1. AREA MAHASISWA (STUDENT)
+    // ---------------------------------------------------------------------
+    
+    // Dashboard Mahasiswa (Logic ada di DashboardController::index)
     Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
-    // Redirect dari /dashboard ke /home untuk kompatibilitas lama buat testing doang
-    Route::get('/dashboard', function() {return redirect()->route('home');})->name('dashboard');
+    // Redirect dari /dashboard ke /home (Kompatibilitas)
+    Route::get('/dashboard', function() {
+        return redirect()->route('home');
+    })->name('dashboard');
 
-    // 2. PROFILE USER (MAHASISWA) - REACT/INERTIA
-    // URL: /profile
+    // ---------------------------------------------------------------------
+    // PROFILE MAHASISWA
+    // ---------------------------------------------------------------------
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    
-    // Menggunakan POST untuk upload file (Avatar)
-    Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
-    
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/profile/photo', [ProfileController::class, 'updatePhoto'])->name('profile.update-photo'); 
 
-    // 3. STUDENT PORTFOLIOS
+    // Portfolio Mahasiswa
     Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfolio.index');
     Route::get('/portfolios/create', [PortfolioController::class, 'create'])->name('portfolio.create');
     Route::post('/portfolios', [PortfolioController::class, 'store'])->name('portfolio.store');
-    
-    // Detail Portfolio
     Route::get('/portfolio/{id}', [PortfolioController::class, 'show'])->name('portfolio.show');
 
-    // 4. COURSES (Halaman List Course untuk Mahasiswa)
-    // Saat ini masih placeholder, nanti bisa diganti controller untuk menampilkan list course dari DB
+    // List Course Mahasiswa
     Route::get('/courses', function () {
         return "Halaman Course Belum Tersedia (Coming Soon)";
     })->name('courses.index');
 
-    // --- AREA KHUSUS ADMIN ---
-    // Semua route di sini otomatis ada awalan '/admin'
-    Route::prefix('admin')->group(function () {
+
+    // ---------------------------------------------------------------------
+    // 2. AREA KHUSUS ADMIN
+    // URL Prefix: /admin/... | Route Name Prefix: admin....
+    // ---------------------------------------------------------------------
+    Route::prefix('admin')->name('admin.')->group(function () {
         
-        // Dashboard Admin
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+        // Dashboard Admin (Logic ada di DashboardController::index)
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-        // PROFILE ADMIN - BLADE VIEW
-        // URL: /admin/profile
-        Route::get('/profile', [ProfileController::class, 'editAdmin'])->name('admin.profile.edit');
-        Route::patch('/profile', [ProfileController::class, 'updateAdmin'])->name('admin.profile.update');
-        Route::delete('/profile', [ProfileController::class, 'destroyAdmin'])->name('admin.profile.destroy');
+        // PROFILE ADMIN (Inertia)
+        // Kita reuse method yang sama dengan mahasiswa, Controller akan cek role user
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+        Route::post('/profile/photo', [ProfileController::class, 'updatePhoto'])->name('profile.update-photo');
 
-        // Verification Resource
+        // Verification Management
         Route::resource('verification', VerificationController::class)
             ->only(['index', 'show', 'update']);
 
-        // Route Student Management (CMS)
+        // Student Management
         Route::resource('students', StudentController::class);
 
-        // Route Job Vacancies (CMS)
+        // Job Vacancies Management
         Route::resource('jobs', JobController::class);
 
-        // Route Management Course (Full CRUD)
-        Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class)->names([
-            'index'   => 'admin.courses.index',
-            'create'  => 'admin.courses.create',
-            'store'   => 'admin.courses.store',
-            'edit'    => 'admin.courses.edit',
-            'update'  => 'admin.courses.update',
-            'destroy' => 'admin.courses.destroy',
-        ]);
+        // Course Management
+        Route::resource('courses', CourseController::class);
 
-        // 👇 PERUBAHAN DI SINI: Route CMS sekarang pakai AnnouncementController (Full CRUD)
-        Route::resource('cms', \App\Http\Controllers\Admin\AnnouncementController::class)->names([
-            'index'   => 'cms.index',
-            'create'  => 'cms.create',
-            'store'   => 'cms.store',
-            'edit'    => 'cms.edit',
-            'update'  => 'cms.update',
-            'destroy' => 'cms.destroy',
-        ]);
+        // CMS / Announcements
+        Route::resource('cms', AnnouncementController::class)
+            ->names([
+                'index'   => 'cms.index',
+                'create'  => 'cms.create',
+                'store'   => 'cms.store',
+                'edit'    => 'cms.edit',
+                'update'  => 'cms.update',
+                'destroy' => 'cms.destroy',
+            ])
+            ->parameters(['cms' => 'id']);
 
-        // Tambah Admin Baru
-        Route::post('/create-admin', [DashboardController::class, 'storeAdmin'])->name('admin.create');
+        // Stats Dashboard
+        Route::get('/stats', [StatsController::class, 'index'])->name('stats.index');
+
+        // Manajemen Admin Lainnya
+        Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
+        Route::post('/users', [AdminUserController::class, 'store'])->name('users.store');
+        Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.destroy');
+
+        // Create Admin Helper (Legacy)
+        Route::post('/create-admin', [DashboardController::class, 'storeAdmin'])->name('create');
     });
 
 });

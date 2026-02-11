@@ -3,86 +3,105 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
-// use Carbon\Carbon;
+use App\Models\Skill;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Illuminate\Support\Carbon;
 
 class StudentController extends Controller
 {
-    public function index()
+    /**
+     * Menampilkan halaman data mahasiswa (React/Inertia)
+     */
+    public function index(Request $request)
     {
-        
-        $students = Student::with(['user', 'skills'])->get()->map(function($student) {
+        // 1. Ambil parameter dari frontend
+        $search = $request->input('search');
+        $major = $request->input('major'); // <--- INI YANG HILANG SEBELUMNYA
 
-            $isActive = false;
-        
-        if ($student->last_seen_at) {
-           $now = \Illuminate\Support\Carbon::now();
-            
-            // 3. Hitung selisih menit
-            $isActive = $student->last_seen_at->diffInMinutes($now) < 5;
+        // 2. Query Builder
+        $query = Student::with(['user', 'skills'])
+            ->latest();
+
+        // 3. Logika Pencarian (Search)
+        if ($search) {
+            $query->where(function($q) use ($search) {
+                $q->where('full_name', 'like', "%{$search}%")
+                  ->orWhere('nim', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%");
+            });
         }
 
-            return [
-                'id' => $student->id,
-                'fullName' => $student->full_name, // Mapping dari full_name
-                'nim' => $student->nim,
-                'email' => $student->email,
-                'major' => $student->major,
-                'yearOfEntry' => $student->year_of_entry, // Mapping dari year_of_entry
-                'phone' => $student->phone,
-                // Mengambil nama-nama skill ke dalam array sederhana
-                'skills' => $student->skills->map(function($s) {
-                    return [
-                        'id' => $s->id,
-                        'name' => $s-> skill_name
-                    ];
-                })->toArray(),
-                // Avatar default menggunakan UI Avatars berdasarkan nama
-                'avatar' => 'https://ui-avatars.com/api/?name=' . urlencode($student->full_name) . '&background=6366f1&color=fff',
+        // 4. Logika Filter Jurusan (Major)
+        // <--- BAGIAN INI DITAMBAHKAN KEMBALI
+        if ($major && $major !== 'all') {
+            $query->where('major', $major);
+        }
 
-                // Status bisa diambil dari relasi user (misal status email verified) atau default 'active'
-                'status' => $isActive ? 'active' : 'Inactive',
+        // 5. Ambil daftar jurusan unik untuk Dropdown
+        $majors = Student::distinct()->pluck('major')->filter()->values();
 
-                // Tanggal untuk System Info di Modal
-                'createdAt' => $student->user ? $student->user->created_at->format('Y-m-d') : '-',
-                'updatedAt' => $student->user ? $student->user->updated_at->format('Y-m-d') : '-',
-            ];
-        });
+        // 6. Pagination & Data Transformation
+        $students = $query->paginate(10)
+            ->withQueryString()
+            ->through(function($student) {
+                
+                // Logika Status Active
+                $isActive = false;
+                if ($student->last_seen_at) {
+                    $lastSeen = Carbon::parse($student->last_seen_at);
+                    $isActive = $lastSeen->diffInMinutes(now()) < 5;
+                }
 
-       
-        return view('admin.students.index', compact('students'));
+                return [
+                    'id'            => $student->id,
+                    'fullName'      => $student->full_name,
+                    'nim'           => $student->nim,
+                    'email'         => $student->email,
+                    'major'         => $student->major,
+                    'yearOfEntry'   => $student->year_of_entry,
+                    'phone'         => $student->phone ?? '-',
+                    'skills'        => $student->skills->pluck('skill_name')->toArray(),
+                    'avatar'        => 'https://ui-avatars.com/api/?name=' . urlencode($student->full_name) . '&background=6366f1&color=fff',
+                    'status'        => $isActive ? 'ACTIVE' : 'INACTIVE', // Uppercase sesuai request
+                    
+                    // Fix Tanggal (Carbon Parse)
+                    'createdAt'     => $student->created_at ? Carbon::parse($student->created_at)->toDateTimeString() : '-',
+                    'updatedAt'     => $student->updated_at ? Carbon::parse($student->updated_at)->toDateTimeString() : '-',
+                ];
+            });
+
+        // 7. Render ke React
+        return Inertia::render('Admin/Students/Index', [
+            'students' => $students,
+            'filters'  => $request->only(['search', 'major']),
+            'majors'   => $majors, // Kirim list jurusan ke frontend
+        ]);
     }
 
-    public function edit(Student $student)
-        {
-            $student->load('skills'); 
-
-            $allSkills = \App\Models\Skill::all();
-            return view('admin.students.edit', compact('student','allSkills'));
-        }
-
+    // ... (Function update dan destroy tetap sama seperti sebelumnya)
     public function update(Request $request, Student $student)
-        {
-            $validated = $request->validate([
-                'full_name' => 'required|string|max:255',
-                'email' => 'required|email|unique:students,email,' . $student->id,
-                'phone' => 'nullable|string',
-                'major' => 'required|string',
-                'year_of_entry' => 'required|numeric',
-                'is_active' => 'required|boolean'
-            ]);
+    {
+        $validated = $request->validate([
+            'full_name'     => 'required|string|max:255',
+            'email'         => 'required|email|unique:students,email,' . $student->id,
+            'phone'         => 'nullable|string',
+            'major'         => 'required|string',
+            'year_of_entry' => 'required|numeric',
+        ]);
 
-            $student->update($validated);
+        $student->update($validated);
 
-            // Buat Skill
-            $student->update($request->except('skills'));
-
-            if ($request->has('skills')) {
-                $student->skills()->sync($request->skills);
-            } else {
-                $student->skills()->detach();
-            }
-
-            return redirect()->route('students.index')->with('success', 'Data mahasiswa berhasil diperbarui!');
+        if ($request->has('skills')) {
+            $student->skills()->sync($request->skills);
         }
+
+        return redirect()->route('admin.students.index')->with('success', 'Data mahasiswa berhasil diperbarui!');
+    }
+
+    public function destroy(Student $student)
+    {
+        $student->delete();
+        return redirect()->back()->with('success', 'Mahasiswa berhasil dihapus.');
+    }
 }

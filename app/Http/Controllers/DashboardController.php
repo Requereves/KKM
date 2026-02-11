@@ -10,17 +10,16 @@ use App\Models\User;
 use App\Models\Student;
 use App\Models\Portfolio;
 use App\Models\Skill;
-// use App\Models\JobVacancy;
+use App\Models\JobVacancy;
 use App\Models\Course;
-use Inertia\Inertia; // 👈 PENTING: Import Inertia
+use Inertia\Inertia; 
 use Inertia\Response;
-use App\Models\JobsVacancies;
-
 
 class DashboardController extends Controller
 {
     /**
-     * Main Entry Point (Traffic Controller)
+     * Main Entry Point
+     * Mendeteksi role user dan mengarahkan ke dashboard yang sesuai.
      */
     public function index()
     {
@@ -35,99 +34,80 @@ class DashboardController extends Controller
 
     /**
      * -------------------------------------------------------------------------
-     * LOGIC DASHBOARD ADMIN (Tetap Menggunakan Blade)
+     * LOGIC DASHBOARD ADMIN (Inertia React)
      * -------------------------------------------------------------------------
      */
     private function adminDashboard($user)
     {
-        // 1. Common Data untuk Sidebar/Header Admin
-        $pendingQuery = Portfolio::with('student')->where('status', 'pending');
-        $pendingVerificationsCount = $pendingQuery->count();
-        $pendingVerifications = $pendingQuery->orderBy('created_at', 'desc')
-            ->limit(5)
+        // 1. Data Statistik (Real-time count)
+        $stats = [
+            'pending_verifications' => Portfolio::where('status', 'pending')->count(),
+            'total_students'        => User::where('role', 'student')->count(),
+            'new_students_month'    => User::where('role', 'student')
+                                        ->whereMonth('created_at', now()->month)
+                                        ->count(),
+            'active_jobs'           => JobVacancy::where('status', 'active')->count(),
+            // Hitung jumlah perusahaan unik sebagai partner
+            'industry_partners'     => JobVacancy::distinct('company')->count('company'), 
+        ];
+
+        // 2. Data Verifikasi Terbaru (Untuk Table Dashboard)
+        $recentVerifications = Portfolio::with('student') // Eager load relasi student
+            ->where('status', 'pending')
+            ->latest()
+            ->take(5)
             ->get()
             ->map(function ($item) {
-                return (object) [
-                    'id' => $item->id,
-                    'name' => $item->student->full_name ?? 'Mahasiswa',
-                    'category' => ucwords(str_replace('_', ' ', $item->category)),
-                    'created_at' => $item->created_at,
+                return [
+                    'id'           => $item->id,
+                    // Fallback jika data student terhapus/null
+                    'student_name' => $item->student->full_name ?? $item->student->name ?? 'Unknown Student',
+                    'title'        => $item->title,
+                    'category'     => ucwords(str_replace('_', ' ', $item->category)),
+                    'file_url'     => $item->file_path ? asset('storage/' . $item->file_path) : '#',
+                    'createdAt'    => $item->created_at, // Dikirim sebagai object agar bisa diolah JS
                 ];
             });
 
-        // 2. Data Khusus Admin Dashboard
-        $data = [
-            'user' => $user,
-            'pendingVerifications' => $pendingVerifications,
-            'pendingVerificationsCount' => $pendingVerificationsCount,
+        // 3. Render Page React
+        return Inertia::render('Admin/Dashboard', [
+            // HAPUS BAGIAN INI: 'auth' => ['user' => $user], 
+            // Kita biarkan HandleInertiaRequests yang mengirim data auth agar konsisten
             
-            // Kartu Statistik
-            'pendingCount' => Portfolio::where('status', 'pending')->count(),
-            'totalStudents' => Student::count(),
-            'activeJobs' => class_exists(JobsVacancies::class) ? JobsVacancies::count() : 0,
-            'partnersCount' => 24,
-
-            // Tabel Recent Requests
-            'recentVerifications' => Portfolio::with('student')
-                ->where('status', 'pending')
-                ->latest()
-                ->take(5)
-                ->get(),
-        ];
-
-        // 3. Chart Data (Kompetensi & Skill Gap)
-        $competencyStats = Portfolio::select('category', DB::raw('count(*) as total'))
-            ->groupBy('category')
-            ->get();
-        
-        $data['competencyLabels'] = $competencyStats->pluck('category')->map(fn($c) => ucwords(str_replace('_', ' ', $c)))->toArray();
-        $data['competencyData'] = $competencyStats->pluck('total')->toArray();
-
-        $topSkills = DB::table('student_skills')
-            ->join('skills', 'student_skills.skill_id', '=', 'skills.id')
-            ->select('skills.skill_name', DB::raw('count(student_skills.student_id) as student_count'))
-            ->groupBy('skills.id', 'skills.skill_name')
-            ->orderByDesc('student_count')
-            ->limit(5)
-            ->get();
-
-        $data['skillLabels'] = $topSkills->pluck('skill_name')->toArray();
-        $data['skillData'] = $topSkills->pluck('student_count')->toArray();
-        
-        // Mockup Industry Demand
-        $data['industryDemandData'] = array_map(function($val) {
-            return $val + rand(-5, 15); 
-        }, $data['skillData']);
-
-        // Return ke View Khusus Admin
-        return view('admin.dashboard', $data);
+            'stats' => $stats,
+            'recentVerifications' => $recentVerifications,
+        ]);
     }
 
     /**
      * -------------------------------------------------------------------------
-     * LOGIC DASHBOARD MAHASISWA (Sekarang Menggunakan React/Inertia)
+     * LOGIC DASHBOARD MAHASISWA
      * -------------------------------------------------------------------------
      */
     private function userDashboard($user)
     {
-        // 1. Data Student Profile
+        // Cek atau buat data student jika belum ada (Auto-sync User -> Student)
         $student = Student::firstOrCreate(
             ['user_id' => $user->id],
             [
-                'nim' => 'TEMP-' . $user->id,
-                'full_name' => $user->name,
-                'email' => $user->email,
+                'nim' => 'TEMP-' . $user->id, 
+                'full_name' => $user->name, 
+                'email' => $user->email
             ]
         );
 
-        // 2. Common Data
-        $pendingQuery = Portfolio::with('student')->where('status', 'pending')->where('student_id', $student->id);
+        // Data Portfolio & Verifikasi
+        $pendingQuery = Portfolio::with('student')
+            ->where('status', 'pending')
+            ->where('student_id', $student->id);
+            
         $pendingVerificationsCount = $pendingQuery->count();
+        
         $pendingVerifications = $pendingQuery->orderBy('created_at', 'desc')
             ->limit(5)
             ->get()
             ->map(function ($item) {
-                return (object) [
+                return [
                     'id' => $item->id,
                     'name' => $item->student->full_name ?? 'Mahasiswa',
                     'category' => ucwords(str_replace('_', ' ', $item->category)),
@@ -135,25 +115,23 @@ class DashboardController extends Controller
                 ];
             });
 
-        // 3. Data Khusus Student Dashboard
+        // Persiapan Data Utama
         $data = [
-            'user' => $user,
+            // HAPUS INI JUGA: 'user' => $user, (Gunakan auth.user di frontend)
             'student' => $student,
             'userName' => $user->name,
             'pendingVerifications' => $pendingVerifications,
             'pendingVerificationsCount' => $pendingVerificationsCount,
-            
-            // Statistik
             'totalPortfolios' => $student->portfolios()->count(),
             'approvedPortfolios' => $student->portfolios()->where('status', 'approved')->count(),
         ];
 
-        // Progress Calculation
+        // Hitung Progress
         $data['progressPercentage'] = $data['totalPortfolios'] > 0 
             ? round(($data['approvedPortfolios'] / $data['totalPortfolios']) * 100) 
             : 0;
 
-        // Calendar Data
+        // Generate Kalender Aktivitas
         $data['currentMonth'] = Carbon::now()->format('F Y');
         $portfolioDates = $student->portfolios()
             ->whereYear('created_at', Carbon::now()->year)
@@ -164,7 +142,7 @@ class DashboardController extends Controller
             ->toArray();
         $data['calendarDays'] = $this->generateCalendarDays($portfolioDates);
 
-        // Recent Certificates
+        // List Sertifikat Terbaru
         $data['certificates'] = $student->portfolios()
             ->orderBy('created_at', 'desc')
             ->limit(5)
@@ -176,12 +154,12 @@ class DashboardController extends Controller
                     ->join('');
                 
                 $statusColor = match($portfolio->status) {
-                    'approved' => 'green',
-                    'rejected' => 'red',
-                    'pending' => 'yellow',
-                    default => 'yellow',
+                    'approved' => 'green', 
+                    'rejected' => 'red', 
+                    'pending' => 'yellow', 
+                    default => 'yellow'
                 };
-                
+
                 return [
                     'id' => $portfolio->id,
                     'name' => $portfolio->category_name ?? ucwords(str_replace('_', ' ', $portfolio->category)),
@@ -195,7 +173,7 @@ class DashboardController extends Controller
                 ];
             });
 
-        // Upcoming Activities
+        // Aktivitas Mendatang (Pending Items)
         $data['upcomingActivities'] = $student->portfolios()
             ->where('status', 'pending')
             ->orderBy('created_at', 'desc')
@@ -213,41 +191,25 @@ class DashboardController extends Controller
                 ];
             });
 
-        // Charts
+        // Chart Data
         $data['chartData'] = $this->getPortfolioChartData($student);
         $data['skillsData'] = $this->getSkillsChartData($student);
 
-        // 👇 PERUBAHAN DI SINI: Rekomendasi Course dengan Empty State Support
+        // Rekomendasi Course berdasarkan Interest User
         $userInterest = $user->interest; 
-        $recommendedCourses = []; // Default kosong jika belum punya interest
-
-        // Jika User sudah punya interest, baru kita cari course-nya
+        $recommendedCourses = [];
         if (!empty($userInterest)) {
-            $recommendedCourses = Course::where('category', $userInterest)
-                                ->inRandomOrder()
-                                ->limit(3)
-                                ->get();
-            
-            // Opsional: Jika user punya interest tapi coursenya kosong (misal data belum ada),
-            // kita biarkan kosong saja agar card "Belum ada rekomendasi" tidak muncul 
-            // (atau bisa fallback ke latest jika mau). 
-            // Untuk skenario "Empty State saat belum isi profil", logic ini sudah benar.
+            $recommendedCourses = Course::where('category', $userInterest)->inRandomOrder()->limit(3)->get();
         }
-
         $data['recommendedCourses'] = $recommendedCourses;
-        $data['userInterest'] = $userInterest; // Dikirim agar Frontend tahu user sudah isi profil atau belum
+        $data['userInterest'] = $userInterest;
 
-        // 👈 PERUBAHAN UTAMA DI SINI:
-        // Hapus 'Student/' karena file Dashboard.jsx ada di folder Pages langsung.
         return Inertia::render('Dashboard', $data);
     }
 
     /**
-     * -------------------------------------------------------------------------
-     * HELPER FUNCTIONS & OTHER FEATURES
-     * -------------------------------------------------------------------------
+     * Helpers
      */
-
     public function storeAdmin(Request $request)
     {
         $request->validate([
@@ -255,30 +217,20 @@ class DashboardController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
         ]);
-
         User::create([
-            'name' => $request->name,
+            'name' => $request->name, 
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => Hash::make($request->password), 
             'role' => 'admin',
         ]);
-
         return redirect()->back()->with('success', 'Admin baru berhasil ditambahkan!');
     }
 
-    public function cms()
-    {
-        $admins = User::where('role', 'admin')->get();
-        return view('admin.cms', compact('admins'));
-    }
-
-    private function generateCalendarDays($portfolioDates = [])
-    {
+    private function generateCalendarDays($portfolioDates = []) {
         $now = Carbon::now();
         $startOfMonth = $now->copy()->startOfMonth();
         $endOfMonth = $now->copy()->endOfMonth();
-        $startDayOfWeek = $startOfMonth->dayOfWeekIso; // Monday = 1
-        
+        $startDayOfWeek = $startOfMonth->dayOfWeekIso; 
         $days = [];
         for ($i = 1; $i < $startDayOfWeek; $i++) {
             $days[] = ['date' => null, 'isToday' => false, 'hasActivity' => false];
@@ -287,17 +239,16 @@ class DashboardController extends Controller
             $isToday = ($day == $now->day);
             $hasActivity = in_array($day, $portfolioDates);
             $days[] = [
-                'date' => $day,
-                'isToday' => $isToday,
-                'hasActivity' => $hasActivity,
+                'date' => $day, 
+                'isToday' => $isToday, 
+                'hasActivity' => $hasActivity, 
                 'activityColor' => $hasActivity ? 'green' : ''
             ];
         }
         return $days;
     }
 
-    private function getPortfolioChartData($student)
-    {
+    private function getPortfolioChartData($student) {
         $months = collect();
         for ($i = 3; $i >= 0; $i--) {
             $date = Carbon::now()->subMonths($i);
@@ -305,26 +256,19 @@ class DashboardController extends Controller
                 ->whereYear('created_at', $date->year)
                 ->whereMonth('created_at', $date->month)
                 ->count();
-            $months->push([
-                'label' => $date->format('M'),
-                'count' => $count,
-            ]);
+            $months->push(['label' => $date->format('M'), 'count' => $count]);
         }
         return $months;
     }
 
-    private function getSkillsChartData($student)
-    {
+    private function getSkillsChartData($student) {
         $studentSkillsCount = $student->skills()->count();
         $totalSkillsCount = Skill::count();
-        $progression = collect([1, 2, 3, 4])->map(function($month) use ($studentSkillsCount) {
-            return max(1, $studentSkillsCount - (4 - $month));
-        });
-
+        $progression = collect([1, 2, 3, 4])->map(fn($month) => max(1, $studentSkillsCount - (4 - $month)));
         return [
-            'current' => $studentSkillsCount,
-            'total' => max($totalSkillsCount, 10),
-            'progression' => $progression,
+            'current' => $studentSkillsCount, 
+            'total' => max($totalSkillsCount, 10), 
+            'progression' => $progression
         ];
     }
 }
