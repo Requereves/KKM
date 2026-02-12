@@ -4,61 +4,87 @@ import { translations } from '@/translations';
 
 const Sidebar = ({ lang = 'id', currentView, onSetView }) => {
   const t = translations[lang];
-  const { url } = usePage(); // Mendapatkan URL saat ini untuk highlight menu aktif
+  
+  // 1. Ambil data URL dan User dari props Inertia
+  const { url, props } = usePage(); 
+  const userRole = props.auth.user.role; // Ambil role: 'admin' atau 'psychologist'
 
-  // Definisi Menu & Mapping ke Route Laravel
-  const menuItems = [
+  // 2. Definisi Menu Lengkap dengan properti 'roles'
+  const allMenuItems = [
     { 
       id: 'dashboard', 
       label: t.dashboard, 
       icon: 'dashboard', 
-      routeName: 'admin.dashboard' 
+      routeName: 'admin.dashboard',
+      roles: ['admin'] // Hanya Admin
     },
     { 
       id: 'verification', 
       label: t.verification, 
       icon: 'verified', 
       routeName: 'admin.verification.index',
+      roles: ['admin']
     },
     { 
       id: 'students', 
       label: t.students, 
       icon: 'people', 
-      routeName: 'admin.students.index' 
+      routeName: 'admin.students.index',
+      roles: ['admin']
     },
     { 
       id: 'jobs', 
       label: t.jobs, 
       icon: 'work_outline', 
-      routeName: 'admin.jobs.index' 
+      routeName: 'admin.jobs.index',
+      roles: ['admin']
     },
     { 
-      // 🔥 UPDATE: ID disesuaikan dengan URL '/admin/courses' agar highlight aktif
       id: 'courses', 
       label: t.training || 'Training', 
       icon: 'model_training', 
-      // 🔥 UPDATE: Route disesuaikan dengan web.php (admin.courses.index)
-      routeName: 'admin.courses.index' 
+      routeName: 'admin.courses.index',
+      roles: ['admin']
     }, 
+    { 
+      id: 'consultations', 
+      label: t.consultation || 'Consultation (Psikolog)', 
+      icon: 'support_agent', 
+      routeName: 'admin.consultations.index',
+      roles: ['admin', 'psychologist'] // 🔥 Admin DAN Psikolog boleh lihat
+    },
     { 
       id: 'cms', 
       label: t.cms || 'Announcement (CMS)', 
       icon: 'campaign', 
-      routeName: 'admin.cms.index' 
+      routeName: 'admin.cms.index',
+      roles: ['admin']
     },
     { 
       id: 'stats', 
       label: t.stats || 'Statistical Reports', 
       icon: 'analytics', 
-      routeName: 'admin.stats.index' 
+      routeName: 'admin.stats.index',
+      roles: ['admin']
     },
     { 
       id: 'users', 
       label: t.manage_admins || 'Manage Admins', 
       icon: 'admin_panel_settings', 
-      routeName: 'admin.users.index' 
+      routeName: 'admin.users.index',
+      roles: ['admin']
     },
   ];
+
+  // 3. Filter menu berdasarkan role user yang login
+  // Hanya tampilkan menu jika role user ada di dalam array 'roles' item tersebut
+  const menuItems = allMenuItems.filter(item => item.roles.includes(userRole));
+
+  // Tentukan Link Logo (Home) berdasarkan Role
+  // Admin -> Dashboard, Psikolog -> Halaman Konsultasi
+  const logoHref = userRole === 'admin' 
+    ? (route().has('admin.dashboard') ? route('admin.dashboard') : '#') 
+    : (route().has('admin.consultations.index') ? route('admin.consultations.index') : '#');
 
   return (
     <aside className="w-64 bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 flex-shrink-0 hidden md:flex flex-col h-screen transition-colors fixed left-0 top-0 z-50 shadow-sm">
@@ -66,16 +92,16 @@ const Sidebar = ({ lang = 'id', currentView, onSetView }) => {
       {/* Header Sidebar (Logo & Branding Arahin.id) */}
       <div className="h-20 flex items-center px-6 border-b border-slate-100 dark:border-slate-800">
         <Link 
-          href={route().has('admin.dashboard') ? route('admin.dashboard') : '#'}
+          href={logoHref}
           className="flex items-center gap-3 group w-full"
-          onClick={() => onSetView && onSetView('dashboard')}
+          onClick={() => onSetView && onSetView(userRole === 'admin' ? 'dashboard' : 'consultations')}
         >
           {/* Logo Image */}
           <img 
             src="/images/logo.png" 
             alt="Arahin.id" 
             className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110"
-            onError={(e) => { e.target.style.display = 'none'; }} // Fallback jika gambar tidak ada
+            onError={(e) => { e.target.style.display = 'none'; }} 
           />
           
           {/* Text Branding: Arahin (Dark) + .id (Blue) */}

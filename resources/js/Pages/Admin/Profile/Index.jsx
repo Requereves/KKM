@@ -30,18 +30,21 @@ export default function ProfilePage({ auth }) {
             const formData = new FormData();
             formData.append('photo', file);
 
-            router.post(route('admin.profile.update-photo'), formData, {
+            // Gunakan route global 'profile.update-photo'
+            router.post(route('profile.update-photo'), formData, { 
                 forceFormData: true,
                 preserveScroll: true,
                 onSuccess: () => {
-                    // ✅ TEKNIK PRO: Force reload halaman penuh agar Header mengambil gambar baru (bukan dari cache)
+                    // ✅ TEKNIK PRO: Force reload halaman penuh agar Header mengambil gambar baru
                     router.visit(window.location.href, {
                         preserveScroll: true,
-                        preserveState: false, // Penting: Reset state agar props auth diperbarui dari server
+                        preserveState: false, 
                     });
                 },
                 onError: (errors) => {
                     alert(errors.photo || 'Gagal mengupload foto. Pastikan format JPG/PNG dan ukuran di bawah 2MB.');
+                    // Reset preview jika gagal
+                    setPhotoPreview(null);
                 }
             });
         }
@@ -51,25 +54,24 @@ export default function ProfilePage({ auth }) {
     // 2. Form Utama (Info & Password)
     const { data, setData, patch, processing, errors, reset, recentlySuccessful } = useForm({
         name: user.name || '',
-        username: user.username || '',
+        username: user.username || '', // ✅ Username wajib ada agar tidak error validasi
         email: user.email || '',
-        // Password fields (kosongkan defaultnya)
+        // Password fields
         current_password: '',
         password: '',
         password_confirmation: '',
     });
 
-    // 3. Handle Submit ke Route Laravel
+    // 3. Handle Submit
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        patch(route('admin.profile.update'), {
+        patch(route('profile.update'), { 
             preserveScroll: true,
             onSuccess: () => {
-                // Reset field password agar aman
                 reset('current_password', 'password', 'password_confirmation');
                 
-                // ✅ Refresh halaman jika nama berubah, agar Header ikut update
+                // Refresh halaman agar Header update nama jika berubah
                 router.visit(window.location.href, {
                     preserveScroll: true,
                     preserveState: false,
@@ -77,6 +79,9 @@ export default function ProfilePage({ auth }) {
             },
         });
     };
+
+    // Logic Avatar (Prioritas: Preview -> Database -> Default)
+    const avatarSrc = photoPreview || (user.avatar_url ? user.avatar_url : `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=random&color=fff`);
 
     return (
         <AuthenticatedLayout user={auth.user}>
@@ -87,7 +92,7 @@ export default function ProfilePage({ auth }) {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                     <div>
                         <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{t.profile || "Profile"}</h1>
-                        <p className="text-slate-500 dark:text-slate-400 text-sm">Update your personal information and security settings.</p>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm">Kelola informasi pribadi dan keamanan akun admin.</p>
                     </div>
                 </div>
 
@@ -98,16 +103,12 @@ export default function ProfilePage({ auth }) {
                         <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 flex flex-col items-center text-center">
                             
                             {/* Area Foto dengan Indikator Upload */}
-                            <div className="relative group cursor-pointer" onClick={handlePhotoClick}>
+                            <div className="relative group cursor-pointer" onClick={handlePhotoClick} title="Klik untuk ganti foto">
                                 <img 
-                                    // Logic: Gunakan Preview (jika baru upload) -> Gunakan dari DB -> Gunakan Default UI Avatar
-                                    src={
-                                        photoPreview || 
-                                        (user.avatar ? user.avatar : `https://ui-avatars.com/api/?name=${user.name}&background=random&color=fff`)
-                                    }
+                                    src={avatarSrc}
                                     alt="Profile" 
-                                    className="w-32 h-32 rounded-full object-cover ring-4 ring-slate-100 dark:ring-slate-800 group-hover:ring-indigo-500 transition-all"
-                                    onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${user.name}&background=random&color=fff` }}
+                                    className="w-32 h-32 rounded-full object-cover ring-4 ring-slate-100 dark:ring-slate-800 group-hover:ring-indigo-500 transition-all shadow-md"
+                                    onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=random&color=fff` }}
                                 />
                                 <div className="absolute inset-0 rounded-full bg-slate-950/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
                                     <span className="material-icons-outlined text-white text-2xl">camera_alt</span>
@@ -115,7 +116,9 @@ export default function ProfilePage({ auth }) {
                             </div>
                             
                             <h2 className="mt-4 text-xl font-bold text-slate-900 dark:text-white">{user.name}</h2>
-                            <p className="text-slate-500 dark:text-slate-400 text-sm capitalize">{user.role || 'Admin'}</p>
+                            <span className="px-3 py-1 mt-2 text-xs font-bold text-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 rounded-full uppercase tracking-wide">
+                                {user.role || 'Admin'}
+                            </span>
 
                             {/* Input File Tersembunyi */}
                             <input 
@@ -129,10 +132,10 @@ export default function ProfilePage({ auth }) {
                             <button 
                                 type="button" 
                                 onClick={handlePhotoClick}
-                                className="mt-6 w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+                                className="mt-6 w-full py-2.5 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium rounded-lg transition-colors flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700"
                             >
                                 <span className="material-icons-outlined text-sm">upload</span>
-                                {t.upload_photo || "Change Photo"}
+                                {t.upload_photo || "Ganti Foto"}
                             </button>
                         </div>
                     </div>
@@ -142,10 +145,10 @@ export default function ProfilePage({ auth }) {
                         <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
                             
                             {/* General Info Header */}
-                            <div className="p-6 border-b border-slate-100 dark:border-slate-800">
+                            <div className="p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
                                 <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                                    <span className="material-icons-outlined text-indigo-500">badge</span>
-                                    {t.general_info || "General Information"}
+                                    <span className="material-icons-outlined text-indigo-500">manage_accounts</span>
+                                    {t.general_info || "Informasi Akun"}
                                 </h3>
                             </div>
                             
@@ -155,7 +158,7 @@ export default function ProfilePage({ auth }) {
                                     
                                     {/* Name Input */}
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.full_name || "Full Name"}</label>
+                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.full_name || "Nama Lengkap"}</label>
                                         <div className="relative">
                                             <span className="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">person</span>
                                             <input 
@@ -169,9 +172,9 @@ export default function ProfilePage({ auth }) {
                                         {errors.name && <p className="text-xs text-rose-500 flex items-center gap-1"><span className="material-icons-outlined text-[10px]">error</span> {errors.name}</p>}
                                     </div>
 
-                                    {/* Username Input */}
+                                    {/* Username Input (✅ WAJIB DITAMBAHKAN) */}
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.username || "Username"}</label>
+                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Username</label>
                                         <div className="relative">
                                             <span className="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">alternate_email</span>
                                             <input 
@@ -187,7 +190,7 @@ export default function ProfilePage({ auth }) {
 
                                     {/* Email Input */}
                                     <div className="space-y-2 md:col-span-2">
-                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.email_address || "Email Address"}</label>
+                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.email_address || "Email"}</label>
                                         <div className="relative">
                                             <span className="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
                                             <input 
@@ -204,51 +207,51 @@ export default function ProfilePage({ auth }) {
                             </div>
 
                             {/* Security Section Header */}
-                            <div className="p-6 border-t border-slate-100 dark:border-slate-800">
-                                <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-6">
+                            <div className="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+                                <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                                     <span className="material-icons-outlined text-indigo-500">lock</span>
-                                    {t.security || "Security"}
+                                    {t.security || "Keamanan"}
                                 </h3>
+                            </div>
 
-                                <div className="space-y-4">
-                                    {/* Current Password */}
+                            <div className="p-6 space-y-4">
+                                {/* Current Password */}
+                                <div className="space-y-2">
+                                    <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.current_password || "Password Saat Ini"}</label>
+                                    <input 
+                                        type="password" 
+                                        value={data.current_password}
+                                        onChange={(e) => setData('current_password', e.target.value)}
+                                        className={`w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white ${errors.current_password ? 'border-rose-500 focus:border-rose-500' : 'border-slate-200 dark:border-slate-800'}`}
+                                        placeholder="••••••••"
+                                    />
+                                    {errors.current_password && <p className="text-xs text-rose-500 flex items-center gap-1"><span className="material-icons-outlined text-[10px]">error</span> {errors.current_password}</p>}
+                                </div>
+                                
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {/* New Password */}
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.current_password || "Current Password"}</label>
+                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.new_password || "Password Baru"}</label>
                                         <input 
                                             type="password" 
-                                            value={data.current_password}
-                                            onChange={(e) => setData('current_password', e.target.value)}
-                                            className={`w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white ${errors.current_password ? 'border-rose-500 focus:border-rose-500' : 'border-slate-200 dark:border-slate-800'}`}
+                                            value={data.password}
+                                            onChange={(e) => setData('password', e.target.value)}
+                                            className={`w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white ${errors.password ? 'border-rose-500 focus:border-rose-500' : 'border-slate-200 dark:border-slate-800'}`}
                                             placeholder="••••••••"
                                         />
-                                        {errors.current_password && <p className="text-xs text-rose-500 flex items-center gap-1"><span className="material-icons-outlined text-[10px]">error</span> {errors.current_password}</p>}
+                                        {errors.password && <p className="text-xs text-rose-500 flex items-center gap-1"><span className="material-icons-outlined text-[10px]">error</span> {errors.password}</p>}
                                     </div>
                                     
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        {/* New Password */}
-                                        <div className="space-y-2">
-                                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.new_password || "New Password"}</label>
-                                            <input 
-                                                type="password" 
-                                                value={data.password}
-                                                onChange={(e) => setData('password', e.target.value)}
-                                                className={`w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white ${errors.password ? 'border-rose-500 focus:border-rose-500' : 'border-slate-200 dark:border-slate-800'}`}
-                                                placeholder="••••••••"
-                                            />
-                                            {errors.password && <p className="text-xs text-rose-500 flex items-center gap-1"><span className="material-icons-outlined text-[10px]">error</span> {errors.password}</p>}
-                                        </div>
-                                        
-                                        {/* Confirm Password */}
-                                        <div className="space-y-2">
-                                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.confirm_password || "Confirm Password"}</label>
-                                            <input 
-                                                type="password" 
-                                                value={data.password_confirmation}
-                                                onChange={(e) => setData('password_confirmation', e.target.value)}
-                                                className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white"
-                                                placeholder="••••••••"
-                                            />
-                                        </div>
+                                    {/* Confirm Password */}
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{t.confirm_password || "Konfirmasi Password"}</label>
+                                        <input 
+                                            type="password" 
+                                            value={data.password_confirmation}
+                                            onChange={(e) => setData('password_confirmation', e.target.value)}
+                                            className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white"
+                                            placeholder="••••••••"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +261,7 @@ export default function ProfilePage({ auth }) {
                                 {recentlySuccessful && (
                                     <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-sm font-medium animate-in fade-in slide-in-from-right-4">
                                         <span className="material-icons-outlined">check_circle</span>
-                                        {t.profile_updated || "Profile updated successfully!"}
+                                        {t.profile_updated || "Profil berhasil diupdate!"}
                                     </div>
                                 )}
                                 <button 
@@ -267,7 +270,7 @@ export default function ProfilePage({ auth }) {
                                     className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/20 transition-all flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {processing && <span className="material-icons-outlined animate-spin text-sm">sync</span>}
-                                    {processing ? (t.saving || "Saving...") : (t.save_changes || "Save Changes")}
+                                    {processing ? (t.saving || "Menyimpan...") : (t.save_changes || "Simpan Perubahan")}
                                 </button>
                             </div>
                         </form>

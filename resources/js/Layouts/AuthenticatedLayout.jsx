@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { usePage, router } from '@inertiajs/react'; // Tambahkan import router
+import { usePage, router } from '@inertiajs/react';
 import Sidebar from '@/Components/Sidebar';
 import Header from '@/Components/Header';
 import { translations } from '@/translations';
@@ -18,6 +18,10 @@ export default function Authenticated({ user, header, children }) {
         if (savedTheme) {
             setTheme(savedTheme);
             document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+        } else {
+            // Default ke dark mode jika belum ada settingan (opsional)
+            // setTheme('dark');
+            // document.documentElement.classList.add('dark');
         }
 
         const savedLang = localStorage.getItem('lang');
@@ -38,10 +42,12 @@ export default function Authenticated({ user, header, children }) {
         const newLang = lang === 'id' ? 'en' : 'id';
         setLang(newLang);
         localStorage.setItem('lang', newLang);
-        router.reload({ only: ['locale'] }); // Reload props locale jika diperlukan
+        
+        // Panggil route switch bahasa di Laravel
+        router.get(route('lang.switch', newLang), {}, { preserveScroll: true });
     }, [lang]);
 
-    // Tentukan menu mana yang aktif berdasarkan URL
+    // Tentukan menu mana yang aktif berdasarkan URL (untuk Sidebar)
     const getCurrentView = () => {
         if (url.startsWith('/admin/dashboard')) return 'dashboard';
         if (url.startsWith('/admin/verification')) return 'verification';
@@ -50,15 +56,15 @@ export default function Authenticated({ user, header, children }) {
         if (url.startsWith('/admin/courses') || url.startsWith('/admin/training')) return 'courses';
         if (url.startsWith('/admin/cms') || url.startsWith('/admin/announcements')) return 'cms';
         if (url.startsWith('/admin/stats')) return 'stats';
-        
-        // ✅ UPDATE: Tambahkan logika untuk halaman Users/Admin Management
         if (url.startsWith('/admin/users')) return 'users';
+        if (url.startsWith('/admin/consultations')) return 'consultations'; // Tambahan untuk Psikolog
         
         return ''; 
     };
 
     return (
-        <div className="flex h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 overflow-hidden font-sans transition-colors">
+        <div className={`flex h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 overflow-hidden font-sans transition-colors ${theme === 'dark' ? 'dark' : ''}`}>
+            
             {/* Sidebar */}
             <Sidebar
                 lang={lang}
@@ -67,26 +73,26 @@ export default function Authenticated({ user, header, children }) {
             />
 
             <div className="flex-1 flex flex-col min-w-0 md:ml-64 transition-all duration-300">
+                
                 {/* Header */}
+                {/* Kita hapus prop 'user', 'onProfileClick' dsb karena Header sekarang mandiri */}
                 <Header
                     theme={theme}
                     onToggleTheme={toggleTheme}
                     lang={lang}
                     onToggleLang={toggleLang}
-                    user={user}
-                    // ✅ UPDATE: Redirect ke Profile menggunakan Inertia Router & Named Route
-                    onProfileClick={() => router.get(route('admin.profile.edit'))} 
+                    // Data notifikasi masih perlu dipass jika logicnya ada di Layout/Parent
                     pendingVerifications={props.pendingVerifications || []}
-                    // ✅ UPDATE: Redirect ke Verifikasi menggunakan Inertia Router & Named Route
                     onNotificationClick={() => router.get(route('admin.verification.index'))}
                 />
 
                 {/* Main Content Area */}
-                <main className="flex-1 overflow-y-auto p-6 space-y-6">
+                <main className="flex-1 overflow-y-auto p-6 space-y-6 scroll-smooth custom-scrollbar">
                     <div className="max-w-7xl mx-auto">
-                        {/* Jika halaman punya header khusus (seperti judul page) */}
+                        
+                        {/* Header Halaman (Title/Breadcrumb) */}
                         {header && (
-                            <div className="mb-6">
+                            <div className="mb-6 animate-in fade-in slide-in-from-top-2 duration-300">
                                 {header}
                             </div>
                         )}
@@ -99,7 +105,7 @@ export default function Authenticated({ user, header, children }) {
                     
                     {/* Footer Global */}
                     <footer className="text-center text-[10px] text-slate-500 dark:text-slate-600 py-8 border-t border-slate-200 dark:border-slate-900 transition-colors mt-auto">
-                        {translations[lang].footer.replace('{heart}', '♥')}
+                        {translations[lang]?.footer?.replace('{heart}', '♥') || '© 2026 Arahin.id - Built with ♥ for Education'}
                     </footer>
                 </main>
             </div>

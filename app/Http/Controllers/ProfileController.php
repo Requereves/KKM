@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash; // ✅ Wajib ada untuk hashing password
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -68,33 +68,39 @@ class ProfileController extends Controller
 
     /**
      * Update Foto Profil (Khusus Admin & User)
-     * Endpoint: POST /admin/profile/photo
+     * Endpoint: POST /profile/avatar (Route Name: profile.avatar)
      */
-    public function updatePhoto(Request $request): RedirectResponse
+    public function updateAvatar(Request $request): RedirectResponse
     {
+        // 1. Validasi Input (Wajib bernama 'avatar' sesuai Edit.jsx)
         $request->validate([
-            'photo' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'], // Max 2MB
+            'avatar' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'], // Max 2MB
         ], [
-            'photo.max' => 'Ukuran foto maksimal 2MB.',
-            'photo.image' => 'File harus berupa gambar.',
+            'avatar.max' => 'Ukuran foto maksimal 2MB.',
+            'avatar.image' => 'File harus berupa gambar.',
+            'avatar.mimes' => 'Format harus jpg, jpeg, atau png.',
         ]);
 
         $user = $request->user();
 
-        // 1. Hapus foto lama jika ada (untuk menghemat storage)
-        if ($user->avatar && Storage::disk('public')->exists($user->avatar)) {
-            Storage::disk('public')->delete($user->avatar);
+        // 2. Cek apakah ada file yang diupload
+        if ($request->hasFile('avatar')) {
+            
+            // 3. Hapus foto lama jika ada (untuk menghemat storage)
+            if ($user->avatar && Storage::disk('public')->exists($user->avatar)) {
+                Storage::disk('public')->delete($user->avatar);
+            }
+
+            // 4. Simpan foto baru ke folder 'avatars' di storage public
+            $path = $request->file('avatar')->store('avatars', 'public');
+
+            // 5. Update database
+            $user->avatar = $path; // Laravel akan otomatis save, atau kita force save
+            $user->save();
         }
 
-        // 2. Simpan foto baru ke folder 'avatars' di storage public
-        $path = $request->file('photo')->store('avatars', 'public');
-
-        // 3. Update database
-        $user->update([
-            'avatar' => $path
-        ]);
-
-        return Redirect::back()->with('success', 'Foto profil berhasil diperbarui!');
+        // 6. Redirect kembali ke halaman profile
+        return Redirect::route('profile.edit')->with('success', 'Foto profil berhasil diperbarui!');
     }
 
     /**
