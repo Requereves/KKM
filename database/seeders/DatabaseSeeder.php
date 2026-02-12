@@ -7,6 +7,7 @@ use App\Models\Student;
 use App\Models\JobVacancy;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,43 +18,53 @@ class DatabaseSeeder extends Seeder
     {
         // 0. Panggil Seeder Course (Agar data course muncul untuk rekomendasi)
         // Pastikan file CourseSeeder.php ada. Jika error, bisa dikomentari dulu.
-        $this->call(CourseSeeder::class);
+        // $this->call(CourseSeeder::class); // Uncomment jika CourseSeeder sudah dibuat
 
         // 1. GENESIS ADMIN (Akun Dewa/Utama)
-        User::create([
-            'name' => 'Super Admin',
-            'email' => 'admin@arahin.id', 
-            'password' => Hash::make('password'),
-            'role' => 'admin',
-            'email_verified_at' => now(),
-        ]);
+        // Cek dulu apakah user sudah ada agar tidak error Duplicate Entry saat seed ulang
+        if (!User::where('email', 'admin@arahin.id')->exists()) {
+            User::create([
+                'name' => 'Super Admin',
+                'email' => 'admin@arahin.id', 
+                'password' => Hash::make('password'),
+                'role' => 'admin',
+                'email_verified_at' => now(),
+            ]);
+        }
 
         // 2. AKUN MAHASISWA DUMMY (Untuk Testing Rekomendasi)
-        $mhs = User::create([
-            'name' => 'Ghufroon Mahasiswa',
-            'email' => 'ghufroon@student.com',
-            'password' => Hash::make('password'),
-            'role' => 'mahasiswa',
-            'email_verified_at' => now(),
-            'interest' => 'Web Development', 
-        ]);
+        $mhsEmail = 'ghufroon@student.com';
+        $mhs = User::where('email', $mhsEmail)->first();
+        
+        if (!$mhs) {
+            $mhs = User::create([
+                'name' => 'Ghufroon Mahasiswa',
+                'email' => $mhsEmail,
+                'password' => Hash::make('password'),
+                'role' => 'mahasiswa',
+                'email_verified_at' => now(),
+                'interest' => 'Web Development', 
+            ]);
 
-        // 3. DATA PROFILE MAHASISWA
-        Student::create([
-            'user_id' => $mhs->id,
-            'nim' => '12345678',
-            'full_name' => 'Ghufroon Mahasiswa',
-        ]);
+            // 3. DATA PROFILE MAHASISWA (Hanya buat jika user baru dibuat)
+            Student::create([
+                'user_id' => $mhs->id,
+                'nim' => '12345678',
+                'full_name' => 'Ghufroon Mahasiswa',
+            ]);
+        }
 
         // ---------------------------------------------------------
         // 4. DUMMY JOB VACANCIES (DATA STATISTIK SPESIFIK)
         // ---------------------------------------------------------
         
         // Bersihkan data lama agar statistik akurat saat seed ulang
+        // Disable foreign key check agar truncate aman
+        \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         JobVacancy::truncate();
+        \DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         // DATA 1: Active, Technology, Full-time, 3 Applicants
-        // Ini menyumbang ke: Active Jobs (+1), Tech Chart, Full-time Chart, Total Applicants (+3)
         JobVacancy::create([
             'title' => 'Frontend Developer',
             'slug' => 'frontend-dev-stats',
@@ -64,11 +75,12 @@ class DatabaseSeeder extends Seeder
             'status' => 'active',
             'applicants_count' => 3,
             'description' => 'React JS Expert needed.',
-            'salary' => 'Rp 15.000.000',
+            'salary' => 15000000, // ✅ Fix: Angka murni (Tanpa Rp dan Titik)
+            'requirements' => json_encode(['React JS', 'Tailwind CSS', 'Redux']), // ✅ Tambahan: JSON Array
+            'deadline' => now()->addDays(30),
         ]);
 
         // DATA 2: Active, Data Science, Internship, 3 Applicants
-        // Ini menyumbang ke: Active Jobs (+1), Data Sci Chart, Internship Chart, Total Applicants (+3)
         JobVacancy::create([
             'title' => 'Data Analyst',
             'slug' => 'data-analyst-stats',
@@ -79,11 +91,12 @@ class DatabaseSeeder extends Seeder
             'status' => 'active',
             'applicants_count' => 3,
             'description' => 'Python & SQL analysis.',
-            'salary' => 'Rp 4.000.000',
+            'salary' => 4000000, // ✅ Fix: Angka murni
+            'requirements' => json_encode(['Python', 'SQL', 'Tableau']),
+            'deadline' => now()->addDays(15),
         ]);
 
         // DATA 3: Closed, Design, Contract, 0 Applicants
-        // Ini menyumbang ke: Total Jobs (+1), Design Chart, Contract Chart. TAPI TIDAK ke Active Jobs.
         JobVacancy::create([
             'title' => 'UI/UX Designer',
             'slug' => 'ui-ux-stats',
@@ -94,11 +107,12 @@ class DatabaseSeeder extends Seeder
             'status' => 'closed',
             'applicants_count' => 0,
             'description' => 'Figma design system.',
-            'salary' => 'Rp 8.000.000',
+            'salary' => 8000000, // ✅ Fix: Angka murni
+            'requirements' => json_encode(['Figma', 'Adobe XD', 'Prototyping']),
+            'deadline' => now()->subDays(5), // Deadline sudah lewat
         ]);
 
         // DATA 4: Draft, Technology, Full-time, 0 Applicants
-        // Ini menyumbang ke: Total Jobs (+1). TIDAK MUNCUL di Chart (karena status draft).
         JobVacancy::create([
             'title' => 'Backend Engineer',
             'slug' => 'backend-draft',
@@ -109,7 +123,9 @@ class DatabaseSeeder extends Seeder
             'status' => 'draft',
             'applicants_count' => 0,
             'description' => 'Draft job vacancy.',
-            'salary' => 'Rp 12.000.000',
+            'salary' => 12000000, // ✅ Fix: Angka murni
+            'requirements' => json_encode(['Laravel', 'MySQL', 'Redis']),
+            'deadline' => null, // Draft biasanya belum ada deadline
         ]);
     }
 }
