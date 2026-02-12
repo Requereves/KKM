@@ -9,27 +9,31 @@ class JobVacancy extends Model
 {
     use HasFactory;
 
-    // Nama tabel di database
+    // 🔥 FIX UTAMA: Nama tabel harus sama persis dengan Migration (tanpa huruf 's' di job)
     protected $table = 'job_vacancies';
 
-    // Daftar kolom yang boleh diisi
+    // Daftar kolom yang boleh diisi (Updated sesuai migration terakhir)
     protected $fillable = [
         'title',
+        'slug',             // <--- Wajib ada
         'company',
         'location',
-        'type',         
-        'status',       
+        'type',
+        'category',         // <--- Wajib ada
+        'status',
+        'applicants_count', // <--- Wajib ada
         'salary',
         'description',
-        'requirements', 
-        'deadline',     
+        'requirements',
+        'deadline',
     ];
 
     // Konversi tipe data otomatis
     protected $casts = [
-        'requirements' => 'array',      
-        'deadline'     => 'date',       
-        'salary'       => 'decimal:0',  
+        'requirements' => 'array',
+        'deadline'     => 'date',
+        'salary'       => 'decimal:0',
+        'applicants_count' => 'integer',
     ];
 
     /**
@@ -37,9 +41,8 @@ class JobVacancy extends Model
      */
     public function applicants()
     {
-        // PERBAIKAN DI SINI:
-        // Kita tambahkan parameter kedua 'job_id' sebagai foreign key yang benar.
-        // Laravel default-nya mencari 'job_vacancy_id', tapi biasanya kita buatnya 'job_id'.
+        // Pastikan foreign key di tabel 'job_applications' adalah 'job_id'
+        // Jika migration job_applications pakai 'job_vacancy_id', ganti 'job_id' jadi 'job_vacancy_id'
         return $this->hasMany(JobApplication::class, 'job_id');
     }
 }

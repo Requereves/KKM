@@ -33,10 +33,12 @@ const Sidebar = ({ lang = 'id', currentView, onSetView }) => {
       routeName: 'admin.jobs.index' 
     },
     { 
-      id: 'training', 
+      // 🔥 UPDATE: ID disesuaikan dengan URL '/admin/courses' agar highlight aktif
+      id: 'courses', 
       label: t.training || 'Training', 
       icon: 'model_training', 
-      routeName: 'admin.training.index' 
+      // 🔥 UPDATE: Route disesuaikan dengan web.php (admin.courses.index)
+      routeName: 'admin.courses.index' 
     }, 
     { 
       id: 'cms', 

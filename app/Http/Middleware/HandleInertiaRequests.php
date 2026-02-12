@@ -54,6 +54,8 @@ class HandleInertiaRequests extends Middleware
                 ] : null,
             ],
 
+            'language' => session('locale', 'id'), 
+
             // 👇 FLASH MESSAGES
             'flash' => [
                 'success' => fn () => $request->session()->get('success'),
