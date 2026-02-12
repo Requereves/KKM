@@ -204,7 +204,7 @@ class DashboardController extends Controller
         $data['recommendedCourses'] = $recommendedCourses;
         $data['userInterest'] = $userInterest;
 
-        return Inertia::render('Dashboard', $data);
+        return Inertia::render('User/Dashboard', $data);
     }
 
     /**

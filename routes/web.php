@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\AnnouncementController;
 use App\Http\Controllers\Admin\StatsController;
 use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\User\UserCoursesController;
 use Inertia\Inertia;
 
 /*
@@ -73,15 +74,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/profile/photo', [ProfileController::class, 'updatePhoto'])->name('profile.update-photo'); 
 
     // Portfolio Mahasiswa
-    Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfolio.index');
-    Route::get('/portfolios/create', [PortfolioController::class, 'create'])->name('portfolio.create');
-    Route::post('/portfolios', [PortfolioController::class, 'store'])->name('portfolio.store');
-    Route::get('/portfolio/{id}', [PortfolioController::class, 'show'])->name('portfolio.show');
+    Route::get('portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
+    Route::get('portfolio/create', [PortfolioController::class, 'create'])->name('portfolio.create');
+    Route::post('portfolio', [PortfolioController::class, 'store'])->name('portfolio.store');
+    Route::get('portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
+    Route::put('portfolio/{id}', [PortfolioController::class, 'update'])->name('portfolio.update');
+    Route::delete('portfolio/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
 
     // List Course Mahasiswa
-    Route::get('/courses', function () {
-        return "Halaman Course Belum Tersedia (Coming Soon)";
-    })->name('courses.index');
+    Route::get('/courses', [UserCoursesController::class, 'index'])->name('courses.index');
+    Route::get('/courses/{id}', [UserCoursesController::class, 'show'])->name('courses.show'); 
 
 
     // ---------------------------------------------------------------------

@@ -10,7 +10,7 @@ class JobVacancy extends Model
     use HasFactory;
 
     // Nama tabel di database
-    protected $table = 'job_vacancies';
+    protected $table = 'jobs_vacancies';
 
     // Daftar kolom yang boleh diisi
     protected $fillable = [
