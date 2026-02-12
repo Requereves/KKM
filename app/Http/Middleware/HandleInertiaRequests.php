@@ -37,26 +37,33 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            
-            // 👇 DATA USER LOGIN
+
+            // 👇 1. DATA USER LOGIN (Shared ke semua komponen React)
             'auth' => [
                 'user' => $request->user() ? [
                     'id' => $request->user()->id,
                     'name' => $request->user()->name,
-                    'username' => $request->user()->username, // Tambahkan ini
-                    'email' => $request->user()->email,
-                    'role' => $request->user()->role,
                     
-                    // ✅ KUNCI PERUBAHAN DI SINI:
-                    // Kita mapping property 'avatar' di frontend agar mengambil value dari 'avatar_url' (Accessor di Model)
-                    // Ini yang membawa timestamp (?t=...) agar gambar refresh otomatis
-                    'avatar' => $request->user()->avatar_url, 
+                    // ✅ UPDATE PENTING: Tambahkan Username & Interest
+                    // Agar form di React bisa membaca data ini dari database
+                    'username' => $request->user()->username, 
+                    'interest' => $request->user()->interest,
+
+                    'email' => $request->user()->email,
+                    'role' => $request->user()->role, // Penting untuk Sidebar
+                    
+                    // 👇 AVATAR URL
+                    // Kita ambil dari Accessor Model User (getAvatarUrlAttribute)
+                    // Ini sudah otomatis berisi URL lengkap + Timestamp (?t=...)
+                    'avatar_url' => $request->user()->avatar_url, 
                 ] : null,
             ],
 
-            'language' => session('locale', 'id'), 
+            // 👇 2. PENGATURAN BAHASA (LOCALE)
+            'locale' => app()->getLocale(),
+            'language' => session('locale', 'id'),
 
-            // 👇 FLASH MESSAGES
+            // 👇 3. FLASH MESSAGES (Untuk Notifikasi Sukses/Gagal)
             'flash' => [
                 'success' => fn () => $request->session()->get('success'),
                 'error' => fn () => $request->session()->get('error'),

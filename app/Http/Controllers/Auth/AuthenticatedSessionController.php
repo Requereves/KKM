@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
-use Inertia\Inertia; // 👈 PENTING: Tambahkan Import Ini
+use Inertia\Inertia; // 👈 Penting untuk logout redirect
 
 class AuthenticatedSessionController extends Controller
 {
@@ -29,14 +29,21 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        // --- UPDATE LOGIC REDIRECT ---
-        // Cek apakah user yang login memiliki role 'admin'
-        if ($request->user()->role === 'admin') {
-            // Jika Admin, arahkan ke dashboard admin
+        // --- UPDATE LOGIC REDIRECT BERDASARKAN ROLE ---
+        $role = $request->user()->role;
+
+        // 1. Jika Admin -> Ke Dashboard Admin
+        if ($role === 'admin') {
             return redirect()->intended(route('admin.dashboard', absolute: false));
         }
+        
+        // 2. Jika Psikolog -> Langsung ke Halaman Konsultasi
+        // (Karena Psikolog dilarang masuk Dashboard Utama)
+        elseif ($role === 'psychologist') {
+            return redirect()->intended(route('admin.consultations.index', absolute: false));
+        }
 
-        // Jika Mahasiswa (default), arahkan ke '/home' (route name: 'home')
+        // 3. Default (Mahasiswa/Student) -> Ke Home User
         return redirect()->intended(route('home', absolute: false));
     }
 
@@ -51,9 +58,8 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        // 👇 PERUBAHAN UTAMA DI SINI:
         // Gunakan Inertia::location() agar browser melakukan Full Reload ke halaman awal.
-        // Ini mengatasi masalah tampilan "modal kecil" saat logout dari halaman React.
+        // Ini mengatasi masalah tampilan jika logout dari halaman React/Inertia.
         return Inertia::location('/');
     }
 }

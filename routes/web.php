@@ -12,7 +12,9 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\AnnouncementController;
 use App\Http\Controllers\Admin\StatsController;
 use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\ConsultationController;
 use App\Http\Controllers\User\UserCoursesController;
+use App\Http\Controllers\User\PsychologistController;
 use Inertia\Inertia;
 
 /*
@@ -66,12 +68,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 
     // ---------------------------------------------------------------------
-    // PROFILE MAHASISWA
+    // PROFILE USER (Berlaku untuk Admin, Student, & Psikolog)
     // ---------------------------------------------------------------------
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::post('/profile/photo', [ProfileController::class, 'updatePhoto'])->name('profile.update-photo'); 
+    
+    // ✅ UPDATE PENTING: Route Upload Avatar
+    // Nama route ini HARUS 'profile.avatar' agar cocok dengan Edit.jsx
+    Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
 
     // Portfolio Mahasiswa
     Route::get('portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
@@ -85,58 +90,76 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/courses', [UserCoursesController::class, 'index'])->name('courses.index');
     Route::get('/courses/{id}', [UserCoursesController::class, 'show'])->name('courses.show'); 
 
+    // Layanan Psikolog & Konsultasi Karir (User Side)
+    Route::get('/psychologist', [PsychologistController::class, 'index'])->name('psychologist.index');
+    Route::post('/psychologist', [PsychologistController::class, 'store'])->name('psychologist.store');
+
 
     // ---------------------------------------------------------------------
-    // 2. AREA KHUSUS ADMIN
-    // URL Prefix: /admin/... | Route Name Prefix: admin....
+    // 2. AREA BACKOFFICE (ADMIN & PSIKOLOG)
     // ---------------------------------------------------------------------
     Route::prefix('admin')->name('admin.')->group(function () {
         
-        // Dashboard Admin (Logic ada di DashboardController::index)
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        // =================================================================
+        // GRUP 1: SUPER ADMIN ONLY (Psikolog DILARANG masuk sini)
+        // =================================================================
+        Route::middleware(['role:admin'])->group(function () {
+            
+            // Dashboard Admin
+            Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-        // PROFILE ADMIN (Inertia)
-        // Kita reuse method yang sama dengan mahasiswa, Controller akan cek role user
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-        Route::post('/profile/photo', [ProfileController::class, 'updatePhoto'])->name('profile.update-photo');
+            // Verification Management
+            Route::resource('verification', VerificationController::class)->only(['index', 'show', 'update']);
 
-        // Verification Management
-        Route::resource('verification', VerificationController::class)
-            ->only(['index', 'show', 'update']);
+            // Student Management
+            Route::resource('students', StudentController::class);
 
-        // Student Management
-        Route::resource('students', StudentController::class);
+            // Job Vacancies Management
+            Route::resource('jobs', JobController::class);
 
-        // Job Vacancies Management
-        Route::resource('jobs', JobController::class);
+            // Course Management
+            Route::resource('courses', CourseController::class);
 
-        // Course Management
-        Route::resource('courses', CourseController::class);
+            // CMS / Announcements
+            Route::resource('cms', AnnouncementController::class)
+                ->names([
+                    'index'   => 'cms.index',
+                    'create'  => 'cms.create',
+                    'store'   => 'cms.store',
+                    'edit'    => 'cms.edit',
+                    'update'  => 'cms.update',
+                    'destroy' => 'cms.destroy',
+                ])
+                ->parameters(['cms' => 'id']);
 
-        // CMS / Announcements
-        Route::resource('cms', AnnouncementController::class)
-            ->names([
-                'index'   => 'cms.index',
-                'create'  => 'cms.create',
-                'store'   => 'cms.store',
-                'edit'    => 'cms.edit',
-                'update'  => 'cms.update',
-                'destroy' => 'cms.destroy',
-            ])
-            ->parameters(['cms' => 'id']);
+            // Stats Dashboard
+            Route::get('/stats', [StatsController::class, 'index'])->name('stats.index');
 
-        // Stats Dashboard
-        Route::get('/stats', [StatsController::class, 'index'])->name('stats.index');
+            // Manajemen Admin Lainnya
+            Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
+            Route::post('/users', [AdminUserController::class, 'store'])->name('users.store');
+            Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.destroy');
 
-        // Manajemen Admin Lainnya
-        Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
-        Route::post('/users', [AdminUserController::class, 'store'])->name('users.store');
-        Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.destroy');
+            // Create Admin Helper (Legacy)
+            Route::post('/create-admin', [DashboardController::class, 'storeAdmin'])->name('create');
+        });
 
-        // Create Admin Helper (Legacy)
-        Route::post('/create-admin', [DashboardController::class, 'storeAdmin'])->name('create');
+
+        // =================================================================
+        // GRUP 2: SHARED ACCESS (ADMIN & PSIKOLOG BOLEH MASUK)
+        // =================================================================
+        Route::middleware(['role:admin,psychologist'])->group(function () {
+            
+            // Consultation / Psikolog Management (Admin Side)
+            Route::resource('consultations', ConsultationController::class)
+                ->names([
+                    'index'   => 'consultations.index',
+                    'update'  => 'consultations.update',
+                    'destroy' => 'consultations.destroy',
+                ])
+                ->only(['index', 'update', 'destroy']);
+        });
+
     });
 
 });

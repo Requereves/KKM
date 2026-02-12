@@ -41,7 +41,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => 'mahasiswa', // 👈 PENTING: Kunci role sebagai mahasiswa
+            'role' => 'student', // 👈 PENTING: Kunci role sebagai mahasiswa
         ]);
 
         // 2. OTOMATIS BUAT DATA STUDENT (Supaya Dashboard Mahasiswa tidak error)

@@ -16,46 +16,62 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // 0. Panggil Seeder Course (Agar data course muncul untuk rekomendasi)
-        // Pastikan file CourseSeeder.php ada. Jika error, bisa dikomentari dulu.
-        // $this->call(CourseSeeder::class); // Uncomment jika CourseSeeder sudah dibuat
+        // 0. Panggil Seeder Course (Opsional, uncomment jika file ada)
+        // $this->call(CourseSeeder::class); 
 
-        // 1. GENESIS ADMIN (Akun Dewa/Utama)
-        // Cek dulu apakah user sudah ada agar tidak error Duplicate Entry saat seed ulang
-        if (!User::where('email', 'admin@arahin.id')->exists()) {
-            User::create([
+        // ---------------------------------------------------------
+        // 1. GENESIS ADMIN (Akun Utama)
+        // ---------------------------------------------------------
+        User::firstOrCreate(
+            ['email' => 'admin@arahin.id'],
+            [
                 'name' => 'Super Admin',
-                'email' => 'admin@arahin.id', 
                 'password' => Hash::make('password'),
                 'role' => 'admin',
                 'email_verified_at' => now(),
-            ]);
-        }
+            ]
+        );
 
-        // 2. AKUN MAHASISWA DUMMY (Untuk Testing Rekomendasi)
-        $mhsEmail = 'ghufroon@student.com';
-        $mhs = User::where('email', $mhsEmail)->first();
-        
-        if (!$mhs) {
-            $mhs = User::create([
+        // ---------------------------------------------------------
+        // 2. AKUN MAHASISWA DUMMY
+        // ---------------------------------------------------------
+        $mhs = User::firstOrCreate(
+            ['email' => 'ghufroon@student.com'],
+            [
                 'name' => 'Ghufroon Mahasiswa',
-                'email' => $mhsEmail,
                 'password' => Hash::make('password'),
-                'role' => 'mahasiswa',
+                'role' => 'student', // 👈 Pastikan 'student', bukan 'mahasiswa'
                 'email_verified_at' => now(),
                 'interest' => 'Web Development', 
-            ]);
+            ]
+        );
 
-            // 3. DATA PROFILE MAHASISWA (Hanya buat jika user baru dibuat)
+        // 3. DATA PROFILE MAHASISWA
+        // Cek dulu apakah data student sudah ada untuk user ini
+        if (!Student::where('user_id', $mhs->id)->exists()) {
             Student::create([
                 'user_id' => $mhs->id,
                 'nim' => '12345678',
                 'full_name' => 'Ghufroon Mahasiswa',
+                // Tambahkan field lain jika diperlukan oleh tabel students
             ]);
         }
 
         // ---------------------------------------------------------
-        // 4. DUMMY JOB VACANCIES (DATA STATISTIK SPESIFIK)
+        // 4. AKUN PSIKOLOG (BARU)
+        // ---------------------------------------------------------
+        User::firstOrCreate(
+            ['email' => 'psikolog@arahin.id'],
+            [
+                'name' => 'Dr. Psikolog',
+                'password' => Hash::make('password'),
+                'role' => 'psychologist', // 👈 Role baru
+                'email_verified_at' => now(),
+            ]
+        );
+
+        // ---------------------------------------------------------
+        // 5. DUMMY JOB VACANCIES (DATA STATISTIK)
         // ---------------------------------------------------------
         
         // Bersihkan data lama agar statistik akurat saat seed ulang
@@ -75,8 +91,8 @@ class DatabaseSeeder extends Seeder
             'status' => 'active',
             'applicants_count' => 3,
             'description' => 'React JS Expert needed.',
-            'salary' => 15000000, // ✅ Fix: Angka murni (Tanpa Rp dan Titik)
-            'requirements' => json_encode(['React JS', 'Tailwind CSS', 'Redux']), // ✅ Tambahan: JSON Array
+            'salary' => 15000000,
+            'requirements' => json_encode(['React JS', 'Tailwind CSS', 'Redux']),
             'deadline' => now()->addDays(30),
         ]);
 
@@ -91,7 +107,7 @@ class DatabaseSeeder extends Seeder
             'status' => 'active',
             'applicants_count' => 3,
             'description' => 'Python & SQL analysis.',
-            'salary' => 4000000, // ✅ Fix: Angka murni
+            'salary' => 4000000,
             'requirements' => json_encode(['Python', 'SQL', 'Tableau']),
             'deadline' => now()->addDays(15),
         ]);
@@ -107,7 +123,7 @@ class DatabaseSeeder extends Seeder
             'status' => 'closed',
             'applicants_count' => 0,
             'description' => 'Figma design system.',
-            'salary' => 8000000, // ✅ Fix: Angka murni
+            'salary' => 8000000,
             'requirements' => json_encode(['Figma', 'Adobe XD', 'Prototyping']),
             'deadline' => now()->subDays(5), // Deadline sudah lewat
         ]);
@@ -123,7 +139,7 @@ class DatabaseSeeder extends Seeder
             'status' => 'draft',
             'applicants_count' => 0,
             'description' => 'Draft job vacancy.',
-            'salary' => 12000000, // ✅ Fix: Angka murni
+            'salary' => 12000000,
             'requirements' => json_encode(['Laravel', 'MySQL', 'Redis']),
             'deadline' => null, // Draft biasanya belum ada deadline
         ]);
