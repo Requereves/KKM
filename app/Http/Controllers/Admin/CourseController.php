@@ -23,10 +23,13 @@ class CourseController extends Controller
                 'title' => $course->title,
                 'category' => $course->category,
     
-                'description' => $course->description ?? 'Comprehensive course description placeholder...', 
+                'description' => $course->getRawOriginal('description') ?? 'Comprehensive course description placeholder...', 
                 'instructor' => $course->instructor,
                 
-                'image' => $course->thumbnail ? asset('storage/' . $course->thumbnail) : 'https://placehold.co/600x400/png',
+                'image' => (str_contains($course->thumbnail, 'http')) 
+                        ? $course->thumbnail 
+                        : ($course->thumbnail ? asset('storage/' . $course->thumbnail) : 'https://placehold.co/600x400/png'),
+
                 'startDate' => $course->created_at->format('Y-m-d'), // Mapping created_at ke startDate
                 'endDate' => $course->created_at->addMonths(1)->format('Y-m-d'), // Dummy endDate (+1 bulan)
                 'participantsCount' => rand(10, 50), // Dummy data
@@ -69,6 +72,7 @@ class CourseController extends Controller
             'title' => 'required|string|max:255',
             'category' => 'required|string',
             'instructor' => 'required|string',
+            'description' => 'required|string',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Max 2MB
         ]);
 
@@ -83,6 +87,7 @@ class CourseController extends Controller
             'title' => $request->title,
             'category' => $request->category,
             'instructor' => $request->instructor,
+            'description' => $request->description,
             'thumbnail' => $imagePath,
         ]);
 
@@ -115,6 +120,7 @@ class CourseController extends Controller
             'title' => 'required|string|max:255',
             'category' => 'required|string',
             'instructor' => 'required|string',
+            'description' => 'nullable|string',
             'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', 
         ]);
 
@@ -123,6 +129,7 @@ class CourseController extends Controller
             'title' => $request->title,
             'category' => $request->category,
             'instructor' => $request->instructor,
+            'description' => $request->description,
         ];
 
         // 3. Upload gambar baru jika ada
