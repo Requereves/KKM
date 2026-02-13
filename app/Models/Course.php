@@ -34,4 +34,18 @@ class Course extends Model
     {
         return $this->hasManyThrough(Lesson::class, Module::class);
     }
+
+     protected function getThumbnailAttribute($value)
+    {
+         if (!$value) return 'https://placehold.co/600x400/png';
+    // Jika sudah ada http (berarti dari accessor), jangan ditambah lagi
+        if (str_contains($value, 'http')) return $value; 
+        return asset('storage/' . $value);
+    }
+
+    // Accessor untuk Deskripsi (Otomatis ngasih placeholder jika kosong)
+    protected function getDescriptionAttribute($value)
+    {
+        return $value ?? 'Comprehensive course description placeholder...';
+    }
 }
