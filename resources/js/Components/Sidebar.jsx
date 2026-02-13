@@ -36,7 +36,7 @@ const Sidebar = ({ lang = 'id', currentView, onSetView }) => {
       id: 'training', 
       label: t.training || 'Training', 
       icon: 'model_training', 
-      routeName: 'admin.training.index' 
+      routeName: 'admin.courses.index' 
     }, 
     { 
       id: 'cms', 

@@ -10,13 +10,28 @@ use Illuminate\Support\Facades\Storage;
 
 class UserCoursesController extends Controller
 {
-    public function index()
-    {
-        return Inertia::render('User/Course/Courses', [ // Mengarah ke folder Pages/User/Courses.jsx
-            'courses' => Course::all(),
-            'language' => session('locale', 'id'),
-        ]);
-    }
+   public function index()
+{
+    $courses = Course::all()->map(function($course) {
+        return [
+            'id' => $course->id,
+            'title' => $course->title,
+            'description' => $course->description ?? 'Belum ada deskripsi.',
+            // Logic gambar yang sama agar tidak pecah
+            'thumbnail' => (str_contains($course->thumbnail, 'http')) 
+                            ? $course->thumbnail 
+                            : ($course->thumbnail ? asset('storage/' . $course->thumbnail) : 'https://placehold.co/600x400/png'),
+            // Tambahkan field lain yang dibutuhkan oleh card di UI User
+            'instructor' => $course->instructor,
+            'status' => ['active', 'upcoming', 'completed'][rand(0, 2)],
+        ];
+    });
+
+    return Inertia::render('User/Course/Courses', [
+        'courses' => $courses,
+        'language' => session('locale', 'id'),
+    ]);
+}
 
     public function show($id)
     {
