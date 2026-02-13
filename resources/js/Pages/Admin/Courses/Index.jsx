@@ -89,7 +89,7 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
     <AuthenticatedLayout user={auth.user}>
       <Head title="Training & Workshops" />
 
-      <div className="p-6 min-h-screen bg-gray-50 dark:bg-gray-900 font-sans animate-in fade-in duration-500">
+      <div className="p-6 min-h-screen font-sans animate-in fade-in duration-500">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
@@ -124,8 +124,8 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
                 key={f}
                 onClick={() => setFilter(f)}
                 className={`px-4 py-1.5 text-xs font-medium rounded-lg capitalize whitespace-nowrap transition-all ${filter === f
-                    ? 'bg-indigo-600 text-white shadow-sm'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400'
+                  ? 'bg-indigo-600 text-white shadow-sm'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400'
                   }`}
               >
                 {f === 'all' ? t.filter_all : f === 'active' ? t.filter_active : f === 'upcoming' ? t.filter_upcoming : t.filter_completed}
@@ -157,8 +157,8 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
                   </div>
                   <div className="absolute top-3 left-3">
                     <span className={`px-2 py-1 rounded-md text-[10px] font-bold uppercase shadow-sm backdrop-blur-sm ${course.status === 'active' ? 'bg-emerald-500/90 text-white' :
-                        course.status === 'upcoming' ? 'bg-indigo-500/90 text-white' :
-                          'bg-slate-500/90 text-white'
+                      course.status === 'upcoming' ? 'bg-indigo-500/90 text-white' :
+                        'bg-slate-500/90 text-white'
                       }`}>
                       {course.status}
                     </span>
