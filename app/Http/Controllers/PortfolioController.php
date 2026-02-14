@@ -15,24 +15,30 @@ class PortfolioController extends Controller
     public function show($id)
     {
         // Ambil data portfolio + info student pemiliknya
-        $portfolio = DB::table('portfolios')
-            ->join('students', 'portfolios.student_id', '=', 'students.id')
-            ->where('portfolios.id', $id)
-            ->select('portfolios.*', 'students.user_id', 'students.full_name')
-            ->first();
+    $portfolio = DB::table('portfolios')->where('id', $id)->first();
 
-        // Kalau data tidak ada, error 404
-        if (!$portfolio) {
-            abort(404);
-            return view('portfolio.show', compact('portfolio'));
-        }
+    if (!$portfolio) {
+        return`ID $id tidak ada di database`;
+    }
+
+    // Direct Path File nya
+    $path = storage_path('app' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . $portfolio->file_path);
+
+     if (!file_exists($path)) {
+        return "ERROR: File ada di database tapi TIDAK ADA di folder: " . $path;
+    }
+
 
         // Opsional: Cek hak akses (Hanya pemilik atau admin yang boleh lihat)
         // if ($portfolio->user_id != Auth::id()) {
         //    abort(403);
         // }
+         return response()->file($path, [
+        'Content-Type' => 'application/pdf',
+        'Content-Disposition' => 'inline'
+        ]);
 
-        return view('portfolio.show', compact('portfolio'));
+        // return view('portfolio.show', compact('portfolio'));
     }
     public function index()
     {   
@@ -40,36 +46,39 @@ class PortfolioController extends Controller
         $user = Auth::user();
 
         // Buat Admin
-        if($user->role =='admin') {
-        // 1. Cari data Student milik User yang login
-            $student = DB::table('students')->where('user_id', Auth::id())->first();
+      if($user->role =='admin') {
+        // Ambil semua portfolio untuk diverifikasi admin
+        $portfolios = DB::table('portfolios')
+                    ->join('students', 'portfolios.student_id', '=', 'students.id')
+                    ->select(
+                        'portfolios.id',
+                        'students.full_name as name', // Sesuai prop 'name' di React
+                        'students.nim',              // Sesuai prop 'nim'
+                        'portfolios.title as documentTitle', // Sesuai 'documentTitle'
+                        'portfolios.category',
+                        'portfolios.status',
+                        'portfolios.description',
+                        'portfolios.file_path as filePath'
+                    )
+                    ->orderBy('portfolios.created_at', 'desc')
+                    ->get();
 
-        // 2. Kalau user belum terdaftar sebagai student, portofolio kosong
-            if (!$student) {
-                $portfolios = collect([]); 
-            } else {
-            // 3. Ambil semua portfolio milik student tersebut
-                $portfolios = DB::table('portfolios')
-                            ->where('student_id', $student->id)
-                            ->orderBy('created_at', 'desc')
-                            ->get();
-            }
+        // Ganti 'portfolio.index' (Blade) menjadi Inertia Page kamu
+        return Inertia::render('Admin/VerificationPage', [
+            'items' => $portfolios
+        ]);
+    } else {
+        // ... (Logika user/mahasiswa tetap sama)
+        $student = DB::table('students')->where('user_id', $user->id)->first();
+        $portfolios = $student 
+            ? DB::table('portfolios')->where('student_id', $student->id)->orderBy('created_at', 'desc')->get()
+            : collect([]);
 
-            return view('portfolio.index', compact('portfolios'));
-        } else {
-
-            // Buat User/Mahasiswa
-                $student = DB::table('students')->where('user_id', $user->id)->first();
-            
-                $portfolios = $student 
-                    ? DB::table('portfolios')->where('student_id', $student->id)->orderBy('created_at', 'desc')->get()
-                    : collect([]);
-
-                return Inertia::render('User/Certificate/Competence', [
-                    'portfolios' => $portfolios,
-                    'language' => session('locale', 'id')
-            ]);
-        }
+        return Inertia::render('User/Certificate/Competence', [
+            'portfolios' => $portfolios,
+            'language' => session('locale', 'id')
+        ]);
+    }
     }
 
     // Function create kosong dulu biar gak error pas tombol diklik
@@ -206,5 +215,19 @@ class PortfolioController extends Controller
 
         return redirect()->back()->with('success', 'Portfolio berhasil dihapus.');
     }
+
+    public function updateStatus(Request $request, $id)
+    {
+    // Hanya admin yang boleh akses
+    if (Auth::user()->role !== 'admin') abort(403);
+
+    DB::table('portfolios')->where('id', $id)->update([
+        'status' => $request->status, // 'approved' atau 'rejected'
+        'admin_feedback' => $request->feedback,
+        'updated_at' => now(),
+    ]);
+
+    return redirect()->back()->with('success', 'Status berhasil diperbarui');
+}
 
 }

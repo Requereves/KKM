@@ -97,7 +97,7 @@ export default function VerificationPage({ auth, items = [], initialSelectedId }
             <div className="flex-1 bg-slate-500/50 flex items-center justify-center p-8 overflow-y-auto relative">
                <div className="bg-white w-full max-w-[600px] h-full min-h-[800px] shadow-lg p-12 text-slate-800 flex flex-col gap-6 relative">
                   {/* Simulated PDF Content */}
-                  <div className="flex justify-between items-center border-b-2 border-slate-900 pb-4">
+                  {/* <div className="flex justify-between items-center border-b-2 border-slate-900 pb-4">
                       <h1 className="text-2xl font-serif font-bold">CERTIFICATE OF COMPLETION</h1>
                       <div className="w-12 h-12 bg-indigo-900 rounded-full opacity-50"></div>
                   </div>
@@ -116,7 +116,13 @@ export default function VerificationPage({ auth, items = [], initialSelectedId }
                          <div className="w-32 border-b border-slate-400 mb-2"></div>
                          <p className="text-xs uppercase font-bold">Date</p>
                       </div>
-                  </div>
+                  </div> */}
+                  <iframe 
+                    key={selectedItem.id} // Tambahkan KEY agar iframe reload saat ganti item
+                    src={route('admin.view-pdf', selectedItem.id)} // Pastikan URL ini sesuai dengan route GET di web.php
+                    className="w-full h-full border-none bg-white"
+                    title="PDF Preview"></iframe>
+
                   {/* Watermark Mock */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
                       <span className="text-9xl font-bold -rotate-45">PREVIEW</span>

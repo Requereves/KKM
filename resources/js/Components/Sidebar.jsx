@@ -43,12 +43,10 @@ const Sidebar = ({ lang = 'id', currentView, onSetView }) => {
       id: 'courses', 
       label: t.training || 'Training', 
       icon: 'model_training', 
-<<<<<<< HEAD
+
       routeName: 'admin.courses.index',
       roles: ['admin']
-=======
-      routeName: 'admin.courses.index' 
->>>>>>> testfe
+
     }, 
     { 
       id: 'consultations', 

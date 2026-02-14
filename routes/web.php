@@ -79,9 +79,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
 
     // Portfolio Mahasiswa
+    
+    
     Route::get('portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
     Route::get('portfolio/create', [PortfolioController::class, 'create'])->name('portfolio.create');
     Route::post('portfolio', [PortfolioController::class, 'store'])->name('portfolio.store');
+
     Route::get('portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
     Route::put('portfolio/{id}', [PortfolioController::class, 'update'])->name('portfolio.update');
     Route::delete('portfolio/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
@@ -105,11 +108,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         // =================================================================
         Route::middleware(['role:admin'])->group(function () {
             
+            
             // Dashboard Admin
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
+            
             // Verification Management
-            Route::resource('verification', VerificationController::class)->only(['index', 'show', 'update']);
+            // Route::resource('verification', VerificationController::class)->only(['index', 'show', 'update']);
+            Route::put('/verification/update/{id}', [PortfolioController::class, 'updateStatus'])->name('verification.update');
+            Route::get('/view-pdf/{id}', [PortfolioController::class, 'show'])->name('view-pdf');
 
             // Student Management
             Route::resource('students', StudentController::class);
