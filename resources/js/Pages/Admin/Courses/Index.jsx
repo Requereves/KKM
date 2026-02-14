@@ -56,31 +56,31 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
   // Jika view 'create', tampilkan Form
   if (view === 'create') {
     return (
-        <AuthenticatedLayout user={auth.user}>
-            <div className="p-6">
-                <TrainingForm 
-                    lang={lang} 
-                    mode="create"
-                    onCancel={() => setView('list')} 
-                />
-            </div>
-        </AuthenticatedLayout>
+      <AuthenticatedLayout user={auth.user}>
+        <div className="p-6">
+          <TrainingForm
+            lang={lang}
+            mode="create"
+            onCancel={() => setView('list')}
+          />
+        </div>
+      </AuthenticatedLayout>
     );
   }
 
   // Jika view 'edit', tampilkan Form dengan data
   if (view === 'edit' && selectedCourse) {
     return (
-        <AuthenticatedLayout user={auth.user}>
-            <div className="p-6">
-                <TrainingForm 
-                    lang={lang} 
-                    mode="edit"
-                    initialData={selectedCourse} 
-                    onCancel={() => { setView('list'); setSelectedCourse(null); }} 
-                />
-            </div>
-        </AuthenticatedLayout>
+      <AuthenticatedLayout user={auth.user}>
+        <div className="p-6">
+          <TrainingForm
+            lang={lang}
+            mode="edit"
+            initialData={selectedCourse}
+            onCancel={() => { setView('list'); setSelectedCourse(null); }}
+          />
+        </div>
+      </AuthenticatedLayout>
     );
   }
 
@@ -88,9 +88,9 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
   return (
     <AuthenticatedLayout user={auth.user}>
       <Head title="Training & Workshops" />
-      
-      <div className="p-6 min-h-screen bg-gray-50 dark:bg-gray-900 font-sans animate-in fade-in duration-500">
-        
+
+      <div className="p-6 min-h-screen font-sans animate-in fade-in duration-500">
+
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
@@ -123,11 +123,10 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-4 py-1.5 text-xs font-medium rounded-lg capitalize whitespace-nowrap transition-all ${
-                  filter === f
-                    ? 'bg-indigo-600 text-white shadow-sm'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400'
-                }`}
+                className={`px-4 py-1.5 text-xs font-medium rounded-lg capitalize whitespace-nowrap transition-all ${filter === f
+                  ? 'bg-indigo-600 text-white shadow-sm'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400'
+                  }`}
               >
                 {f === 'all' ? t.filter_all : f === 'active' ? t.filter_active : f === 'upcoming' ? t.filter_upcoming : t.filter_completed}
               </button>
@@ -138,7 +137,7 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
         {/* Courses Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredCourses.map(course => {
-            const percent = Math.round((course.participantsCount / course.maxParticipants) * 100);
+
             return (
               <div
                 key={course.id}
@@ -157,11 +156,10 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
                     </span>
                   </div>
                   <div className="absolute top-3 left-3">
-                    <span className={`px-2 py-1 rounded-md text-[10px] font-bold uppercase shadow-sm backdrop-blur-sm ${
-                      course.status === 'active' ? 'bg-emerald-500/90 text-white' :
+                    <span className={`px-2 py-1 rounded-md text-[10px] font-bold uppercase shadow-sm backdrop-blur-sm ${course.status === 'active' ? 'bg-emerald-500/90 text-white' :
                       course.status === 'upcoming' ? 'bg-indigo-500/90 text-white' :
-                      'bg-slate-500/90 text-white'
-                    }`}>
+                        'bg-slate-500/90 text-white'
+                      }`}>
                       {course.status}
                     </span>
                   </div>
@@ -189,19 +187,7 @@ export default function TrainingPage({ auth, courses, lang = 'en' }) {
                       <span>{course.startDate} - {course.endDate}</span>
                     </div>
 
-                    {/* Progress Bar */}
-                    <div>
-                      <div className="flex justify-between text-[10px] mb-1">
-                        <span className="text-slate-500 dark:text-slate-400">{t.enrolled}</span>
-                        <span className="font-bold text-slate-700 dark:text-slate-200">{course.participantsCount}/{course.maxParticipants}</span>
-                      </div>
-                      <div className="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-                        <div
-                          className={`h-full rounded-full ${percent >= 100 ? 'bg-rose-500' : 'bg-emerald-500'}`}
-                          style={{ width: `${Math.min(percent, 100)}%` }}
-                        ></div>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
 

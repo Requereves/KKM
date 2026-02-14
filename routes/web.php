@@ -15,6 +15,8 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\ConsultationController;
 use App\Http\Controllers\User\UserCoursesController;
 use App\Http\Controllers\User\PsychologistController;
+// Import Notification Controller
+use App\Http\Controllers\NotificationController;
 use Inertia\Inertia;
 
 /*
@@ -74,9 +76,21 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
-    // ✅ UPDATE PENTING: Route Upload Avatar
-    // Nama route ini HARUS 'profile.avatar' agar cocok dengan Edit.jsx
+    // ✅ Route Upload Avatar
     Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
+
+    // ---------------------------------------------------------------------
+    // 🔔 SYSTEM NOTIFICATIONS
+    // ---------------------------------------------------------------------
+    // Halaman "Lihat Semua Notifikasi"
+    Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');
+    // Tandai satu notifikasi dibaca
+    Route::patch('/notifications/{id}/read', [NotificationController::class, 'markAsRead'])->name('notifications.read');
+    // Tandai SEMUA notifikasi dibaca
+    Route::patch('/notifications/read-all', [NotificationController::class, 'markAllRead'])->name('notifications.readAll');
+    // 🗑️ Hapus satu notifikasi (Route Baru)
+    Route::delete('/notifications/{id}', [NotificationController::class, 'destroy'])->name('notifications.destroy');
+
 
     // Portfolio Mahasiswa
     

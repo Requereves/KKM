@@ -1,23 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, usePage } from '@inertiajs/react'; 
+import { Link, usePage, router } from '@inertiajs/react';
 
 const Header = ({ 
   theme, 
   onToggleTheme, 
   lang, 
   onToggleLang, 
-  pendingVerifications = [], 
-  onNotificationClick
+  onToggleSidebar // ✅ Props baru untuk toggle sidebar
 }) => {
-  // 1. AMBIL DATA DARI GLOBAL STATE
+  // 1. AMBIL DATA DARI GLOBAL STATE (Inertia)
   const { props } = usePage();
-  const currentUser = props.auth.user; 
+  const currentUser = props.auth.user;
+  
+  // Ambil notifikasi dari shared props (Middleware)
+  // Default ke array kosong jika belum ada data
+  const notifications = currentUser?.notifications || [];
+  const unreadCount = currentUser?.unread_count || 0;
 
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const notificationRef = useRef(null);
   const profileRef = useRef(null);
 
+  // Handle klik di luar dropdown untuk menutup menu
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (notificationRef.current && !notificationRef.current.contains(event.target)) {
@@ -31,61 +36,152 @@ const Header = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const getTimeAgo = (dateString) => {
-    if (!dateString) return '';
-    const date = new Date(dateString);
-    const now = new Date();
-    const seconds = Math.floor((now.getTime() - date.getTime()) / 1000);
-    if (seconds < 60) return 'Just now';
-    const minutes = Math.floor(seconds / 60);
-    if (minutes < 60) return `${minutes}m ago`;
-    const hours = Math.floor(minutes / 60);
-    if (hours < 24) return `${hours}h ago`;
-    return `${Math.floor(hours / 24)}d ago`;
+  // --- LOGIC NOTIFIKASI ---
+  
+  // Tandai satu notifikasi sudah dibaca
+  const handleMarkAsRead = (id) => {
+    router.patch(route('notifications.read', id), {}, {
+        preserveScroll: true,
+        onSuccess: () => {
+            // Optional: Bisa tambah logic feedback visual di sini
+        }
+    });
   };
 
-  // ✅ PERBAIKAN UTAMA DI SINI:
-  // Kita pakai 'avatar_url' (sesuai output console), bukan 'avatar'
+  // Tandai SEMUA sudah dibaca
+  const handleMarkAllRead = () => {
+    router.patch(route('notifications.readAll'), {}, {
+        preserveScroll: true,
+        onSuccess: () => setShowNotifications(false) // Tutup dropdown setelah mark all
+    });
+  };
+
+  // Logic Avatar
   const avatarSrc = currentUser?.avatar_url 
     ? currentUser.avatar_url 
     : `https://ui-avatars.com/api/?name=${encodeURIComponent(currentUser?.name || 'User')}&background=random&color=fff`;
 
   return (
-    <header className="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-6 z-20 shadow-sm transition-colors sticky top-0">
+    <header className="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-4 sm:px-6 z-20 shadow-sm transition-colors sticky top-0">
       
-      <button className="md:hidden text-slate-600 dark:text-slate-400 p-2">
+      {/* Mobile Menu Button (Burger) */}
+      <button 
+        onClick={onToggleSidebar} // ✅ Panggil fungsi toggle saat diklik
+        className="md:hidden text-slate-600 dark:text-slate-400 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+      >
         <span className="material-icons-outlined text-2xl">menu</span>
       </button>
       
       <div className="ml-auto flex items-center gap-2 sm:gap-4">
         
-        <button onClick={onToggleLang} className="h-10 px-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all">
+        {/* Language Toggle */}
+        <button onClick={onToggleLang} className="hidden sm:flex h-10 px-3 items-center gap-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all">
           <span className="material-icons-outlined text-lg">language</span>
           <span className="text-xs font-bold uppercase">{lang}</span>
         </button>
 
+        {/* Theme Toggle */}
         <button onClick={onToggleTheme} className="w-10 h-10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all">
           <span className="material-icons-outlined text-xl">{theme === 'dark' ? 'light_mode' : 'dark_mode'}</span>
         </button>
 
+        {/* --- SISTEM NOTIFIKASI --- */}
         <div className="relative" ref={notificationRef}>
-          <button onClick={() => setShowNotifications(!showNotifications)} className="w-10 h-10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all relative">
+          <button 
+            onClick={() => setShowNotifications(!showNotifications)} 
+            className="w-10 h-10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all relative"
+          >
             <span className="material-icons-outlined text-xl">notifications</span>
-            {pendingVerifications.length > 0 && (
-              <span className="absolute top-2 right-2 w-2.5 h-2.5 bg-rose-500 rounded-full border-2 border-white dark:border-slate-900 animate-pulse"></span>
+            
+            {/* Badge Merah Berdenyut (Hanya muncul jika ada unread) */}
+            {unreadCount > 0 && (
+              <span className="absolute top-2 right-2 w-2.5 h-2.5 bg-rose-500 rounded-full border-2 border-white dark:border-slate-900">
+                 <span className="absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75 animate-ping"></span>
+              </span>
             )}
           </button>
           
+          {/* Dropdown Notifikasi */}
           {showNotifications && (
-            <div className="absolute right-0 mt-2 w-80 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50">
-               <div className="p-4 text-center text-sm text-slate-500">Notifikasi</div>
+            <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+               
+               {/* Header Dropdown */}
+               <div className="px-4 py-3 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-800/50">
+                  <h3 className="text-sm font-bold text-slate-800 dark:text-white">Notifikasi</h3>
+                  {unreadCount > 0 && (
+                    <button 
+                        onClick={handleMarkAllRead} 
+                        className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 transition-colors uppercase tracking-wider"
+                    >
+                        Tandai semua dibaca
+                    </button>
+                  )}
+               </div>
+
+               {/* List Notifikasi (Scrollable) */}
+               <div className="max-h-[350px] overflow-y-auto custom-scrollbar">
+                  {notifications.length > 0 ? (
+                    notifications.map((item) => (
+                        <div 
+                            key={item.id} 
+                            onClick={() => !item.read_at && handleMarkAsRead(item.id)}
+                            className={`relative px-4 py-3 border-b border-slate-50 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors flex gap-3 cursor-pointer ${!item.read_at ? 'bg-indigo-50/30 dark:bg-indigo-900/10' : ''}`}
+                        >
+                            {/* Icon Notifikasi */}
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${item.data.color || 'bg-slate-100 text-slate-500'}`}>
+                                <span className="material-icons-outlined text-lg">{item.data.icon || 'notifications'}</span>
+                            </div>
+
+                            {/* Konten Text */}
+                            <div className="flex-1 min-w-0">
+                                <div className="flex justify-between items-start mb-0.5">
+                                    <h4 className={`text-sm truncate pr-2 ${!item.read_at ? 'font-bold text-slate-800 dark:text-white' : 'font-medium text-slate-600 dark:text-slate-300'}`}>
+                                        {item.data.title || 'Notifikasi Baru'}
+                                    </h4>
+                                    <span className="text-[10px] text-slate-400 whitespace-nowrap ml-1">{item.created_at_human}</span>
+                                </div>
+                                <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                    {item.data.message}
+                                </p>
+                            </div>
+                            
+                            {/* Titik Biru (Unread Indicator) */}
+                            {!item.read_at && (
+                                <div className="flex flex-col justify-center pl-1">
+                                    <div className="w-2 h-2 bg-indigo-500 rounded-full shadow-sm"></div>
+                                </div>
+                            )}
+                        </div>
+                    ))
+                  ) : (
+                    // Empty State (Kosong)
+                    <div className="py-12 px-6 flex flex-col items-center justify-center text-center">
+                        <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center mb-3">
+                            <span className="material-icons-outlined text-3xl text-slate-300 dark:text-slate-600">notifications_off</span>
+                        </div>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Belum ada notifikasi</p>
+                        <p className="text-slate-400 text-xs mt-1">Kami akan memberi tahu Anda jika ada update penting.</p>
+                    </div>
+                  )}
+               </div>
+
+               {/* Footer Dropdown */}
+               <div className="p-2 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-center">
+                 <Link 
+                    href={route('notifications.index')} 
+                    onClick={() => setShowNotifications(false)}
+                    className="text-xs font-bold text-slate-500 hover:text-indigo-600 transition-colors block w-full py-1"
+                 >
+                    Lihat Semua Notifikasi
+                 </Link>
+               </div>
             </div>
           )}
         </div>
         
         <div className="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-1 hidden sm:block"></div>
 
-        {/* User Profile System */}
+        {/* 4. User Profile System */}
         <div className="relative" ref={profileRef}>
           <div 
             onClick={() => setShowProfileMenu(!showProfileMenu)}
@@ -114,9 +210,9 @@ const Header = ({
             </div>
           </div>
 
-          {/* Dropdown Menu */}
+          {/* Dropdown Menu Profile */}
           {showProfileMenu && (
-            <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl z-50 overflow-hidden">
+            <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-150">
                <div className="block sm:hidden px-4 py-3 border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50">
                   <p className="text-sm font-bold text-slate-900 dark:text-white truncate">{currentUser?.name}</p>
                   <p className="text-xs text-slate-500 truncate">{currentUser?.email}</p>

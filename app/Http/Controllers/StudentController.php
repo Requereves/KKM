@@ -17,13 +17,15 @@ class StudentController extends Controller
     {
         // 1. Ambil parameter dari frontend
         $search = $request->input('search');
-        $major = $request->input('major'); // <--- INI YANG HILANG SEBELUMNYA
+        $major = $request->input('major'); // Parameter filter jurusan
 
-        // 2. Query Builder
+        // 2. Query Builder dengan Eager Loading
+        // 'user' dan 'skills' di-load agar query lebih efisien (mencegah N+1 problem)
         $query = Student::with(['user', 'skills'])
-            ->latest();
+            ->latest(); // Urutkan dari yang terbaru
 
         // 3. Logika Pencarian (Search)
+        // Menggunakan grouping where (function($q)) agar tidak bentrok dengan filter lain
         if ($search) {
             $query->where(function($q) use ($search) {
                 $q->where('full_name', 'like', "%{$search}%")
@@ -33,20 +35,25 @@ class StudentController extends Controller
         }
 
         // 4. Logika Filter Jurusan (Major)
-        // <--- BAGIAN INI DITAMBAHKAN KEMBALI
+        // Hanya filter jika ada value dan value-nya bukan 'all'
         if ($major && $major !== 'all') {
             $query->where('major', $major);
         }
 
-        // 5. Ambil daftar jurusan unik untuk Dropdown
-        $majors = Student::distinct()->pluck('major')->filter()->values();
+        // 5. Ambil daftar jurusan unik untuk opsi Dropdown di Frontend
+        $majors = Student::distinct()
+            ->whereNotNull('major')
+            ->pluck('major')
+            ->filter()
+            ->values();
 
         // 6. Pagination & Data Transformation
+        // Mengubah format data agar sesuai dengan kebutuhan React Table
         $students = $query->paginate(10)
-            ->withQueryString()
+            ->withQueryString() // Pertahankan parameter URL saat pindah page
             ->through(function($student) {
                 
-                // Logika Status Active
+                // Logika Status Active (User dianggap aktif jika login < 5 menit lalu)
                 $isActive = false;
                 if ($student->last_seen_at) {
                     $lastSeen = Carbon::parse($student->last_seen_at);
@@ -61,47 +68,62 @@ class StudentController extends Controller
                     'major'         => $student->major,
                     'yearOfEntry'   => $student->year_of_entry,
                     'phone'         => $student->phone ?? '-',
+                    // Mengambil hanya nama skill dalam bentuk array
                     'skills'        => $student->skills->pluck('skill_name')->toArray(),
+                    // Generate avatar default berdasarkan inisial nama
                     'avatar'        => 'https://ui-avatars.com/api/?name=' . urlencode($student->full_name) . '&background=6366f1&color=fff',
-                    'status'        => $isActive ? 'ACTIVE' : 'INACTIVE', // Uppercase sesuai request
+                    'status'        => $isActive ? 'ACTIVE' : 'INACTIVE',
                     
-                    // Fix Tanggal (Carbon Parse)
-                    'createdAt'     => $student->created_at ? Carbon::parse($student->created_at)->toDateTimeString() : '-',
-                    'updatedAt'     => $student->updated_at ? Carbon::parse($student->updated_at)->toDateTimeString() : '-',
+                    // Formatting Tanggal agar mudah dibaca
+                    'createdAt'     => $student->created_at ? Carbon::parse($student->created_at)->translatedFormat('d M Y H:i') : '-',
+                    'updatedAt'     => $student->updated_at ? Carbon::parse($student->updated_at)->translatedFormat('d M Y H:i') : '-',
                 ];
             });
 
-        // 7. Render ke React
+        // 7. Render ke View React (Inertia)
         return Inertia::render('Admin/Students/Index', [
             'students' => $students,
-            'filters'  => $request->only(['search', 'major']),
-            'majors'   => $majors, // Kirim list jurusan ke frontend
+            'filters'  => $request->only(['search', 'major']), // Kirim state filter balik ke frontend
+            'majors'   => $majors, // Kirim list jurusan untuk dropdown
         ]);
     }
 
-    // ... (Function update dan destroy tetap sama seperti sebelumnya)
+    /**
+     * Update data mahasiswa
+     */
     public function update(Request $request, Student $student)
     {
+        // Validasi input
         $validated = $request->validate([
             'full_name'     => 'required|string|max:255',
+            // Validasi email unique kecuali untuk user ini sendiri
             'email'         => 'required|email|unique:students,email,' . $student->id,
             'phone'         => 'nullable|string',
             'major'         => 'required|string',
             'year_of_entry' => 'required|numeric',
         ]);
 
+        // Update data utama
         $student->update($validated);
 
+        // Update relasi skills (Many-to-Many) jika ada input skills
         if ($request->has('skills')) {
+            // Asumsi input skills berupa array ID skill
             $student->skills()->sync($request->skills);
         }
 
-        return redirect()->route('admin.students.index')->with('success', 'Data mahasiswa berhasil diperbarui!');
+        return redirect()->route('admin.students.index')
+            ->with('success', 'Data mahasiswa berhasil diperbarui!');
     }
 
+    /**
+     * Hapus data mahasiswa
+     */
     public function destroy(Student $student)
     {
         $student->delete();
-        return redirect()->back()->with('success', 'Mahasiswa berhasil dihapus.');
+        
+        return redirect()->back()
+            ->with('success', 'Mahasiswa berhasil dihapus.');
     }
 }

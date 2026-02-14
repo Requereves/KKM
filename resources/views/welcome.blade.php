@@ -22,9 +22,7 @@
                     <a href="#solusi" class="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl shadow-xl shadow-blue-200 hover:bg-blue-700 transition flex items-center gap-2">
                         Mulai Jelajahi <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="#" class="px-8 py-4 bg-white text-slate-700 font-bold rounded-xl border border-slate-200 hover:bg-slate-50 transition">
-                        Lihat Demo
-                    </a>
+                    
                 </div>
                 <div class="mt-10 flex items-center gap-4 text-sm font-medium text-slate-500">
                     <div class="flex -space-x-2">

@@ -44,18 +44,34 @@ class HandleInertiaRequests extends Middleware
                     'id' => $request->user()->id,
                     'name' => $request->user()->name,
                     
-                    // ✅ UPDATE PENTING: Tambahkan Username & Interest
-                    // Agar form di React bisa membaca data ini dari database
+                    // Update: Username & Interest
                     'username' => $request->user()->username, 
                     'interest' => $request->user()->interest,
 
                     'email' => $request->user()->email,
-                    'role' => $request->user()->role, // Penting untuk Sidebar
+                    'role' => $request->user()->role,
                     
-                    // 👇 AVATAR URL
-                    // Kita ambil dari Accessor Model User (getAvatarUrlAttribute)
-                    // Ini sudah otomatis berisi URL lengkap + Timestamp (?t=...)
+                    // Avatar URL
                     'avatar_url' => $request->user()->avatar_url, 
+
+                    // 👇 UPDATE PENTING: NOTIFICATIONS
+                    // Mengirim data notifikasi ke Header.jsx
+                    'notifications' => $request->user()->notifications()
+                        ->latest()
+                        ->take(3) // ✅ BATASI 3 NOTIFIKASI SAJA
+                        ->get()
+                        ->map(function ($n) {
+                            return [
+                                'id' => $n->id,
+                                'type' => class_basename($n->type), // Nama class notifikasi
+                                'data' => $n->data, // Isi pesan (title, message, link, icon)
+                                'read_at' => $n->read_at,
+                                'created_at_human' => $n->created_at->diffForHumans(), // Contoh: "2 minutes ago"
+                            ];
+                        }),
+                    
+                    // Menghitung TOTAL unread count (Tetap akurat meski dropdown dibatasi)
+                    'unread_count' => $request->user()->unreadNotifications()->count(),
                 ] : null,
             ],
 
