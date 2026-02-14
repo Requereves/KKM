@@ -43,11 +43,14 @@ const Navbar = ({ darkMode, toggleDarkMode, language = 'id' }) => {
                     
                     {/* SISI KIRI: Logo & Menu */}
                     <div className="flex items-center gap-8">
-                        {/* Logo */}
+                        {/* Logo Arahin.id */}
                         <Link href={route('home')} className="flex items-center gap-2 group">
-                            <div className="w-8 h-8 bg-cyan-400 rounded-lg flex items-center justify-center text-white font-bold shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-                                A
-                            </div>
+                            <img 
+                                src="/images/logo.png" 
+                                alt="Arahin.id Logo" 
+                                className="h-10 w-auto object-contain group-hover:scale-105 transition-transform" 
+                            />
+                            {/* Opsional: Jika ingin tetap ada teks di sebelah logo */}
                             <span className="font-bold text-xl tracking-tight text-white">
                                 Arahin<span className="text-indigo-400">.id</span>
                             </span>

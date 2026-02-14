@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
+use App\Models\User; // ✅ Import Model User untuk ambil data admin lain
+use App\Notifications\SystemNotification; // ✅ Import Notifikasi Custom
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification; // ✅ Import Facade Notification
 use Carbon\Carbon;
 
 class AnnouncementController extends Controller
@@ -55,6 +58,7 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
+        // 1. Validasi Input
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'category' => 'required|string',
@@ -75,13 +79,45 @@ class AnnouncementController extends Controller
             'author' => Auth::user()->name ?? 'Admin',
         ];
 
+        // Upload Gambar jika ada
         if ($request->hasFile('image')) {
             $dbData['image'] = $request->file('image')->store('announcements', 'public');
         }
 
-        Announcement::create($dbData);
+        // 2. Simpan ke Database
+        $announcement = Announcement::create($dbData);
 
-        // Redirect ke route yang benar (admin.cms.index)
+        // ============================================================
+        // 🔥 TRIGGER NOTIFIKASI REAL-TIME (Sesuai Request)
+        // ============================================================
+
+        // OPSI A: Kirim notifikasi ke DIRI SENDIRI (User yang sedang login)
+        // Sebagai konfirmasi bahwa tindakan berhasil
+        $request->user()->notify(new SystemNotification(
+            'Pengumuman Dibuat', // Judul
+            'Anda berhasil membuat pengumuman baru: "' . $announcement->title . '"', // Pesan
+            route('admin.cms.index'), // Link tujuan saat diklik
+            'campaign', // Icon (Material Icon name)
+            'bg-purple-100 text-purple-600' // Warna icon
+        ));
+
+        // OPSI B: Kirim ke SEMUA ADMIN LAIN (Kecuali diri sendiri)
+        // Agar rekan kerja tahu ada update baru
+        $otherAdmins = User::where('role', 'admin')
+            ->where('id', '!=', $request->user()->id)
+            ->get();
+
+        if ($otherAdmins->count() > 0) {
+            Notification::send($otherAdmins, new SystemNotification(
+                'Info CMS Terbaru',
+                $request->user()->name . ' baru saja memposting pengumuman: "' . $announcement->title . '"',
+                route('admin.cms.index'),
+                'campaign',
+                'bg-blue-100 text-blue-600'
+            ));
+        }
+
+        // 3. Redirect
         return redirect()->route('admin.cms.index')->with('success', 'Announcement created successfully!');
     }
 
